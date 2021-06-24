@@ -10,9 +10,9 @@ namespace BookStore.DTO
     {
         private int id;
         private string name;
-        private string categoryId;
+        private int categoryId;
 
-        public Title(int id, string name, string categoryId)
+        public Title(int id, string name, int categoryId)
         {
             this.Id = id;
             this.Name = name;
@@ -37,7 +37,7 @@ namespace BookStore.DTO
                 OnPropertyChanged("Name");
             }
         }
-        public string CategoryId 
+        public int CategoryId 
         { 
             get => categoryId; 
             set 
