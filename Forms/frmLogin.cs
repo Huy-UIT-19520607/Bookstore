@@ -26,6 +26,10 @@ namespace BookStore.Forms
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.AcceptButton = this.btnLogin;
 
+            this.gunaTxtConfirmPassword.Enabled = false;
+            this.gunaTxtNewPassword.Enabled = false;
+            this.gunaTxtUsernameFP.Enabled = false;
+
             ResetErrorMessage();
         }
 
@@ -100,21 +104,32 @@ namespace BookStore.Forms
 
             gunaTxtUsername.Focus();
 
+            this.gunaTxtConfirmPassword.Enabled = false;
+            this.gunaTxtNewPassword.Enabled = false;
+            this.gunaTxtUsernameFP.Enabled = false;
+
+            this.gunaTxtUsername.Enabled = true;
+            this.gunaTxtPassword.Enabled = true;
+
             ResetErrorMessage();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //if (!ValidateChildren(ValidationConstraints.Enabled))
-            //{
-            //    return;
-            //}
+            if (!ValidateChildren(ValidationConstraints.Enabled))
+            {
+                return;
+            }
 
             //frmMain frmMain = new frmMain(username, password, role);
-            frmMain frmMain = new frmMain(username, password, role);
-            frmMain.Owner = this;
-            frmMain.Show();
-            this.Hide();
+
+            if (DAO.Account.Instance.Login(gunaTxtUsername.Text, gunaTxtPassword.Text))
+            {
+                frmMain frmMain = new frmMain(username, password, role);
+                frmMain.Owner = this;
+                frmMain.Show();
+                this.Hide();
+            }
 
             ResetLogin();
         }
@@ -123,6 +138,13 @@ namespace BookStore.Forms
         {
             tmrForgotPassword.Start();
             this.AcceptButton = this.btnOk;
+
+            this.gunaTxtConfirmPassword.Enabled = true;
+            this.gunaTxtNewPassword.Enabled = true;
+            this.gunaTxtUsernameFP.Enabled = true;
+
+            this.gunaTxtUsername.Enabled = false;
+            this.gunaTxtPassword.Enabled = false;
 
             this.gunaTxtUsernameFP.Focus();
         }
@@ -140,9 +162,18 @@ namespace BookStore.Forms
         private void btnCancel_Click(object sender, EventArgs e)
         {
             tmrLogin.Start();
-            this.AcceptButton = this.btnLogin;
-            
-            this.gunaTxtUsername.Focus();
+            //this.AcceptButton = this.btnLogin;
+
+            //this.gunaTxtConfirmPassword.Enabled = false;
+            //this.gunaTxtNewPassword.Enabled = false;
+            //this.gunaTxtUsernameFP.Enabled = false;
+
+            //this.gunaTxtUsername.Enabled = true;
+            //this.gunaTxtPassword.Enabled = true;
+
+            //this.gunaTxtUsername.Focus();
+
+            ResetLogin();
         }
 
         private void tmrLogin_Tick(object sender, EventArgs e)
