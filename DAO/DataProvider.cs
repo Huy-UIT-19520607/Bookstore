@@ -28,7 +28,6 @@ namespace BookStore
 
         private string connectionString = 
             @"Data Source=DESKTOP-60EFUQD;Initial Catalog=QuanLyNhaSach;Persist Security Info=True;User ID=sa;Password=123456";
-        //"Data Source=.\\sqlexpress;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
 
         private SqlCommand addParameters(string query,SqlCommand command, object[] parameter = null) 
         {
@@ -82,7 +81,7 @@ namespace BookStore
         /// </summary>
         /// <param name="query">Câu lệnh</param>
         /// <param name="parameter">Tham số</param>
-        /// <returns>Số hàng bị ảnh hương sau khi thực hiện query</returns>
+        /// <returns>Số hàng bị ảnh hưởng sau khi thực hiện query</returns>
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int recordNumber = 0;
