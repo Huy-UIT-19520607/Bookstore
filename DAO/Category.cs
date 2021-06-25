@@ -12,7 +12,7 @@ namespace BookStore.DAO
     {
         private static Category instance;
 
-        private static BindingList<DTO.Category> categories = new BindingList<DTO.Category>();
+        private static BindingList<DTO.Category> categories;
 
         public static Category Instance
         {
@@ -31,6 +31,7 @@ namespace BookStore.DAO
 
         public Category()
         {
+            categories = new BindingList<DTO.Category>();
             GetListCategory();
         }
 
