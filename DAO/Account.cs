@@ -12,7 +12,7 @@ namespace BookStore.DAO
     {
         private static Account instance;
 
-        private static BindingList<DTO.Account> accounts = new BindingList<DTO.Account>();
+        private static BindingList<DTO.Account> accounts;
 
         public static Account Instance {
             get
@@ -30,6 +30,7 @@ namespace BookStore.DAO
 
         private Account()
         {
+            accounts = new BindingList<DTO.Account>();
             GetListAccount();
         }
 
