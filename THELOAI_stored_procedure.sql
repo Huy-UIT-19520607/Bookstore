@@ -2,20 +2,26 @@
 
 GO
 
--- Lấy thể loại theo tên
-CREATE PROC sp_get_category_by_name
-@name nvarchar(50)
-AS
-	SELECT * FROM THELOAI
-	WHERE TenTheLoai=@name
-GO
+-- Lấy thể loại theo tên (loại bỏ)
+--CREATE PROC sp_get_category_by_name
+--@name nvarchar(50)
+--AS
+--	SELECT * FROM THELOAI
+--	WHERE TenTheLoai=@name
+--GO
 
 -- Thêm thể loại
 CREATE PROC sp_add_category
 @name nvarchar(50)
 AS
+BEGIN
 	INSERT INTO THELOAI(TenTheLoai)
-	VALUES (@name)
+	VALUES (@name);
+
+	SELECT MaTheLoai
+	FROM THELOAI
+	WHERE TenTheLoai=@name
+END;
 GO
 
 -- Xóa thể loại

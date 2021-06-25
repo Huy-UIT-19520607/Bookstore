@@ -52,33 +52,21 @@ namespace BookStore.DAO
             }
         }
 
-        private void AddToList(string name)
-        {
-            string query = "EXEC sp_get_title_by_data @name";
-            DataTable results = DataProvider.Instance.ExecuteQuery(query, new object[] { name });
-
-            if (results.Rows.Count > 0)
-            {
-                DTO.Category newTitle = new DTO.Category(
-                    (int)results.Rows[0].ItemArray[0], 
-                    results.Rows[0].ItemArray[1].ToString()
-                );
-                Categories.Add(newTitle);
-            }
-        }
-
         public bool AddCategory(string name)
         {
             string query = "EXEC sp_add_category @name";
 
-            int results = DataProvider.Instance.ExecuteNonQuery(query, new object[] { name });
+            object results = DataProvider.Instance.ExecuteScalar(query, new object[] { name });
 
-            if (results > 0)
+            if (results != null)
             {
-                AddToList(name);
+                Categories.Add(new DTO.Category(
+                    (int)results,
+                    name
+                ));
             }
 
-            return results > 0;
+            return results != null;
         }
 
         public bool DeleteCategory(int id)

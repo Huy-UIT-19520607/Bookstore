@@ -30,6 +30,7 @@ namespace BookStore.DAO
 
         public Title() 
         {
+            titles = new BindingList<DTO.Title>();
             GetListTitle();
         }
 
@@ -52,32 +53,21 @@ namespace BookStore.DAO
             }
         }
 
-        private void AddToList(string name, int categoryId)
-        {
-            string query = "EXEC sp_get_title_by_data @name , @category_id";
-            DataTable results = DataProvider.Instance.ExecuteQuery(query, new object[] { name, categoryId });
-
-            if (results.Rows.Count > 0)
-            {
-                Titles.Add(new DTO.Title(
-                    (int)results.Rows[0].ItemArray[0], 
-                    results.Rows[0].ItemArray[1].ToString(),
-                    (int)results.Rows[0].ItemArray[2]
-                ));
-            }
-        }
-
         public bool AddTitle(string name, int categoryId)
         {
             string query = "EXEC sp_add_title @name , @category_id";
-            int results = DataProvider.Instance.ExecuteNonQuery(query, new object[] { name, categoryId });
+            object results = DataProvider.Instance.ExecuteScalar(query, new object[] { name, categoryId });
 
-            if (results > 0)
+            if (results != null)
             {
-                AddToList(name, categoryId);
+                Titles.Add(new DTO.Title(
+                    (int)results,
+                    name,
+                    categoryId
+                ));
             }
 
-            return results > 0;
+            return results != null;
         }
 
         public bool DeleteTitle(int id)
