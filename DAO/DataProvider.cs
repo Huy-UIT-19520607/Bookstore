@@ -26,10 +26,10 @@ namespace BookStore
 
         private DataProvider() { }
 
-        private string connectionString = 
+        private readonly string connectionString = 
             @"Data Source=DESKTOP-60EFUQD;Initial Catalog=QuanLyNhaSach;Persist Security Info=True;User ID=sa;Password=123456";
 
-        private SqlCommand addParameters(string query,SqlCommand command, object[] parameter = null) 
+        private SqlCommand AddParameters(string query,SqlCommand command, object[] parameter = null) 
         {
             if (parameter != null)
             {
@@ -64,7 +64,7 @@ namespace BookStore
 
                 SqlCommand command = new SqlCommand(query, connection);
                 
-                command = addParameters(query, command, parameter);
+                command = AddParameters(query, command, parameter);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
 
@@ -92,7 +92,7 @@ namespace BookStore
 
                 SqlCommand command = new SqlCommand(query, connection);
 
-                command = addParameters(query, command, parameter);
+                command = AddParameters(query, command, parameter);
 
                 recordNumber = command.ExecuteNonQuery();
 
@@ -118,7 +118,7 @@ namespace BookStore
 
                 SqlCommand command = new SqlCommand(query, connection);
 
-                command = addParameters(query, command, parameter);
+                command = AddParameters(query, command, parameter);
 
                 firstData = command.ExecuteScalar();
 

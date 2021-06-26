@@ -60,7 +60,8 @@ namespace BookStore.DTO
             {
                 totalPrice = value;
                 OnPropertyChanged("TotalPrice");
-            }         }
+            } 
+        }
         public int Payment 
         { 
             get => payment; 
