@@ -52,7 +52,7 @@ namespace BookStore.DAO
 
         public bool AddDetail(int bookId, int number, int receivePrice, int total)
         {
-            string 
+            return true;
         }
     }
 }

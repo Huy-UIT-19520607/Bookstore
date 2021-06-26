@@ -121,17 +121,30 @@ namespace BookStore.Forms
                 return;
             }
 
-            //frmMain frmMain = new frmMain(username, password, role);
+            string username = gunaTxtUsername.Text;
+            string password = gunaTxtPassword.Text;
 
-            if (DAO.Account.Instance.Login(gunaTxtUsername.Text, gunaTxtPassword.Text))
+            if (Login(username, password))
             {
-                frmMain frmMain = new frmMain(username, password, role);
-                frmMain.Owner = this;
-                frmMain.Show();
-                this.Hide();
+                if (DAO.AccountDAO.Instance.Login(gunaTxtUsername.Text, gunaTxtPassword.Text))
+                {
+                    frmMain frmMain = new frmMain(username, password, role);
+                    frmMain.Owner = this;
+                    frmMain.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
+                }    
             }
 
             ResetLogin();
+        }
+
+        bool Login(string username, string password)
+        {
+            return DAO.AccountDAO.Instance.Login(username, password);
         }
 
         private void lblForgotPassword_Click(object sender, EventArgs e)

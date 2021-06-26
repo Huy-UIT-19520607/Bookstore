@@ -12,7 +12,8 @@ namespace BookStore
     {
         private static DataProvider instance;
 
-        public static DataProvider Instance {
+        public static DataProvider Instance
+        {
             get
             {
                 if (instance == null)
@@ -27,9 +28,9 @@ namespace BookStore
         private DataProvider() { }
 
         private readonly string connectionString = 
-            @"Data Source=DESKTOP-60EFUQD;Initial Catalog=QuanLyNhaSach;Persist Security Info=True;User ID=sa;Password=123456";
+            @"Data Source=DESKTOP-O9Q211T;Initial Catalog=QuanLyNhaSach;Persist Security Info=True;User ID=sa;Password=Huy123456";
 
-        private SqlCommand AddParameters(string query,SqlCommand command, object[] parameter = null) 
+        private SqlCommand AddParameters(string query, SqlCommand command, object[] parameter = null)
         {
             if (parameter != null)
             {
@@ -63,7 +64,7 @@ namespace BookStore
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
-                
+
                 command = AddParameters(query, command, parameter);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -127,5 +128,8 @@ namespace BookStore
 
             return firstData;
         }
+
+
+        
     }
 }

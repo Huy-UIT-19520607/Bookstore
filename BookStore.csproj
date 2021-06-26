@@ -67,6 +67,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\Account.cs" />
+    <Compile Include="BUS\Category.cs" />
+    <Compile Include="BUS\Title.cs" />
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\Author.cs" />
+    <Compile Include="DAO\Bill.cs" />
+    <Compile Include="DAO\Book.cs" />
+    <Compile Include="DAO\BookReceiptDetail.cs" />
+    <Compile Include="DAO\CashReceipt.cs" />
+    <Compile Include="DAO\Category.cs" />
+    <Compile Include="DAO\Customer.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\DebtReport.cs" />
+    <Compile Include="DAO\InventoryReport.cs" />
+    <Compile Include="DAO\Title.cs" />
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\Author.cs" />
+    <Compile Include="DTO\Bill.cs" />
+    <Compile Include="DTO\BillDetail.cs" />
+    <Compile Include="DTO\Book.cs" />
+    <Compile Include="DTO\BookReceipt.cs" />
+    <Compile Include="DTO\BookReceiptDetail.cs" />
+    <Compile Include="DTO\CashReceipt.cs" />
+    <Compile Include="DTO\Category.cs" />
+    <Compile Include="DTO\Customer.cs" />
+    <Compile Include="DTO\DebtReport.cs" />
+    <Compile Include="DTO\InventoryReport.cs" />
+    <Compile Include="DTO\Parameter.cs" />
+    <Compile Include="DTO\PropertyChangedBase.cs" />
+    <Compile Include="DTO\Title.cs" />
     <Compile Include="Forms\Business\frmBill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -376,7 +406,6 @@
     <EmbeddedResource Include="Forms\Setting\frmRequirement.resx">
       <DependentUpon>frmRequirement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
