@@ -118,13 +118,13 @@ namespace BookStore.Forms
 
         private void btnGenre_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Management.Form3());
+            onOpenChildForm(new Forms.Management.frmCategory());
             onHideSubMenu();
         }
 
         private void btnBook_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Management.frmTitleBook());
+            onOpenChildForm(new Forms.Management.frmBook());
             onHideSubMenu();
         }
 

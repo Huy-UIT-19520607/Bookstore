@@ -16,5 +16,6 @@ namespace BookStore.Forms.Setting
         {
             InitializeComponent();
         }
+
     }
 }

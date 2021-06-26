@@ -521,7 +521,7 @@ namespace BookStore.Forms
             this.pnlTopBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTopBar.Location = new System.Drawing.Point(260, 0);
             this.pnlTopBar.Name = "pnlTopBar";
-            this.pnlTopBar.Size = new System.Drawing.Size(926, 93);
+            this.pnlTopBar.Size = new System.Drawing.Size(959, 93);
             this.pnlTopBar.TabIndex = 1;
             this.pnlTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTopBar_MouseDown);
             // 
@@ -575,7 +575,7 @@ namespace BookStore.Forms
             this.lblCurrentTime.AutoSize = true;
             this.lblCurrentTime.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentTime.ForeColor = System.Drawing.Color.White;
-            this.lblCurrentTime.Location = new System.Drawing.Point(804, 49);
+            this.lblCurrentTime.Location = new System.Drawing.Point(837, 49);
             this.lblCurrentTime.Name = "lblCurrentTime";
             this.lblCurrentTime.Size = new System.Drawing.Size(88, 25);
             this.lblCurrentTime.TabIndex = 5;
@@ -589,7 +589,7 @@ namespace BookStore.Forms
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Location = new System.Drawing.Point(848, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(881, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(27, 23);
             this.btnMinimize.TabIndex = 4;
@@ -605,7 +605,7 @@ namespace BookStore.Forms
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximize.ForeColor = System.Drawing.Color.White;
             this.btnMaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximize.Image")));
-            this.btnMaximize.Location = new System.Drawing.Point(875, 0);
+            this.btnMaximize.Location = new System.Drawing.Point(908, 0);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(27, 23);
             this.btnMaximize.TabIndex = 3;
@@ -620,7 +620,7 @@ namespace BookStore.Forms
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(899, 0);
+            this.btnExit.Location = new System.Drawing.Point(932, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(27, 23);
             this.btnExit.TabIndex = 0;
@@ -632,7 +632,7 @@ namespace BookStore.Forms
             this.lblSubMenuName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSubMenuName.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubMenuName.ForeColor = System.Drawing.Color.White;
-            this.lblSubMenuName.Location = new System.Drawing.Point(374, 25);
+            this.lblSubMenuName.Location = new System.Drawing.Point(390, 25);
             this.lblSubMenuName.Name = "lblSubMenuName";
             this.lblSubMenuName.Size = new System.Drawing.Size(242, 40);
             this.lblSubMenuName.TabIndex = 2;
@@ -644,8 +644,9 @@ namespace BookStore.Forms
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChildForm.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlChildForm.Location = new System.Drawing.Point(260, 93);
+            this.pnlChildForm.MinimumSize = new System.Drawing.Size(959, 692);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(926, 692);
+            this.pnlChildForm.Size = new System.Drawing.Size(959, 692);
             this.pnlChildForm.TabIndex = 2;
             // 
             // tmrCurrentTime
@@ -663,14 +664,14 @@ namespace BookStore.Forms
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1186, 785);
+            this.ClientSize = new System.Drawing.Size(1219, 785);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.pnlTopBar);
             this.Controls.Add(this.pnlSlideMenu);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(1202, 824);
+            this.MinimumSize = new System.Drawing.Size(1235, 824);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý Nhà sách";

@@ -29,289 +29,403 @@ namespace BookStore.Forms.Management
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.grpTitleBook = new System.Windows.Forms.GroupBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.btnAddTitleBook = new System.Windows.Forms.Button();
-            this.btnDeleteTitleBook = new System.Windows.Forms.Button();
-            this.btnEditTitleBook = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nudPublishingYear = new System.Windows.Forms.NumericUpDown();
+            this.lblPublisherError = new System.Windows.Forms.Label();
+            this.txtPublisher = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.nudQuantity = new System.Windows.Forms.NumericUpDown();
+            this.nudPrice = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblNewCategory = new System.Windows.Forms.Label();
+            this.btnAddBook = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.gunaDgvBook = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.SoPNS2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhaXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnDeleteBook = new System.Windows.Forms.Button();
+            this.btnTitleBookSearch = new System.Windows.Forms.Button();
+            this.gunaTxtTitleBookSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.grpImportBookDetail = new System.Windows.Forms.GroupBox();
+            this.pnlTitleBook = new System.Windows.Forms.Panel();
             this.pnlAccount = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnBookSearch = new System.Windows.Forms.Button();
+            this.gunaTxtBookSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.grpTitleBook = new System.Windows.Forms.GroupBox();
+            this.pnlBook = new System.Windows.Forms.Panel();
             this.gunaDgvTitleBook = new Guna.UI2.WinForms.Guna2DataGridView();
             this.MaDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlSearchTitleBook = new System.Windows.Forms.Panel();
-            this.btnTitleBookSearch = new System.Windows.Forms.Button();
-            this.gunaTxtTitleBookSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.grpAuthor = new System.Windows.Forms.GroupBox();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDeleteAuthor = new System.Windows.Forms.Button();
-            this.btnEditAuthor = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.gunaDgvAuthor = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.MaDauSach2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btnAuthorSearch = new System.Windows.Forms.Button();
-            this.gunaTxtAuthorSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.grpBook = new System.Windows.Forms.GroupBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnDeleteBook = new System.Windows.Forms.Button();
-            this.btnEditBook = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.gunaDgvBook = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaDauSach3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NhaXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NamXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.btnBookSearch = new System.Windows.Forms.Button();
-            this.gunaTxtBookSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.grpTitleBook.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.grpImportBookInfo = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dtmDate = new System.Windows.Forms.DateTimePicker();
+            this.txtTotalAmount = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPublishingYear)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaDgvBook)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.grpImportBookDetail.SuspendLayout();
+            this.pnlTitleBook.SuspendLayout();
             this.pnlAccount.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.grpTitleBook.SuspendLayout();
+            this.pnlBook.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaDgvTitleBook)).BeginInit();
             this.pnlSearchTitleBook.SuspendLayout();
-            this.grpAuthor.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDgvAuthor)).BeginInit();
-            this.panel7.SuspendLayout();
-            this.grpBook.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDgvBook)).BeginInit();
-            this.panel11.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
-            this.panel13.SuspendLayout();
+            this.grpImportBookInfo.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // grpTitleBook
-            // 
-            this.grpTitleBook.Controls.Add(this.panel3);
-            this.grpTitleBook.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpTitleBook.Location = new System.Drawing.Point(12, 12);
-            this.grpTitleBook.Name = "grpTitleBook";
-            this.grpTitleBook.Size = new System.Drawing.Size(499, 365);
-            this.grpTitleBook.TabIndex = 14;
-            this.grpTitleBook.TabStop = false;
-            this.grpTitleBook.Text = "Danh sách Đầu sách";
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.panel2);
-            this.panel3.Controls.Add(this.pnlAccount);
-            this.panel3.Controls.Add(this.pnlSearchTitleBook);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(3, 35);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(493, 327);
-            this.panel3.TabIndex = 0;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button11);
-            this.panel2.Controls.Add(this.btnAddTitleBook);
-            this.panel2.Controls.Add(this.btnDeleteTitleBook);
-            this.panel2.Controls.Add(this.btnEditTitleBook);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.nudPublishingYear);
+            this.panel2.Controls.Add(this.lblPublisherError);
+            this.panel2.Controls.Add(this.txtPublisher);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 270);
+            this.panel2.Location = new System.Drawing.Point(0, 315);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(489, 53);
-            this.panel2.TabIndex = 9;
+            this.panel2.Size = new System.Drawing.Size(940, 54);
+            this.panel2.TabIndex = 14;
             // 
-            // button11
+            // label1
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(21, 9);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(34, 35);
-            this.button11.TabIndex = 10;
-            this.button11.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(524, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 21);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Năm xuất bản:";
             // 
-            // btnAddTitleBook
+            // nudPublishingYear
             // 
-            this.btnAddTitleBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddTitleBook.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnAddTitleBook.FlatAppearance.BorderSize = 0;
-            this.btnAddTitleBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddTitleBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTitleBook.ForeColor = System.Drawing.Color.White;
-            this.btnAddTitleBook.Location = new System.Drawing.Point(133, 3);
-            this.btnAddTitleBook.Name = "btnAddTitleBook";
-            this.btnAddTitleBook.Size = new System.Drawing.Size(82, 46);
-            this.btnAddTitleBook.TabIndex = 2;
-            this.btnAddTitleBook.Text = "Thêm";
-            this.btnAddTitleBook.UseVisualStyleBackColor = false;
+            this.nudPublishingYear.Location = new System.Drawing.Point(640, 3);
+            this.nudPublishingYear.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.nudPublishingYear.Name = "nudPublishingYear";
+            this.nudPublishingYear.Size = new System.Drawing.Size(86, 33);
+            this.nudPublishingYear.TabIndex = 28;
+            this.nudPublishingYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudPublishingYear.Value = new decimal(new int[] {
+            1999,
+            0,
+            0,
+            0});
             // 
-            // btnDeleteTitleBook
+            // lblPublisherError
             // 
-            this.btnDeleteTitleBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteTitleBook.BackColor = System.Drawing.Color.Crimson;
-            this.btnDeleteTitleBook.FlatAppearance.BorderSize = 0;
-            this.btnDeleteTitleBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteTitleBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteTitleBook.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteTitleBook.Location = new System.Drawing.Point(309, 3);
-            this.btnDeleteTitleBook.Name = "btnDeleteTitleBook";
-            this.btnDeleteTitleBook.Size = new System.Drawing.Size(82, 46);
-            this.btnDeleteTitleBook.TabIndex = 5;
-            this.btnDeleteTitleBook.Text = "Xoá";
-            this.btnDeleteTitleBook.UseVisualStyleBackColor = false;
+            this.lblPublisherError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPublisherError.ForeColor = System.Drawing.Color.Red;
+            this.lblPublisherError.Location = new System.Drawing.Point(143, 34);
+            this.lblPublisherError.Name = "lblPublisherError";
+            this.lblPublisherError.Size = new System.Drawing.Size(319, 17);
+            this.lblPublisherError.TabIndex = 24;
+            this.lblPublisherError.Text = "Publisher Error";
+            this.lblPublisherError.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // btnEditTitleBook
+            // txtPublisher
             // 
-            this.btnEditTitleBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditTitleBook.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnEditTitleBook.FlatAppearance.BorderSize = 0;
-            this.btnEditTitleBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditTitleBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditTitleBook.ForeColor = System.Drawing.Color.White;
-            this.btnEditTitleBook.Location = new System.Drawing.Point(221, 3);
-            this.btnEditTitleBook.Name = "btnEditTitleBook";
-            this.btnEditTitleBook.Size = new System.Drawing.Size(82, 46);
-            this.btnEditTitleBook.TabIndex = 4;
-            this.btnEditTitleBook.Text = "Sửa";
-            this.btnEditTitleBook.UseVisualStyleBackColor = false;
+            this.txtPublisher.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPublisher.Location = new System.Drawing.Point(143, 5);
+            this.txtPublisher.Name = "txtPublisher";
+            this.txtPublisher.Size = new System.Drawing.Size(319, 29);
+            this.txtPublisher.TabIndex = 23;
             // 
-            // pnlAccount
+            // label3
             // 
-            this.pnlAccount.Controls.Add(this.gunaDgvTitleBook);
-            this.pnlAccount.Location = new System.Drawing.Point(7, 47);
-            this.pnlAccount.Name = "pnlAccount";
-            this.pnlAccount.Size = new System.Drawing.Size(452, 220);
-            this.pnlAccount.TabIndex = 2;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(27, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 21);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Nhà xuất bản:";
             // 
-            // gunaDgvTitleBook
+            // panel5
             // 
-            dataGridViewCellStyle37.BackColor = System.Drawing.Color.White;
-            this.gunaDgvTitleBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
-            this.gunaDgvTitleBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gunaDgvTitleBook.BackgroundColor = System.Drawing.Color.White;
-            this.gunaDgvTitleBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaDgvTitleBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDgvTitleBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
-            this.gunaDgvTitleBook.ColumnHeadersHeight = 30;
-            this.gunaDgvTitleBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.gunaDgvTitleBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaDauSach,
-            this.TenDauSach,
-            this.TenTheLoai});
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle39.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDgvTitleBook.DefaultCellStyle = dataGridViewCellStyle39;
-            this.gunaDgvTitleBook.EnableHeadersVisualStyles = false;
-            this.gunaDgvTitleBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvTitleBook.Location = new System.Drawing.Point(15, 17);
-            this.gunaDgvTitleBook.Name = "gunaDgvTitleBook";
-            this.gunaDgvTitleBook.RowHeadersVisible = false;
-            this.gunaDgvTitleBook.RowTemplate.Height = 28;
-            this.gunaDgvTitleBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDgvTitleBook.Size = new System.Drawing.Size(426, 174);
-            this.gunaDgvTitleBook.TabIndex = 0;
-            this.gunaDgvTitleBook.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvTitleBook.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gunaDgvTitleBook.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gunaDgvTitleBook.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gunaDgvTitleBook.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gunaDgvTitleBook.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvTitleBook.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvTitleBook.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDgvTitleBook.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gunaDgvTitleBook.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDgvTitleBook.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gunaDgvTitleBook.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.gunaDgvTitleBook.ThemeStyle.HeaderStyle.Height = 30;
-            this.gunaDgvTitleBook.ThemeStyle.ReadOnly = false;
-            this.gunaDgvTitleBook.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvTitleBook.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDgvTitleBook.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDgvTitleBook.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gunaDgvTitleBook.ThemeStyle.RowsStyle.Height = 28;
-            this.gunaDgvTitleBook.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvTitleBook.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.panel5.Controls.Add(this.nudQuantity);
+            this.panel5.Controls.Add(this.nudPrice);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.lblNewCategory);
+            this.panel5.Controls.Add(this.btnAddBook);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(940, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(238, 369);
+            this.panel5.TabIndex = 17;
             // 
-            // MaDauSach
+            // nudQuantity
             // 
-            this.MaDauSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.MaDauSach.HeaderText = "Mã Đầu Sách";
-            this.MaDauSach.Name = "MaDauSach";
-            this.MaDauSach.Width = 146;
+            this.nudQuantity.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudQuantity.Location = new System.Drawing.Point(132, 88);
+            this.nudQuantity.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.nudQuantity.Name = "nudQuantity";
+            this.nudQuantity.Size = new System.Drawing.Size(100, 33);
+            this.nudQuantity.TabIndex = 30;
+            this.nudQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // TenDauSach
+            // nudPrice
             // 
-            this.TenDauSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenDauSach.HeaderText = "Tên Đầu Sách";
-            this.TenDauSach.Name = "TenDauSach";
+            this.nudPrice.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudPrice.Location = new System.Drawing.Point(132, 138);
+            this.nudPrice.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.nudPrice.Name = "nudPrice";
+            this.nudPrice.Size = new System.Drawing.Size(100, 33);
+            this.nudPrice.TabIndex = 29;
+            this.nudPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // TenTheLoai
+            // label2
             // 
-            this.TenTheLoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.TenTheLoai.HeaderText = "Thể Loại";
-            this.TenTheLoai.Name = "TenTheLoai";
-            this.TenTheLoai.Width = 106;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 143);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 21);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Đơn giá nhập:";
             // 
-            // pnlSearchTitleBook
+            // lblNewCategory
             // 
-            this.pnlSearchTitleBook.Controls.Add(this.btnTitleBookSearch);
-            this.pnlSearchTitleBook.Controls.Add(this.gunaTxtTitleBookSearch);
-            this.pnlSearchTitleBook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSearchTitleBook.Location = new System.Drawing.Point(0, 0);
-            this.pnlSearchTitleBook.Name = "pnlSearchTitleBook";
-            this.pnlSearchTitleBook.Size = new System.Drawing.Size(489, 46);
-            this.pnlSearchTitleBook.TabIndex = 1;
+            this.lblNewCategory.AutoSize = true;
+            this.lblNewCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewCategory.Location = new System.Drawing.Point(15, 93);
+            this.lblNewCategory.Name = "lblNewCategory";
+            this.lblNewCategory.Size = new System.Drawing.Size(115, 21);
+            this.lblNewCategory.TabIndex = 22;
+            this.lblNewCategory.Text = "Số lượng nhập:";
+            // 
+            // btnAddBook
+            // 
+            this.btnAddBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddBook.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnAddBook.FlatAppearance.BorderSize = 0;
+            this.btnAddBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddBook.ForeColor = System.Drawing.Color.White;
+            this.btnAddBook.Location = new System.Drawing.Point(29, 212);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(194, 46);
+            this.btnAddBook.TabIndex = 11;
+            this.btnAddBook.Text = "Thêm sách vào phiếu";
+            this.btnAddBook.UseVisualStyleBackColor = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.BackColor = System.Drawing.Color.Crimson;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(161, 184);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(86, 46);
+            this.btnCancel.TabIndex = 31;
+            this.btnCancel.Text = "Huỷ";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(50, 184);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(86, 46);
+            this.btnSave.TabIndex = 30;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
+            // gunaDgvBook
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gunaDgvBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.gunaDgvBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gunaDgvBook.BackgroundColor = System.Drawing.Color.White;
+            this.gunaDgvBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gunaDgvBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gunaDgvBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDgvBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gunaDgvBook.ColumnHeadersHeight = 30;
+            this.gunaDgvBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SoPNS2,
+            this.MaSach,
+            this.NhaXuatBan,
+            this.NamXuatBan,
+            this.SoLuongNhap,
+            this.DonGiaNhap,
+            this.ThanhTien});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDgvBook.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gunaDgvBook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaDgvBook.EnableHeadersVisualStyles = false;
+            this.gunaDgvBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDgvBook.Location = new System.Drawing.Point(0, 46);
+            this.gunaDgvBook.Name = "gunaDgvBook";
+            this.gunaDgvBook.RowHeadersVisible = false;
+            this.gunaDgvBook.RowTemplate.Height = 28;
+            this.gunaDgvBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gunaDgvBook.Size = new System.Drawing.Size(879, 226);
+            this.gunaDgvBook.TabIndex = 20;
+            this.gunaDgvBook.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.gunaDgvBook.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.gunaDgvBook.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.gunaDgvBook.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.gunaDgvBook.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.gunaDgvBook.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.gunaDgvBook.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDgvBook.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaDgvBook.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gunaDgvBook.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaDgvBook.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.gunaDgvBook.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.gunaDgvBook.ThemeStyle.HeaderStyle.Height = 30;
+            this.gunaDgvBook.ThemeStyle.ReadOnly = false;
+            this.gunaDgvBook.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gunaDgvBook.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gunaDgvBook.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaDgvBook.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gunaDgvBook.ThemeStyle.RowsStyle.Height = 28;
+            this.gunaDgvBook.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDgvBook.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // SoPNS2
+            // 
+            this.SoPNS2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.SoPNS2.HeaderText = "Số PNS";
+            this.SoPNS2.Name = "SoPNS2";
+            this.SoPNS2.Width = 96;
+            // 
+            // MaSach
+            // 
+            this.MaSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.MaSach.HeaderText = "Mã Sách";
+            this.MaSach.Name = "MaSach";
+            this.MaSach.Width = 107;
+            // 
+            // NhaXuatBan
+            // 
+            this.NhaXuatBan.HeaderText = "Nhà Xuất Bản";
+            this.NhaXuatBan.Name = "NhaXuatBan";
+            // 
+            // NamXuatBan
+            // 
+            this.NamXuatBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.NamXuatBan.HeaderText = "Năm XB";
+            this.NamXuatBan.Name = "NamXuatBan";
+            this.NamXuatBan.Width = 102;
+            // 
+            // SoLuongNhap
+            // 
+            this.SoLuongNhap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.SoLuongNhap.HeaderText = "Số Lượng";
+            this.SoLuongNhap.Name = "SoLuongNhap";
+            this.SoLuongNhap.Width = 114;
+            // 
+            // DonGiaNhap
+            // 
+            this.DonGiaNhap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.DonGiaNhap.HeaderText = "Đơn Giá";
+            this.DonGiaNhap.Name = "DonGiaNhap";
+            this.DonGiaNhap.Width = 103;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.Width = 129;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnDeleteBook);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 272);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(879, 54);
+            this.panel4.TabIndex = 19;
+            // 
+            // btnDeleteBook
+            // 
+            this.btnDeleteBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteBook.BackColor = System.Drawing.Color.Brown;
+            this.btnDeleteBook.FlatAppearance.BorderSize = 0;
+            this.btnDeleteBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteBook.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteBook.Location = new System.Drawing.Point(760, 3);
+            this.btnDeleteBook.Name = "btnDeleteBook";
+            this.btnDeleteBook.Size = new System.Drawing.Size(97, 46);
+            this.btnDeleteBook.TabIndex = 32;
+            this.btnDeleteBook.Text = "Xoá sách";
+            this.btnDeleteBook.UseVisualStyleBackColor = false;
             // 
             // btnTitleBookSearch
             // 
@@ -350,381 +464,39 @@ namespace BookStore.Forms.Management
             this.gunaTxtTitleBookSearch.Size = new System.Drawing.Size(328, 35);
             this.gunaTxtTitleBookSearch.TabIndex = 0;
             // 
-            // grpAuthor
+            // grpImportBookDetail
             // 
-            this.grpAuthor.Controls.Add(this.panel4);
-            this.grpAuthor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.grpAuthor.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpAuthor.Location = new System.Drawing.Point(748, 26);
-            this.grpAuthor.Name = "grpAuthor";
-            this.grpAuthor.Size = new System.Drawing.Size(335, 365);
-            this.grpAuthor.TabIndex = 15;
-            this.grpAuthor.TabStop = false;
-            this.grpAuthor.Text = "Danh sách Tác giả";
+            this.grpImportBookDetail.Controls.Add(this.pnlTitleBook);
+            this.grpImportBookDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpImportBookDetail.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpImportBookDetail.Location = new System.Drawing.Point(296, 3);
+            this.grpImportBookDetail.Name = "grpImportBookDetail";
+            this.grpImportBookDetail.Size = new System.Drawing.Size(887, 366);
+            this.grpImportBookDetail.TabIndex = 17;
+            this.grpImportBookDetail.TabStop = false;
+            this.grpImportBookDetail.Text = "Chi tiết Phiếu nhập";
             // 
-            // panel4
+            // pnlTitleBook
             // 
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(3, 35);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(329, 327);
-            this.panel4.TabIndex = 0;
+            this.pnlTitleBook.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTitleBook.Controls.Add(this.pnlAccount);
+            this.pnlTitleBook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTitleBook.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlTitleBook.Location = new System.Drawing.Point(3, 35);
+            this.pnlTitleBook.Name = "pnlTitleBook";
+            this.pnlTitleBook.Size = new System.Drawing.Size(881, 328);
+            this.pnlTitleBook.TabIndex = 0;
             // 
-            // panel1
+            // pnlAccount
             // 
-            this.panel1.Controls.Add(this.btnDeleteAuthor);
-            this.panel1.Controls.Add(this.btnEditAuthor);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 274);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(329, 53);
-            this.panel1.TabIndex = 10;
-            // 
-            // btnDeleteAuthor
-            // 
-            this.btnDeleteAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteAuthor.BackColor = System.Drawing.Color.Crimson;
-            this.btnDeleteAuthor.FlatAppearance.BorderSize = 0;
-            this.btnDeleteAuthor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteAuthor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteAuthor.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteAuthor.Location = new System.Drawing.Point(236, 3);
-            this.btnDeleteAuthor.Name = "btnDeleteAuthor";
-            this.btnDeleteAuthor.Size = new System.Drawing.Size(82, 46);
-            this.btnDeleteAuthor.TabIndex = 5;
-            this.btnDeleteAuthor.Text = "Xoá";
-            this.btnDeleteAuthor.UseVisualStyleBackColor = false;
-            // 
-            // btnEditAuthor
-            // 
-            this.btnEditAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditAuthor.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnEditAuthor.FlatAppearance.BorderSize = 0;
-            this.btnEditAuthor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditAuthor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditAuthor.ForeColor = System.Drawing.Color.White;
-            this.btnEditAuthor.Location = new System.Drawing.Point(148, 3);
-            this.btnEditAuthor.Name = "btnEditAuthor";
-            this.btnEditAuthor.Size = new System.Drawing.Size(82, 46);
-            this.btnEditAuthor.TabIndex = 4;
-            this.btnEditAuthor.Text = "Sửa";
-            this.btnEditAuthor.UseVisualStyleBackColor = false;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.button10);
-            this.panel6.Controls.Add(this.gunaDgvAuthor);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 46);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(329, 281);
-            this.panel6.TabIndex = 2;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.Location = new System.Drawing.Point(36, 107);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(34, 34);
-            this.button10.TabIndex = 2;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // gunaDgvAuthor
-            // 
-            dataGridViewCellStyle40.BackColor = System.Drawing.Color.White;
-            this.gunaDgvAuthor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle40;
-            this.gunaDgvAuthor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gunaDgvAuthor.BackgroundColor = System.Drawing.Color.White;
-            this.gunaDgvAuthor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaDgvAuthor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDgvAuthor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle41;
-            this.gunaDgvAuthor.ColumnHeadersHeight = 30;
-            this.gunaDgvAuthor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaDauSach2,
-            this.TenTacGia});
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle42.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDgvAuthor.DefaultCellStyle = dataGridViewCellStyle42;
-            this.gunaDgvAuthor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaDgvAuthor.EnableHeadersVisualStyles = false;
-            this.gunaDgvAuthor.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvAuthor.Location = new System.Drawing.Point(0, 0);
-            this.gunaDgvAuthor.Name = "gunaDgvAuthor";
-            this.gunaDgvAuthor.RowHeadersVisible = false;
-            this.gunaDgvAuthor.RowTemplate.Height = 28;
-            this.gunaDgvAuthor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDgvAuthor.Size = new System.Drawing.Size(329, 281);
-            this.gunaDgvAuthor.TabIndex = 0;
-            this.gunaDgvAuthor.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvAuthor.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gunaDgvAuthor.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gunaDgvAuthor.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gunaDgvAuthor.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gunaDgvAuthor.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvAuthor.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvAuthor.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDgvAuthor.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gunaDgvAuthor.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDgvAuthor.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gunaDgvAuthor.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gunaDgvAuthor.ThemeStyle.HeaderStyle.Height = 30;
-            this.gunaDgvAuthor.ThemeStyle.ReadOnly = false;
-            this.gunaDgvAuthor.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvAuthor.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDgvAuthor.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDgvAuthor.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gunaDgvAuthor.ThemeStyle.RowsStyle.Height = 28;
-            this.gunaDgvAuthor.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvAuthor.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // MaDauSach2
-            // 
-            this.MaDauSach2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.MaDauSach2.HeaderText = "Mã Đầu Sách";
-            this.MaDauSach2.Name = "MaDauSach2";
-            this.MaDauSach2.Width = 146;
-            // 
-            // TenTacGia
-            // 
-            this.TenTacGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenTacGia.HeaderText = "Tên Tác Giả";
-            this.TenTacGia.Name = "TenTacGia";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.btnAuthorSearch);
-            this.panel7.Controls.Add(this.gunaTxtAuthorSearch);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(329, 46);
-            this.panel7.TabIndex = 1;
-            // 
-            // btnAuthorSearch
-            // 
-            this.btnAuthorSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(106)))));
-            this.btnAuthorSearch.FlatAppearance.BorderSize = 0;
-            this.btnAuthorSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAuthorSearch.ForeColor = System.Drawing.Color.White;
-            this.btnAuthorSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnAuthorSearch.Image")));
-            this.btnAuthorSearch.Location = new System.Drawing.Point(260, 2);
-            this.btnAuthorSearch.Name = "btnAuthorSearch";
-            this.btnAuthorSearch.Size = new System.Drawing.Size(34, 35);
-            this.btnAuthorSearch.TabIndex = 1;
-            this.btnAuthorSearch.UseVisualStyleBackColor = false;
-            // 
-            // gunaTxtAuthorSearch
-            // 
-            this.gunaTxtAuthorSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTxtAuthorSearch.DefaultText = "";
-            this.gunaTxtAuthorSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.gunaTxtAuthorSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.gunaTxtAuthorSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.gunaTxtAuthorSearch.DisabledState.Parent = this.gunaTxtAuthorSearch;
-            this.gunaTxtAuthorSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.gunaTxtAuthorSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gunaTxtAuthorSearch.FocusedState.Parent = this.gunaTxtAuthorSearch;
-            this.gunaTxtAuthorSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTxtAuthorSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gunaTxtAuthorSearch.HoverState.Parent = this.gunaTxtAuthorSearch;
-            this.gunaTxtAuthorSearch.Location = new System.Drawing.Point(36, 2);
-            this.gunaTxtAuthorSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gunaTxtAuthorSearch.Name = "gunaTxtAuthorSearch";
-            this.gunaTxtAuthorSearch.PasswordChar = '\0';
-            this.gunaTxtAuthorSearch.PlaceholderText = "Tìm kiếm";
-            this.gunaTxtAuthorSearch.SelectedText = "";
-            this.gunaTxtAuthorSearch.ShadowDecoration.Parent = this.gunaTxtAuthorSearch;
-            this.gunaTxtAuthorSearch.Size = new System.Drawing.Size(217, 35);
-            this.gunaTxtAuthorSearch.TabIndex = 0;
-            // 
-            // grpBook
-            // 
-            this.grpBook.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpBook.Controls.Add(this.panel8);
-            this.grpBook.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpBook.Location = new System.Drawing.Point(580, 456);
-            this.grpBook.Name = "grpBook";
-            this.grpBook.Size = new System.Drawing.Size(563, 297);
-            this.grpBook.TabIndex = 16;
-            this.grpBook.TabStop = false;
-            this.grpBook.Text = "Danh sách Sách";
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.panel5);
-            this.panel8.Controls.Add(this.panel10);
-            this.panel8.Controls.Add(this.panel11);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel8.Location = new System.Drawing.Point(3, 35);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(557, 259);
-            this.panel8.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.btnDeleteBook);
-            this.panel5.Controls.Add(this.btnEditBook);
-            this.panel5.Location = new System.Drawing.Point(456, 64);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(91, 133);
-            this.panel5.TabIndex = 11;
-            // 
-            // btnDeleteBook
-            // 
-            this.btnDeleteBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteBook.BackColor = System.Drawing.Color.Crimson;
-            this.btnDeleteBook.FlatAppearance.BorderSize = 0;
-            this.btnDeleteBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteBook.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteBook.Location = new System.Drawing.Point(6, 84);
-            this.btnDeleteBook.Name = "btnDeleteBook";
-            this.btnDeleteBook.Size = new System.Drawing.Size(82, 46);
-            this.btnDeleteBook.TabIndex = 5;
-            this.btnDeleteBook.Text = "Xoá";
-            this.btnDeleteBook.UseVisualStyleBackColor = false;
-            // 
-            // btnEditBook
-            // 
-            this.btnEditBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditBook.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnEditBook.FlatAppearance.BorderSize = 0;
-            this.btnEditBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditBook.ForeColor = System.Drawing.Color.White;
-            this.btnEditBook.Location = new System.Drawing.Point(6, 32);
-            this.btnEditBook.Name = "btnEditBook";
-            this.btnEditBook.Size = new System.Drawing.Size(82, 46);
-            this.btnEditBook.TabIndex = 4;
-            this.btnEditBook.Text = "Sửa";
-            this.btnEditBook.UseVisualStyleBackColor = false;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.gunaDgvBook);
-            this.panel10.Location = new System.Drawing.Point(10, 47);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(390, 182);
-            this.panel10.TabIndex = 2;
-            // 
-            // gunaDgvBook
-            // 
-            dataGridViewCellStyle43.BackColor = System.Drawing.Color.White;
-            this.gunaDgvBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle43;
-            this.gunaDgvBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gunaDgvBook.BackgroundColor = System.Drawing.Color.White;
-            this.gunaDgvBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaDgvBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDgvBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle44;
-            this.gunaDgvBook.ColumnHeadersHeight = 30;
-            this.gunaDgvBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaSach,
-            this.MaDauSach3,
-            this.NhaXuatBan,
-            this.NamXuatBan,
-            this.SoLuongTon});
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle45.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle45.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDgvBook.DefaultCellStyle = dataGridViewCellStyle45;
-            this.gunaDgvBook.EnableHeadersVisualStyles = false;
-            this.gunaDgvBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvBook.Location = new System.Drawing.Point(9, 17);
-            this.gunaDgvBook.Name = "gunaDgvBook";
-            this.gunaDgvBook.RowHeadersVisible = false;
-            this.gunaDgvBook.RowTemplate.Height = 28;
-            this.gunaDgvBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDgvBook.Size = new System.Drawing.Size(352, 155);
-            this.gunaDgvBook.TabIndex = 0;
-            this.gunaDgvBook.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvBook.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gunaDgvBook.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gunaDgvBook.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gunaDgvBook.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gunaDgvBook.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvBook.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvBook.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDgvBook.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gunaDgvBook.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDgvBook.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gunaDgvBook.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gunaDgvBook.ThemeStyle.HeaderStyle.Height = 30;
-            this.gunaDgvBook.ThemeStyle.ReadOnly = false;
-            this.gunaDgvBook.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvBook.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDgvBook.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDgvBook.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gunaDgvBook.ThemeStyle.RowsStyle.Height = 28;
-            this.gunaDgvBook.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvBook.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // MaSach
-            // 
-            this.MaSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.MaSach.HeaderText = "Mã Sách";
-            this.MaSach.Name = "MaSach";
-            this.MaSach.Width = 107;
-            // 
-            // MaDauSach3
-            // 
-            this.MaDauSach3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.MaDauSach3.HeaderText = "Mã Đầu Sách";
-            this.MaDauSach3.Name = "MaDauSach3";
-            this.MaDauSach3.Width = 146;
-            // 
-            // NhaXuatBan
-            // 
-            this.NhaXuatBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NhaXuatBan.HeaderText = "Nhà XB";
-            this.NhaXuatBan.Name = "NhaXuatBan";
-            // 
-            // NamXuatBan
-            // 
-            this.NamXuatBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.NamXuatBan.HeaderText = "Năm XB";
-            this.NamXuatBan.Name = "NamXuatBan";
-            this.NamXuatBan.Width = 102;
-            // 
-            // SoLuongTon
-            // 
-            this.SoLuongTon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.SoLuongTon.HeaderText = "Số Lượng Tồn";
-            this.SoLuongTon.Name = "SoLuongTon";
-            this.SoLuongTon.Width = 151;
+            this.pnlAccount.Controls.Add(this.gunaDgvBook);
+            this.pnlAccount.Controls.Add(this.panel4);
+            this.pnlAccount.Controls.Add(this.panel11);
+            this.pnlAccount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAccount.Location = new System.Drawing.Point(0, 0);
+            this.pnlAccount.Name = "pnlAccount";
+            this.pnlAccount.Size = new System.Drawing.Size(879, 326);
+            this.pnlAccount.TabIndex = 3;
             // 
             // panel11
             // 
@@ -733,8 +505,8 @@ namespace BookStore.Forms.Management
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(557, 46);
-            this.panel11.TabIndex = 1;
+            this.panel11.Size = new System.Drawing.Size(879, 46);
+            this.panel11.TabIndex = 18;
             // 
             // btnBookSearch
             // 
@@ -743,7 +515,7 @@ namespace BookStore.Forms.Management
             this.btnBookSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBookSearch.ForeColor = System.Drawing.Color.White;
             this.btnBookSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnBookSearch.Image")));
-            this.btnBookSearch.Location = new System.Drawing.Point(378, 4);
+            this.btnBookSearch.Location = new System.Drawing.Point(378, 2);
             this.btnBookSearch.Name = "btnBookSearch";
             this.btnBookSearch.Size = new System.Drawing.Size(34, 35);
             this.btnBookSearch.TabIndex = 1;
@@ -760,10 +532,10 @@ namespace BookStore.Forms.Management
             this.gunaTxtBookSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.gunaTxtBookSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gunaTxtBookSearch.FocusedState.Parent = this.gunaTxtBookSearch;
-            this.gunaTxtBookSearch.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.gunaTxtBookSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaTxtBookSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gunaTxtBookSearch.HoverState.Parent = this.gunaTxtBookSearch;
-            this.gunaTxtBookSearch.Location = new System.Drawing.Point(43, 4);
+            this.gunaTxtBookSearch.Location = new System.Drawing.Point(43, 2);
             this.gunaTxtBookSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaTxtBookSearch.Name = "gunaTxtBookSearch";
             this.gunaTxtBookSearch.PasswordChar = '\0';
@@ -773,278 +545,315 @@ namespace BookStore.Forms.Management
             this.gunaTxtBookSearch.Size = new System.Drawing.Size(328, 35);
             this.gunaTxtBookSearch.TabIndex = 0;
             // 
-            // panel9
+            // tableLayoutPanel1
             // 
-            this.panel9.Controls.Add(this.panel13);
-            this.panel9.Controls.Add(this.guna2DataGridView1);
-            this.panel9.Controls.Add(this.panel12);
-            this.panel9.Controls.Add(this.label1);
-            this.panel9.Location = new System.Drawing.Point(36, 396);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(472, 391);
-            this.panel9.TabIndex = 17;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.grpTitleBook, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.67628F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.32372F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1192, 817);
+            this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // label1
+            // grpTitleBook
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Danh sách Tác giả";
+            this.grpTitleBook.Controls.Add(this.pnlBook);
+            this.grpTitleBook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpTitleBook.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpTitleBook.Location = new System.Drawing.Point(3, 405);
+            this.grpTitleBook.Name = "grpTitleBook";
+            this.grpTitleBook.Size = new System.Drawing.Size(1186, 409);
+            this.grpTitleBook.TabIndex = 18;
+            this.grpTitleBook.TabStop = false;
+            this.grpTitleBook.Text = "Danh sách Đầu sách";
             // 
-            // panel12
+            // pnlBook
             // 
-            this.panel12.Controls.Add(this.button1);
-            this.panel12.Controls.Add(this.guna2TextBox1);
-            this.panel12.Location = new System.Drawing.Point(8, 33);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(451, 46);
-            this.panel12.TabIndex = 2;
+            this.pnlBook.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBook.Controls.Add(this.gunaDgvTitleBook);
+            this.pnlBook.Controls.Add(this.pnlSearchTitleBook);
+            this.pnlBook.Controls.Add(this.panel2);
+            this.pnlBook.Controls.Add(this.panel5);
+            this.pnlBook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBook.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlBook.Location = new System.Drawing.Point(3, 35);
+            this.pnlBook.Name = "pnlBook";
+            this.pnlBook.Size = new System.Drawing.Size(1180, 371);
+            this.pnlBook.TabIndex = 0;
             // 
-            // button1
+            // gunaDgvTitleBook
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(106)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(260, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 35);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.gunaDgvTitleBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.gunaDgvTitleBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gunaDgvTitleBook.BackgroundColor = System.Drawing.Color.White;
+            this.gunaDgvTitleBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gunaDgvTitleBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gunaDgvTitleBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDgvTitleBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.gunaDgvTitleBook.ColumnHeadersHeight = 30;
+            this.gunaDgvTitleBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.gunaDgvTitleBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaDauSach,
+            this.TenDauSach,
+            this.TenTheLoai});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDgvTitleBook.DefaultCellStyle = dataGridViewCellStyle6;
+            this.gunaDgvTitleBook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaDgvTitleBook.EnableHeadersVisualStyles = false;
+            this.gunaDgvTitleBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDgvTitleBook.Location = new System.Drawing.Point(0, 46);
+            this.gunaDgvTitleBook.Name = "gunaDgvTitleBook";
+            this.gunaDgvTitleBook.RowHeadersVisible = false;
+            this.gunaDgvTitleBook.RowTemplate.Height = 28;
+            this.gunaDgvTitleBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gunaDgvTitleBook.Size = new System.Drawing.Size(940, 269);
+            this.gunaDgvTitleBook.TabIndex = 15;
+            this.gunaDgvTitleBook.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.gunaDgvTitleBook.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.gunaDgvTitleBook.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.gunaDgvTitleBook.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.gunaDgvTitleBook.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.gunaDgvTitleBook.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.gunaDgvTitleBook.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDgvTitleBook.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaDgvTitleBook.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gunaDgvTitleBook.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaDgvTitleBook.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.gunaDgvTitleBook.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.gunaDgvTitleBook.ThemeStyle.HeaderStyle.Height = 30;
+            this.gunaDgvTitleBook.ThemeStyle.ReadOnly = false;
+            this.gunaDgvTitleBook.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gunaDgvTitleBook.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gunaDgvTitleBook.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaDgvTitleBook.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gunaDgvTitleBook.ThemeStyle.RowsStyle.Height = 28;
+            this.gunaDgvTitleBook.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDgvTitleBook.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // guna2TextBox1
+            // MaDauSach
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(36, 2);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Tìm kiếm";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(217, 35);
-            this.guna2TextBox1.TabIndex = 0;
+            this.MaDauSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.MaDauSach.HeaderText = "Mã Đầu Sách";
+            this.MaDauSach.Name = "MaDauSach";
+            this.MaDauSach.Width = 146;
             // 
-            // guna2DataGridView1
+            // TenDauSach
             // 
-            dataGridViewCellStyle46.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle46;
-            this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle47;
-            this.guna2DataGridView1.ColumnHeadersHeight = 30;
-            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle48.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle48;
-            this.guna2DataGridView1.EnableHeadersVisualStyles = false;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(8, 85);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.RowTemplate.Height = 28;
-            this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(451, 247);
-            this.guna2DataGridView1.TabIndex = 3;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 30;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 28;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TenDauSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenDauSach.HeaderText = "Tên Đầu Sách";
+            this.TenDauSach.Name = "TenDauSach";
             // 
-            // dataGridViewTextBoxColumn1
+            // TenTheLoai
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Đầu Sách";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 88;
+            this.TenTheLoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenTheLoai.HeaderText = "Thể Loại";
+            this.TenTheLoai.Name = "TenTheLoai";
             // 
-            // dataGridViewTextBoxColumn2
+            // pnlSearchTitleBook
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên Tác Giả";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.pnlSearchTitleBook.Controls.Add(this.btnTitleBookSearch);
+            this.pnlSearchTitleBook.Controls.Add(this.gunaTxtTitleBookSearch);
+            this.pnlSearchTitleBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSearchTitleBook.Location = new System.Drawing.Point(0, 0);
+            this.pnlSearchTitleBook.Name = "pnlSearchTitleBook";
+            this.pnlSearchTitleBook.Size = new System.Drawing.Size(940, 46);
+            this.pnlSearchTitleBook.TabIndex = 16;
             // 
-            // panel13
+            // tableLayoutPanel2
             // 
-            this.panel13.Controls.Add(this.button2);
-            this.panel13.Controls.Add(this.button3);
-            this.panel13.Location = new System.Drawing.Point(98, 335);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(329, 53);
-            this.panel13.TabIndex = 11;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.75F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.25F));
+            this.tableLayoutPanel2.Controls.Add(this.grpImportBookDetail, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1186, 372);
+            this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // button2
+            // panel1
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Crimson;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(236, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 46);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Xoá";
-            this.button2.UseVisualStyleBackColor = false;
+            this.panel1.Controls.Add(this.grpImportBookInfo);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(287, 345);
+            this.panel1.TabIndex = 18;
             // 
-            // button3
+            // grpImportBookInfo
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.Goldenrod;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(148, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 46);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Sửa";
-            this.button3.UseVisualStyleBackColor = false;
+            this.grpImportBookInfo.Controls.Add(this.panel3);
+            this.grpImportBookInfo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpImportBookInfo.Location = new System.Drawing.Point(3, 24);
+            this.grpImportBookInfo.Name = "grpImportBookInfo";
+            this.grpImportBookInfo.Size = new System.Drawing.Size(270, 295);
+            this.grpImportBookInfo.TabIndex = 26;
+            this.grpImportBookInfo.TabStop = false;
+            this.grpImportBookInfo.Text = "Phiếu nhập";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnCancel);
+            this.panel3.Controls.Add(this.btnSave);
+            this.panel3.Controls.Add(this.dtmDate);
+            this.panel3.Controls.Add(this.txtTotalAmount);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(3, 35);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(264, 257);
+            this.panel3.TabIndex = 0;
+            // 
+            // dtmDate
+            // 
+            this.dtmDate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtmDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtmDate.Location = new System.Drawing.Point(140, 57);
+            this.dtmDate.Name = "dtmDate";
+            this.dtmDate.Size = new System.Drawing.Size(117, 33);
+            this.dtmDate.TabIndex = 29;
+            // 
+            // txtTotalAmount
+            // 
+            this.txtTotalAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalAmount.Location = new System.Drawing.Point(103, 109);
+            this.txtTotalAmount.Name = "txtTotalAmount";
+            this.txtTotalAmount.Size = new System.Drawing.Size(154, 33);
+            this.txtTotalAmount.TabIndex = 28;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1, 112);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 25);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Tổng tiền:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1, 57);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 25);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Ngày lập:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1168, 838);
-            this.Controls.Add(this.grpBook);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.grpAuthor);
-            this.Controls.Add(this.grpTitleBook);
+            this.ClientSize = new System.Drawing.Size(1192, 817);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.grpTitleBook.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPublishingYear)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaDgvBook)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.grpImportBookDetail.ResumeLayout(false);
+            this.pnlTitleBook.ResumeLayout(false);
             this.pnlAccount.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.grpTitleBook.ResumeLayout(false);
+            this.pnlBook.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaDgvTitleBook)).EndInit();
             this.pnlSearchTitleBook.ResumeLayout(false);
-            this.grpAuthor.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDgvAuthor)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.grpBook.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDgvBook)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
-            this.panel13.ResumeLayout(false);
+            this.grpImportBookInfo.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grpTitleBook;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button btnAddTitleBook;
-        private System.Windows.Forms.Button btnDeleteTitleBook;
-        private System.Windows.Forms.Button btnEditTitleBook;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown nudPublishingYear;
+        private System.Windows.Forms.Label lblPublisherError;
+        private System.Windows.Forms.TextBox txtPublisher;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.NumericUpDown nudQuantity;
+        private System.Windows.Forms.NumericUpDown nudPrice;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNewCategory;
+        private System.Windows.Forms.Button btnAddBook;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSave;
+        private Guna.UI2.WinForms.Guna2DataGridView gunaDgvBook;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoPNS2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NhaXuatBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamXuatBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGiaNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnDeleteBook;
+        private System.Windows.Forms.Button btnTitleBookSearch;
+        private Guna.UI2.WinForms.Guna2TextBox gunaTxtTitleBookSearch;
+        private System.Windows.Forms.GroupBox grpImportBookDetail;
+        private System.Windows.Forms.Panel pnlTitleBook;
         private System.Windows.Forms.Panel pnlAccount;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button btnBookSearch;
+        private Guna.UI2.WinForms.Guna2TextBox gunaTxtBookSearch;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.GroupBox grpTitleBook;
+        private System.Windows.Forms.Panel pnlBook;
         private Guna.UI2.WinForms.Guna2DataGridView gunaDgvTitleBook;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDauSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai;
         private System.Windows.Forms.Panel pnlSearchTitleBook;
-        private System.Windows.Forms.Button btnTitleBookSearch;
-        private Guna.UI2.WinForms.Guna2TextBox gunaTxtTitleBookSearch;
-        private System.Windows.Forms.GroupBox grpAuthor;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnDeleteAuthor;
-        private System.Windows.Forms.Button btnEditAuthor;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button10;
-        private Guna.UI2.WinForms.Guna2DataGridView gunaDgvAuthor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTacGia;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btnAuthorSearch;
-        private Guna.UI2.WinForms.Guna2TextBox gunaTxtAuthorSearch;
-        private System.Windows.Forms.GroupBox grpBook;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnDeleteBook;
-        private System.Windows.Forms.Button btnEditBook;
-        private System.Windows.Forms.Panel panel10;
-        private Guna.UI2.WinForms.Guna2DataGridView gunaDgvBook;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NhaXuatBan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NamXuatBan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongTon;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button btnBookSearch;
-        private Guna.UI2.WinForms.Guna2TextBox gunaTxtBookSearch;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Button button1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox grpImportBookInfo;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DateTimePicker dtmDate;
+        private System.Windows.Forms.TextBox txtTotalAmount;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

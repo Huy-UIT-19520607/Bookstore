@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BookStore.Forms.Management
 {
-    public partial class frmTitleBook_EditTitleBook : Form
+    public partial class frmBook_AddTitleBook : Form
     {
-        public frmTitleBook_EditTitleBook()
+        public frmBook_AddTitleBook()
         {
             InitializeComponent();
         }

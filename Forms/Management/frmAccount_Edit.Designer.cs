@@ -38,7 +38,7 @@ namespace BookStore.Forms.Management
             this.lblNewPasswordError = new System.Windows.Forms.Label();
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDisplayNameError = new System.Windows.Forms.Label();
             this.txtDisplayName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
@@ -136,16 +136,16 @@ namespace BookStore.Forms.Management
             this.label4.TabIndex = 39;
             this.label4.Text = "Mật khẩu mới:";
             // 
-            // label1
+            // lblDisplayNameError
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(174, 118);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 17);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "DisplayName Error";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblDisplayNameError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisplayNameError.ForeColor = System.Drawing.Color.Red;
+            this.lblDisplayNameError.Location = new System.Drawing.Point(174, 118);
+            this.lblDisplayNameError.Name = "lblDisplayNameError";
+            this.lblDisplayNameError.Size = new System.Drawing.Size(215, 17);
+            this.lblDisplayNameError.TabIndex = 38;
+            this.lblDisplayNameError.Text = "DisplayName Error";
+            this.lblDisplayNameError.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtDisplayName
             // 
@@ -241,7 +241,7 @@ namespace BookStore.Forms.Management
             this.Controls.Add(this.lblNewPasswordError);
             this.Controls.Add(this.txtNewPassword);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDisplayNameError);
             this.Controls.Add(this.txtDisplayName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnOk);
@@ -272,7 +272,7 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Label lblNewPasswordError;
         private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDisplayNameError;
         private System.Windows.Forms.TextBox txtDisplayName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnOk;

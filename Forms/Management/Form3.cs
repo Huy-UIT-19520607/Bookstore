@@ -17,6 +17,9 @@ namespace BookStore.Forms.Management
             InitializeComponent();
         }
 
-        
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(numericUpDown1.Value.ToString());
+        }
     }
 }

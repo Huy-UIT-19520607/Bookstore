@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookStore.Forms.Management
+namespace BookStore.Forms.Business
 {
-    public partial class frmTitleBook_EditAuthor : Form
+    public partial class frmBill_Edit : Form
     {
-        public frmTitleBook_EditAuthor()
+        public frmBill_Edit()
         {
             InitializeComponent();
         }

@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookStore.Forms.Management
+namespace BookStore.Forms.Business
 {
-    public partial class frmTitleBook_AddTitleBook : Form
+    public partial class frmReceipt_EditDetail : Form
     {
-        public frmTitleBook_AddTitleBook()
+        public frmReceipt_EditDetail()
         {
             InitializeComponent();
         }
-
-        
     }
 }

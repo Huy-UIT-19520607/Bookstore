@@ -48,110 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu.Dataviz.WinForms, Version=2.1.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.Dataviz.WinForms.2.1.6\lib\Bunifu.Dataviz.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.Dataviz.WinForms.2.1.6\lib\Bunifu.Licensing.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuPanel, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuRating, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuShapes, Version=5.0.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
-    </Reference>
-    <Reference Include="Guna.UI2, Version=1.0.1.7, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.7\lib\net40\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.1.9, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.9\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Core.WinForms, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Shared.Base, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -175,6 +73,18 @@
     <Compile Include="Forms\Business\frmBill.Designer.cs">
       <DependentUpon>frmBill.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Business\frmBill_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Business\frmBill_Add.Designer.cs">
+      <DependentUpon>frmBill_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Business\frmBill_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Business\frmBill_Edit.Designer.cs">
+      <DependentUpon>frmBill_Edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Business\frmImportBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,11 +97,41 @@
     <Compile Include="Forms\Business\frmImportBook_Add.Designer.cs">
       <DependentUpon>frmImportBook_Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Business\frmImportBook_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Business\frmImportBook_Edit.Designer.cs">
+      <DependentUpon>frmImportBook_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Business\frmImportBook_EditDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Business\frmImportBook_EditDetail.Designer.cs">
+      <DependentUpon>frmImportBook_EditDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Business\frmReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Business\frmReceipt.Designer.cs">
       <DependentUpon>frmReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Business\frmReceipt_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Business\frmReceipt_Add.Designer.cs">
+      <DependentUpon>frmReceipt_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Business\frmReceipt_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Business\frmReceipt_Edit.Designer.cs">
+      <DependentUpon>frmReceipt_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Business\frmReceipt_EditDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Business\frmReceipt_EditDetail.Designer.cs">
+      <DependentUpon>frmReceipt_EditDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
@@ -253,35 +193,35 @@
     <Compile Include="Forms\Management\frmCustomer_Edit.Designer.cs">
       <DependentUpon>frmCustomer_Edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Management\frmTitleBook.cs">
+    <Compile Include="Forms\Management\frmBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Management\frmTitleBook.Designer.cs">
-      <DependentUpon>frmTitleBook.cs</DependentUpon>
+    <Compile Include="Forms\Management\frmBook.Designer.cs">
+      <DependentUpon>frmBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Management\frmTitleBook_AddTitleBook.cs">
+    <Compile Include="Forms\Management\frmBook_AddTitleBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Management\frmTitleBook_AddTitleBook.Designer.cs">
-      <DependentUpon>frmTitleBook_AddTitleBook.cs</DependentUpon>
+    <Compile Include="Forms\Management\frmBook_AddTitleBook.Designer.cs">
+      <DependentUpon>frmBook_AddTitleBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Management\frmTitleBook_EditAuthor.cs">
+    <Compile Include="Forms\Management\frmBook_EditAuthor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Management\frmTitleBook_EditAuthor.Designer.cs">
-      <DependentUpon>frmTitleBook_EditAuthor.cs</DependentUpon>
+    <Compile Include="Forms\Management\frmBook_EditAuthor.Designer.cs">
+      <DependentUpon>frmBook_EditAuthor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Management\frmTitleBook_EditBook.cs">
+    <Compile Include="Forms\Management\frmBook_EditBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Management\frmTitleBook_EditBook.Designer.cs">
-      <DependentUpon>frmTitleBook_EditBook.cs</DependentUpon>
+    <Compile Include="Forms\Management\frmBook_EditBook.Designer.cs">
+      <DependentUpon>frmBook_EditBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Management\frmTitleBook_EditTitleBook.cs">
+    <Compile Include="Forms\Management\frmBook_EditTitleBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Management\frmTitleBook_EditTitleBook.Designer.cs">
-      <DependentUpon>frmTitleBook_EditTitleBook.cs</DependentUpon>
+    <Compile Include="Forms\Management\frmBook_EditTitleBook.Designer.cs">
+      <DependentUpon>frmBook_EditTitleBook.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Management\frmCategory_Add.cs">
       <SubType>Form</SubType>
@@ -337,14 +277,35 @@
     <EmbeddedResource Include="Forms\Business\frmBill.resx">
       <DependentUpon>frmBill.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Business\frmBill_Add.resx">
+      <DependentUpon>frmBill_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Business\frmBill_Edit.resx">
+      <DependentUpon>frmBill_Edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Business\frmImportBook.resx">
       <DependentUpon>frmImportBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Business\frmImportBook_Add.resx">
       <DependentUpon>frmImportBook_Add.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Business\frmImportBook_Edit.resx">
+      <DependentUpon>frmImportBook_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Business\frmImportBook_EditDetail.resx">
+      <DependentUpon>frmImportBook_EditDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Business\frmReceipt.resx">
       <DependentUpon>frmReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Business\frmReceipt_Add.resx">
+      <DependentUpon>frmReceipt_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Business\frmReceipt_Edit.resx">
+      <DependentUpon>frmReceipt_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Business\frmReceipt_EditDetail.resx">
+      <DependentUpon>frmReceipt_EditDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -376,20 +337,20 @@
     <EmbeddedResource Include="Forms\Management\frmCustomer_Edit.resx">
       <DependentUpon>frmCustomer_Edit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Management\frmTitleBook.resx">
-      <DependentUpon>frmTitleBook.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Management\frmBook.resx">
+      <DependentUpon>frmBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Management\frmTitleBook_AddTitleBook.resx">
-      <DependentUpon>frmTitleBook_AddTitleBook.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Management\frmBook_AddTitleBook.resx">
+      <DependentUpon>frmBook_AddTitleBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Management\frmTitleBook_EditAuthor.resx">
-      <DependentUpon>frmTitleBook_EditAuthor.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Management\frmBook_EditAuthor.resx">
+      <DependentUpon>frmBook_EditAuthor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Management\frmTitleBook_EditBook.resx">
-      <DependentUpon>frmTitleBook_EditBook.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Management\frmBook_EditBook.resx">
+      <DependentUpon>frmBook_EditBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Management\frmTitleBook_EditTitleBook.resx">
-      <DependentUpon>frmTitleBook_EditTitleBook.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Management\frmBook_EditTitleBook.resx">
+      <DependentUpon>frmBook_EditTitleBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Management\frmCategory_Add.resx">
       <DependentUpon>frmCategory_Add.cs</DependentUpon>
@@ -424,6 +385,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

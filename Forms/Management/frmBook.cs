@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace BookStore.Forms.Management
 {
-    public partial class frmTitleBook_EditBook : Form
+    public partial class frmBook : Form
     {
-        public frmTitleBook_EditBook()
+        public frmBook()
         {
             InitializeComponent();
         }
+
+        
     }
 }

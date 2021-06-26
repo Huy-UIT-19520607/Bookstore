@@ -17,10 +17,10 @@ namespace BookStore.Forms
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Management.Form3());
-            //Application.Run(new Management.frmTitleBook());
+            Application.Run(new Management.frmAccount());
             //Application.Run(new frmMain("1", "2", 1));
 
-            Application.Run(new Business.frmImportBook_Add());
+            //Application.Run(new Business.frmBill());
         }
     }
 }
