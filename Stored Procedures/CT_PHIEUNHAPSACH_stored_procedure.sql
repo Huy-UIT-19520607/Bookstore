@@ -38,3 +38,13 @@ as
 		ThanhTien=@total
 	where SoPNS=@id
 go
+
+-- Xóa chi tiết
+create proc sp_remove_book_receipt_detail
+@id int
+as
+	delete from CT_PHIEUNHAPSACH
+	where SoPNS=@id
+go
+
+drop proc sp_remove_book_receipt_detail, sp_update_book_receipt_detail, sp_add_book_receipt_detail
