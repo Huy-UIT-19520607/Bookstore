@@ -8,76 +8,65 @@ namespace BookStore.DTO
 {
     public class BillDetail: PropertyChangedBase
     {
-        private int month;
-        private int year;
-        private int customerId;
-        private int deftStart;
-        private int change;
-        private int debtFinal;
+        private int id;
+        private int bookId;
+        private int number;
+        private int price;
+        private int total;
 
-        public BillDetail(int month, int year, int customerId, int deftStart, int change, int debtFinal)
+        public BillDetail(int id, int bookId, int number, int price, int total)
         {
-            this.Month = month;
-            this.Year = year;
-            this.CustomerId = customerId;
-            this.DeftStart = deftStart;
-            this.Change = change;
-            this.DebtFinal = debtFinal;
+            this.Id = id;
+            this.BookId = bookId;
+            this.Number = number;
+            this.Price = price;
+            this.Total = total;
         }
 
-        public int Month 
+        public int Id 
         { 
-            get => month;
-            set 
-            {
-                month = value;
-                OnPropertyChanged("Month");
-            } 
-        }
-        public int Year 
-        { 
-            get => year;            
-            set 
-            {
-                year = value;
-                OnPropertyChanged("Year");
-            } 
-        }
-        public int CustomerId
-        { 
-            get => customerId;
+            get => id;
             set
             {
-                customerId = value;
-                OnPropertyChanged("CustomerId");
+                id = value;
+                OnPropertyChanged("Id");
             }
         }
-        public int DeftStart 
+        public int BookId 
         { 
-            get => deftStart;
-            set 
-            {
-                deftStart = value;
-                OnPropertyChanged("DeftStart");
-            }
-        }
-        public int Change
-        { 
-            get => change; 
+            get => bookId; 
             set
             {
-                change = value;
-                OnPropertyChanged("Change");
+                bookId = value;
+                OnPropertyChanged("BookId");
             }
         }
-        public int DebtFinal
+        public int Number 
         { 
-            get => debtFinal;
+            get => number; 
             set
             {
-                debtFinal = value;
-                OnPropertyChanged("DebtFinal");
-            } 
+                number = value;
+                OnPropertyChanged("Number");
+            }
+        }
+        public int Price 
+        { 
+            get => price; 
+            set
+            {
+                price = value;
+                OnPropertyChanged("Price");
+            }
+        }
+        public int Total 
+        { 
+            get => total; 
+            set
+            {
+                total = value;
+                OnPropertyChanged("Total");
+            }
         }
     }
 }
