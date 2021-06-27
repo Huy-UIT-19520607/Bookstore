@@ -68,12 +68,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\Account.cs" />
+    <Compile Include="BUS\Author.cs" />
+    <Compile Include="BUS\Bill.cs" />
+    <Compile Include="BUS\BillDetail.cs" />
+    <Compile Include="BUS\Book.cs" />
     <Compile Include="BUS\Category.cs" />
+    <Compile Include="BUS\Customer.cs" />
+    <Compile Include="BUS\DebtReport.cs" />
+    <Compile Include="BUS\Parameter.cs" />
     <Compile Include="BUS\Title.cs" />
-    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\Account.cs" />
     <Compile Include="DAO\Author.cs" />
     <Compile Include="DAO\Bill.cs" />
+    <Compile Include="DAO\BillDetail.cs" />
     <Compile Include="DAO\Book.cs" />
+    <Compile Include="DAO\BookReceipt.cs" />
     <Compile Include="DAO\BookReceiptDetail.cs" />
     <Compile Include="DAO\CashReceipt.cs" />
     <Compile Include="DAO\Category.cs" />
@@ -81,6 +90,7 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DebtReport.cs" />
     <Compile Include="DAO\InventoryReport.cs" />
+    <Compile Include="DAO\Parameter.cs" />
     <Compile Include="DAO\Title.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Author.cs" />
