@@ -31,6 +31,9 @@ GO
 CREATE PROC sp_remove_title
 @id int
 AS
+	delete from CT_TACGIA
+	where MaDauSach=@id
+
 	DELETE FROM DAUSACH
 	WHERE MaDauSach=@id
 GO

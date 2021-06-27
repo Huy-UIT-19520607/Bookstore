@@ -29,6 +29,9 @@ CREATE PROC sp_remove_bill
 @id int
 AS 
 BEGIN
+	delete from CT_HOADON
+	where SoHD=@id
+
 	DELETE FROM HOADON
 	WHERE SoHD=@id
 END;
