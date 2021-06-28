@@ -91,6 +91,28 @@ namespace BookStore.BUS
             return false;
         }
 
+        public void UpdateInStock(int type, int bookId, DateTime date, int amount, int oldAmount = 0)
+        {
+            var book = Books.First(bk => bk.Id == bookId);
+            int old = book.InStock;
+
+            switch (type)
+            {
+                case 1:
+                    book.InStock -= amount;
+                    break;
+                case 2:
+                    book.InStock += (amount - oldAmount);
+                    break;
+                case 3:
+                    book.InStock += amount;
+                    break;
+            }
+
+            UpdateBook(book);
+            InventoryReport.Instance.UpdateChange(bookId, date, book.InStock, old);
+        }
+
         public bool DeleteBook(int id)
         {
             if (DAO.Book.Instance.DeleteBook(id))

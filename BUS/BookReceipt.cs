@@ -71,9 +71,10 @@ namespace BookStore.BUS
         {
             if (DAO.BookReceipt.Instance.DeleteReceipt(id))
             {
-                Receipts.Remove(Receipts.First(receipt => receipt.Id == id));
+                var obj = Receipts.First(receipt => receipt.Id == id);
+                Receipts.Remove(obj);
 
-                BUS.BookReceiptDetail.Instance.DeleteAllDetailById(id);
+                BUS.BookReceiptDetail.Instance.DeleteAllDetailById(id, obj.ReceiveDay);
 
                 return true;
             }

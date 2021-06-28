@@ -49,6 +49,10 @@ namespace BookStore.BUS
                     total
                 ));
 
+                Book.Instance.UpdateInStock(1, bookId,
+                    BookReceipt.Instance.Receipts.First(receipt => receipt.Id == id).ReceiveDay,
+                    number);
+
                 return true;
             }
             return false;
@@ -62,6 +66,10 @@ namespace BookStore.BUS
 
                 BookReceipt.Instance.DeleteAmount(id, obj.Total);
 
+                Book.Instance.UpdateInStock(3, obj.BookId, 
+                    BookReceipt.Instance.Receipts.First(receipt => receipt.Id == id).ReceiveDay,
+                    obj.Number);
+
                 Details.Remove(obj);
 
                 return true;
@@ -69,13 +77,15 @@ namespace BookStore.BUS
             return true;
         }
 
-        public void DeleteAllDetailById(int id)
+        public void DeleteAllDetailById(int id, DateTime date)
         {
             List<DTO.BookReceiptDetail> detailToRemove = Details.Where(detail => detail.Id == id).ToList();
 
             foreach (var detail in detailToRemove)
             {
                 Details.Remove(detail);
+
+                Book.Instance.UpdateInStock(3, detail.BookId, date, detail.Number);
             }
         }
 
@@ -85,7 +95,11 @@ namespace BookStore.BUS
             {
                 var obj = Details.First(detail => detail.Id == updated.Id && detail.BookId == updated.BookId);
 
-                BookReceipt.Instance.UpdateTotal(updated.Id, updated.Total, obj.Total); ;
+                BookReceipt.Instance.UpdateTotal(updated.Id, updated.Total, obj.Total);
+
+                Book.Instance.UpdateInStock(2, updated.BookId,
+                    BookReceipt.Instance.Receipts.First(receipt => receipt.Id == updated.Id).ReceiveDay,
+                    updated.Number, obj.Number);
 
                 obj.Number = updated.Number;
                 obj.ReceivePrice = updated.ReceivePrice;

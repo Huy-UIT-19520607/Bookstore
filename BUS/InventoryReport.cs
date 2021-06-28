@@ -54,5 +54,37 @@ namespace BookStore.BUS
             }
             return false;
         }
+
+        public void UpdateChange(int bookId, DateTime date, int amount, int oldAmount)
+        {
+            var report = Reports.FirstOrDefault
+                (rpt => rpt.Month == date.Month && rpt.Year == date.Year && rpt.BookId == bookId);
+
+            if (report != null)
+            {
+                report.Change += (amount - oldAmount);
+                report.Final = report.First - report.Change;
+
+                UpdateReport(report);
+            }
+        }
+
+        public bool UpdateReport(DTO.InventoryReport updated)
+        {
+            if (DAO.InventoryReport.Instance.UpdateReport(updated))
+            {
+                var obj = Reports.First(report =>
+                    report.Month == updated.Month
+                    && report.Year == updated.Year
+                    && report.BookId == updated.BookId);
+
+                obj.First = updated.First;
+                obj.Change = updated.Change;
+                obj.Final = updated.Final;
+
+                return true;
+            }
+            return false;
+        }
     }
 }
