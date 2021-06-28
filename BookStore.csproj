@@ -73,9 +73,12 @@
     <Compile Include="BUS\Bill.cs" />
     <Compile Include="BUS\BillDetail.cs" />
     <Compile Include="BUS\Book.cs" />
+    <Compile Include="BUS\BookReceipt.cs" />
+    <Compile Include="BUS\BookReceiptDetail.cs" />
     <Compile Include="BUS\Category.cs" />
     <Compile Include="BUS\Customer.cs" />
     <Compile Include="BUS\DebtReport.cs" />
+    <Compile Include="BUS\InventoryReport.cs" />
     <Compile Include="BUS\Parameter.cs" />
     <Compile Include="BUS\Title.cs" />
     <Compile Include="DAO\Account.cs" />
@@ -108,23 +111,29 @@
     <Compile Include="DTO\Parameter.cs" />
     <Compile Include="DTO\PropertyChangedBase.cs" />
     <Compile Include="DTO\Title.cs" />
-    <Compile Include="Forms\Business\frmCashReceipt.cs">
+    <Compile Include="Forms\Business\frmBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Business\frmCashReceipt.Designer.cs">
-      <DependentUpon>frmCashReceipt.cs</DependentUpon>
+    <Compile Include="Forms\Business\frmBill.Designer.cs">
+      <DependentUpon>frmBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Business\frmCashReceipt_Add.cs">
+    <Compile Include="Forms\Business\frmBill_Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Business\frmCashReceipt_Add.Designer.cs">
-      <DependentUpon>frmCashReceipt_Add.cs</DependentUpon>
+    <Compile Include="Forms\Business\frmBill_Add.Designer.cs">
+      <DependentUpon>frmBill_Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Business\frmCashReceipt_Edit.cs">
+    <Compile Include="Forms\Business\frmBill_Edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Business\frmCashReceipt_Edit.Designer.cs">
-      <DependentUpon>frmCashReceipt_Edit.cs</DependentUpon>
+    <Compile Include="Forms\Business\frmBill_Edit.Designer.cs">
+      <DependentUpon>frmBill_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Business\frmBill_EditDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Business\frmBill_EditDetail.Designer.cs">
+      <DependentUpon>frmBill_EditDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Business\frmBookReceipt.cs">
       <SubType>Form</SubType>
@@ -150,29 +159,23 @@
     <Compile Include="Forms\Business\frmBookReceipt_EditDetail.Designer.cs">
       <DependentUpon>frmBookReceipt_EditDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Business\frmBill.cs">
+    <Compile Include="Forms\Business\frmCashReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Business\frmBill.Designer.cs">
-      <DependentUpon>frmBill.cs</DependentUpon>
+    <Compile Include="Forms\Business\frmCashReceipt.Designer.cs">
+      <DependentUpon>frmCashReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Business\frmBill_Add.cs">
+    <Compile Include="Forms\Business\frmCashReceipt_Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Business\frmBill_Add.Designer.cs">
-      <DependentUpon>frmBill_Add.cs</DependentUpon>
+    <Compile Include="Forms\Business\frmCashReceipt_Add.Designer.cs">
+      <DependentUpon>frmCashReceipt_Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Business\frmBill_Edit.cs">
+    <Compile Include="Forms\Business\frmCashReceipt_Edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Business\frmBill_Edit.Designer.cs">
-      <DependentUpon>frmBill_Edit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Business\frmBill_EditDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Business\frmBill_EditDetail.Designer.cs">
-      <DependentUpon>frmBill_EditDetail.cs</DependentUpon>
+    <Compile Include="Forms\Business\frmCashReceipt_Edit.Designer.cs">
+      <DependentUpon>frmCashReceipt_Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
@@ -315,14 +318,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidateInput.cs" />
-    <EmbeddedResource Include="Forms\Business\frmCashReceipt.resx">
-      <DependentUpon>frmCashReceipt.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Business\frmBill.resx">
+      <DependentUpon>frmBill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Business\frmCashReceipt_Add.resx">
-      <DependentUpon>frmCashReceipt_Add.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Business\frmBill_Add.resx">
+      <DependentUpon>frmBill_Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Business\frmCashReceipt_Edit.resx">
-      <DependentUpon>frmCashReceipt_Edit.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Business\frmBill_Edit.resx">
+      <DependentUpon>frmBill_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Business\frmBill_EditDetail.resx">
+      <DependentUpon>frmBill_EditDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Business\frmBookReceipt.resx">
       <DependentUpon>frmBookReceipt.cs</DependentUpon>
@@ -336,17 +342,14 @@
     <EmbeddedResource Include="Forms\Business\frmBookReceipt_EditDetail.resx">
       <DependentUpon>frmBookReceipt_EditDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Business\frmBill.resx">
-      <DependentUpon>frmBill.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Business\frmCashReceipt.resx">
+      <DependentUpon>frmCashReceipt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Business\frmBill_Add.resx">
-      <DependentUpon>frmBill_Add.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Business\frmCashReceipt_Add.resx">
+      <DependentUpon>frmCashReceipt_Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Business\frmBill_Edit.resx">
-      <DependentUpon>frmBill_Edit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Business\frmBill_EditDetail.resx">
-      <DependentUpon>frmBill_EditDetail.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Business\frmCashReceipt_Edit.resx">
+      <DependentUpon>frmCashReceipt_Edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
