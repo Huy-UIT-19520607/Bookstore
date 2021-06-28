@@ -18,14 +18,12 @@ namespace BookStore.Forms
         private string password;
         private int role;
 
-        public frmMain(string username, string password, int role)
+        public frmMain(string username, int role)
         {
             InitializeComponent();
          
             this.username = username;
-            this.password = password;
             this.role = role;
-
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -37,9 +35,9 @@ namespace BookStore.Forms
             this.ResizeBegin += (s, ev) => { this.SuspendLayout(); };
             this.ResizeEnd += (s, ev) => { this.ResumeLayout(true); };
 
-            onCustomizeDesign();
+            CustomizeDesign();
 
-            onOpenChildForm(new Forms.Overview.frmDashboard());
+            OpenChildForm(new Forms.Overview.frmDashboard());
         }
 
         #region Drag Control
@@ -57,7 +55,7 @@ namespace BookStore.Forms
         }
         #endregion
 
-        private void onCustomizeDesign()
+        private void CustomizeDesign()
         {
             pnlSubMenuManagement.Visible = false;
             pnlSubMenuBusiness.Visible = false;
@@ -65,7 +63,7 @@ namespace BookStore.Forms
             pnlSubMenuSetting.Visible = false;
         }
 
-        private void onHideSubMenu()
+        private void HideSubMenu()
         {
             if (pnlSubMenuManagement.Visible == true)
                 pnlSubMenuManagement.Visible = false;
@@ -77,17 +75,17 @@ namespace BookStore.Forms
                 pnlSubMenuSetting.Visible = false;
         }
 
-        private void onShowSubMenu(Panel subMenu)
+        private void ShowSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
             {
-                onHideSubMenu();
+                HideSubMenu();
                 subMenu.Visible = true;
             }
         }
 
         private Form activeForm = null;
-        private void onOpenChildForm(Form childForm)
+        private void OpenChildForm(Form childForm)
         {
             if (activeForm != null)
                 activeForm.Close();
@@ -107,94 +105,94 @@ namespace BookStore.Forms
 
         private void picLogo_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Overview.frmDashboard());
+            OpenChildForm(new Forms.Overview.frmDashboard());
         }
 
         #region Management SubMenu
         private void btnMenuManagement_Click(object sender, EventArgs e)
         {
-            onShowSubMenu(pnlSubMenuManagement);
+            ShowSubMenu(pnlSubMenuManagement);
         }
 
         private void btnGenre_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Management.frmCategory());
-            onHideSubMenu();
+            OpenChildForm(new Forms.Management.frmCategory());
+            HideSubMenu();
         }
 
         private void btnBook_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Management.frmBook());
-            onHideSubMenu();
+            OpenChildForm(new Forms.Management.frmBook());
+            HideSubMenu();
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Management.frmCustomer());
-            onHideSubMenu();
+            OpenChildForm(new Forms.Management.frmCustomer());
+            HideSubMenu();
         }
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Management.frmAccount());
-            onHideSubMenu();
+            OpenChildForm(new Forms.Management.frmAccount());
+            HideSubMenu();
         }
         #endregion
 
         #region Business SubMenu
         private void btnMenuBusiness_Click(object sender, EventArgs e)
         {
-            onShowSubMenu(pnlSubMenuBusiness);
+            ShowSubMenu(pnlSubMenuBusiness);
         }
 
         private void btnImportBook_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Business.frmImportBook());
-            onHideSubMenu();
+            OpenChildForm(new Forms.Business.frmBookReceipt());
+            HideSubMenu();
         }
 
         private void btnReceipt_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Business.frmReceipt());
-            onHideSubMenu();
+            OpenChildForm(new Forms.Business.frmBill());
+            HideSubMenu();
         }
 
         private void btnBill_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Business.frmBill());
-            onHideSubMenu();
+            OpenChildForm(new Forms.Business.frmCashReceipt());
+            HideSubMenu();
         }
         #endregion
 
         #region Report SubMenu
         private void btnMenuReport_Click(object sender, EventArgs e)
         {
-            onShowSubMenu(pnlSubMenuReport);
+            ShowSubMenu(pnlSubMenuReport);
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Report.frmInventory());
-            onHideSubMenu();
+            OpenChildForm(new Forms.Report.frmInventory());
+            HideSubMenu();
         }
 
         private void btnDept_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Report.frmDebt());
-            onHideSubMenu();
+            OpenChildForm(new Forms.Report.frmDebt());
+            HideSubMenu();
         }
         #endregion
 
         #region Setting SubMenu
         private void btnMenuSetting_Click(object sender, EventArgs e)
         {
-            onShowSubMenu(pnlSubMenuSetting);
+            ShowSubMenu(pnlSubMenuSetting);
         }
 
         private void btnRequirement_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Setting.frmRequirement());
-            onHideSubMenu();
+            OpenChildForm(new Forms.Setting.frmRequirement());
+            HideSubMenu();
         }
         #endregion
 

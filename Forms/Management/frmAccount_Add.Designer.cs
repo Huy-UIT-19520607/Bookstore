@@ -29,11 +29,12 @@ namespace BookStore.Forms.Management
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblUsernameError = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.lblNewCategory = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.lblDisplayNameError = new System.Windows.Forms.Label();
             this.txtDisplayName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +47,8 @@ namespace BookStore.Forms.Management
             this.label7 = new System.Windows.Forms.Label();
             this.cboRole = new System.Windows.Forms.ComboBox();
             this.chkHideShowPassword = new System.Windows.Forms.CheckBox();
+            this.errAccount_Add = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errAccount_Add)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsernameError
@@ -70,9 +73,10 @@ namespace BookStore.Forms.Management
             this.btnOk.Location = new System.Drawing.Point(226, 317);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(137, 46);
-            this.btnOk.TabIndex = 16;
+            this.btnOk.TabIndex = 6;
             this.btnOk.Text = "Tạo mới";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -85,9 +89,10 @@ namespace BookStore.Forms.Management
             this.btnCancel.Location = new System.Drawing.Point(387, 317);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(137, 46);
-            this.btnCancel.TabIndex = 17;
+            this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtUsername
             // 
@@ -95,25 +100,27 @@ namespace BookStore.Forms.Management
             this.txtUsername.Location = new System.Drawing.Point(240, 30);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(215, 33);
-            this.txtUsername.TabIndex = 15;
+            this.txtUsername.TabIndex = 0;
+            this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsername_Validating);
+            this.txtUsername.Validated += new System.EventHandler(this.txtUsername_Validated);
             // 
-            // lblNewCategory
+            // label
             // 
-            this.lblNewCategory.AutoSize = true;
-            this.lblNewCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewCategory.Location = new System.Drawing.Point(46, 33);
-            this.lblNewCategory.Name = "lblNewCategory";
-            this.lblNewCategory.Size = new System.Drawing.Size(141, 25);
-            this.lblNewCategory.TabIndex = 14;
-            this.lblNewCategory.Text = "Tên đăng nhập:";
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(46, 33);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(141, 25);
+            this.label.TabIndex = 14;
+            this.label.Text = "Tên đăng nhập:";
             // 
             // lblDisplayNameError
             // 
             this.lblDisplayNameError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisplayNameError.ForeColor = System.Drawing.Color.Red;
-            this.lblDisplayNameError.Location = new System.Drawing.Point(240, 118);
+            this.lblDisplayNameError.Location = new System.Drawing.Point(114, 118);
             this.lblDisplayNameError.Name = "lblDisplayNameError";
-            this.lblDisplayNameError.Size = new System.Drawing.Size(215, 17);
+            this.lblDisplayNameError.Size = new System.Drawing.Size(341, 17);
             this.lblDisplayNameError.TabIndex = 21;
             this.lblDisplayNameError.Text = "DisplayName Error";
             this.lblDisplayNameError.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -124,7 +131,9 @@ namespace BookStore.Forms.Management
             this.txtDisplayName.Location = new System.Drawing.Point(240, 85);
             this.txtDisplayName.Name = "txtDisplayName";
             this.txtDisplayName.Size = new System.Drawing.Size(215, 33);
-            this.txtDisplayName.TabIndex = 20;
+            this.txtDisplayName.TabIndex = 1;
+            this.txtDisplayName.Validating += new System.ComponentModel.CancelEventHandler(this.txtDisplayName_Validating);
+            this.txtDisplayName.Validated += new System.EventHandler(this.txtDisplayName_Validated);
             // 
             // label2
             // 
@@ -152,8 +161,11 @@ namespace BookStore.Forms.Management
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(240, 140);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.Size = new System.Drawing.Size(215, 33);
-            this.txtPassword.TabIndex = 23;
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
+            this.txtPassword.Validated += new System.EventHandler(this.txtPassword_Validated);
             // 
             // label4
             // 
@@ -181,8 +193,11 @@ namespace BookStore.Forms.Management
             this.txtConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmPassword.Location = new System.Drawing.Point(240, 194);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.PasswordChar = '●';
             this.txtConfirmPassword.Size = new System.Drawing.Size(215, 33);
-            this.txtConfirmPassword.TabIndex = 26;
+            this.txtConfirmPassword.TabIndex = 3;
+            this.txtConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmPassword_Validating);
+            this.txtConfirmPassword.Validated += new System.EventHandler(this.txtConfirmPassword_Validated);
             // 
             // label5
             // 
@@ -209,10 +224,13 @@ namespace BookStore.Forms.Management
             this.cboRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboRole.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboRole.FormattingEnabled = true;
+            this.cboRole.Items.AddRange(new object[] {
+            "Quản trị viên",
+            "Nhân viên"});
             this.cboRole.Location = new System.Drawing.Point(240, 253);
             this.cboRole.Name = "cboRole";
             this.cboRole.Size = new System.Drawing.Size(215, 33);
-            this.cboRole.TabIndex = 29;
+            this.cboRole.TabIndex = 4;
             // 
             // chkHideShowPassword
             // 
@@ -221,13 +239,21 @@ namespace BookStore.Forms.Management
             this.chkHideShowPassword.Location = new System.Drawing.Point(45, 329);
             this.chkHideShowPassword.Name = "chkHideShowPassword";
             this.chkHideShowPassword.Size = new System.Drawing.Size(152, 25);
-            this.chkHideShowPassword.TabIndex = 30;
+            this.chkHideShowPassword.TabIndex = 5;
             this.chkHideShowPassword.Text = "Hiển thị mật khẩu";
             this.chkHideShowPassword.UseVisualStyleBackColor = true;
+            this.chkHideShowPassword.CheckedChanged += new System.EventHandler(this.chkHideShowPassword_CheckedChanged);
+            // 
+            // errAccount_Add
+            // 
+            this.errAccount_Add.BlinkRate = 0;
+            this.errAccount_Add.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errAccount_Add.ContainerControl = this;
             // 
             // frmAccount_Add
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(547, 397);
             this.Controls.Add(this.chkHideShowPassword);
@@ -246,7 +272,7 @@ namespace BookStore.Forms.Management
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.lblNewCategory);
+            this.Controls.Add(this.label);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -254,6 +280,7 @@ namespace BookStore.Forms.Management
             this.Name = "frmAccount_Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Tài khoản mới";
+            ((System.ComponentModel.ISupportInitialize)(this.errAccount_Add)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,7 +292,7 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label lblNewCategory;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label lblDisplayNameError;
         private System.Windows.Forms.TextBox txtDisplayName;
         private System.Windows.Forms.Label label2;
@@ -278,5 +305,6 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboRole;
         private System.Windows.Forms.CheckBox chkHideShowPassword;
+        private System.Windows.Forms.ErrorProvider errAccount_Add;
     }
 }

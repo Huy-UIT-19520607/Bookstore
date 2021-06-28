@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace BookStore.Forms.Business
 {
-    public partial class frmReceipt_Add : Form
+    public partial class frmBookReceipt_Edit : Form
     {
-        public frmReceipt_Add()
+        public frmBookReceipt_Edit()
         {
             InitializeComponent();
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

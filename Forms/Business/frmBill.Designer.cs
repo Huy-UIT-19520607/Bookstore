@@ -30,255 +30,547 @@ namespace BookStore.Forms.Business
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBill));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnFilterCustomerFromBill = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnFilterReceiptDetail = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.grpReceiptDetail = new System.Windows.Forms.GroupBox();
+            this.pnlImportBookDetail = new System.Windows.Forms.Panel();
+            this.gunaDgvReceiptDetail = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.SoPNS2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSach2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhaXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnDeleteReceiptDetail = new System.Windows.Forms.Button();
+            this.btnEditReceiptDetail = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnImportBookDetailSearch = new System.Windows.Forms.Button();
+            this.gunaTxtImportBookDetailSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.grpBill = new System.Windows.Forms.GroupBox();
+            this.grpImportBook = new System.Windows.Forms.GroupBox();
             this.pnlImportBook = new System.Windows.Forms.Panel();
-            this.gunaDgvImportBook = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnBillSearch = new System.Windows.Forms.Button();
-            this.gunaTxtBillSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnAddBill = new System.Windows.Forms.Button();
-            this.btnDeleteBill = new System.Windows.Forms.Button();
-            this.btnEditBill = new System.Windows.Forms.Button();
-            this.btnAddTitleBook = new System.Windows.Forms.Button();
-            this.btnDeleteTitleBook = new System.Windows.Forms.Button();
-            this.btnEditTitleBook = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pnlCategory = new System.Windows.Forms.Panel();
-            this.btnFilterBillFromCustomer = new System.Windows.Forms.Button();
-            this.gunaDgvCustomer = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTienNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnlSearch = new System.Windows.Forms.Panel();
-            this.btnCustomerSearch = new System.Windows.Forms.Button();
-            this.gunaTxtCustomerSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.gunaDgvReceipt = new Guna.UI2.WinForms.Guna2DataGridView();
             this.SoPNS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConLai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnImportBookSearch = new System.Windows.Forms.Button();
+            this.gunaTxtImportBookSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnAddReceipt = new System.Windows.Forms.Button();
+            this.btnDeleteReceipt = new System.Windows.Forms.Button();
+            this.btnEditReceipt = new System.Windows.Forms.Button();
+            this.btnAddTitleBook = new System.Windows.Forms.Button();
+            this.btnDeleteTitleBook = new System.Windows.Forms.Button();
+            this.btnEditTitleBook = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.grpCustomer = new System.Windows.Forms.GroupBox();
+            this.pnlCustomer = new System.Windows.Forms.Panel();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.nudDebtAmount = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCustomerCode = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
+            this.grpReceiptDetail.SuspendLayout();
+            this.pnlImportBookDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaDgvReceiptDetail)).BeginInit();
+            this.panel12.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.grpBill.SuspendLayout();
+            this.grpImportBook.SuspendLayout();
             this.pnlImportBook.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDgvImportBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaDgvReceipt)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.pnlCategory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDgvCustomer)).BeginInit();
-            this.pnlSearch.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.grpCustomer.SuspendLayout();
+            this.pnlCustomer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDebtAmount)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnFilterCustomerFromBill
+            // btnFilterReceiptDetail
             // 
-            this.btnFilterCustomerFromBill.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnFilterCustomerFromBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnFilterCustomerFromBill.FlatAppearance.BorderSize = 0;
-            this.btnFilterCustomerFromBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilterCustomerFromBill.ForeColor = System.Drawing.Color.White;
-            this.btnFilterCustomerFromBill.Image = ((System.Drawing.Image)(resources.GetObject("btnFilterCustomerFromBill.Image")));
-            this.btnFilterCustomerFromBill.Location = new System.Drawing.Point(359, 25);
-            this.btnFilterCustomerFromBill.Name = "btnFilterCustomerFromBill";
-            this.btnFilterCustomerFromBill.Size = new System.Drawing.Size(34, 35);
-            this.btnFilterCustomerFromBill.TabIndex = 10;
-            this.btnFilterCustomerFromBill.UseVisualStyleBackColor = false;
+            this.btnFilterReceiptDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFilterReceiptDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnFilterReceiptDetail.FlatAppearance.BorderSize = 0;
+            this.btnFilterReceiptDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilterReceiptDetail.ForeColor = System.Drawing.Color.White;
+            this.btnFilterReceiptDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnFilterReceiptDetail.Image")));
+            this.btnFilterReceiptDetail.Location = new System.Drawing.Point(205, 0);
+            this.btnFilterReceiptDetail.Name = "btnFilterReceiptDetail";
+            this.btnFilterReceiptDetail.Size = new System.Drawing.Size(34, 35);
+            this.btnFilterReceiptDetail.TabIndex = 10;
+            this.btnFilterReceiptDetail.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.grpReceiptDetail, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.33691F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.66309F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.13017F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.86983F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(943, 653);
-            this.tableLayoutPanel1.TabIndex = 6;
+            this.tableLayoutPanel1.TabIndex = 5;
+            // 
+            // grpReceiptDetail
+            // 
+            this.grpReceiptDetail.Controls.Add(this.pnlImportBookDetail);
+            this.grpReceiptDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpReceiptDetail.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpReceiptDetail.Location = new System.Drawing.Point(3, 363);
+            this.grpReceiptDetail.Name = "grpReceiptDetail";
+            this.grpReceiptDetail.Size = new System.Drawing.Size(937, 287);
+            this.grpReceiptDetail.TabIndex = 38;
+            this.grpReceiptDetail.TabStop = false;
+            this.grpReceiptDetail.Text = "Chi tiết Hoá đơn";
+            // 
+            // pnlImportBookDetail
+            // 
+            this.pnlImportBookDetail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlImportBookDetail.Controls.Add(this.gunaDgvReceiptDetail);
+            this.pnlImportBookDetail.Controls.Add(this.panel12);
+            this.pnlImportBookDetail.Controls.Add(this.panel7);
+            this.pnlImportBookDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlImportBookDetail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlImportBookDetail.Location = new System.Drawing.Point(3, 35);
+            this.pnlImportBookDetail.Name = "pnlImportBookDetail";
+            this.pnlImportBookDetail.Size = new System.Drawing.Size(931, 249);
+            this.pnlImportBookDetail.TabIndex = 0;
+            // 
+            // gunaDgvReceiptDetail
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.gunaDgvReceiptDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.gunaDgvReceiptDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gunaDgvReceiptDetail.BackgroundColor = System.Drawing.Color.White;
+            this.gunaDgvReceiptDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gunaDgvReceiptDetail.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gunaDgvReceiptDetail.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDgvReceiptDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.gunaDgvReceiptDetail.ColumnHeadersHeight = 30;
+            this.gunaDgvReceiptDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SoPNS2,
+            this.MaSach2,
+            this.TenSach,
+            this.NhaXuatBan,
+            this.NamXuatBan,
+            this.SoLuongNhap,
+            this.DonGiaNhap,
+            this.ThanhTien});
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDgvReceiptDetail.DefaultCellStyle = dataGridViewCellStyle9;
+            this.gunaDgvReceiptDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaDgvReceiptDetail.EnableHeadersVisualStyles = false;
+            this.gunaDgvReceiptDetail.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDgvReceiptDetail.Location = new System.Drawing.Point(0, 47);
+            this.gunaDgvReceiptDetail.Name = "gunaDgvReceiptDetail";
+            this.gunaDgvReceiptDetail.RowHeadersVisible = false;
+            this.gunaDgvReceiptDetail.RowTemplate.Height = 28;
+            this.gunaDgvReceiptDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gunaDgvReceiptDetail.Size = new System.Drawing.Size(929, 138);
+            this.gunaDgvReceiptDetail.TabIndex = 37;
+            this.gunaDgvReceiptDetail.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.gunaDgvReceiptDetail.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.gunaDgvReceiptDetail.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.gunaDgvReceiptDetail.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.gunaDgvReceiptDetail.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.gunaDgvReceiptDetail.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.gunaDgvReceiptDetail.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDgvReceiptDetail.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaDgvReceiptDetail.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gunaDgvReceiptDetail.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaDgvReceiptDetail.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.gunaDgvReceiptDetail.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.gunaDgvReceiptDetail.ThemeStyle.HeaderStyle.Height = 30;
+            this.gunaDgvReceiptDetail.ThemeStyle.ReadOnly = false;
+            this.gunaDgvReceiptDetail.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gunaDgvReceiptDetail.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gunaDgvReceiptDetail.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaDgvReceiptDetail.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gunaDgvReceiptDetail.ThemeStyle.RowsStyle.Height = 28;
+            this.gunaDgvReceiptDetail.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDgvReceiptDetail.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // SoPNS2
+            // 
+            this.SoPNS2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SoPNS2.HeaderText = "Số HĐ";
+            this.SoPNS2.Name = "SoPNS2";
+            this.SoPNS2.Width = 87;
+            // 
+            // MaSach2
+            // 
+            this.MaSach2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.MaSach2.HeaderText = "Mã Sách";
+            this.MaSach2.Name = "MaSach2";
+            this.MaSach2.Width = 107;
+            // 
+            // TenSach
+            // 
+            this.TenSach.HeaderText = "Tên Sách";
+            this.TenSach.Name = "TenSach";
+            // 
+            // NhaXuatBan
+            // 
+            this.NhaXuatBan.HeaderText = "Nhà XB";
+            this.NhaXuatBan.Name = "NhaXuatBan";
+            // 
+            // NamXuatBan
+            // 
+            this.NamXuatBan.HeaderText = "Năm XB";
+            this.NamXuatBan.Name = "NamXuatBan";
+            // 
+            // SoLuongNhap
+            // 
+            this.SoLuongNhap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SoLuongNhap.HeaderText = "Số Lượng";
+            this.SoLuongNhap.Name = "SoLuongNhap";
+            this.SoLuongNhap.Width = 114;
+            // 
+            // DonGiaNhap
+            // 
+            this.DonGiaNhap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.DonGiaNhap.HeaderText = "Đơn Giá";
+            this.DonGiaNhap.Name = "DonGiaNhap";
+            this.DonGiaNhap.Width = 103;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.btnDeleteReceiptDetail);
+            this.panel12.Controls.Add(this.btnEditReceiptDetail);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel12.Location = new System.Drawing.Point(0, 185);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(929, 62);
+            this.panel12.TabIndex = 36;
+            // 
+            // btnDeleteReceiptDetail
+            // 
+            this.btnDeleteReceiptDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteReceiptDetail.BackColor = System.Drawing.Color.Crimson;
+            this.btnDeleteReceiptDetail.FlatAppearance.BorderSize = 0;
+            this.btnDeleteReceiptDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteReceiptDetail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteReceiptDetail.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteReceiptDetail.Location = new System.Drawing.Point(840, 11);
+            this.btnDeleteReceiptDetail.Name = "btnDeleteReceiptDetail";
+            this.btnDeleteReceiptDetail.Size = new System.Drawing.Size(63, 46);
+            this.btnDeleteReceiptDetail.TabIndex = 5;
+            this.btnDeleteReceiptDetail.Text = "Xoá";
+            this.btnDeleteReceiptDetail.UseVisualStyleBackColor = false;
+            // 
+            // btnEditReceiptDetail
+            // 
+            this.btnEditReceiptDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditReceiptDetail.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnEditReceiptDetail.FlatAppearance.BorderSize = 0;
+            this.btnEditReceiptDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditReceiptDetail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditReceiptDetail.ForeColor = System.Drawing.Color.White;
+            this.btnEditReceiptDetail.Location = new System.Drawing.Point(771, 11);
+            this.btnEditReceiptDetail.Name = "btnEditReceiptDetail";
+            this.btnEditReceiptDetail.Size = new System.Drawing.Size(63, 46);
+            this.btnEditReceiptDetail.TabIndex = 4;
+            this.btnEditReceiptDetail.Text = "Sửa";
+            this.btnEditReceiptDetail.UseVisualStyleBackColor = false;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.btnImportBookDetailSearch);
+            this.panel7.Controls.Add(this.gunaTxtImportBookDetailSearch);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(929, 47);
+            this.panel7.TabIndex = 5;
+            // 
+            // btnImportBookDetailSearch
+            // 
+            this.btnImportBookDetailSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(106)))));
+            this.btnImportBookDetailSearch.FlatAppearance.BorderSize = 0;
+            this.btnImportBookDetailSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportBookDetailSearch.ForeColor = System.Drawing.Color.White;
+            this.btnImportBookDetailSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnImportBookDetailSearch.Image")));
+            this.btnImportBookDetailSearch.Location = new System.Drawing.Point(379, 3);
+            this.btnImportBookDetailSearch.Name = "btnImportBookDetailSearch";
+            this.btnImportBookDetailSearch.Size = new System.Drawing.Size(34, 35);
+            this.btnImportBookDetailSearch.TabIndex = 1;
+            this.btnImportBookDetailSearch.UseVisualStyleBackColor = false;
+            // 
+            // gunaTxtImportBookDetailSearch
+            // 
+            this.gunaTxtImportBookDetailSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gunaTxtImportBookDetailSearch.DefaultText = "";
+            this.gunaTxtImportBookDetailSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.gunaTxtImportBookDetailSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.gunaTxtImportBookDetailSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gunaTxtImportBookDetailSearch.DisabledState.Parent = this.gunaTxtImportBookDetailSearch;
+            this.gunaTxtImportBookDetailSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gunaTxtImportBookDetailSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gunaTxtImportBookDetailSearch.FocusedState.Parent = this.gunaTxtImportBookDetailSearch;
+            this.gunaTxtImportBookDetailSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTxtImportBookDetailSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gunaTxtImportBookDetailSearch.HoverState.Parent = this.gunaTxtImportBookDetailSearch;
+            this.gunaTxtImportBookDetailSearch.Location = new System.Drawing.Point(54, 3);
+            this.gunaTxtImportBookDetailSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaTxtImportBookDetailSearch.Name = "gunaTxtImportBookDetailSearch";
+            this.gunaTxtImportBookDetailSearch.PasswordChar = '\0';
+            this.gunaTxtImportBookDetailSearch.PlaceholderText = "Tìm kiếm";
+            this.gunaTxtImportBookDetailSearch.SelectedText = "";
+            this.gunaTxtImportBookDetailSearch.ShadowDecoration.Parent = this.gunaTxtImportBookDetailSearch;
+            this.gunaTxtImportBookDetailSearch.Size = new System.Drawing.Size(318, 35);
+            this.gunaTxtImportBookDetailSearch.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.43757F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.56243F));
             this.tableLayoutPanel2.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(937, 387);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(937, 354);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.grpBill);
+            this.panel2.Controls.Add(this.grpImportBook);
+            this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(931, 381);
+            this.panel2.Size = new System.Drawing.Size(654, 348);
             this.panel2.TabIndex = 17;
             // 
-            // grpBill
+            // grpImportBook
             // 
-            this.grpBill.Controls.Add(this.pnlImportBook);
-            this.grpBill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpBill.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpBill.Location = new System.Drawing.Point(0, 0);
-            this.grpBill.Name = "grpBill";
-            this.grpBill.Size = new System.Drawing.Size(931, 317);
-            this.grpBill.TabIndex = 39;
-            this.grpBill.TabStop = false;
-            this.grpBill.Text = "Phiếu Thu tiền";
+            this.grpImportBook.Controls.Add(this.pnlImportBook);
+            this.grpImportBook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpImportBook.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpImportBook.Location = new System.Drawing.Point(0, 0);
+            this.grpImportBook.Name = "grpImportBook";
+            this.grpImportBook.Size = new System.Drawing.Size(644, 312);
+            this.grpImportBook.TabIndex = 39;
+            this.grpImportBook.TabStop = false;
+            this.grpImportBook.Text = "Hoá đơn";
             // 
             // pnlImportBook
             // 
             this.pnlImportBook.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlImportBook.Controls.Add(this.gunaDgvImportBook);
+            this.pnlImportBook.Controls.Add(this.gunaDgvReceipt);
             this.pnlImportBook.Controls.Add(this.panel6);
             this.pnlImportBook.Controls.Add(this.panel10);
             this.pnlImportBook.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlImportBook.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlImportBook.Location = new System.Drawing.Point(3, 35);
             this.pnlImportBook.Name = "pnlImportBook";
-            this.pnlImportBook.Size = new System.Drawing.Size(925, 279);
+            this.pnlImportBook.Size = new System.Drawing.Size(638, 274);
             this.pnlImportBook.TabIndex = 0;
             // 
-            // gunaDgvImportBook
+            // gunaDgvReceipt
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.gunaDgvImportBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gunaDgvImportBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gunaDgvImportBook.BackgroundColor = System.Drawing.Color.White;
-            this.gunaDgvImportBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaDgvImportBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDgvImportBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDgvImportBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.gunaDgvImportBook.ColumnHeadersHeight = 30;
-            this.gunaDgvImportBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.gunaDgvReceipt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.gunaDgvReceipt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gunaDgvReceipt.BackgroundColor = System.Drawing.Color.White;
+            this.gunaDgvReceipt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gunaDgvReceipt.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gunaDgvReceipt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDgvReceipt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.gunaDgvReceipt.ColumnHeadersHeight = 30;
+            this.gunaDgvReceipt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SoPNS,
             this.MaKhachHang,
             this.NgayLap,
+            this.TongTien,
+            this.ThanhToan,
             this.ConLai});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDgvImportBook.DefaultCellStyle = dataGridViewCellStyle6;
-            this.gunaDgvImportBook.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaDgvImportBook.EnableHeadersVisualStyles = false;
-            this.gunaDgvImportBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvImportBook.Location = new System.Drawing.Point(0, 46);
-            this.gunaDgvImportBook.Name = "gunaDgvImportBook";
-            this.gunaDgvImportBook.RowHeadersVisible = false;
-            this.gunaDgvImportBook.RowTemplate.Height = 28;
-            this.gunaDgvImportBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDgvImportBook.Size = new System.Drawing.Size(923, 169);
-            this.gunaDgvImportBook.TabIndex = 28;
-            this.gunaDgvImportBook.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvImportBook.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gunaDgvImportBook.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gunaDgvImportBook.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gunaDgvImportBook.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gunaDgvImportBook.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvImportBook.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvImportBook.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDgvImportBook.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gunaDgvImportBook.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDgvImportBook.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gunaDgvImportBook.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gunaDgvImportBook.ThemeStyle.HeaderStyle.Height = 30;
-            this.gunaDgvImportBook.ThemeStyle.ReadOnly = false;
-            this.gunaDgvImportBook.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvImportBook.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDgvImportBook.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDgvImportBook.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gunaDgvImportBook.ThemeStyle.RowsStyle.Height = 28;
-            this.gunaDgvImportBook.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvImportBook.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDgvReceipt.DefaultCellStyle = dataGridViewCellStyle12;
+            this.gunaDgvReceipt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaDgvReceipt.EnableHeadersVisualStyles = false;
+            this.gunaDgvReceipt.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDgvReceipt.Location = new System.Drawing.Point(0, 46);
+            this.gunaDgvReceipt.Name = "gunaDgvReceipt";
+            this.gunaDgvReceipt.RowHeadersVisible = false;
+            this.gunaDgvReceipt.RowTemplate.Height = 28;
+            this.gunaDgvReceipt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gunaDgvReceipt.Size = new System.Drawing.Size(636, 164);
+            this.gunaDgvReceipt.TabIndex = 28;
+            this.gunaDgvReceipt.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.gunaDgvReceipt.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.gunaDgvReceipt.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.gunaDgvReceipt.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.gunaDgvReceipt.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.gunaDgvReceipt.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.gunaDgvReceipt.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDgvReceipt.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaDgvReceipt.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gunaDgvReceipt.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaDgvReceipt.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.gunaDgvReceipt.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.gunaDgvReceipt.ThemeStyle.HeaderStyle.Height = 30;
+            this.gunaDgvReceipt.ThemeStyle.ReadOnly = false;
+            this.gunaDgvReceipt.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gunaDgvReceipt.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gunaDgvReceipt.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaDgvReceipt.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gunaDgvReceipt.ThemeStyle.RowsStyle.Height = 28;
+            this.gunaDgvReceipt.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDgvReceipt.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // SoPNS
+            // 
+            this.SoPNS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.SoPNS.HeaderText = "Số HĐ";
+            this.SoPNS.Name = "SoPNS";
+            this.SoPNS.Width = 87;
+            // 
+            // MaKhachHang
+            // 
+            this.MaKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.MaKhachHang.HeaderText = "Mã KH";
+            this.MaKhachHang.Name = "MaKhachHang";
+            this.MaKhachHang.Width = 91;
+            // 
+            // NgayLap
+            // 
+            this.NgayLap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NgayLap.HeaderText = "Ngày Lập";
+            this.NgayLap.Name = "NgayLap";
+            // 
+            // TongTien
+            // 
+            this.TongTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TongTien.HeaderText = "Tổng Tiền";
+            this.TongTien.Name = "TongTien";
+            // 
+            // ThanhToan
+            // 
+            this.ThanhToan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ThanhToan.HeaderText = "Thanh Toán";
+            this.ThanhToan.Name = "ThanhToan";
+            // 
+            // ConLai
+            // 
+            this.ConLai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ConLai.HeaderText = "Còn Lại";
+            this.ConLai.Name = "ConLai";
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btnBillSearch);
-            this.panel6.Controls.Add(this.gunaTxtBillSearch);
+            this.panel6.Controls.Add(this.btnImportBookSearch);
+            this.panel6.Controls.Add(this.gunaTxtImportBookSearch);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(923, 46);
+            this.panel6.Size = new System.Drawing.Size(636, 46);
             this.panel6.TabIndex = 29;
             // 
-            // btnBillSearch
+            // btnImportBookSearch
             // 
-            this.btnBillSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(106)))));
-            this.btnBillSearch.FlatAppearance.BorderSize = 0;
-            this.btnBillSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBillSearch.ForeColor = System.Drawing.Color.White;
-            this.btnBillSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnBillSearch.Image")));
-            this.btnBillSearch.Location = new System.Drawing.Point(480, 2);
-            this.btnBillSearch.Name = "btnBillSearch";
-            this.btnBillSearch.Size = new System.Drawing.Size(34, 35);
-            this.btnBillSearch.TabIndex = 1;
-            this.btnBillSearch.UseVisualStyleBackColor = false;
+            this.btnImportBookSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(106)))));
+            this.btnImportBookSearch.FlatAppearance.BorderSize = 0;
+            this.btnImportBookSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportBookSearch.ForeColor = System.Drawing.Color.White;
+            this.btnImportBookSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnImportBookSearch.Image")));
+            this.btnImportBookSearch.Location = new System.Drawing.Point(352, 2);
+            this.btnImportBookSearch.Name = "btnImportBookSearch";
+            this.btnImportBookSearch.Size = new System.Drawing.Size(34, 35);
+            this.btnImportBookSearch.TabIndex = 1;
+            this.btnImportBookSearch.UseVisualStyleBackColor = false;
             // 
-            // gunaTxtBillSearch
+            // gunaTxtImportBookSearch
             // 
-            this.gunaTxtBillSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTxtBillSearch.DefaultText = "";
-            this.gunaTxtBillSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.gunaTxtBillSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.gunaTxtBillSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.gunaTxtBillSearch.DisabledState.Parent = this.gunaTxtBillSearch;
-            this.gunaTxtBillSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.gunaTxtBillSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gunaTxtBillSearch.FocusedState.Parent = this.gunaTxtBillSearch;
-            this.gunaTxtBillSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTxtBillSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gunaTxtBillSearch.HoverState.Parent = this.gunaTxtBillSearch;
-            this.gunaTxtBillSearch.Location = new System.Drawing.Point(62, 2);
-            this.gunaTxtBillSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gunaTxtBillSearch.Name = "gunaTxtBillSearch";
-            this.gunaTxtBillSearch.PasswordChar = '\0';
-            this.gunaTxtBillSearch.PlaceholderText = "Tìm kiếm";
-            this.gunaTxtBillSearch.SelectedText = "";
-            this.gunaTxtBillSearch.ShadowDecoration.Parent = this.gunaTxtBillSearch;
-            this.gunaTxtBillSearch.Size = new System.Drawing.Size(410, 35);
-            this.gunaTxtBillSearch.TabIndex = 0;
+            this.gunaTxtImportBookSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gunaTxtImportBookSearch.DefaultText = "";
+            this.gunaTxtImportBookSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.gunaTxtImportBookSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.gunaTxtImportBookSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gunaTxtImportBookSearch.DisabledState.Parent = this.gunaTxtImportBookSearch;
+            this.gunaTxtImportBookSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gunaTxtImportBookSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gunaTxtImportBookSearch.FocusedState.Parent = this.gunaTxtImportBookSearch;
+            this.gunaTxtImportBookSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTxtImportBookSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gunaTxtImportBookSearch.HoverState.Parent = this.gunaTxtImportBookSearch;
+            this.gunaTxtImportBookSearch.Location = new System.Drawing.Point(43, 2);
+            this.gunaTxtImportBookSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaTxtImportBookSearch.Name = "gunaTxtImportBookSearch";
+            this.gunaTxtImportBookSearch.PasswordChar = '\0';
+            this.gunaTxtImportBookSearch.PlaceholderText = "Tìm kiếm";
+            this.gunaTxtImportBookSearch.SelectedText = "";
+            this.gunaTxtImportBookSearch.ShadowDecoration.Parent = this.gunaTxtImportBookSearch;
+            this.gunaTxtImportBookSearch.Size = new System.Drawing.Size(302, 35);
+            this.gunaTxtImportBookSearch.TabIndex = 0;
             // 
             // panel10
             // 
@@ -287,66 +579,66 @@ namespace BookStore.Forms.Business
             this.panel10.Controls.Add(this.btnDeleteTitleBook);
             this.panel10.Controls.Add(this.btnEditTitleBook);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(0, 215);
+            this.panel10.Location = new System.Drawing.Point(0, 210);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(923, 62);
+            this.panel10.Size = new System.Drawing.Size(636, 62);
             this.panel10.TabIndex = 27;
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.btnAddBill);
-            this.panel9.Controls.Add(this.btnDeleteBill);
-            this.panel9.Controls.Add(this.btnEditBill);
+            this.panel9.Controls.Add(this.btnAddReceipt);
+            this.panel9.Controls.Add(this.btnDeleteReceipt);
+            this.panel9.Controls.Add(this.btnEditReceipt);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(923, 62);
+            this.panel9.Size = new System.Drawing.Size(636, 62);
             this.panel9.TabIndex = 28;
             // 
-            // btnAddBill
+            // btnAddReceipt
             // 
-            this.btnAddBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddBill.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnAddBill.FlatAppearance.BorderSize = 0;
-            this.btnAddBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddBill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddBill.ForeColor = System.Drawing.Color.White;
-            this.btnAddBill.Location = new System.Drawing.Point(719, 10);
-            this.btnAddBill.Name = "btnAddBill";
-            this.btnAddBill.Size = new System.Drawing.Size(63, 46);
-            this.btnAddBill.TabIndex = 2;
-            this.btnAddBill.Text = "Thêm";
-            this.btnAddBill.UseVisualStyleBackColor = false;
+            this.btnAddReceipt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddReceipt.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAddReceipt.FlatAppearance.BorderSize = 0;
+            this.btnAddReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddReceipt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddReceipt.ForeColor = System.Drawing.Color.White;
+            this.btnAddReceipt.Location = new System.Drawing.Point(432, 10);
+            this.btnAddReceipt.Name = "btnAddReceipt";
+            this.btnAddReceipt.Size = new System.Drawing.Size(63, 46);
+            this.btnAddReceipt.TabIndex = 2;
+            this.btnAddReceipt.Text = "Thêm";
+            this.btnAddReceipt.UseVisualStyleBackColor = false;
             // 
-            // btnDeleteBill
+            // btnDeleteReceipt
             // 
-            this.btnDeleteBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteBill.BackColor = System.Drawing.Color.Crimson;
-            this.btnDeleteBill.FlatAppearance.BorderSize = 0;
-            this.btnDeleteBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteBill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteBill.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteBill.Location = new System.Drawing.Point(857, 10);
-            this.btnDeleteBill.Name = "btnDeleteBill";
-            this.btnDeleteBill.Size = new System.Drawing.Size(63, 46);
-            this.btnDeleteBill.TabIndex = 5;
-            this.btnDeleteBill.Text = "Xoá";
-            this.btnDeleteBill.UseVisualStyleBackColor = false;
+            this.btnDeleteReceipt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteReceipt.BackColor = System.Drawing.Color.Crimson;
+            this.btnDeleteReceipt.FlatAppearance.BorderSize = 0;
+            this.btnDeleteReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteReceipt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteReceipt.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteReceipt.Location = new System.Drawing.Point(570, 10);
+            this.btnDeleteReceipt.Name = "btnDeleteReceipt";
+            this.btnDeleteReceipt.Size = new System.Drawing.Size(63, 46);
+            this.btnDeleteReceipt.TabIndex = 5;
+            this.btnDeleteReceipt.Text = "Xoá";
+            this.btnDeleteReceipt.UseVisualStyleBackColor = false;
             // 
-            // btnEditBill
+            // btnEditReceipt
             // 
-            this.btnEditBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditBill.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnEditBill.FlatAppearance.BorderSize = 0;
-            this.btnEditBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditBill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditBill.ForeColor = System.Drawing.Color.White;
-            this.btnEditBill.Location = new System.Drawing.Point(788, 10);
-            this.btnEditBill.Name = "btnEditBill";
-            this.btnEditBill.Size = new System.Drawing.Size(63, 46);
-            this.btnEditBill.TabIndex = 4;
-            this.btnEditBill.Text = "Sửa";
-            this.btnEditBill.UseVisualStyleBackColor = false;
+            this.btnEditReceipt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditReceipt.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnEditReceipt.FlatAppearance.BorderSize = 0;
+            this.btnEditReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditReceipt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditReceipt.ForeColor = System.Drawing.Color.White;
+            this.btnEditReceipt.Location = new System.Drawing.Point(501, 10);
+            this.btnEditReceipt.Name = "btnEditReceipt";
+            this.btnEditReceipt.Size = new System.Drawing.Size(63, 46);
+            this.btnEditReceipt.TabIndex = 4;
+            this.btnEditReceipt.Text = "Sửa";
+            this.btnEditReceipt.UseVisualStyleBackColor = false;
             // 
             // btnAddTitleBook
             // 
@@ -356,7 +648,7 @@ namespace BookStore.Forms.Business
             this.btnAddTitleBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTitleBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTitleBook.ForeColor = System.Drawing.Color.White;
-            this.btnAddTitleBook.Location = new System.Drawing.Point(719, 10);
+            this.btnAddTitleBook.Location = new System.Drawing.Point(432, 10);
             this.btnAddTitleBook.Name = "btnAddTitleBook";
             this.btnAddTitleBook.Size = new System.Drawing.Size(63, 46);
             this.btnAddTitleBook.TabIndex = 2;
@@ -371,7 +663,7 @@ namespace BookStore.Forms.Business
             this.btnDeleteTitleBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteTitleBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteTitleBook.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteTitleBook.Location = new System.Drawing.Point(857, 10);
+            this.btnDeleteTitleBook.Location = new System.Drawing.Point(570, 10);
             this.btnDeleteTitleBook.Name = "btnDeleteTitleBook";
             this.btnDeleteTitleBook.Size = new System.Drawing.Size(63, 46);
             this.btnDeleteTitleBook.TabIndex = 5;
@@ -386,253 +678,165 @@ namespace BookStore.Forms.Business
             this.btnEditTitleBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditTitleBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditTitleBook.ForeColor = System.Drawing.Color.White;
-            this.btnEditTitleBook.Location = new System.Drawing.Point(788, 10);
+            this.btnEditTitleBook.Location = new System.Drawing.Point(501, 10);
             this.btnEditTitleBook.Name = "btnEditTitleBook";
             this.btnEditTitleBook.Size = new System.Drawing.Size(63, 46);
             this.btnEditTitleBook.TabIndex = 4;
             this.btnEditTitleBook.Text = "Sửa";
             this.btnEditTitleBook.UseVisualStyleBackColor = false;
             // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(644, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(10, 312);
+            this.panel5.TabIndex = 38;
+            // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnFilterBillFromCustomer);
-            this.panel3.Controls.Add(this.btnFilterCustomerFromBill);
+            this.panel3.Controls.Add(this.btnFilterReceiptDetail);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 317);
+            this.panel3.Location = new System.Drawing.Point(0, 312);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(931, 64);
+            this.panel3.Size = new System.Drawing.Size(654, 36);
             this.panel3.TabIndex = 27;
             // 
-            // groupBox1
+            // panel1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.panel7);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 396);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(937, 254);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách Khách hàng";
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.grpCustomer);
+            this.panel1.Location = new System.Drawing.Point(663, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(271, 348);
+            this.panel1.TabIndex = 18;
             // 
-            // panel7
+            // grpCustomer
             // 
-            this.panel7.Controls.Add(this.pnlCategory);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 42);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(931, 209);
-            this.panel7.TabIndex = 3;
+            this.grpCustomer.Controls.Add(this.pnlCustomer);
+            this.grpCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpCustomer.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpCustomer.Location = new System.Drawing.Point(0, 0);
+            this.grpCustomer.Name = "grpCustomer";
+            this.grpCustomer.Size = new System.Drawing.Size(271, 348);
+            this.grpCustomer.TabIndex = 4;
+            this.grpCustomer.TabStop = false;
+            this.grpCustomer.Text = "Khách hàng";
             // 
-            // pnlCategory
+            // pnlCustomer
             // 
-            this.pnlCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlCategory.Controls.Add(this.gunaDgvCustomer);
-            this.pnlCategory.Controls.Add(this.pnlSearch);
-            this.pnlCategory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlCategory.Location = new System.Drawing.Point(0, 0);
-            this.pnlCategory.Name = "pnlCategory";
-            this.pnlCategory.Size = new System.Drawing.Size(931, 209);
-            this.pnlCategory.TabIndex = 0;
+            this.pnlCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCustomer.Controls.Add(this.txtPhone);
+            this.pnlCustomer.Controls.Add(this.nudDebtAmount);
+            this.pnlCustomer.Controls.Add(this.label8);
+            this.pnlCustomer.Controls.Add(this.txtCustomerName);
+            this.pnlCustomer.Controls.Add(this.label3);
+            this.pnlCustomer.Controls.Add(this.label2);
+            this.pnlCustomer.Controls.Add(this.label1);
+            this.pnlCustomer.Controls.Add(this.txtCustomerCode);
+            this.pnlCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCustomer.Location = new System.Drawing.Point(3, 35);
+            this.pnlCustomer.Name = "pnlCustomer";
+            this.pnlCustomer.Size = new System.Drawing.Size(265, 310);
+            this.pnlCustomer.TabIndex = 0;
             // 
-            // btnFilterBillFromCustomer
+            // txtPhone
             // 
-            this.btnFilterBillFromCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnFilterBillFromCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnFilterBillFromCustomer.FlatAppearance.BorderSize = 0;
-            this.btnFilterBillFromCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilterBillFromCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnFilterBillFromCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnFilterBillFromCustomer.Image")));
-            this.btnFilterBillFromCustomer.Location = new System.Drawing.Point(551, 25);
-            this.btnFilterBillFromCustomer.Name = "btnFilterBillFromCustomer";
-            this.btnFilterBillFromCustomer.Size = new System.Drawing.Size(34, 35);
-            this.btnFilterBillFromCustomer.TabIndex = 11;
-            this.btnFilterBillFromCustomer.UseVisualStyleBackColor = false;
+            this.txtPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(66, 154);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.ReadOnly = true;
+            this.txtPhone.Size = new System.Drawing.Size(153, 29);
+            this.txtPhone.TabIndex = 59;
             // 
-            // gunaDgvCustomer
+            // nudDebtAmount
             // 
-            this.gunaDgvCustomer.AllowUserToAddRows = false;
-            this.gunaDgvCustomer.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gunaDgvCustomer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.gunaDgvCustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gunaDgvCustomer.BackgroundColor = System.Drawing.Color.White;
-            this.gunaDgvCustomer.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaDgvCustomer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDgvCustomer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gunaDgvCustomer.ColumnHeadersHeight = 30;
-            this.gunaDgvCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.TenKhachHang,
-            this.DiaChi,
-            this.SDT,
-            this.Email,
-            this.SoTienNo});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDgvCustomer.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gunaDgvCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaDgvCustomer.EnableHeadersVisualStyles = false;
-            this.gunaDgvCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvCustomer.Location = new System.Drawing.Point(0, 64);
-            this.gunaDgvCustomer.MultiSelect = false;
-            this.gunaDgvCustomer.Name = "gunaDgvCustomer";
-            this.gunaDgvCustomer.ReadOnly = true;
-            this.gunaDgvCustomer.RowHeadersVisible = false;
-            this.gunaDgvCustomer.RowTemplate.Height = 28;
-            this.gunaDgvCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDgvCustomer.Size = new System.Drawing.Size(929, 143);
-            this.gunaDgvCustomer.TabIndex = 3;
-            this.gunaDgvCustomer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvCustomer.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gunaDgvCustomer.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gunaDgvCustomer.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gunaDgvCustomer.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gunaDgvCustomer.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvCustomer.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvCustomer.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDgvCustomer.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gunaDgvCustomer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDgvCustomer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gunaDgvCustomer.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gunaDgvCustomer.ThemeStyle.HeaderStyle.Height = 30;
-            this.gunaDgvCustomer.ThemeStyle.ReadOnly = true;
-            this.gunaDgvCustomer.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDgvCustomer.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDgvCustomer.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDgvCustomer.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gunaDgvCustomer.ThemeStyle.RowsStyle.Height = 28;
-            this.gunaDgvCustomer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDgvCustomer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.nudDebtAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudDebtAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudDebtAmount.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudDebtAmount.Location = new System.Drawing.Point(66, 207);
+            this.nudDebtAmount.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.nudDebtAmount.Name = "nudDebtAmount";
+            this.nudDebtAmount.ReadOnly = true;
+            this.nudDebtAmount.Size = new System.Drawing.Size(153, 33);
+            this.nudDebtAmount.TabIndex = 51;
+            this.nudDebtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudDebtAmount.ThousandsSeparator = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // label8
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Khách Hàng";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 169;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(3, 212);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 21);
+            this.label8.TabIndex = 58;
+            this.label8.Text = "Tiền nợ:";
             // 
-            // TenKhachHang
+            // txtCustomerName
             // 
-            this.TenKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenKhachHang.HeaderText = "Tên Khách Hàng";
-            this.TenKhachHang.Name = "TenKhachHang";
-            this.TenKhachHang.ReadOnly = true;
+            this.txtCustomerName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCustomerName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerName.Location = new System.Drawing.Point(66, 102);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.ReadOnly = true;
+            this.txtCustomerName.Size = new System.Drawing.Size(194, 29);
+            this.txtCustomerName.TabIndex = 56;
             // 
-            // DiaChi
+            // label3
             // 
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 21);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "Tên KH:";
             // 
-            // SDT
+            // label2
             // 
-            this.SDT.HeaderText = "SĐT";
-            this.SDT.Name = "SDT";
-            this.SDT.ReadOnly = true;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 157);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 21);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "SĐT:";
             // 
-            // Email
+            // label1
             // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 21);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Mã KH:";
             // 
-            // SoTienNo
+            // txtCustomerCode
             // 
-            this.SoTienNo.HeaderText = "Số Tiền Nợ";
-            this.SoTienNo.Name = "SoTienNo";
-            this.SoTienNo.ReadOnly = true;
+            this.txtCustomerCode.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCustomerCode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerCode.Location = new System.Drawing.Point(66, 47);
+            this.txtCustomerCode.Name = "txtCustomerCode";
+            this.txtCustomerCode.ReadOnly = true;
+            this.txtCustomerCode.Size = new System.Drawing.Size(105, 29);
+            this.txtCustomerCode.TabIndex = 53;
             // 
-            // pnlSearch
-            // 
-            this.pnlSearch.Controls.Add(this.btnCustomerSearch);
-            this.pnlSearch.Controls.Add(this.gunaTxtCustomerSearch);
-            this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlSearch.Location = new System.Drawing.Point(0, 0);
-            this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Size = new System.Drawing.Size(929, 64);
-            this.pnlSearch.TabIndex = 4;
-            // 
-            // btnCustomerSearch
-            // 
-            this.btnCustomerSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(106)))));
-            this.btnCustomerSearch.FlatAppearance.BorderSize = 0;
-            this.btnCustomerSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomerSearch.ForeColor = System.Drawing.Color.White;
-            this.btnCustomerSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomerSearch.Image")));
-            this.btnCustomerSearch.Location = new System.Drawing.Point(483, 7);
-            this.btnCustomerSearch.Name = "btnCustomerSearch";
-            this.btnCustomerSearch.Size = new System.Drawing.Size(34, 35);
-            this.btnCustomerSearch.TabIndex = 1;
-            this.btnCustomerSearch.UseVisualStyleBackColor = false;
-            // 
-            // gunaTxtCustomerSearch
-            // 
-            this.gunaTxtCustomerSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTxtCustomerSearch.DefaultText = "";
-            this.gunaTxtCustomerSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.gunaTxtCustomerSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.gunaTxtCustomerSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.gunaTxtCustomerSearch.DisabledState.Parent = this.gunaTxtCustomerSearch;
-            this.gunaTxtCustomerSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.gunaTxtCustomerSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gunaTxtCustomerSearch.FocusedState.Parent = this.gunaTxtCustomerSearch;
-            this.gunaTxtCustomerSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTxtCustomerSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gunaTxtCustomerSearch.HoverState.Parent = this.gunaTxtCustomerSearch;
-            this.gunaTxtCustomerSearch.Location = new System.Drawing.Point(65, 7);
-            this.gunaTxtCustomerSearch.Margin = new System.Windows.Forms.Padding(5);
-            this.gunaTxtCustomerSearch.Name = "gunaTxtCustomerSearch";
-            this.gunaTxtCustomerSearch.PasswordChar = '\0';
-            this.gunaTxtCustomerSearch.PlaceholderText = "Tìm kiếm";
-            this.gunaTxtCustomerSearch.SelectedText = "";
-            this.gunaTxtCustomerSearch.ShadowDecoration.Parent = this.gunaTxtCustomerSearch;
-            this.gunaTxtCustomerSearch.Size = new System.Drawing.Size(410, 35);
-            this.gunaTxtCustomerSearch.TabIndex = 0;
-            // 
-            // SoPNS
-            // 
-            this.SoPNS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SoPNS.HeaderText = "Số Phiếu Thu";
-            this.SoPNS.Name = "SoPNS";
-            // 
-            // MaKhachHang
-            // 
-            this.MaKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaKhachHang.HeaderText = "Mã Khách Hàng";
-            this.MaKhachHang.Name = "MaKhachHang";
-            // 
-            // NgayLap
-            // 
-            this.NgayLap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NgayLap.HeaderText = "Ngày Lập";
-            this.NgayLap.Name = "NgayLap";
-            // 
-            // ConLai
-            // 
-            this.ConLai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ConLai.HeaderText = "Số Tiền Thu";
-            this.ConLai.Name = "ConLai";
-            // 
-            // frmBill
+            // frmReceipt
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -640,65 +844,87 @@ namespace BookStore.Forms.Business
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MinimumSize = new System.Drawing.Size(959, 692);
-            this.Name = "frmBill";
+            this.Name = "frmReceipt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "THU TIỀN";
+            this.Text = "HOÁ ĐƠN";
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.grpReceiptDetail.ResumeLayout(false);
+            this.pnlImportBookDetail.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gunaDgvReceiptDetail)).EndInit();
+            this.panel12.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.grpBill.ResumeLayout(false);
+            this.grpImportBook.ResumeLayout(false);
             this.pnlImportBook.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDgvImportBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaDgvReceipt)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.pnlCategory.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDgvCustomer)).EndInit();
-            this.pnlSearch.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.grpCustomer.ResumeLayout(false);
+            this.pnlCustomer.ResumeLayout(false);
+            this.pnlCustomer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDebtAmount)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnFilterCustomerFromBill;
+        private System.Windows.Forms.Button btnFilterReceiptDetail;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.GroupBox grpBill;
+        private System.Windows.Forms.GroupBox grpImportBook;
         private System.Windows.Forms.Panel pnlImportBook;
-        private Guna.UI2.WinForms.Guna2DataGridView gunaDgvImportBook;
+        private Guna.UI2.WinForms.Guna2DataGridView gunaDgvReceipt;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnBillSearch;
-        private Guna.UI2.WinForms.Guna2TextBox gunaTxtBillSearch;
+        private System.Windows.Forms.Button btnImportBookSearch;
+        private Guna.UI2.WinForms.Guna2TextBox gunaTxtImportBookSearch;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button btnAddBill;
-        private System.Windows.Forms.Button btnDeleteBill;
-        private System.Windows.Forms.Button btnEditBill;
+        private System.Windows.Forms.Button btnAddReceipt;
+        private System.Windows.Forms.Button btnDeleteReceipt;
+        private System.Windows.Forms.Button btnEditReceipt;
         private System.Windows.Forms.Button btnAddTitleBook;
         private System.Windows.Forms.Button btnDeleteTitleBook;
         private System.Windows.Forms.Button btnEditTitleBook;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpReceiptDetail;
+        private System.Windows.Forms.Panel pnlImportBookDetail;
+        private Guna.UI2.WinForms.Guna2DataGridView gunaDgvReceiptDetail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoPNS2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NhaXuatBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamXuatBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGiaNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Button btnDeleteReceiptDetail;
+        private System.Windows.Forms.Button btnEditReceiptDetail;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel pnlCategory;
-        private System.Windows.Forms.Button btnFilterBillFromCustomer;
-        private Guna.UI2.WinForms.Guna2DataGridView gunaDgvCustomer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhachHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoTienNo;
-        private System.Windows.Forms.Panel pnlSearch;
-        private System.Windows.Forms.Button btnCustomerSearch;
-        private Guna.UI2.WinForms.Guna2TextBox gunaTxtCustomerSearch;
+        private System.Windows.Forms.Button btnImportBookDetailSearch;
+        private Guna.UI2.WinForms.Guna2TextBox gunaTxtImportBookDetailSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoPNS;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhToan;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConLai;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox grpCustomer;
+        private System.Windows.Forms.Panel pnlCustomer;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.NumericUpDown nudDebtAmount;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtCustomerName;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCustomerCode;
     }
 }

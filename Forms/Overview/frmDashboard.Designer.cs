@@ -33,10 +33,10 @@ namespace BookStore.Forms.Overview
             this.label5 = new System.Windows.Forms.Label();
             this.gunaCirProPayDebt = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblPayDebtPercent = new System.Windows.Forms.Label();
+            this.lblPaidDebtAmountPercent = new System.Windows.Forms.Label();
             this.gunaCirProPayReceipt = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblPayReceiptPercent = new System.Windows.Forms.Label();
+            this.lblPaidReceiptAmountPercent = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblImportedBookQuantity = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@ namespace BookStore.Forms.Overview
             // 
             this.gunaCirProPayDebt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gunaCirProPayDebt.Controls.Add(this.label4);
-            this.gunaCirProPayDebt.Controls.Add(this.lblPayDebtPercent);
+            this.gunaCirProPayDebt.Controls.Add(this.lblPaidDebtAmountPercent);
             this.gunaCirProPayDebt.FillColor = System.Drawing.Color.Gainsboro;
             this.gunaCirProPayDebt.FillThickness = 20;
             this.gunaCirProPayDebt.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -110,23 +110,23 @@ namespace BookStore.Forms.Overview
             this.label4.TabIndex = 19;
             this.label4.Text = "%";
             // 
-            // lblPayDebtPercent
+            // lblPaidDebtAmountPercent
             // 
-            this.lblPayDebtPercent.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPayDebtPercent.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPayDebtPercent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.lblPayDebtPercent.Location = new System.Drawing.Point(46, 55);
-            this.lblPayDebtPercent.Name = "lblPayDebtPercent";
-            this.lblPayDebtPercent.Size = new System.Drawing.Size(87, 50);
-            this.lblPayDebtPercent.TabIndex = 18;
-            this.lblPayDebtPercent.Text = "60";
-            this.lblPayDebtPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPaidDebtAmountPercent.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPaidDebtAmountPercent.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaidDebtAmountPercent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.lblPaidDebtAmountPercent.Location = new System.Drawing.Point(46, 55);
+            this.lblPaidDebtAmountPercent.Name = "lblPaidDebtAmountPercent";
+            this.lblPaidDebtAmountPercent.Size = new System.Drawing.Size(87, 50);
+            this.lblPaidDebtAmountPercent.TabIndex = 18;
+            this.lblPaidDebtAmountPercent.Text = "60";
+            this.lblPaidDebtAmountPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gunaCirProPayReceipt
             // 
             this.gunaCirProPayReceipt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gunaCirProPayReceipt.Controls.Add(this.label2);
-            this.gunaCirProPayReceipt.Controls.Add(this.lblPayReceiptPercent);
+            this.gunaCirProPayReceipt.Controls.Add(this.lblPaidReceiptAmountPercent);
             this.gunaCirProPayReceipt.FillColor = System.Drawing.Color.Gainsboro;
             this.gunaCirProPayReceipt.FillThickness = 20;
             this.gunaCirProPayReceipt.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -154,17 +154,17 @@ namespace BookStore.Forms.Overview
             this.label2.TabIndex = 17;
             this.label2.Text = "%";
             // 
-            // lblPayReceiptPercent
+            // lblPaidReceiptAmountPercent
             // 
-            this.lblPayReceiptPercent.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPayReceiptPercent.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPayReceiptPercent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.lblPayReceiptPercent.Location = new System.Drawing.Point(44, 55);
-            this.lblPayReceiptPercent.Name = "lblPayReceiptPercent";
-            this.lblPayReceiptPercent.Size = new System.Drawing.Size(92, 50);
-            this.lblPayReceiptPercent.TabIndex = 16;
-            this.lblPayReceiptPercent.Text = "80";
-            this.lblPayReceiptPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPaidReceiptAmountPercent.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPaidReceiptAmountPercent.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaidReceiptAmountPercent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.lblPaidReceiptAmountPercent.Location = new System.Drawing.Point(44, 55);
+            this.lblPaidReceiptAmountPercent.Name = "lblPaidReceiptAmountPercent";
+            this.lblPaidReceiptAmountPercent.Size = new System.Drawing.Size(92, 50);
+            this.lblPaidReceiptAmountPercent.TabIndex = 16;
+            this.lblPaidReceiptAmountPercent.Text = "80";
+            this.lblPaidReceiptAmountPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnRefresh
             // 
@@ -397,10 +397,10 @@ namespace BookStore.Forms.Overview
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2CircleProgressBar gunaCirProPayDebt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblPayDebtPercent;
+        private System.Windows.Forms.Label lblPaidDebtAmountPercent;
         private Guna.UI2.WinForms.Guna2CircleProgressBar gunaCirProPayReceipt;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblPayReceiptPercent;
+        private System.Windows.Forms.Label lblPaidReceiptAmountPercent;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblImportedBookQuantity;

@@ -48,8 +48,7 @@ namespace BookStore.Forms
             this.pnlSubMenuManagement = new System.Windows.Forms.Panel();
             this.btnAccount = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnTitleBook = new System.Windows.Forms.Button();
+            this.btnBook = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnMenuManagement = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
@@ -110,7 +109,7 @@ namespace BookStore.Forms
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 905);
+            this.btnLogout.Location = new System.Drawing.Point(0, 856);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(20, 0, 25, 0);
             this.btnLogout.Size = new System.Drawing.Size(243, 60);
@@ -125,7 +124,7 @@ namespace BookStore.Forms
             // 
             this.pnlSubMenuSetting.Controls.Add(this.btnRequirement);
             this.pnlSubMenuSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuSetting.Location = new System.Drawing.Point(0, 850);
+            this.pnlSubMenuSetting.Location = new System.Drawing.Point(0, 801);
             this.pnlSubMenuSetting.Name = "pnlSubMenuSetting";
             this.pnlSubMenuSetting.Size = new System.Drawing.Size(243, 55);
             this.pnlSubMenuSetting.TabIndex = 10;
@@ -160,7 +159,7 @@ namespace BookStore.Forms
             this.btnMenuSetting.ForeColor = System.Drawing.Color.White;
             this.btnMenuSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuSetting.Image")));
             this.btnMenuSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuSetting.Location = new System.Drawing.Point(0, 790);
+            this.btnMenuSetting.Location = new System.Drawing.Point(0, 741);
             this.btnMenuSetting.Name = "btnMenuSetting";
             this.btnMenuSetting.Padding = new System.Windows.Forms.Padding(20, 0, 25, 0);
             this.btnMenuSetting.Size = new System.Drawing.Size(243, 60);
@@ -176,7 +175,7 @@ namespace BookStore.Forms
             this.pnlSubMenuReport.Controls.Add(this.btnDept);
             this.pnlSubMenuReport.Controls.Add(this.btnInventory);
             this.pnlSubMenuReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuReport.Location = new System.Drawing.Point(0, 684);
+            this.pnlSubMenuReport.Location = new System.Drawing.Point(0, 635);
             this.pnlSubMenuReport.Name = "pnlSubMenuReport";
             this.pnlSubMenuReport.Size = new System.Drawing.Size(243, 106);
             this.pnlSubMenuReport.TabIndex = 8;
@@ -231,7 +230,7 @@ namespace BookStore.Forms
             this.btnMenuReport.ForeColor = System.Drawing.Color.White;
             this.btnMenuReport.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuReport.Image")));
             this.btnMenuReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuReport.Location = new System.Drawing.Point(0, 624);
+            this.btnMenuReport.Location = new System.Drawing.Point(0, 575);
             this.btnMenuReport.Name = "btnMenuReport";
             this.btnMenuReport.Padding = new System.Windows.Forms.Padding(20, 0, 25, 0);
             this.btnMenuReport.Size = new System.Drawing.Size(243, 60);
@@ -248,7 +247,7 @@ namespace BookStore.Forms
             this.pnlSubMenuBusiness.Controls.Add(this.btnReceipt);
             this.pnlSubMenuBusiness.Controls.Add(this.btnImportBook);
             this.pnlSubMenuBusiness.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuBusiness.Location = new System.Drawing.Point(0, 469);
+            this.pnlSubMenuBusiness.Location = new System.Drawing.Point(0, 420);
             this.pnlSubMenuBusiness.Name = "pnlSubMenuBusiness";
             this.pnlSubMenuBusiness.Size = new System.Drawing.Size(243, 155);
             this.pnlSubMenuBusiness.TabIndex = 4;
@@ -323,7 +322,7 @@ namespace BookStore.Forms
             this.btnMenuBusiness.ForeColor = System.Drawing.Color.White;
             this.btnMenuBusiness.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuBusiness.Image")));
             this.btnMenuBusiness.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuBusiness.Location = new System.Drawing.Point(0, 409);
+            this.btnMenuBusiness.Location = new System.Drawing.Point(0, 360);
             this.btnMenuBusiness.Name = "btnMenuBusiness";
             this.btnMenuBusiness.Padding = new System.Windows.Forms.Padding(20, 0, 25, 0);
             this.btnMenuBusiness.Size = new System.Drawing.Size(243, 60);
@@ -339,13 +338,12 @@ namespace BookStore.Forms
             this.pnlSubMenuManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(106)))));
             this.pnlSubMenuManagement.Controls.Add(this.btnAccount);
             this.pnlSubMenuManagement.Controls.Add(this.btnCustomer);
-            this.pnlSubMenuManagement.Controls.Add(this.button1);
-            this.pnlSubMenuManagement.Controls.Add(this.btnTitleBook);
+            this.pnlSubMenuManagement.Controls.Add(this.btnBook);
             this.pnlSubMenuManagement.Controls.Add(this.btnCategory);
             this.pnlSubMenuManagement.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuManagement.Location = new System.Drawing.Point(0, 153);
             this.pnlSubMenuManagement.Name = "pnlSubMenuManagement";
-            this.pnlSubMenuManagement.Size = new System.Drawing.Size(243, 256);
+            this.pnlSubMenuManagement.Size = new System.Drawing.Size(243, 207);
             this.pnlSubMenuManagement.TabIndex = 2;
             // 
             // btnAccount
@@ -357,7 +355,7 @@ namespace BookStore.Forms
             this.btnAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccount.ForeColor = System.Drawing.Color.White;
             this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.Location = new System.Drawing.Point(0, 200);
+            this.btnAccount.Location = new System.Drawing.Point(0, 150);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Padding = new System.Windows.Forms.Padding(63, 0, 0, 0);
             this.btnAccount.Size = new System.Drawing.Size(243, 50);
@@ -377,7 +375,7 @@ namespace BookStore.Forms
             this.btnCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomer.ForeColor = System.Drawing.Color.White;
             this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 150);
+            this.btnCustomer.Location = new System.Drawing.Point(0, 100);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Padding = new System.Windows.Forms.Padding(63, 0, 0, 0);
             this.btnCustomer.Size = new System.Drawing.Size(243, 50);
@@ -388,44 +386,25 @@ namespace BookStore.Forms
             this.btnCustomer.UseVisualStyleBackColor = false;
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
-            // button1
+            // btnBook
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 100);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(63, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(243, 50);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Sách";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnTitleBook
-            // 
-            this.btnTitleBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
-            this.btnTitleBook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTitleBook.FlatAppearance.BorderSize = 0;
-            this.btnTitleBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTitleBook.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTitleBook.ForeColor = System.Drawing.Color.White;
-            this.btnTitleBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTitleBook.Location = new System.Drawing.Point(0, 50);
-            this.btnTitleBook.Name = "btnTitleBook";
-            this.btnTitleBook.Padding = new System.Windows.Forms.Padding(63, 0, 0, 0);
-            this.btnTitleBook.Size = new System.Drawing.Size(243, 50);
-            this.btnTitleBook.TabIndex = 1;
-            this.btnTitleBook.Text = "Đầu Sách";
-            this.btnTitleBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTitleBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTitleBook.UseVisualStyleBackColor = false;
-            this.btnTitleBook.Click += new System.EventHandler(this.btnBook_Click);
+            this.btnBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
+            this.btnBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBook.FlatAppearance.BorderSize = 0;
+            this.btnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBook.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBook.ForeColor = System.Drawing.Color.White;
+            this.btnBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBook.Location = new System.Drawing.Point(0, 50);
+            this.btnBook.Name = "btnBook";
+            this.btnBook.Padding = new System.Windows.Forms.Padding(63, 0, 0, 0);
+            this.btnBook.Size = new System.Drawing.Size(243, 50);
+            this.btnBook.TabIndex = 1;
+            this.btnBook.Text = "Sách";
+            this.btnBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBook.UseVisualStyleBackColor = false;
+            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
             // 
             // btnCategory
             // 
@@ -697,7 +676,7 @@ namespace BookStore.Forms
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Panel pnlSubMenuManagement;
         private System.Windows.Forms.Button btnMenuManagement;
-        private System.Windows.Forms.Button btnTitleBook;
+        private System.Windows.Forms.Button btnBook;
         private System.Windows.Forms.Button btnCategory;
         private System.Windows.Forms.Panel pnlSubMenuSetting;
         private System.Windows.Forms.Button btnRequirement;
@@ -727,7 +706,6 @@ namespace BookStore.Forms
         private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer tmrRefresh;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.Button btnCustomer;
     }

@@ -46,13 +46,16 @@ namespace BookStore.Forms.Management
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblNewCategory = new System.Windows.Forms.Label();
             this.cboChangePassword = new System.Windows.Forms.CheckBox();
+            this.txtOldPassword = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // chkHideShowPassword
             // 
             this.chkHideShowPassword.AutoSize = true;
             this.chkHideShowPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkHideShowPassword.Location = new System.Drawing.Point(635, 145);
+            this.chkHideShowPassword.Location = new System.Drawing.Point(507, 188);
             this.chkHideShowPassword.Name = "chkHideShowPassword";
             this.chkHideShowPassword.Size = new System.Drawing.Size(152, 25);
             this.chkHideShowPassword.TabIndex = 47;
@@ -80,19 +83,19 @@ namespace BookStore.Forms.Management
             // 
             // lblConfirmPasswordError
             // 
-            this.lblConfirmPasswordError.AutoSize = true;
             this.lblConfirmPasswordError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmPasswordError.ForeColor = System.Drawing.Color.Red;
-            this.lblConfirmPasswordError.Location = new System.Drawing.Point(706, 117);
+            this.lblConfirmPasswordError.Location = new System.Drawing.Point(627, 172);
             this.lblConfirmPasswordError.Name = "lblConfirmPasswordError";
-            this.lblConfirmPasswordError.Size = new System.Drawing.Size(144, 17);
+            this.lblConfirmPasswordError.Size = new System.Drawing.Size(215, 17);
             this.lblConfirmPasswordError.TabIndex = 44;
             this.lblConfirmPasswordError.Text = "ConfirmPassword Error";
+            this.lblConfirmPasswordError.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(635, 84);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(627, 139);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(215, 33);
             this.txtConfirmPassword.TabIndex = 43;
@@ -101,7 +104,7 @@ namespace BookStore.Forms.Management
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(441, 87);
+            this.label5.Location = new System.Drawing.Point(433, 142);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(177, 25);
             this.label5.TabIndex = 42;
@@ -109,19 +112,19 @@ namespace BookStore.Forms.Management
             // 
             // lblNewPasswordError
             // 
-            this.lblNewPasswordError.AutoSize = true;
             this.lblNewPasswordError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewPasswordError.ForeColor = System.Drawing.Color.Red;
-            this.lblNewPasswordError.Location = new System.Drawing.Point(749, 63);
+            this.lblNewPasswordError.Location = new System.Drawing.Point(627, 118);
             this.lblNewPasswordError.Name = "lblNewPasswordError";
-            this.lblNewPasswordError.Size = new System.Drawing.Size(98, 17);
+            this.lblNewPasswordError.Size = new System.Drawing.Size(212, 17);
             this.lblNewPasswordError.TabIndex = 41;
             this.lblNewPasswordError.Text = "Password Error";
+            this.lblNewPasswordError.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtNewPassword
             // 
             this.txtNewPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewPassword.Location = new System.Drawing.Point(635, 30);
+            this.txtNewPassword.Location = new System.Drawing.Point(627, 85);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.Size = new System.Drawing.Size(215, 33);
             this.txtNewPassword.TabIndex = 40;
@@ -130,7 +133,7 @@ namespace BookStore.Forms.Management
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(441, 33);
+            this.label4.Location = new System.Drawing.Point(433, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 25);
             this.label4.TabIndex = 39;
@@ -173,7 +176,7 @@ namespace BookStore.Forms.Management
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOk.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.Color.White;
-            this.btnOk.Location = new System.Drawing.Point(113, 238);
+            this.btnOk.Location = new System.Drawing.Point(106, 238);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(137, 46);
             this.btnOk.TabIndex = 33;
@@ -188,7 +191,7 @@ namespace BookStore.Forms.Management
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(274, 238);
+            this.btnCancel.Location = new System.Drawing.Point(267, 238);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(137, 46);
             this.btnCancel.TabIndex = 34;
@@ -226,11 +229,43 @@ namespace BookStore.Forms.Management
             this.cboChangePassword.Text = "Đổi mật khẩu";
             this.cboChangePassword.UseVisualStyleBackColor = true;
             // 
+            // txtOldPassword
+            // 
+            this.txtOldPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOldPassword.Location = new System.Drawing.Point(627, 30);
+            this.txtOldPassword.Name = "txtOldPassword";
+            this.txtOldPassword.Size = new System.Drawing.Size(215, 33);
+            this.txtOldPassword.TabIndex = 50;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(433, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 25);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Mật khẩu cũ:";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(627, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(215, 17);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "DisplayName Error";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // frmAccount_Edit
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(423, 315);
+            this.ClientSize = new System.Drawing.Size(416, 315);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtOldPassword);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cboChangePassword);
             this.Controls.Add(this.chkHideShowPassword);
             this.Controls.Add(this.cboRole);
@@ -280,5 +315,8 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblNewCategory;
         private System.Windows.Forms.CheckBox cboChangePassword;
+        private System.Windows.Forms.TextBox txtOldPassword;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }

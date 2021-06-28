@@ -157,6 +157,7 @@ namespace BookStore.Forms.Management
             this.gunaDgvAccount.ThemeStyle.RowsStyle.Height = 28;
             this.gunaDgvAccount.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gunaDgvAccount.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gunaDgvAccount.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gunaDgvAccount_CellFormatting);
             // 
             // panel1
             // 
@@ -228,6 +229,7 @@ namespace BookStore.Forms.Management
             this.chkHideShowPassword.TabIndex = 6;
             this.chkHideShowPassword.Text = "Hiển thị mật khẩu";
             this.chkHideShowPassword.UseVisualStyleBackColor = true;
+            this.chkHideShowPassword.CheckedChanged += new System.EventHandler(this.chkHideShowPassword_CheckedChanged);
             // 
             // btnAdd
             // 
@@ -243,6 +245,7 @@ namespace BookStore.Forms.Management
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -258,6 +261,7 @@ namespace BookStore.Forms.Management
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Xoá";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -273,11 +277,12 @@ namespace BookStore.Forms.Management
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // TenDangNhap
             // 
             this.TenDangNhap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenDangNhap.DataPropertyName = "TenDangNhap";
+            this.TenDangNhap.DataPropertyName = "Username";
             this.TenDangNhap.HeaderText = "Tên Đăng Nhập";
             this.TenDangNhap.Name = "TenDangNhap";
             this.TenDangNhap.ReadOnly = true;
@@ -285,7 +290,7 @@ namespace BookStore.Forms.Management
             // TenHienThi
             // 
             this.TenHienThi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenHienThi.DataPropertyName = "TenHienThi";
+            this.TenHienThi.DataPropertyName = "DisplayName";
             this.TenHienThi.HeaderText = "Tên Hiển Thị";
             this.TenHienThi.Name = "TenHienThi";
             this.TenHienThi.ReadOnly = true;
@@ -293,7 +298,7 @@ namespace BookStore.Forms.Management
             // MatKhau
             // 
             this.MatKhau.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MatKhau.DataPropertyName = "MatKhau";
+            this.MatKhau.DataPropertyName = "Password";
             this.MatKhau.HeaderText = "Mật Khẩu";
             this.MatKhau.Name = "MatKhau";
             this.MatKhau.ReadOnly = true;
@@ -301,7 +306,7 @@ namespace BookStore.Forms.Management
             // PhanQuyen
             // 
             this.PhanQuyen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PhanQuyen.DataPropertyName = "PhanQuyen";
+            this.PhanQuyen.DataPropertyName = "Permission";
             this.PhanQuyen.FillWeight = 80F;
             this.PhanQuyen.HeaderText = "Phân Quyền";
             this.PhanQuyen.Name = "PhanQuyen";
@@ -320,6 +325,7 @@ namespace BookStore.Forms.Management
             this.Name = "frmAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TÀI KHOẢN";
+            this.Load += new System.EventHandler(this.frmAccount_Load);
             this.grpAccount.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.pnlAccount.ResumeLayout(false);

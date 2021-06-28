@@ -1,7 +1,7 @@
 ﻿
 namespace BookStore.Forms.Business
 {
-    partial class frmImportBook
+    partial class frmBookReceipt
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,16 @@ namespace BookStore.Forms.Business
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmImportBook));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBookReceipt));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.grpImportBook = new System.Windows.Forms.GroupBox();
@@ -48,6 +48,7 @@ namespace BookStore.Forms.Business
             this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnImportBookSearch = new System.Windows.Forms.Button();
             this.gunaTxtImportBookSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -58,6 +59,7 @@ namespace BookStore.Forms.Business
             this.btnDeleteTitleBook = new System.Windows.Forms.Button();
             this.btnEditTitleBook = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnFilterDetail = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.grpAccount = new System.Windows.Forms.GroupBox();
@@ -72,25 +74,23 @@ namespace BookStore.Forms.Business
             this.btnDeleteImportBookDetail = new System.Windows.Forms.Button();
             this.btnEditImportBookDetail = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnImportBookDetailSearch = new System.Windows.Forms.Button();
             this.gunaTxtImportBookDetailSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnFilterBook = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.grpBook = new System.Windows.Forms.GroupBox();
             this.pnlBook = new System.Windows.Forms.Panel();
             this.gunaDgvBook = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.gunaTxtBookSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnBookSearch = new System.Windows.Forms.Button();
-            this.btnImportBookSearch = new System.Windows.Forms.Button();
-            this.btnFilterDetail = new System.Windows.Forms.Button();
-            this.btnImportBookDetailSearch = new System.Windows.Forms.Button();
-            this.btnFilterBook = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnBookSearch = new System.Windows.Forms.Button();
+            this.gunaTxtBookSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.grpImportBook.SuspendLayout();
@@ -170,34 +170,34 @@ namespace BookStore.Forms.Business
             // 
             // gunaDgvImportBook
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.gunaDgvImportBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gunaDgvImportBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gunaDgvImportBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gunaDgvImportBook.BackgroundColor = System.Drawing.Color.White;
             this.gunaDgvImportBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaDgvImportBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gunaDgvImportBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDgvImportBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDgvImportBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gunaDgvImportBook.ColumnHeadersHeight = 30;
             this.gunaDgvImportBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SoPNS,
             this.NgayLap,
             this.TongTien});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDgvImportBook.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDgvImportBook.DefaultCellStyle = dataGridViewCellStyle3;
             this.gunaDgvImportBook.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaDgvImportBook.EnableHeadersVisualStyles = false;
             this.gunaDgvImportBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -258,6 +258,19 @@ namespace BookStore.Forms.Business
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(307, 46);
             this.panel6.TabIndex = 29;
+            // 
+            // btnImportBookSearch
+            // 
+            this.btnImportBookSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(106)))));
+            this.btnImportBookSearch.FlatAppearance.BorderSize = 0;
+            this.btnImportBookSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportBookSearch.ForeColor = System.Drawing.Color.White;
+            this.btnImportBookSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnImportBookSearch.Image")));
+            this.btnImportBookSearch.Location = new System.Drawing.Point(221, 2);
+            this.btnImportBookSearch.Name = "btnImportBookSearch";
+            this.btnImportBookSearch.Size = new System.Drawing.Size(34, 35);
+            this.btnImportBookSearch.TabIndex = 1;
+            this.btnImportBookSearch.UseVisualStyleBackColor = false;
             // 
             // gunaTxtImportBookSearch
             // 
@@ -405,6 +418,20 @@ namespace BookStore.Forms.Business
             this.panel5.Size = new System.Drawing.Size(37, 342);
             this.panel5.TabIndex = 38;
             // 
+            // btnFilterDetail
+            // 
+            this.btnFilterDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFilterDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnFilterDetail.FlatAppearance.BorderSize = 0;
+            this.btnFilterDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilterDetail.ForeColor = System.Drawing.Color.White;
+            this.btnFilterDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnFilterDetail.Image")));
+            this.btnFilterDetail.Location = new System.Drawing.Point(0, 162);
+            this.btnFilterDetail.Name = "btnFilterDetail";
+            this.btnFilterDetail.Size = new System.Drawing.Size(34, 34);
+            this.btnFilterDetail.TabIndex = 2;
+            this.btnFilterDetail.UseVisualStyleBackColor = false;
+            // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -450,21 +477,21 @@ namespace BookStore.Forms.Business
             // 
             // gunaDgvImportBookDetail
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.gunaDgvImportBookDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.gunaDgvImportBookDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gunaDgvImportBookDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gunaDgvImportBookDetail.BackgroundColor = System.Drawing.Color.White;
             this.gunaDgvImportBookDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaDgvImportBookDetail.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gunaDgvImportBookDetail.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDgvImportBookDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDgvImportBookDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gunaDgvImportBookDetail.ColumnHeadersHeight = 30;
             this.gunaDgvImportBookDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SoPNS2,
@@ -472,14 +499,14 @@ namespace BookStore.Forms.Business
             this.SoLuongNhap,
             this.DonGiaNhap,
             this.ThanhTien});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDgvImportBookDetail.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDgvImportBookDetail.DefaultCellStyle = dataGridViewCellStyle6;
             this.gunaDgvImportBookDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaDgvImportBookDetail.EnableHeadersVisualStyles = false;
             this.gunaDgvImportBookDetail.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -594,6 +621,19 @@ namespace BookStore.Forms.Business
             this.panel7.Size = new System.Drawing.Size(565, 47);
             this.panel7.TabIndex = 5;
             // 
+            // btnImportBookDetailSearch
+            // 
+            this.btnImportBookDetailSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(106)))));
+            this.btnImportBookDetailSearch.FlatAppearance.BorderSize = 0;
+            this.btnImportBookDetailSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportBookDetailSearch.ForeColor = System.Drawing.Color.White;
+            this.btnImportBookDetailSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnImportBookDetailSearch.Image")));
+            this.btnImportBookDetailSearch.Location = new System.Drawing.Point(379, 3);
+            this.btnImportBookDetailSearch.Name = "btnImportBookDetailSearch";
+            this.btnImportBookDetailSearch.Size = new System.Drawing.Size(34, 35);
+            this.btnImportBookDetailSearch.TabIndex = 1;
+            this.btnImportBookDetailSearch.UseVisualStyleBackColor = false;
+            // 
             // gunaTxtImportBookDetailSearch
             // 
             this.gunaTxtImportBookDetailSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -626,6 +666,20 @@ namespace BookStore.Forms.Business
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(573, 36);
             this.panel4.TabIndex = 0;
+            // 
+            // btnFilterBook
+            // 
+            this.btnFilterBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFilterBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnFilterBook.FlatAppearance.BorderSize = 0;
+            this.btnFilterBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilterBook.ForeColor = System.Drawing.Color.White;
+            this.btnFilterBook.Image = ((System.Drawing.Image)(resources.GetObject("btnFilterBook.Image")));
+            this.btnFilterBook.Location = new System.Drawing.Point(234, 0);
+            this.btnFilterBook.Name = "btnFilterBook";
+            this.btnFilterBook.Size = new System.Drawing.Size(34, 35);
+            this.btnFilterBook.TabIndex = 10;
+            this.btnFilterBook.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
@@ -670,21 +724,21 @@ namespace BookStore.Forms.Business
             // 
             // gunaDgvBook
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.gunaDgvBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.gunaDgvBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.gunaDgvBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gunaDgvBook.BackgroundColor = System.Drawing.Color.White;
             this.gunaDgvBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaDgvBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gunaDgvBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDgvBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDgvBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.gunaDgvBook.ColumnHeadersHeight = 30;
             this.gunaDgvBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -693,14 +747,14 @@ namespace BookStore.Forms.Business
             this.TheLoai,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDgvBook.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDgvBook.DefaultCellStyle = dataGridViewCellStyle9;
             this.gunaDgvBook.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaDgvBook.EnableHeadersVisualStyles = false;
             this.gunaDgvBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -732,107 +786,6 @@ namespace BookStore.Forms.Business
             this.gunaDgvBook.ThemeStyle.RowsStyle.Height = 28;
             this.gunaDgvBook.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gunaDgvBook.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.btnBookSearch);
-            this.panel11.Controls.Add(this.gunaTxtBookSearch);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(929, 46);
-            this.panel11.TabIndex = 9;
-            // 
-            // gunaTxtBookSearch
-            // 
-            this.gunaTxtBookSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTxtBookSearch.DefaultText = "";
-            this.gunaTxtBookSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.gunaTxtBookSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.gunaTxtBookSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.gunaTxtBookSearch.DisabledState.Parent = this.gunaTxtBookSearch;
-            this.gunaTxtBookSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.gunaTxtBookSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gunaTxtBookSearch.FocusedState.Parent = this.gunaTxtBookSearch;
-            this.gunaTxtBookSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTxtBookSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gunaTxtBookSearch.HoverState.Parent = this.gunaTxtBookSearch;
-            this.gunaTxtBookSearch.Location = new System.Drawing.Point(43, 2);
-            this.gunaTxtBookSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gunaTxtBookSearch.Name = "gunaTxtBookSearch";
-            this.gunaTxtBookSearch.PasswordChar = '\0';
-            this.gunaTxtBookSearch.PlaceholderText = "Tìm kiếm";
-            this.gunaTxtBookSearch.SelectedText = "";
-            this.gunaTxtBookSearch.ShadowDecoration.Parent = this.gunaTxtBookSearch;
-            this.gunaTxtBookSearch.Size = new System.Drawing.Size(328, 35);
-            this.gunaTxtBookSearch.TabIndex = 0;
-            // 
-            // btnBookSearch
-            // 
-            this.btnBookSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(106)))));
-            this.btnBookSearch.FlatAppearance.BorderSize = 0;
-            this.btnBookSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBookSearch.ForeColor = System.Drawing.Color.White;
-            this.btnBookSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnBookSearch.Image")));
-            this.btnBookSearch.Location = new System.Drawing.Point(378, 2);
-            this.btnBookSearch.Name = "btnBookSearch";
-            this.btnBookSearch.Size = new System.Drawing.Size(34, 35);
-            this.btnBookSearch.TabIndex = 1;
-            this.btnBookSearch.UseVisualStyleBackColor = false;
-            // 
-            // btnImportBookSearch
-            // 
-            this.btnImportBookSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(106)))));
-            this.btnImportBookSearch.FlatAppearance.BorderSize = 0;
-            this.btnImportBookSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportBookSearch.ForeColor = System.Drawing.Color.White;
-            this.btnImportBookSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnImportBookSearch.Image")));
-            this.btnImportBookSearch.Location = new System.Drawing.Point(221, 2);
-            this.btnImportBookSearch.Name = "btnImportBookSearch";
-            this.btnImportBookSearch.Size = new System.Drawing.Size(34, 35);
-            this.btnImportBookSearch.TabIndex = 1;
-            this.btnImportBookSearch.UseVisualStyleBackColor = false;
-            // 
-            // btnFilterDetail
-            // 
-            this.btnFilterDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFilterDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnFilterDetail.FlatAppearance.BorderSize = 0;
-            this.btnFilterDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilterDetail.ForeColor = System.Drawing.Color.White;
-            this.btnFilterDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnFilterDetail.Image")));
-            this.btnFilterDetail.Location = new System.Drawing.Point(0, 162);
-            this.btnFilterDetail.Name = "btnFilterDetail";
-            this.btnFilterDetail.Size = new System.Drawing.Size(34, 34);
-            this.btnFilterDetail.TabIndex = 2;
-            this.btnFilterDetail.UseVisualStyleBackColor = false;
-            // 
-            // btnImportBookDetailSearch
-            // 
-            this.btnImportBookDetailSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(106)))));
-            this.btnImportBookDetailSearch.FlatAppearance.BorderSize = 0;
-            this.btnImportBookDetailSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportBookDetailSearch.ForeColor = System.Drawing.Color.White;
-            this.btnImportBookDetailSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnImportBookDetailSearch.Image")));
-            this.btnImportBookDetailSearch.Location = new System.Drawing.Point(379, 3);
-            this.btnImportBookDetailSearch.Name = "btnImportBookDetailSearch";
-            this.btnImportBookDetailSearch.Size = new System.Drawing.Size(34, 35);
-            this.btnImportBookDetailSearch.TabIndex = 1;
-            this.btnImportBookDetailSearch.UseVisualStyleBackColor = false;
-            // 
-            // btnFilterBook
-            // 
-            this.btnFilterBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnFilterBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnFilterBook.FlatAppearance.BorderSize = 0;
-            this.btnFilterBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilterBook.ForeColor = System.Drawing.Color.White;
-            this.btnFilterBook.Image = ((System.Drawing.Image)(resources.GetObject("btnFilterBook.Image")));
-            this.btnFilterBook.Location = new System.Drawing.Point(234, 0);
-            this.btnFilterBook.Name = "btnFilterBook";
-            this.btnFilterBook.Size = new System.Drawing.Size(34, 35);
-            this.btnFilterBook.TabIndex = 10;
-            this.btnFilterBook.UseVisualStyleBackColor = false;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -868,6 +821,53 @@ namespace BookStore.Forms.Business
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn3.HeaderText = "Năm XB";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.btnBookSearch);
+            this.panel11.Controls.Add(this.gunaTxtBookSearch);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(929, 46);
+            this.panel11.TabIndex = 9;
+            // 
+            // btnBookSearch
+            // 
+            this.btnBookSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(106)))));
+            this.btnBookSearch.FlatAppearance.BorderSize = 0;
+            this.btnBookSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBookSearch.ForeColor = System.Drawing.Color.White;
+            this.btnBookSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnBookSearch.Image")));
+            this.btnBookSearch.Location = new System.Drawing.Point(378, 2);
+            this.btnBookSearch.Name = "btnBookSearch";
+            this.btnBookSearch.Size = new System.Drawing.Size(34, 35);
+            this.btnBookSearch.TabIndex = 1;
+            this.btnBookSearch.UseVisualStyleBackColor = false;
+            // 
+            // gunaTxtBookSearch
+            // 
+            this.gunaTxtBookSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gunaTxtBookSearch.DefaultText = "";
+            this.gunaTxtBookSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.gunaTxtBookSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.gunaTxtBookSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gunaTxtBookSearch.DisabledState.Parent = this.gunaTxtBookSearch;
+            this.gunaTxtBookSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gunaTxtBookSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gunaTxtBookSearch.FocusedState.Parent = this.gunaTxtBookSearch;
+            this.gunaTxtBookSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTxtBookSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gunaTxtBookSearch.HoverState.Parent = this.gunaTxtBookSearch;
+            this.gunaTxtBookSearch.Location = new System.Drawing.Point(43, 2);
+            this.gunaTxtBookSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaTxtBookSearch.Name = "gunaTxtBookSearch";
+            this.gunaTxtBookSearch.PasswordChar = '\0';
+            this.gunaTxtBookSearch.PlaceholderText = "Tìm kiếm";
+            this.gunaTxtBookSearch.SelectedText = "";
+            this.gunaTxtBookSearch.ShadowDecoration.Parent = this.gunaTxtBookSearch;
+            this.gunaTxtBookSearch.Size = new System.Drawing.Size(328, 35);
+            this.gunaTxtBookSearch.TabIndex = 0;
             // 
             // frmImportBook
             // 

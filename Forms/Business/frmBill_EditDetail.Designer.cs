@@ -1,7 +1,7 @@
 ﻿
 namespace BookStore.Forms.Business
 {
-    partial class frmReceipt_EditDetail
+    partial class frmBill_EditDetail
     {
         /// <summary>
         /// Required designer variable.

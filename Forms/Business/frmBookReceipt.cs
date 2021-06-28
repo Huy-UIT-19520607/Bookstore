@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace BookStore.Forms.Business
 {
-    public partial class frmImportBook_EditDetail : Form
+    public partial class frmBookReceipt : Form
     {
-        public frmImportBook_EditDetail()
+        public frmBookReceipt()
         {
             InitializeComponent();
         }
+
+        
     }
 }

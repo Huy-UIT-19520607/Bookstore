@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BookStore.Forms.Business
 {
-    public partial class frmReceipt_Edit : Form
+    public partial class frmCashReceipt_Edit : Form
     {
-        public frmReceipt_Edit()
+        public frmCashReceipt_Edit()
         {
             InitializeComponent();
         }
