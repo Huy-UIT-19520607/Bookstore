@@ -45,7 +45,7 @@ namespace BookStore.BUS
             return DAO.Account.Instance.Login(username, password);
         }
 
-        public bool AddAccount(string username, string password, string displayname, int permission)
+        public bool AddAccount(DTO.Account newAcc)
         {
             //if (Accounts.FirstOrDefault(account => account.Username.Equals(username)) != null)
             //{
@@ -62,7 +62,7 @@ namespace BookStore.BUS
             //    }
             //}
             //return false;
-            DTO.Account newAcc = new DTO.Account(username, password, displayname, permission);
+            //DTO.Account newAcc = new DTO.Account(username, password, displayname, permission);
 
             if (DAO.Account.Instance.AddAccount(newAcc))
             {

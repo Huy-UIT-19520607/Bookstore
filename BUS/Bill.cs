@@ -86,5 +86,19 @@ namespace BookStore.BUS
             }
             return false;
         }
+
+        public void UpdateTotal(int id, int amount, int oldAmount)
+        {
+            var obj = Bills.First(bill => bill.Id == id);
+
+            obj.TotalPrice += (amount - oldAmount);
+        }
+
+        public void DeleteAmount(int id, int amount)
+        {
+            var obj = Bills.First(bill => bill.Id == id);
+
+            obj.TotalPrice -= amount;
+        }
     }
 }

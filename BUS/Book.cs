@@ -39,13 +39,13 @@ namespace BookStore.BUS
 
         public bool AddBook(int titleId, string publisher, int publishYear, int inStock, int price)
         {
-            if (Books.FirstOrDefault(book => 
-                book.TitleId == titleId 
-                && book.Publisher.Equals(publisher)
-                && book.InStock == inStock
-                && book.Price == price
-            ) == null)
-            {
+            //if (Books.FirstOrDefault(book => 
+            //    book.TitleId == titleId 
+            //    && book.Publisher.Equals(publisher)
+            //    && book.InStock == inStock
+            //    && book.Price == price
+            //) == null)
+            //{
                 int id = DAO.Book.Instance.AddBook(titleId, publisher, publishYear, inStock, price);
 
                 if (id != -1)
@@ -62,19 +62,19 @@ namespace BookStore.BUS
                     return true;
                 }
                 return false;
-            }
-            return false;
+            //}
+            //return false;
         }
 
         public bool UpdateBook(DTO.Book updated)
         {
-            if (Books.FirstOrDefault(book =>
-                   book.TitleId == updated.TitleId
-                   && book.Publisher.Equals(updated.Publisher)
-                   && book.InStock == updated.PublishYear
-                   && book.Price == updated.Price
-               ) == null)
-            {
+            //if (Books.FirstOrDefault(book =>
+            //       book.TitleId == updated.TitleId
+            //       && book.Publisher.Equals(updated.Publisher)
+            //       && book.InStock == updated.PublishYear
+            //       && book.Price == updated.Price
+            //   ) == null)
+            //{
                 if (DAO.Book.Instance.UpdateBook(updated))
                 {
                     var obj = Books.First(book => book.Id == updated.Id);
@@ -87,7 +87,7 @@ namespace BookStore.BUS
 
                     return true;
                 }
-            }
+            //}
             return false;
         }
 
@@ -99,6 +99,17 @@ namespace BookStore.BUS
                 return true;
             }
             return false;
+        }
+
+        public void UpdatePrice(int value)
+        {
+            Task.Factory.StartNew(() =>
+            {
+                foreach (var item in Books)
+                {
+                    item.Price *= (value / 100);
+                }
+            });
         }
     }
 }

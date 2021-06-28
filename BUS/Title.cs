@@ -36,9 +36,9 @@ namespace BookStore.BUS
 
         public bool AddTitle(string name, int categoryId)
         {
-            if (Titles.FirstOrDefault(
-                title => title.Name == name && title.CategoryId == categoryId) == null)
-            {
+            //if (Titles.FirstOrDefault(
+            //    title => title.Name == name && title.CategoryId == categoryId) == null)
+            //{
                 int id = DAO.Title.Instance.AddTitle(name, categoryId);
                 if (id != -1)
                 {
@@ -50,8 +50,8 @@ namespace BookStore.BUS
 
                     return true;
                 }
-                return false;
-            }
+            //    return false;
+            //}
             return false;
         }
 
@@ -68,9 +68,9 @@ namespace BookStore.BUS
 
         public bool UpdateTitle(DTO.Title updated)
         {
-            if (Titles.FirstOrDefault(
-                title => title.Name == updated.Name && title.CategoryId == updated.CategoryId) != null)
-            {
+            //if (Titles.FirstOrDefault(
+            //    title => title.Name == updated.Name && title.CategoryId == updated.CategoryId) != null)
+            //{
                 if (DAO.Title.Instance.UpdateTitle(updated))
                 {
                     var obj = Titles.First(title => title.Id.Equals(updated.Id));
@@ -80,8 +80,8 @@ namespace BookStore.BUS
 
                     return true;
                 }
-                return false;
-            }
+                //return false;
+            //}
             return false;
         }
     }

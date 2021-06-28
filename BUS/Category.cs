@@ -42,8 +42,8 @@ namespace BookStore.BUS
 
         public bool AddCategory(string name)
         {
-            if (Categories.FirstOrDefault(category => category.Name.Equals(name)) == null)
-            {
+            //if (Categories.FirstOrDefault(category => category.Name.Equals(name)) == null)
+            //{
                 int id = DAO.Category.Instance.AddCategory(name);
 
                 if (id == -1)
@@ -57,8 +57,8 @@ namespace BookStore.BUS
                 ));
 
                 return true;
-            }
-            return false;
+            //}
+            //return false;
         }
 
         public bool DeleteCategory(int id)
@@ -74,8 +74,8 @@ namespace BookStore.BUS
 
         public bool UpdateCategory(int id, string name)
         {
-            if (Categories.FirstOrDefault(category => category.Name.Equals(name)) != null)
-            {
+            //if (Categories.FirstOrDefault(category => category.Name.Equals(name)) != null)
+            //{
                 if (DAO.Category.Instance.UpdateCategory(id, name))
                 {
                     var obj = Categories.First(category => category.Id == id);
@@ -84,8 +84,8 @@ namespace BookStore.BUS
 
                     return true;
                 }
-                return false;
-            }
+                //return false;
+            //}
             return false;
         }
     }

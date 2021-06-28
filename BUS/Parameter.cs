@@ -46,6 +46,11 @@ namespace BookStore.BUS
 
                 obj.Value = value;
 
+                if (name.Equals("ApDungQD4"))
+                {
+                    BUS.Book.Instance.UpdatePrice(value);
+                }
+
                 return true;
             }
             return false;

@@ -28,13 +28,13 @@ namespace BookStore.BUS
 
         public bool AddCustomer(string name, string address, string phoneNumber, string email, int debt)
         {           
-            if (Customers.FirstOrDefault
-                (customer => customer.Name.Equals(name)
-                && customer.Address.Equals(address)
-                && customer.PhoneNumber.Equals(phoneNumber)
-                && customer.Email.Equals(email)
-                && customer.Debt == debt) == null)
-            {
+            //if (Customers.FirstOrDefault
+            //    (customer => customer.Name.Equals(name)
+            //    && customer.Address.Equals(address)
+            //    && customer.PhoneNumber.Equals(phoneNumber)
+            //    && customer.Email.Equals(email)
+            //    && customer.Debt == debt) == null)
+            //{
                 int id = DAO.Customer.Instance.AddCustomer(name, address, phoneNumber, email, debt);
                 if (id != -1)
                 {
@@ -45,10 +45,12 @@ namespace BookStore.BUS
                        phoneNumber,
                        email,
                        debt
-                   ));
+                    ));
+
+                    return true;
                 }
-                return false;
-            }
+                //return false;
+            //}
             return false;
         }
 
@@ -64,13 +66,13 @@ namespace BookStore.BUS
 
         public bool UpdateCustomer(DTO.Customer updated)
         {
-            if (Customers.FirstOrDefault
-                (customer => customer.Name.Equals(updated.Name)
-                && customer.Address.Equals(updated.Address)
-                && customer.PhoneNumber.Equals(updated.PhoneNumber)
-                && customer.Email.Equals(updated.Email)
-                && customer.Debt == updated.Debt) != null)
-            {
+            //if (Customers.FirstOrDefault
+            //    (customer => customer.Name.Equals(updated.Name)
+            //    && customer.Address.Equals(updated.Address)
+            //    && customer.PhoneNumber.Equals(updated.PhoneNumber)
+            //    && customer.Email.Equals(updated.Email)
+            //    && customer.Debt == updated.Debt) != null)
+            //{
                 if (DAO.Customer.Instance.UpdateCustomer(updated))
                 {
                     var obj = Customers.First(customer => customer.Id == updated.Id);
@@ -83,7 +85,7 @@ namespace BookStore.BUS
 
                     return true;
                 }
-            }
+            //}
             return false;
         }
     }

@@ -10,11 +10,12 @@ namespace BookStore.BUS
     public class BillDetail
     {
         private static BillDetail instance;
-        private BindingList<DTO.BillDetail> billDetails;
+        private static BindingList<DTO.BillDetail> billDetails;
 
         public BillDetail()
         {
             BillDetails = new BindingList<DTO.BillDetail>();
+            GetListDetail();
         }
 
         public static BillDetail Instance { get => instance; set => instance = value; }
@@ -39,7 +40,7 @@ namespace BookStore.BUS
         public void DeleteAllDetailById(int id)
         {
             List<DTO.BillDetail> detailToRemove = 
-                BillDetails.Where(detail => detail.Id != id).ToList();
+                BillDetails.Where(detail => detail.Id == id).ToList();
 
             foreach(var detail in detailToRemove)
             {
@@ -51,8 +52,11 @@ namespace BookStore.BUS
         {
             if (DAO.BillDetail.Instance.DeleteDetail(id, bookId))
             {
-                BillDetails.Remove(
-                    BillDetails.First(detail => detail.Id == id && detail.BookId == bookId));
+                var obj = BillDetails.First(detail => detail.Id == id && detail.BookId == bookId);
+
+                Bill.Instance.DeleteAmount(id, obj.Total);
+
+                BillDetails.Remove(obj);
 
                 return true;
             }
@@ -65,6 +69,8 @@ namespace BookStore.BUS
             {
                 var obj = BillDetails.First(
                     detail => detail.Id == updated.Id && detail.BookId == updated.BookId);
+
+                Bill.Instance.UpdateTotal(updated.Id, updated.Total, obj.Total);
 
                 obj.Number = updated.Number;
                 obj.Price = updated.Price;
