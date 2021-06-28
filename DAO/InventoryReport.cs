@@ -11,12 +11,12 @@ namespace BookStore.DAO
     public class InventoryReport
     {
         private static InventoryReport instance;
-        private static BindingList<DTO.InventoryReport> inventoryReports;
+        //private static BindingList<DTO.InventoryReport> inventoryReports;
 
         public InventoryReport()
         {
-            inventoryReports = new BindingList<DTO.InventoryReport>();
-            GetListReport();
+            //inventoryReports = new BindingList<DTO.InventoryReport>();
+            //GetListReport();
         }
 
         public static InventoryReport Instance 
@@ -31,16 +31,27 @@ namespace BookStore.DAO
             }
             set => instance = value; 
         }
-        public static BindingList<DTO.InventoryReport> InventoryReports { get => inventoryReports; set => inventoryReports = value; }
+        //public static BindingList<DTO.InventoryReport> InventoryReports { get => inventoryReports; set => inventoryReports = value; }
 
-        private void GetListReport()
+        public BindingList<DTO.InventoryReport> GetListReport()
         {
             string query = "select * from BAOCAOTON";
             DataTable results = DataProvider.Instance.ExecuteQuery(query);
 
+            BindingList<DTO.InventoryReport> inventoryReports = new BindingList<DTO.InventoryReport>();
+
             foreach (DataRow row in results.Rows)
             {
-                InventoryReports.Add(new DTO.InventoryReport(
+                //InventoryReports.Add(new DTO.InventoryReport(
+                //    (int)row.ItemArray[0],
+                //    (int)row.ItemArray[1],
+                //    (int)row.ItemArray[2],
+                //    (int)row.ItemArray[3],
+                //    (int)row.ItemArray[4],
+                //    (int)row.ItemArray[5]
+                //));
+
+                inventoryReports.Add(new DTO.InventoryReport(
                     (int)row.ItemArray[0],
                     (int)row.ItemArray[1],
                     (int)row.ItemArray[2],
@@ -49,6 +60,8 @@ namespace BookStore.DAO
                     (int)row.ItemArray[5]
                 ));
             }
+
+            return inventoryReports;
         }
 
         public bool AddReport(int month, int year, int bookId, int first, int change, int final)
@@ -66,14 +79,14 @@ namespace BookStore.DAO
 
             if (results > 0)
             {
-                InventoryReports.Add(new DTO.InventoryReport(
-                    month,
-                    year,
-                    bookId,
-                    first,
-                    change,
-                    final
-                ));
+                //InventoryReports.Add(new DTO.InventoryReport(
+                //    month,
+                //    year,
+                //    bookId,
+                //    first,
+                //    change,
+                //    final
+                //));
             }
 
             return results > 0;
@@ -94,15 +107,15 @@ namespace BookStore.DAO
 
             if (results > 0)
             {
-                var obj = InventoryReports.First(report => 
-                    report.Month == updated.Month 
-                    && report.Year == updated.Year
-                    && report.BookId == updated.BookId
-                );
+                //var obj = InventoryReports.First(report => 
+                //    report.Month == updated.Month 
+                //    && report.Year == updated.Year
+                //    && report.BookId == updated.BookId
+                //);
 
-                obj.DeftStart = updated.DeftStart;
-                obj.Change = updated.Change;
-                obj.DebtFinal = updated.DebtFinal;
+                //obj.DeftStart = updated.DeftStart;
+                //obj.Change = updated.Change;
+                //obj.DebtFinal = updated.DebtFinal;
             }
 
             return results > 0;
@@ -120,11 +133,11 @@ namespace BookStore.DAO
 
             if (results > 0)
             {
-                InventoryReports.Remove(InventoryReports.First(report =>
-                    report.Month == month
-                    && report.Year == year
-                    && report.BookId == bookId
-                ));
+                //InventoryReports.Remove(InventoryReports.First(report =>
+                //    report.Month == month
+                //    && report.Year == year
+                //    && report.BookId == bookId
+                //));
             }
 
             return results > 0;

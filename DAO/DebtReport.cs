@@ -11,25 +11,36 @@ namespace BookStore.DAO
     public class DebtReport
     {
         private static DebtReport instance;
-        private static BindingList<DTO.DebtReport> debtReports;
+        //private static BindingList<DTO.DebtReport> debtReports;
 
         public DebtReport()
         {
-            debtReports = new BindingList<DTO.DebtReport>();
-            GetListReport();
+            //debtReports = new BindingList<DTO.DebtReport>();
+            //GetListReport();
         }
 
         public static DebtReport Instance { get => instance; set => instance = value; }
-        public static BindingList<DTO.DebtReport> DebtReports { get => debtReports; set => debtReports = value; }
+        //public static BindingList<DTO.DebtReport> DebtReports { get => debtReports; set => debtReports = value; }
 
-        private void GetListReport()
+        public BindingList<DTO.DebtReport> GetListReport()
         {
             string query = "select * from BAOCAOCONGNO";
             DataTable results = DataProvider.Instance.ExecuteQuery(query);
 
+            BindingList<DTO.DebtReport> debtReports = new BindingList<DTO.DebtReport>();
+
             foreach (DataRow row in results.Rows)
             {
-                DebtReports.Add(new DTO.DebtReport(
+                //DebtReports.Add(new DTO.DebtReport(
+                //    (int)row.ItemArray[0],
+                //    (int)row.ItemArray[1],
+                //    (int)row.ItemArray[2],
+                //    (int)row.ItemArray[3],
+                //    (int)row.ItemArray[4],
+                //    (int)row.ItemArray[5]
+                //));
+
+                debtReports.Add(new DTO.DebtReport(
                     (int)row.ItemArray[0],
                     (int)row.ItemArray[1],
                     (int)row.ItemArray[2],
@@ -38,6 +49,8 @@ namespace BookStore.DAO
                     (int)row.ItemArray[5]
                 ));
             }
+
+            return debtReports;
         }
 
         public bool AddReport(int month, int year, int customerId, int first, int change, int final)
@@ -55,14 +68,14 @@ namespace BookStore.DAO
 
             if (results > 0)
             {
-                DebtReports.Add(new DTO.DebtReport(
-                    month,
-                    year,
-                    customerId,
-                    first,
-                    change,
-                    final
-                ));
+                //DebtReports.Add(new DTO.DebtReport(
+                //    month,
+                //    year,
+                //    customerId,
+                //    first,
+                //    change,
+                //    final
+                //));
             }
 
             return results > 0;
@@ -83,15 +96,15 @@ namespace BookStore.DAO
 
             if (results > 0)
             {
-                var obj = DebtReports.First(report =>
-                    report.Month == updated.Month
-                    && report.Year == updated.Year
-                    && report.CustomerId == updated.CustomerId
-                );
+                //var obj = DebtReports.First(report =>
+                //    report.Month == updated.Month
+                //    && report.Year == updated.Year
+                //    && report.CustomerId == updated.CustomerId
+                //);
 
-                obj.DeftStart = updated.DeftStart;
-                obj.Change = updated.Change;
-                obj.DebtFinal = updated.DebtFinal;
+                //obj.DeftStart = updated.DeftStart;
+                //obj.Change = updated.Change;
+                //obj.DebtFinal = updated.DebtFinal;
             }
 
             return results > 0;
@@ -109,11 +122,11 @@ namespace BookStore.DAO
 
             if (results > 0)
             {
-                DebtReports.Remove(DebtReports.First(report =>
-                    report.Month == month
-                    && report.Year == year
-                    && report.CustomerId == customerId
-                ));
+                //DebtReports.Remove(DebtReports.First(report =>
+                //    report.Month == month
+                //    && report.Year == year
+                //    && report.CustomerId == customerId
+                //));
             }
 
             return results > 0;

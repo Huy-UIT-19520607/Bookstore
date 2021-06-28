@@ -11,7 +11,7 @@ namespace BookStore.DAO
     public class Title
     {
         private static Title instance;
-        private static BindingList<DTO.Title> titles;
+        //private static BindingList<DTO.Title> titles;
 
         public static Title Instance 
         { 
@@ -26,48 +26,51 @@ namespace BookStore.DAO
             private set => instance = value;
         }
 
-        public static BindingList<DTO.Title> Titles { get => titles; set => titles = value; }
+        //public static BindingList<DTO.Title> Titles { get => titles; set => titles = value; }
 
         public Title() 
         {
-            titles = new BindingList<DTO.Title>();
-            GetListTitle();
+            //titles = new BindingList<DTO.Title>();
+            //GetListTitle();
         }
 
-        public void GetListTitle()
+        public BindingList<DTO.Title> GetListTitle()
         {
-            int id;
-            string name;
-            int categoryId;
-
             string query = "select * from DAUSACH";
             DataTable results = DataProvider.Instance.ExecuteQuery(query);
 
+            BindingList<DTO.Title> titles = new BindingList<DTO.Title>();
+
             foreach (DataRow row in results.Rows)
             {
-                id = (int)row.ItemArray[0];
-                name = row.ItemArray[1].ToString();
-                categoryId = (int)row.ItemArray[2];
-
-                Titles.Add(new DTO.Title(id, name, categoryId));
+                //Titles.Add(new DTO.Title(id, name, categoryId));
+                titles.Add(new DTO.Title(
+                    (int)row.ItemArray[0],
+                    row.ItemArray[1].ToString(),
+                    (int)row.ItemArray[2]
+                ));
             }
+
+            return titles;
         }
 
-        public bool AddTitle(string name, int categoryId)
+        public int AddTitle(string name, int categoryId)
         {
             string query = "EXEC sp_add_title @name , @category_id";
             object results = DataProvider.Instance.ExecuteScalar(query, new object[] { name, categoryId });
 
-            if (results != null)
+            if (results == null)
             {
-                Titles.Add(new DTO.Title(
-                    (int)results,
-                    name,
-                    categoryId
-                ));
+                //Titles.Add(new DTO.Title(
+                //    (int)results,
+                //    name,
+                //    categoryId
+                //));
+
+                return -1;
             }
 
-            return results != null;
+            return (int)results;
         }
 
         public bool DeleteTitle(int id)
@@ -77,7 +80,7 @@ namespace BookStore.DAO
 
             if (results > 0)
             {
-                Titles.Remove(Titles.First(title => title.Id == id));
+                //Titles.Remove(Titles.First(title => title.Id == id));
             }
 
             return results > 0;
@@ -96,10 +99,10 @@ namespace BookStore.DAO
 
             if (results > 0)
             {
-                var obj = Titles.First(title => title.Id.Equals(updated.Id));
+                //var obj = Titles.First(title => title.Id.Equals(updated.Id));
 
-                obj.Name = updated.Name;
-                obj.CategoryId = obj.CategoryId;
+                //obj.Name = updated.Name;
+                //obj.CategoryId = obj.CategoryId;
             }
 
             return results > 0;

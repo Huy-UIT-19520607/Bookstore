@@ -12,7 +12,7 @@ namespace BookStore.DAO
     {
         private static Category instance;
 
-        private static BindingList<DTO.Category> categories;
+        //private static BindingList<DTO.Category> categories;
 
         public static Category Instance
         {
@@ -27,47 +27,55 @@ namespace BookStore.DAO
             private set => instance = value;
         }
 
-        public static BindingList<DTO.Category> Categories { get => categories; set => categories = value; }
+        //public static BindingList<DTO.Category> Categories { get => categories; set => categories = value; }
 
         public Category()
         {
-            categories = new BindingList<DTO.Category>();
-            GetListCategory();
+            //categories = new BindingList<DTO.Category>();
+            //GetListCategory();
         }
 
-        public void GetListCategory()
+        public BindingList<DTO.Category> GetListCategory()
         {
-            int id;
-            string name;
-
             string query = "Select * from THELOAI";
 
             DataTable results = DataProvider.Instance.ExecuteQuery(query);
 
+            BindingList<DTO.Category> categories = new BindingList<DTO.Category>();
+
             foreach (DataRow row in results.Rows)
             {
-                id = (int)row.ItemArray[0];
-                name = row.ItemArray[1].ToString(); 
+                //id = (int)row.ItemArray[0];
+                //name = row.ItemArray[1].ToString(); 
 
-                Categories.Add(new DTO.Category(id, name));
+                //Categories.Add(new DTO.Category(id, name));
+
+                categories.Add(new DTO.Category(
+                    (int)row.ItemArray[0],
+                    row.ItemArray[1].ToString()
+                ));
             }
+
+            return categories;
         }
 
-        public bool AddCategory(string name)
+        public int AddCategory(string name)
         {
             string query = "EXEC sp_add_category @name";
 
             object results = DataProvider.Instance.ExecuteScalar(query, new object[] { name });
 
-            if (results != null)
+            if (results == null)
             {
-                Categories.Add(new DTO.Category(
-                    (int)results,
-                    name
-                ));
+                //Categories.Add(new DTO.Category(
+                //    (int)results,
+                //    name
+                //));
+
+                return -1;
             }
 
-            return results != null;
+            return (int)results;
         }
 
         public bool DeleteCategory(int id)
@@ -78,7 +86,7 @@ namespace BookStore.DAO
 
             if (results > 0)
             {
-                Categories.Remove(Categories.First(category => category.Id == id));
+                //Categories.Remove(Categories.First(category => category.Id == id));
             }
 
             return results > 0;
@@ -92,9 +100,9 @@ namespace BookStore.DAO
 
             if (results > 0)
             {
-                var obj = Categories.First(category => category.Id == id);
+                //var obj = Categories.First(category => category.Id == id);
 
-                obj.Name = name;
+                //obj.Name = name;
             }
 
             return results > 0;

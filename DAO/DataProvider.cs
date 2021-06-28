@@ -27,8 +27,9 @@ namespace BookStore
 
         private DataProvider() { }
 
-        private readonly string connectionString = 
-            @"Data Source=DESKTOP-O9Q211T;Initial Catalog=QuanLyNhaSach;Persist Security Info=True;User ID=sa;Password=Huy123456";
+        private readonly string connectionString =
+            //@"Data Source=DESKTOP-O9Q211T;Initial Catalog=QuanLyNhaSach;Persist Security Info=True;User ID=sa;Password=Huy123456";
+            @"Data Source=DESKTOP-60EFUQD;Initial Catalog=QuanLyNhaSach;Persist Security Info=True;User ID=sa;Password=123456";
 
         private SqlCommand AddParameters(string query, SqlCommand command, object[] parameter = null)
         {

@@ -11,12 +11,12 @@ namespace BookStore.DAO
     public class Author
     {
         private static Author instance;
-        private static BindingList<DTO.Author> authors;
+        //private static BindingList<DTO.Author> authors;
 
         public Author()
         {
-            Authors = new BindingList<DTO.Author>();
-            GetListAuthor();
+            //Authors = new BindingList<DTO.Author>();
+            //GetListAuthor();
         }
 
         public static Author Instance
@@ -31,20 +31,24 @@ namespace BookStore.DAO
             }
             set => instance = value;
         }
-        public static BindingList<DTO.Author> Authors { get => authors; set => authors = value; }
+        //public static BindingList<DTO.Author> Authors { get => authors; set => authors = value; }
 
-        private void GetListAuthor()
+        public BindingList<DTO.Author> GetListAuthor()
         {
             string query = "select * from CT_TACGIA";
             DataTable results = DataProvider.Instance.ExecuteQuery(query);
 
+            BindingList<DTO.Author> authors = new BindingList<DTO.Author>();
+
             foreach (DataRow row in results.Rows)
             {
-                Authors.Add(new DTO.Author(
+                authors.Add(new DTO.Author(
                     (int)row.ItemArray[0],
                     row.ItemArray[1].ToString()
                 ));
             }
+
+            return authors;
         }
 
         public bool AddAuthor(int titleId, string name)
@@ -56,13 +60,13 @@ namespace BookStore.DAO
                 name
             });
 
-            if (results > 0)
-            {
-                Authors.Add(new DTO.Author(
-                    titleId,
-                    name
-                ));
-            }
+            //if (results > 0)
+            //{
+            //    Authors.Add(new DTO.Author(
+            //        titleId,
+            //        name
+            //    ));
+            //}
 
             return results > 0;
         }
@@ -77,14 +81,14 @@ namespace BookStore.DAO
                 updated.Name
             });
 
-            if (results > 0)
-            {
-                var obj = Authors.First(author =>
-                            author.TitleId == updated.TitleId
-                            && author.Name.Equals(oldName));
+            //if (results > 0)
+            //{
+            //    var obj = Authors.First(author =>
+            //                author.TitleId == updated.TitleId
+            //                && author.Name.Equals(oldName));
 
-                obj.Name = updated.Name;
-            }
+            //    obj.Name = updated.Name;
+            //}
 
             return results > 0;
         }
@@ -98,13 +102,13 @@ namespace BookStore.DAO
                 removed.Name
             });
 
-            if (results > 0)
-            {
-                Authors.Remove(Authors.First(author =>
-                            author.TitleId == removed.TitleId
-                            && author.Name.Equals(removed.Name)
-                            ));
-            }
+            //if (results > 0)
+            //{
+            //    Authors.Remove(Authors.First(author =>
+            //                author.TitleId == removed.TitleId
+            //                && author.Name.Equals(removed.Name)
+            //                ));
+            //}
 
             return results > 0;
         }

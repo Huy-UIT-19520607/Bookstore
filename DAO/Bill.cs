@@ -11,7 +11,7 @@ namespace BookStore.DAO
     public class Bill
     {
         private static Bill instance;
-        private static BindingList<DTO.Bill> bills;
+        //private static BindingList<DTO.Bill> bills;
 
         public static Bill Instance 
         { 
@@ -25,21 +25,32 @@ namespace BookStore.DAO
             }
             set => instance = value; 
         }
-        public static BindingList<DTO.Bill> Bills { get => bills; set => bills = value; }
+        //public static BindingList<DTO.Bill> Bills { get => bills; set => bills = value; }
 
         public Bill()
         {
-            GetListBill();
+            //GetListBill();
         }
 
-        private void GetListBill()
+        public BindingList<DTO.Bill> GetListBill()
         {
             string query = "select * from HOADON";
             DataTable results = DataProvider.Instance.ExecuteQuery(query);
 
-            foreach(DataRow row in results.Rows)
+            BindingList<DTO.Bill> bills = new BindingList<DTO.Bill>();
+
+            foreach (DataRow row in results.Rows)
             {
-                Bills.Add(new DTO.Bill(
+                //Bills.Add(new DTO.Bill(
+                //    (int)row.ItemArray[0],
+                //    (int)row.ItemArray[1],
+                //    DateTime.Parse(row.ItemArray[2].ToString()),
+                //    (int)row.ItemArray[3],
+                //    (int)row.ItemArray[4],
+                //    (int)row.ItemArray[5]
+                //));
+
+                bills.Add(new DTO.Bill(
                     (int)row.ItemArray[0],
                     (int)row.ItemArray[1],
                     DateTime.Parse(row.ItemArray[2].ToString()),
@@ -47,34 +58,38 @@ namespace BookStore.DAO
                     (int)row.ItemArray[4],
                     (int)row.ItemArray[5]
                 ));
-            }    
+            }
+
+            return bills;
         }
 
-        public bool AddBill(int customerId, DateTime createDate, int total, int payment, int balance)
+        public int AddBill(int customerId, DateTime createDate, int total, int payment, int balance)
         {
             string query = "EXEC sp_add_bill @customer_id , @date , @total , @payment , @balance";
             object results = DataProvider.Instance.ExecuteScalar(query, new object[]
             {
                 customerId,
-                createDate,
+                createDate.ToString("s"),
                 total,
                 payment,
                 balance
             });
 
-            if (results != null)
+            if (results == null)
             {
-                bills.Add(new DTO.Bill(
-                   (int)results,
-                   customerId,
-                   createDate,
-                   total,
-                   payment,
-                   balance
-               ));
+                // bills.Add(new DTO.Bill(
+                //    (int)results,
+                //    customerId,
+                //    createDate,
+                //    total,
+                //    payment,
+                //    balance
+                //));
+
+                return -1;
             }
 
-            return results != null;
+            return (int)results;
         }
 
         public bool DeleteBill(int id)
@@ -84,7 +99,7 @@ namespace BookStore.DAO
 
             if (results > 0)
             {
-                Bills.Remove(Bills.First(bill => bill.Id == id));
+                //Bills.Remove(Bills.First(bill => bill.Id == id));
             }
 
             return results > 0;
@@ -105,13 +120,13 @@ namespace BookStore.DAO
 
             if (results > 0)
             {
-                var obj = Bills.First(bill => bill.Id == updated.Id);
+                //var obj = Bills.First(bill => bill.Id == updated.Id);
 
-                obj.CustomerId = updated.CustomerId;
-                obj.CreateDate = updated.CreateDate;
-                obj.TotalPrice = updated.TotalPrice;
-                obj.Payment = updated.Payment;
-                obj.Balance = updated.Balance;
+                //obj.CustomerId = updated.CustomerId;
+                //obj.CreateDate = updated.CreateDate;
+                //obj.TotalPrice = updated.TotalPrice;
+                //obj.Payment = updated.Payment;
+                //obj.Balance = updated.Balance;
             }
 
             return results > 0;

@@ -11,12 +11,12 @@ namespace BookStore.DAO
     public class Parameter
     {
         private static Parameter instance;
-        private static BindingList<DTO.Parameter> parameters;
+        //private static BindingList<DTO.Parameter> parameters;
 
         public Parameter()
         {
-            parameters = new BindingList<DTO.Parameter>();
-            GetListParameter();
+            //parameters = new BindingList<DTO.Parameter>();
+            //GetListParameter();
         }
 
         public static Parameter Instance
@@ -31,20 +31,29 @@ namespace BookStore.DAO
             }
             set => instance = value;
         }
-        public static BindingList<DTO.Parameter> Parameters { get => parameters; set => parameters = value; }
+        //public static BindingList<DTO.Parameter> Parameters { get => parameters; set => parameters = value; }
 
-        private void GetListParameter()
+        public BindingList<DTO.Parameter> GetListParameter()
         {
             string query = "select * from THAMSO";
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
 
-            foreach(DataRow row in result.Rows)
+            BindingList<DTO.Parameter> parameters = new BindingList<DTO.Parameter>();
+
+            foreach (DataRow row in result.Rows)
             {
-                Parameters.Add(new DTO.Parameter(
+                //Parameters.Add(new DTO.Parameter(
+                //    row.ItemArray[0].ToString(),
+                //    (int)row.ItemArray[1]
+                //));
+
+                parameters.Add(new DTO.Parameter(
                     row.ItemArray[0].ToString(),
                     (int)row.ItemArray[1]
                 ));
             }
+
+            return parameters;
         }
 
         public bool ChangeValue(string name, int value)
@@ -58,9 +67,9 @@ namespace BookStore.DAO
 
             if (result > 0)
             {
-                var obj = Parameters.First(parameter => parameter.Name == name);
+                //var obj = Parameters.First(parameter => parameter.Name == name);
 
-                obj.Value = value;
+                //obj.Value = value;
             }
 
             return result > 0;
