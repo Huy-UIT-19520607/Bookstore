@@ -44,12 +44,14 @@ namespace BookStore.BUS
                 BillDetails.Add(billDetail);
 
                 Book.Instance.UpdateInStock(1, billDetail.BookId,
+                    Bill.Instance.Bills.First(bill => bill.Id == billDetail.Id).CreateDate,
+                    billDetail.Number);
+
                 return true;
             }
             return false;
         }
 
-        public void DeleteAllDetailById(int id)
         public void DeleteAllDetailById(int id, DateTime date)
         {
             List<DTO.BillDetail> detailToRemove = 
@@ -58,6 +60,7 @@ namespace BookStore.BUS
             foreach(var detail in detailToRemove)
             {
                 BillDetails.Remove(detail);
+
                 Book.Instance.UpdateInStock(3, detail.BookId, date, detail.Number);
             }
         }
@@ -69,6 +72,9 @@ namespace BookStore.BUS
                 var obj = BillDetails.First(detail => detail.Id == id && detail.BookId == bookId);
 
                 Book.Instance.UpdateInStock(3, bookId,
+                    Bill.Instance.Bills.First(bill => bill.Id == id).CreateDate,
+                    obj.Number);
+
                 Bill.Instance.DeleteAmount(id, obj.Total);
 
                 BillDetails.Remove(obj);
@@ -88,6 +94,9 @@ namespace BookStore.BUS
                 Bill.Instance.UpdateTotal(updated.Id, updated.Total, obj.Total);
 
                 Book.Instance.UpdateInStock(2, updated.BookId,
+                    Bill.Instance.Bills.First(bill => bill.Id == updated.Id).CreateDate,
+                    updated.Number, obj.Number);
+
                 obj.Number = updated.Number;
                 obj.Price = updated.Price;
                 obj.Total = updated.Total;

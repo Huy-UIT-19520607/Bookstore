@@ -50,7 +50,12 @@ namespace BookStore.BUS
                    total,
                    payment,
                    balance
-               ));
+                ));
+
+                if (balance > 0)
+                {
+                    Customer.Instance.UpdateDebt(3, customerId, createDate, balance);
+                }
 
                 return true;
             }
@@ -62,6 +67,11 @@ namespace BookStore.BUS
             if (DAO.Bill.Instance.UpdateBill(updated))
             {
                 var obj = Bills.First(bill => bill.Id == updated.Id);
+
+                if (updated.Balance > 0)
+                {
+                    Customer.Instance.UpdateDebt(2, updated.CustomerId, updated.CreateDate, updated.Balance, obj.Balance);
+                }
 
                 obj.CustomerId = updated.CustomerId;
                 obj.CreateDate = updated.CreateDate;
@@ -78,9 +88,16 @@ namespace BookStore.BUS
         {
             if (DAO.Bill.Instance.DeleteBill(id))
             {
-                Bills.Remove(Bills.First(bill => bill.Id == id));
+                var obj = Bills.First(bill => bill.Id == id);
 
-                BillDetail.Instance.DeleteAllDetailById(id);
+                if (obj.Balance > 0)
+                {
+                    Customer.Instance.UpdateDebt(1,  obj.CustomerId, obj.CreateDate, obj.Balance);
+                }
+
+                BillDetail.Instance.DeleteAllDetailById(id, obj.CreateDate);
+
+                Bills.Remove(obj);
 
                 return true;
             }
@@ -102,13 +119,9 @@ namespace BookStore.BUS
                 obj.TotalPrice - obj.Payment
             ));
 
-            if (obj.TotalPrice - obj.Payment < 0)
+            if (obj.TotalPrice - obj.Payment > 0)
             {
-                var customer = Customer.Instance.Customers.First(cstmr => cstmr.Id == obj.CustomerId);
-
-                customer.Debt += (obj.TotalPrice - obj.Payment);
-
-                Customer.Instance.UpdateCustomer(customer);
+                Customer.Instance.UpdateDebt(2, obj.CustomerId, obj.CreateDate, obj.TotalPrice - obj.Payment, obj.Balance);
             }
         }
 
@@ -127,13 +140,9 @@ namespace BookStore.BUS
                 obj.TotalPrice - obj.Payment
             ));
 
-            if (obj.TotalPrice - obj.Payment < 0)
+            if (obj.TotalPrice - obj.Payment > 0)
             {
-                var customer = Customer.Instance.Customers.First(cstmr => cstmr.Id == obj.CustomerId);
-
-                customer.Debt += (obj.TotalPrice - obj.Payment);
-
-                Customer.Instance.UpdateCustomer(customer);
+                Customer.Instance.UpdateDebt(2, obj.CustomerId, obj.CreateDate, obj.TotalPrice - obj.Payment, obj.Balance);
             }
         }
     }

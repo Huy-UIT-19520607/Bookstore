@@ -75,6 +75,28 @@ namespace BookStore.BUS
             return false;
         }
 
+        public void UpdateDebt(int type, int customerId, DateTime date, int amount, int oldAmount = 0)
+        {
+            var customer = Customers.First(cus => cus.Id == customerId);
+            int old = customer.Debt;
+
+            switch (type)
+            {
+                case 1:
+                    customer.Debt -= amount;
+                    break;
+                case 2:
+                    customer.Debt += (amount - oldAmount);
+                    break;
+                case 3:
+                    customer.Debt += amount;
+                    break;
+            }
+
+            UpdateCustomer(customer);
+            DebtReport.Instance.UpdateChange(customerId, date, customer.Debt, old);
+        }
+
         public bool UpdateCustomer(DTO.Customer updated)
         {
             //if (Customers.FirstOrDefault

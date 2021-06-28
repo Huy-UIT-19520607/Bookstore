@@ -50,6 +50,10 @@ namespace BookStore.BUS
                     amount
                 ));
 
+                var customer = Customer.Instance.Customers.First(cus => cus.Id == customerId);
+                customer.Debt -= amount;
+                Customer.Instance.UpdateCustomer(customer);
+
                 return true;
             }
             return false;
@@ -60,6 +64,10 @@ namespace BookStore.BUS
             if (DAO.CashReceipt.Instance.UpdateReceipt(updated))
             {
                 var obj = Receipts.First(receipt => receipt.Id == updated.Id);
+
+                var customer = Customer.Instance.Customers.First(cus => cus.Id == updated.CustomerId);
+                customer.Debt += (updated.Payment - obj.Payment);
+                Customer.Instance.UpdateCustomer(customer);
 
                 obj.CustomerId = updated.CustomerId;
                 obj.CreateDate = updated.CreateDate;
@@ -74,7 +82,13 @@ namespace BookStore.BUS
         {
             if (DAO.CashReceipt.Instance.DeleteReceipt(id))
             {
-                Receipts.Remove(Receipts.First(receipt => receipt.Id == id));
+                var obj = Receipts.First(receipt => receipt.Id == id);
+
+                var customer = Customer.Instance.Customers.First(cus => cus.Id == obj.CustomerId);
+                customer.Debt += obj.Payment;
+                Customer.Instance.UpdateCustomer(customer);
+
+                Receipts.Remove(obj);
 
                 return true;
             }

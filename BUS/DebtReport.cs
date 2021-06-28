@@ -56,24 +56,38 @@ namespace BookStore.BUS
             return false;
         }
 
-        //public bool UpdateReport(DTO.DebtReport updated)
-        //{
-        //    if (DAO.DebtReport.Instance.UpdateReport(updated))
-        //    {
-        //        var obj = Reports.First(report =>
-        //            report.Month == updated.Month
-        //            && report.Year == updated.Year
-        //            && report.CustomerId == updated.CustomerId
-        //        );
+        public void UpdateChange(int customerId, DateTime date, int amount, int oldAmount)
+        {
+            var report = Reports.FirstOrDefault
+                (rpt => rpt.Month == date.Month && rpt.Year == date.Year && rpt.CustomerId == customerId);
 
-        //        obj.DeftStart = updated.DeftStart;
-        //        obj.Change = updated.Change;
-        //        obj.DebtFinal = updated.DebtFinal;
+            if (report != null)
+            {
+                report.Change += (amount - oldAmount);
+                report.DebtFinal = report.DeftStart - report.Change;
 
-        //        return true;
-        //    }
-        //    return false;
-        //}
+                UpdateReport(report);
+            }
+        }
+
+        public bool UpdateReport(DTO.DebtReport updated)
+        {
+            if (DAO.DebtReport.Instance.UpdateReport(updated))
+            {
+                var obj = Reports.First(report =>
+                    report.Month == updated.Month
+                    && report.Year == updated.Year
+                    && report.CustomerId == updated.CustomerId
+                );
+
+                obj.DeftStart = updated.DeftStart;
+                obj.Change = updated.Change;
+                obj.DebtFinal = updated.DebtFinal;
+
+                return true;
+            }
+            return false;
+        }
 
         //public bool DeleteReport(int month, int year, int customerId)
         //{
