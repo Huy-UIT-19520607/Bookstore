@@ -11,18 +11,18 @@ namespace BookStore.DTO
         private int month;
         private int year;
         private int bookId;
-        private int deftStart;
+        private int first;
         private int change;
-        private int debtFinal;
+        private int final;
 
-        public InventoryReport(int month, int year, int bookId, int deftStart, int change, int debtFinal)
+        public InventoryReport(int month, int year, int bookId, int first, int change, int final)
         {
             this.Month = month;
             this.Year = year;
             this.BookId = bookId;
-            this.DeftStart = deftStart;
+            this.First = first;
             this.Change = change;
-            this.DebtFinal = debtFinal;
+            this.Final = final;
         }
 
         public int Month
@@ -52,13 +52,13 @@ namespace BookStore.DTO
                 OnPropertyChanged("BookId");
             }
         }
-        public int DeftStart
+        public int First
         {
-            get => deftStart;
+            get => first;
             set
             {
-                deftStart = value;
-                OnPropertyChanged("DeftStart");
+                first = value;
+                OnPropertyChanged("First");
             }
         }
         public int Change
@@ -70,13 +70,13 @@ namespace BookStore.DTO
                 OnPropertyChanged("Change");
             }
         }
-        public int DebtFinal
+        public int Final
         {
-            get => debtFinal;
+            get => final;
             set
             {
-                debtFinal = value;
-                OnPropertyChanged("DebtFinal");
+                final = value;
+                OnPropertyChanged("Final");
             }
         }
     }
