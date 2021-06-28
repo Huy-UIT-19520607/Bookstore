@@ -18,8 +18,19 @@ namespace BookStore.BUS
             GetListCustomer();
         }
 
-        public static Customer Instance { get => instance; set => instance = value; }
-        public static BindingList<DTO.Customer> Customers { get => customers; set => customers = value; }
+        public static Customer Instance 
+        { 
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Customer();
+                }
+                return instance;
+            }    
+            set => instance = value; 
+        }
+        public BindingList<DTO.Customer> Customers { get => customers; set => customers = value; }
 
         public void GetListCustomer()
         {

@@ -30,7 +30,7 @@ namespace BookStore.BUS
             }
             set => instance = value;
         }
-        public static BindingList<DTO.Author> Authors { get => authors; set => authors = value; }
+        public BindingList<DTO.Author> Authors { get => authors; set => authors = value; }
 
         private void GetListAuthor()
         {

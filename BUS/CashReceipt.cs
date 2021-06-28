@@ -18,8 +18,19 @@ namespace BookStore.BUS
             GetListReceipt();
         }
 
-        public static CashReceipt Instance { get => instance; set => instance = value; }
-        public static BindingList<DTO.CashReceipt> Receipts { get => receipts; set => receipts = value; }
+        public static CashReceipt Instance 
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new CashReceipt();
+                }
+                return instance;
+            } 
+            set => instance = value; 
+        }
+        public BindingList<DTO.CashReceipt> Receipts { get => receipts; set => receipts = value; }
     
         public void GetListReceipt()
         {

@@ -25,7 +25,7 @@ namespace BookStore.BUS
             }
             set => instance = value;
         }
-        public static BindingList<DTO.Parameter> Parameters { get => parameters; set => parameters = value; }
+        public BindingList<DTO.Parameter> Parameters { get => parameters; set => parameters = value; }
         public int ApDungQD4 { get => Parameters[0].Value; }
         public int SLNhapMin { get => Parameters[1].Value; }
         public int SLTruocNhapMax { get => Parameters[2].Value; }

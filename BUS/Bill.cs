@@ -30,7 +30,7 @@ namespace BookStore.BUS
             }
             set => instance = value; 
         }
-        public static BindingList<DTO.Bill> Bills { get => bills; set => bills = value; }
+        public BindingList<DTO.Bill> Bills { get => bills; set => bills = value; }
 
         public void GetListBill()
         {
@@ -92,6 +92,24 @@ namespace BookStore.BUS
             var obj = Bills.First(bill => bill.Id == id);
 
             obj.TotalPrice += (amount - oldAmount);
+
+            UpdateBill(new DTO.Bill(
+                id,
+                obj.CustomerId,
+                obj.CreateDate,
+                obj.TotalPrice,
+                obj.Payment,
+                obj.TotalPrice - obj.Payment
+            ));
+
+            if (obj.TotalPrice - obj.Payment < 0)
+            {
+                var customer = Customer.Instance.Customers.First(cstmr => cstmr.Id == obj.CustomerId);
+
+                customer.Debt += (obj.TotalPrice - obj.Payment);
+
+                Customer.Instance.UpdateCustomer(customer);
+            }
         }
 
         public void DeleteAmount(int id, int amount)
@@ -99,6 +117,24 @@ namespace BookStore.BUS
             var obj = Bills.First(bill => bill.Id == id);
 
             obj.TotalPrice -= amount;
+
+            UpdateBill(new DTO.Bill(
+                id,
+                obj.CustomerId,
+                obj.CreateDate,
+                obj.TotalPrice,
+                obj.Payment,
+                obj.TotalPrice - obj.Payment
+            ));
+
+            if (obj.TotalPrice - obj.Payment < 0)
+            {
+                var customer = Customer.Instance.Customers.First(cstmr => cstmr.Id == obj.CustomerId);
+
+                customer.Debt += (obj.TotalPrice - obj.Payment);
+
+                Customer.Instance.UpdateCustomer(customer);
+            }
         }
     }
 }

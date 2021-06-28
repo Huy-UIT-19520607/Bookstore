@@ -21,7 +21,7 @@ namespace BookStore.BUS
             private set => instance = value;
         }
 
-        public static BindingList<DTO.Title> Titles { get => titles; set => titles = value; }
+        public BindingList<DTO.Title> Titles { get => titles; set => titles = value; }
 
         public Title()
         {

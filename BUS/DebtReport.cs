@@ -18,8 +18,19 @@ namespace BookStore.BUS
             GetListReport();
         }
 
-        public static DebtReport Instance { get => instance; set => instance = value; }
-        public static BindingList<DTO.DebtReport> Reports { get => reports; set => reports = value; }
+        public static DebtReport Instance 
+        { 
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DebtReport();
+                }
+                return instance;
+            }
+            set => instance = value; 
+        }
+        public BindingList<DTO.DebtReport> Reports { get => reports; set => reports = value; }
 
         public void GetListReport()
         {
