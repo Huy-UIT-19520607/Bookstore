@@ -100,9 +100,9 @@ namespace BookStore.DAO
                 updated.Month,
                 updated.Year,
                 updated.BookId,
-                updated.DeftStart,
+                updated.First,
                 updated.Change,
-                updated.DebtFinal
+                updated.Final
             });
 
             if (results > 0)
