@@ -37,13 +37,13 @@ namespace BookStore.Forms
             this.btnRequirement = new System.Windows.Forms.Button();
             this.btnMenuSetting = new System.Windows.Forms.Button();
             this.pnlSubMenuReport = new System.Windows.Forms.Panel();
-            this.btnDept = new System.Windows.Forms.Button();
+            this.btnDebt = new System.Windows.Forms.Button();
             this.btnInventory = new System.Windows.Forms.Button();
             this.btnMenuReport = new System.Windows.Forms.Button();
             this.pnlSubMenuBusiness = new System.Windows.Forms.Panel();
+            this.btnCashReceipt = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
-            this.btnReceipt = new System.Windows.Forms.Button();
-            this.btnImportBook = new System.Windows.Forms.Button();
+            this.btnBookReceipt = new System.Windows.Forms.Button();
             this.btnMenuBusiness = new System.Windows.Forms.Button();
             this.pnlSubMenuManagement = new System.Windows.Forms.Panel();
             this.btnAccount = new System.Windows.Forms.Button();
@@ -52,13 +52,13 @@ namespace BookStore.Forms
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnMenuManagement = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.lblLogo = new System.Windows.Forms.Label();
+            this.lblLogoName = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlTopBar = new System.Windows.Forms.Panel();
-            this.lblRole = new System.Windows.Forms.Label();
+            this.lblPermission = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblHelloName = new System.Windows.Forms.Label();
-            this.lblHello = new System.Windows.Forms.Label();
+            this.lblDisplayName = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.lblCurrentTime = new System.Windows.Forms.Label();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximize = new System.Windows.Forms.Button();
@@ -172,7 +172,7 @@ namespace BookStore.Forms
             // 
             // pnlSubMenuReport
             // 
-            this.pnlSubMenuReport.Controls.Add(this.btnDept);
+            this.pnlSubMenuReport.Controls.Add(this.btnDebt);
             this.pnlSubMenuReport.Controls.Add(this.btnInventory);
             this.pnlSubMenuReport.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuReport.Location = new System.Drawing.Point(0, 635);
@@ -180,25 +180,25 @@ namespace BookStore.Forms
             this.pnlSubMenuReport.Size = new System.Drawing.Size(243, 106);
             this.pnlSubMenuReport.TabIndex = 8;
             // 
-            // btnDept
+            // btnDebt
             // 
-            this.btnDept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
-            this.btnDept.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDept.FlatAppearance.BorderSize = 0;
-            this.btnDept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDept.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDept.ForeColor = System.Drawing.Color.White;
-            this.btnDept.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDept.Location = new System.Drawing.Point(0, 50);
-            this.btnDept.Name = "btnDept";
-            this.btnDept.Padding = new System.Windows.Forms.Padding(63, 0, 25, 0);
-            this.btnDept.Size = new System.Drawing.Size(243, 50);
-            this.btnDept.TabIndex = 4;
-            this.btnDept.Text = "Công nợ";
-            this.btnDept.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDept.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDept.UseVisualStyleBackColor = false;
-            this.btnDept.Click += new System.EventHandler(this.btnDept_Click);
+            this.btnDebt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
+            this.btnDebt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDebt.FlatAppearance.BorderSize = 0;
+            this.btnDebt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDebt.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDebt.ForeColor = System.Drawing.Color.White;
+            this.btnDebt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDebt.Location = new System.Drawing.Point(0, 50);
+            this.btnDebt.Name = "btnDebt";
+            this.btnDebt.Padding = new System.Windows.Forms.Padding(63, 0, 25, 0);
+            this.btnDebt.Size = new System.Drawing.Size(243, 50);
+            this.btnDebt.TabIndex = 4;
+            this.btnDebt.Text = "Công nợ";
+            this.btnDebt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDebt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDebt.UseVisualStyleBackColor = false;
+            this.btnDebt.Click += new System.EventHandler(this.btnDebt_Click);
             // 
             // btnInventory
             // 
@@ -243,14 +243,34 @@ namespace BookStore.Forms
             // 
             // pnlSubMenuBusiness
             // 
+            this.pnlSubMenuBusiness.Controls.Add(this.btnCashReceipt);
             this.pnlSubMenuBusiness.Controls.Add(this.btnBill);
-            this.pnlSubMenuBusiness.Controls.Add(this.btnReceipt);
-            this.pnlSubMenuBusiness.Controls.Add(this.btnImportBook);
+            this.pnlSubMenuBusiness.Controls.Add(this.btnBookReceipt);
             this.pnlSubMenuBusiness.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuBusiness.Location = new System.Drawing.Point(0, 420);
             this.pnlSubMenuBusiness.Name = "pnlSubMenuBusiness";
             this.pnlSubMenuBusiness.Size = new System.Drawing.Size(243, 155);
             this.pnlSubMenuBusiness.TabIndex = 4;
+            // 
+            // btnCashReceipt
+            // 
+            this.btnCashReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
+            this.btnCashReceipt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCashReceipt.FlatAppearance.BorderSize = 0;
+            this.btnCashReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCashReceipt.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCashReceipt.ForeColor = System.Drawing.Color.White;
+            this.btnCashReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCashReceipt.Location = new System.Drawing.Point(0, 100);
+            this.btnCashReceipt.Name = "btnCashReceipt";
+            this.btnCashReceipt.Padding = new System.Windows.Forms.Padding(63, 0, 25, 0);
+            this.btnCashReceipt.Size = new System.Drawing.Size(243, 50);
+            this.btnCashReceipt.TabIndex = 3;
+            this.btnCashReceipt.Text = "Thu tiền";
+            this.btnCashReceipt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCashReceipt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCashReceipt.UseVisualStyleBackColor = false;
+            this.btnCashReceipt.Click += new System.EventHandler(this.btnCashReceipt_Click);
             // 
             // btnBill
             // 
@@ -261,56 +281,36 @@ namespace BookStore.Forms
             this.btnBill.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBill.ForeColor = System.Drawing.Color.White;
             this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBill.Location = new System.Drawing.Point(0, 100);
+            this.btnBill.Location = new System.Drawing.Point(0, 50);
             this.btnBill.Name = "btnBill";
             this.btnBill.Padding = new System.Windows.Forms.Padding(63, 0, 25, 0);
             this.btnBill.Size = new System.Drawing.Size(243, 50);
-            this.btnBill.TabIndex = 3;
-            this.btnBill.Text = "Thu tiền";
+            this.btnBill.TabIndex = 2;
+            this.btnBill.Text = "Hoá đơn";
             this.btnBill.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBill.UseVisualStyleBackColor = false;
             this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
-            // btnReceipt
+            // btnBookReceipt
             // 
-            this.btnReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
-            this.btnReceipt.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReceipt.FlatAppearance.BorderSize = 0;
-            this.btnReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReceipt.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReceipt.ForeColor = System.Drawing.Color.White;
-            this.btnReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReceipt.Location = new System.Drawing.Point(0, 50);
-            this.btnReceipt.Name = "btnReceipt";
-            this.btnReceipt.Padding = new System.Windows.Forms.Padding(63, 0, 25, 0);
-            this.btnReceipt.Size = new System.Drawing.Size(243, 50);
-            this.btnReceipt.TabIndex = 2;
-            this.btnReceipt.Text = "Hoá đơn";
-            this.btnReceipt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReceipt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReceipt.UseVisualStyleBackColor = false;
-            this.btnReceipt.Click += new System.EventHandler(this.btnReceipt_Click);
-            // 
-            // btnImportBook
-            // 
-            this.btnImportBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
-            this.btnImportBook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnImportBook.FlatAppearance.BorderSize = 0;
-            this.btnImportBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportBook.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImportBook.ForeColor = System.Drawing.Color.White;
-            this.btnImportBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportBook.Location = new System.Drawing.Point(0, 0);
-            this.btnImportBook.Name = "btnImportBook";
-            this.btnImportBook.Padding = new System.Windows.Forms.Padding(63, 0, 25, 0);
-            this.btnImportBook.Size = new System.Drawing.Size(243, 50);
-            this.btnImportBook.TabIndex = 1;
-            this.btnImportBook.Text = "Nhập sách";
-            this.btnImportBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnImportBook.UseVisualStyleBackColor = false;
-            this.btnImportBook.Click += new System.EventHandler(this.btnImportBook_Click);
+            this.btnBookReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
+            this.btnBookReceipt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBookReceipt.FlatAppearance.BorderSize = 0;
+            this.btnBookReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBookReceipt.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookReceipt.ForeColor = System.Drawing.Color.White;
+            this.btnBookReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBookReceipt.Location = new System.Drawing.Point(0, 0);
+            this.btnBookReceipt.Name = "btnBookReceipt";
+            this.btnBookReceipt.Padding = new System.Windows.Forms.Padding(63, 0, 25, 0);
+            this.btnBookReceipt.Size = new System.Drawing.Size(243, 50);
+            this.btnBookReceipt.TabIndex = 1;
+            this.btnBookReceipt.Text = "Nhập sách";
+            this.btnBookReceipt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBookReceipt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBookReceipt.UseVisualStyleBackColor = false;
+            this.btnBookReceipt.Click += new System.EventHandler(this.btnBookReceipt_Click);
             // 
             // btnMenuBusiness
             // 
@@ -411,6 +411,7 @@ namespace BookStore.Forms
             this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
             this.btnCategory.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCategory.FlatAppearance.BorderSize = 0;
+            this.btnCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategory.ForeColor = System.Drawing.Color.White;
@@ -425,7 +426,7 @@ namespace BookStore.Forms
             this.btnCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCategory.UseVisualStyleBackColor = false;
-            this.btnCategory.Click += new System.EventHandler(this.btnGenre_Click);
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
             // btnMenuManagement
             // 
@@ -451,7 +452,7 @@ namespace BookStore.Forms
             // pnlLogo
             // 
             this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
-            this.pnlLogo.Controls.Add(this.lblLogo);
+            this.pnlLogo.Controls.Add(this.lblLogoName);
             this.pnlLogo.Controls.Add(this.picLogo);
             this.pnlLogo.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -461,16 +462,16 @@ namespace BookStore.Forms
             this.pnlLogo.Size = new System.Drawing.Size(243, 93);
             this.pnlLogo.TabIndex = 0;
             // 
-            // lblLogo
+            // lblLogoName
             // 
-            this.lblLogo.AutoSize = true;
-            this.lblLogo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.ForeColor = System.Drawing.Color.White;
-            this.lblLogo.Location = new System.Drawing.Point(61, 61);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(138, 25);
-            this.lblLogo.TabIndex = 3;
-            this.lblLogo.Text = "SE Book Store";
+            this.lblLogoName.AutoSize = true;
+            this.lblLogoName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogoName.ForeColor = System.Drawing.Color.White;
+            this.lblLogoName.Location = new System.Drawing.Point(61, 61);
+            this.lblLogoName.Name = "lblLogoName";
+            this.lblLogoName.Size = new System.Drawing.Size(138, 25);
+            this.lblLogoName.TabIndex = 3;
+            this.lblLogoName.Text = "SE Book Store";
             // 
             // picLogo
             // 
@@ -486,11 +487,11 @@ namespace BookStore.Forms
             // 
             // pnlTopBar
             // 
-            this.pnlTopBar.BackColor = System.Drawing.Color.Black;
-            this.pnlTopBar.Controls.Add(this.lblRole);
+            this.pnlTopBar.BackColor = System.Drawing.Color.Firebrick;
+            this.pnlTopBar.Controls.Add(this.lblPermission);
             this.pnlTopBar.Controls.Add(this.label3);
-            this.pnlTopBar.Controls.Add(this.lblHelloName);
-            this.pnlTopBar.Controls.Add(this.lblHello);
+            this.pnlTopBar.Controls.Add(this.lblDisplayName);
+            this.pnlTopBar.Controls.Add(this.label);
             this.pnlTopBar.Controls.Add(this.lblCurrentTime);
             this.pnlTopBar.Controls.Add(this.btnMinimize);
             this.pnlTopBar.Controls.Add(this.btnMaximize);
@@ -504,16 +505,16 @@ namespace BookStore.Forms
             this.pnlTopBar.TabIndex = 1;
             this.pnlTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTopBar_MouseDown);
             // 
-            // lblRole
+            // lblPermission
             // 
-            this.lblRole.AutoSize = true;
-            this.lblRole.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRole.ForeColor = System.Drawing.Color.White;
-            this.lblRole.Location = new System.Drawing.Point(105, 45);
-            this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(126, 25);
-            this.lblRole.TabIndex = 9;
-            this.lblRole.Text = "Chủ nhà sách";
+            this.lblPermission.AutoSize = true;
+            this.lblPermission.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPermission.ForeColor = System.Drawing.Color.White;
+            this.lblPermission.Location = new System.Drawing.Point(105, 45);
+            this.lblPermission.Name = "lblPermission";
+            this.lblPermission.Size = new System.Drawing.Size(126, 25);
+            this.lblPermission.TabIndex = 9;
+            this.lblPermission.Text = "Chủ nhà sách";
             // 
             // label3
             // 
@@ -526,27 +527,27 @@ namespace BookStore.Forms
             this.label3.TabIndex = 8;
             this.label3.Text = "Chức vụ:";
             // 
-            // lblHelloName
+            // lblDisplayName
             // 
-            this.lblHelloName.AutoSize = true;
-            this.lblHelloName.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHelloName.ForeColor = System.Drawing.Color.White;
-            this.lblHelloName.Location = new System.Drawing.Point(105, 19);
-            this.lblHelloName.Name = "lblHelloName";
-            this.lblHelloName.Size = new System.Drawing.Size(66, 25);
-            this.lblHelloName.TabIndex = 7;
-            this.lblHelloName.Text = "admin";
+            this.lblDisplayName.AutoSize = true;
+            this.lblDisplayName.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisplayName.ForeColor = System.Drawing.Color.White;
+            this.lblDisplayName.Location = new System.Drawing.Point(105, 19);
+            this.lblDisplayName.Name = "lblDisplayName";
+            this.lblDisplayName.Size = new System.Drawing.Size(66, 25);
+            this.lblDisplayName.TabIndex = 7;
+            this.lblDisplayName.Text = "admin";
             // 
-            // lblHello
+            // label
             // 
-            this.lblHello.AutoSize = true;
-            this.lblHello.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHello.ForeColor = System.Drawing.Color.White;
-            this.lblHello.Location = new System.Drawing.Point(21, 19);
-            this.lblHello.Name = "lblHello";
-            this.lblHello.Size = new System.Drawing.Size(91, 25);
-            this.lblHello.TabIndex = 6;
-            this.lblHello.Text = "Xin chào:";
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.White;
+            this.label.Location = new System.Drawing.Point(21, 19);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(91, 25);
+            this.label.TabIndex = 6;
+            this.label.Text = "Xin chào:";
             // 
             // lblCurrentTime
             // 
@@ -654,7 +655,6 @@ namespace BookStore.Forms
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý Nhà sách";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlSlideMenu.ResumeLayout(false);
             this.pnlSubMenuSetting.ResumeLayout(false);
@@ -682,13 +682,13 @@ namespace BookStore.Forms
         private System.Windows.Forms.Button btnRequirement;
         private System.Windows.Forms.Button btnMenuSetting;
         private System.Windows.Forms.Panel pnlSubMenuReport;
-        private System.Windows.Forms.Button btnDept;
+        private System.Windows.Forms.Button btnDebt;
         private System.Windows.Forms.Button btnInventory;
         private System.Windows.Forms.Button btnMenuReport;
         private System.Windows.Forms.Panel pnlSubMenuBusiness;
+        private System.Windows.Forms.Button btnCashReceipt;
         private System.Windows.Forms.Button btnBill;
-        private System.Windows.Forms.Button btnReceipt;
-        private System.Windows.Forms.Button btnImportBook;
+        private System.Windows.Forms.Button btnBookReceipt;
         private System.Windows.Forms.Button btnMenuBusiness;
         private System.Windows.Forms.Panel pnlTopBar;
         private System.Windows.Forms.Label lblSubMenuName;
@@ -696,14 +696,14 @@ namespace BookStore.Forms
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Label lblLogo;
+        private System.Windows.Forms.Label lblLogoName;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Label lblCurrentTime;
         private System.Windows.Forms.Timer tmrCurrentTime;
-        private System.Windows.Forms.Label lblHelloName;
-        private System.Windows.Forms.Label lblHello;
-        private System.Windows.Forms.Label lblRole;
+        private System.Windows.Forms.Label lblDisplayName;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label lblPermission;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer tmrRefresh;
         private System.Windows.Forms.Button btnAccount;

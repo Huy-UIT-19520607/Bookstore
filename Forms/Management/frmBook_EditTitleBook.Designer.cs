@@ -29,26 +29,19 @@ namespace BookStore.Forms.Management
         /// </summary>
         private void InitializeComponent()
         {
-            this.cboCategory = new System.Windows.Forms.ComboBox();
+            this.components = new System.ComponentModel.Container();
             this.label7 = new System.Windows.Forms.Label();
             this.lblTitleBookNameError = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtTitleBookName = new System.Windows.Forms.TextBox();
-            this.lblNewCategory = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTitlteBookCode = new System.Windows.Forms.TextBox();
+            this.errBook_EditTitleBook = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cboCategory = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errBook_EditTitleBook)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cboCategory
-            // 
-            this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCategory.FormattingEnabled = true;
-            this.cboCategory.Location = new System.Drawing.Point(173, 126);
-            this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(305, 33);
-            this.cboCategory.TabIndex = 58;
             // 
             // label7
             // 
@@ -64,9 +57,9 @@ namespace BookStore.Forms.Management
             // 
             this.lblTitleBookNameError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleBookNameError.ForeColor = System.Drawing.Color.Red;
-            this.lblTitleBookNameError.Location = new System.Drawing.Point(362, 106);
+            this.lblTitleBookNameError.Location = new System.Drawing.Point(304, 106);
             this.lblTitleBookNameError.Name = "lblTitleBookNameError";
-            this.lblTitleBookNameError.Size = new System.Drawing.Size(336, 17);
+            this.lblTitleBookNameError.Size = new System.Drawing.Size(394, 17);
             this.lblTitleBookNameError.TabIndex = 56;
             this.lblTitleBookNameError.Text = "TitleBookName Error";
             this.lblTitleBookNameError.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -85,6 +78,7 @@ namespace BookStore.Forms.Management
             this.btnOk.TabIndex = 54;
             this.btnOk.Text = "Sửa đổi";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -100,6 +94,7 @@ namespace BookStore.Forms.Management
             this.btnCancel.TabIndex = 55;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtTitleBookName
             // 
@@ -108,16 +103,17 @@ namespace BookStore.Forms.Management
             this.txtTitleBookName.Name = "txtTitleBookName";
             this.txtTitleBookName.Size = new System.Drawing.Size(525, 33);
             this.txtTitleBookName.TabIndex = 53;
+            this.txtTitleBookName.Validating += new System.ComponentModel.CancelEventHandler(this.txtTitleBookName_Validating);
             // 
-            // lblNewCategory
+            // label
             // 
-            this.lblNewCategory.AutoSize = true;
-            this.lblNewCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewCategory.Location = new System.Drawing.Point(34, 76);
-            this.lblNewCategory.Name = "lblNewCategory";
-            this.lblNewCategory.Size = new System.Drawing.Size(125, 25);
-            this.lblNewCategory.TabIndex = 52;
-            this.lblNewCategory.Text = "Tên đầu sách:";
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(34, 76);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(125, 25);
+            this.label.TabIndex = 52;
+            this.label.Text = "Tên đầu sách:";
             // 
             // label3
             // 
@@ -138,41 +134,62 @@ namespace BookStore.Forms.Management
             this.txtTitlteBookCode.Size = new System.Drawing.Size(122, 33);
             this.txtTitlteBookCode.TabIndex = 65;
             // 
-            // frmTitleBook_EditTitleBook
+            // errBook_EditTitleBook
             // 
+            this.errBook_EditTitleBook.BlinkRate = 0;
+            this.errBook_EditTitleBook.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errBook_EditTitleBook.ContainerControl = this;
+            // 
+            // cboCategory
+            // 
+            this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCategory.FormattingEnabled = true;
+            this.cboCategory.Location = new System.Drawing.Point(173, 129);
+            this.cboCategory.Name = "cboCategory";
+            this.cboCategory.Size = new System.Drawing.Size(329, 33);
+            this.cboCategory.TabIndex = 66;
+            // 
+            // frmBook_EditTitleBook
+            // 
+            this.AcceptButton = this.btnOk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(734, 243);
+            this.Controls.Add(this.cboCategory);
             this.Controls.Add(this.txtTitlteBookCode);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cboCategory);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblTitleBookNameError);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtTitleBookName);
-            this.Controls.Add(this.lblNewCategory);
+            this.Controls.Add(this.label);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmTitleBook_EditTitleBook";
+            this.Name = "frmBook_EditTitleBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa Đầu sách";
+            this.Load += new System.EventHandler(this.frmBook_EditTitleBook_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errBook_EditTitleBook)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox cboCategory;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblTitleBookNameError;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtTitleBookName;
-        private System.Windows.Forms.Label lblNewCategory;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTitlteBookCode;
+        private System.Windows.Forms.ErrorProvider errBook_EditTitleBook;
+        private System.Windows.Forms.ComboBox cboCategory;
     }
 }

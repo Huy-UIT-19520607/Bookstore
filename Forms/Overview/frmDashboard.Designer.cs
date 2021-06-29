@@ -69,7 +69,7 @@ namespace BookStore.Forms.Overview
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label5.Location = new System.Drawing.Point(220, 65);
+            this.label5.Location = new System.Drawing.Point(219, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(520, 37);
             this.label5.TabIndex = 26;
@@ -86,7 +86,7 @@ namespace BookStore.Forms.Overview
             this.gunaCirProPayDebt.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.gunaCirProPayDebt.ForeColor = System.Drawing.Color.White;
             this.gunaCirProPayDebt.InnerColor = System.Drawing.Color.White;
-            this.gunaCirProPayDebt.Location = new System.Drawing.Point(559, 436);
+            this.gunaCirProPayDebt.Location = new System.Drawing.Point(564, 436);
             this.gunaCirProPayDebt.Minimum = 0;
             this.gunaCirProPayDebt.Name = "gunaCirProPayDebt";
             this.gunaCirProPayDebt.ProgressColor = System.Drawing.Color.Red;
@@ -132,7 +132,7 @@ namespace BookStore.Forms.Overview
             this.gunaCirProPayReceipt.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.gunaCirProPayReceipt.ForeColor = System.Drawing.Color.White;
             this.gunaCirProPayReceipt.InnerColor = System.Drawing.Color.White;
-            this.gunaCirProPayReceipt.Location = new System.Drawing.Point(215, 436);
+            this.gunaCirProPayReceipt.Location = new System.Drawing.Point(220, 436);
             this.gunaCirProPayReceipt.Minimum = 0;
             this.gunaCirProPayReceipt.Name = "gunaCirProPayReceipt";
             this.gunaCirProPayReceipt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -188,7 +188,7 @@ namespace BookStore.Forms.Overview
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label);
             this.panel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(349, 148);
+            this.panel2.Location = new System.Drawing.Point(354, 148);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(252, 123);
             this.panel2.TabIndex = 20;
@@ -233,7 +233,7 @@ namespace BookStore.Forms.Overview
             this.panel3.Controls.Add(this.lblCustomerQuantity);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(674, 148);
+            this.panel3.Location = new System.Drawing.Point(679, 148);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(252, 123);
             this.panel3.TabIndex = 21;
@@ -278,7 +278,7 @@ namespace BookStore.Forms.Overview
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(24, 148);
+            this.panel1.Location = new System.Drawing.Point(29, 148);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 123);
             this.panel1.TabIndex = 22;
@@ -321,7 +321,7 @@ namespace BookStore.Forms.Overview
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label11.Location = new System.Drawing.Point(609, 615);
+            this.label11.Location = new System.Drawing.Point(616, 615);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(73, 30);
             this.label11.TabIndex = 17;
@@ -333,7 +333,7 @@ namespace BookStore.Forms.Overview
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label10.Location = new System.Drawing.Point(196, 615);
+            this.label10.Location = new System.Drawing.Point(201, 615);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(208, 30);
             this.label10.TabIndex = 18;
@@ -345,7 +345,7 @@ namespace BookStore.Forms.Overview
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label12.Location = new System.Drawing.Point(130, 360);
+            this.label12.Location = new System.Drawing.Point(135, 360);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(676, 37);
             this.label12.TabIndex = 19;

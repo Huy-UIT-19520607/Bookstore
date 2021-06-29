@@ -29,12 +29,13 @@ namespace BookStore.Forms.Management
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.lblNewCategory = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCustomerCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,7 +48,9 @@ namespace BookStore.Forms.Management
             this.lblCustomerNameError = new System.Windows.Forms.Label();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.nudDebtAmount = new System.Windows.Forms.NumericUpDown();
+            this.errCustomer_Edit = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nudDebtAmount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errCustomer_Edit)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -91,9 +94,10 @@ namespace BookStore.Forms.Management
             this.btnOk.Location = new System.Drawing.Point(182, 354);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(137, 46);
-            this.btnOk.TabIndex = 44;
+            this.btnOk.TabIndex = 6;
             this.btnOk.Text = "Sửa đổi";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -106,19 +110,20 @@ namespace BookStore.Forms.Management
             this.btnCancel.Location = new System.Drawing.Point(343, 354);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(137, 46);
-            this.btnCancel.TabIndex = 45;
+            this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // lblNewCategory
+            // label
             // 
-            this.lblNewCategory.AutoSize = true;
-            this.lblNewCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewCategory.Location = new System.Drawing.Point(47, 77);
-            this.lblNewCategory.Name = "lblNewCategory";
-            this.lblNewCategory.Size = new System.Drawing.Size(148, 25);
-            this.lblNewCategory.TabIndex = 42;
-            this.lblNewCategory.Text = "Tên khách hàng:";
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(47, 77);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(148, 25);
+            this.label.TabIndex = 42;
+            this.label.Text = "Tên khách hàng:";
             // 
             // label1
             // 
@@ -137,7 +142,7 @@ namespace BookStore.Forms.Management
             this.txtCustomerCode.Name = "txtCustomerCode";
             this.txtCustomerCode.ReadOnly = true;
             this.txtCustomerCode.Size = new System.Drawing.Size(106, 33);
-            this.txtCustomerCode.TabIndex = 59;
+            this.txtCustomerCode.TabIndex = 0;
             // 
             // label3
             // 
@@ -166,7 +171,9 @@ namespace BookStore.Forms.Management
             this.txtEmail.Location = new System.Drawing.Point(213, 238);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(225, 33);
-            this.txtEmail.TabIndex = 66;
+            this.txtEmail.TabIndex = 4;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
+            this.txtEmail.Validated += new System.EventHandler(this.txtEmail_Validated);
             // 
             // lblPhoneError
             // 
@@ -185,15 +192,17 @@ namespace BookStore.Forms.Management
             this.txtPhone.Location = new System.Drawing.Point(213, 184);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(225, 33);
-            this.txtPhone.TabIndex = 64;
+            this.txtPhone.TabIndex = 3;
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
+            this.txtPhone.Validated += new System.EventHandler(this.txtPhone_Validated);
             // 
             // lblAddressError
             // 
             this.lblAddressError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddressError.ForeColor = System.Drawing.Color.Red;
-            this.lblAddressError.Location = new System.Drawing.Point(213, 162);
+            this.lblAddressError.Location = new System.Drawing.Point(140, 162);
             this.lblAddressError.Name = "lblAddressError";
-            this.lblAddressError.Size = new System.Drawing.Size(225, 17);
+            this.lblAddressError.Size = new System.Drawing.Size(298, 17);
             this.lblAddressError.TabIndex = 63;
             this.lblAddressError.Text = "Address Error";
             this.lblAddressError.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -204,15 +213,17 @@ namespace BookStore.Forms.Management
             this.txtAddress.Location = new System.Drawing.Point(213, 129);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(225, 33);
-            this.txtAddress.TabIndex = 62;
+            this.txtAddress.TabIndex = 2;
+            this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txtAddress_Validating);
+            this.txtAddress.Validated += new System.EventHandler(this.txtAddress_Validated);
             // 
             // lblCustomerNameError
             // 
             this.lblCustomerNameError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerNameError.ForeColor = System.Drawing.Color.Red;
-            this.lblCustomerNameError.Location = new System.Drawing.Point(213, 107);
+            this.lblCustomerNameError.Location = new System.Drawing.Point(137, 107);
             this.lblCustomerNameError.Name = "lblCustomerNameError";
-            this.lblCustomerNameError.Size = new System.Drawing.Size(225, 17);
+            this.lblCustomerNameError.Size = new System.Drawing.Size(301, 17);
             this.lblCustomerNameError.TabIndex = 61;
             this.lblCustomerNameError.Text = "CustomerName Error";
             this.lblCustomerNameError.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -223,7 +234,9 @@ namespace BookStore.Forms.Management
             this.txtCustomerName.Location = new System.Drawing.Point(213, 74);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(225, 33);
-            this.txtCustomerName.TabIndex = 60;
+            this.txtCustomerName.TabIndex = 1;
+            this.txtCustomerName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCustomerName_Validating);
+            this.txtCustomerName.Validated += new System.EventHandler(this.txtCustomerName_Validated);
             // 
             // nudDebtAmount
             // 
@@ -242,13 +255,21 @@ namespace BookStore.Forms.Management
             this.nudDebtAmount.Name = "nudDebtAmount";
             this.nudDebtAmount.ReadOnly = true;
             this.nudDebtAmount.Size = new System.Drawing.Size(134, 33);
-            this.nudDebtAmount.TabIndex = 68;
+            this.nudDebtAmount.TabIndex = 5;
             this.nudDebtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudDebtAmount.ThousandsSeparator = true;
             // 
+            // errCustomer_Edit
+            // 
+            this.errCustomer_Edit.BlinkRate = 0;
+            this.errCustomer_Edit.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errCustomer_Edit.ContainerControl = this;
+            // 
             // frmCustomer_Edit
             // 
+            this.AcceptButton = this.btnOk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(507, 426);
             this.Controls.Add(this.nudDebtAmount);
@@ -268,7 +289,7 @@ namespace BookStore.Forms.Management
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.lblNewCategory);
+            this.Controls.Add(this.label);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -277,6 +298,7 @@ namespace BookStore.Forms.Management
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa Khách hàng";
             ((System.ComponentModel.ISupportInitialize)(this.nudDebtAmount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errCustomer_Edit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,7 +310,7 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label lblNewCategory;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCustomerCode;
         private System.Windows.Forms.Label label3;
@@ -301,5 +323,6 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Label lblCustomerNameError;
         private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.NumericUpDown nudDebtAmount;
+        private System.Windows.Forms.ErrorProvider errCustomer_Edit;
     }
 }

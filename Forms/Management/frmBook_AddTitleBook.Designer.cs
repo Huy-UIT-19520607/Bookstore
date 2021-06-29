@@ -29,9 +29,10 @@ namespace BookStore.Forms.Management
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBook_AddTitleBook));
             this.cboCategory = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -39,7 +40,7 @@ namespace BookStore.Forms.Management
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtTitleBookName = new System.Windows.Forms.TextBox();
-            this.lblNewCategory = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaDgvAuthor = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -48,11 +49,14 @@ namespace BookStore.Forms.Management
             this.txtAuthorName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddList = new System.Windows.Forms.Button();
-            this.btnOkList = new System.Windows.Forms.Button();
             this.btnDeleteList = new System.Windows.Forms.Button();
+            this.errBook_AddTitleBook = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tipBook_AddTitleBook = new System.Windows.Forms.ToolTip(this.components);
+            this.btnStopAddList = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaDgvAuthor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errBook_AddTitleBook)).BeginInit();
             this.SuspendLayout();
             // 
             // cboCategory
@@ -79,9 +83,9 @@ namespace BookStore.Forms.Management
             // 
             this.lblTitleBookNameError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleBookNameError.ForeColor = System.Drawing.Color.Red;
-            this.lblTitleBookNameError.Location = new System.Drawing.Point(371, 52);
+            this.lblTitleBookNameError.Location = new System.Drawing.Point(302, 52);
             this.lblTitleBookNameError.Name = "lblTitleBookNameError";
-            this.lblTitleBookNameError.Size = new System.Drawing.Size(305, 17);
+            this.lblTitleBookNameError.Size = new System.Drawing.Size(374, 17);
             this.lblTitleBookNameError.TabIndex = 35;
             this.lblTitleBookNameError.Text = "TitleBookName Error";
             this.lblTitleBookNameError.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -100,6 +104,7 @@ namespace BookStore.Forms.Management
             this.btnOk.TabIndex = 33;
             this.btnOk.Text = "Tạo mới";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -115,6 +120,7 @@ namespace BookStore.Forms.Management
             this.btnCancel.TabIndex = 34;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtTitleBookName
             // 
@@ -123,16 +129,18 @@ namespace BookStore.Forms.Management
             this.txtTitleBookName.Name = "txtTitleBookName";
             this.txtTitleBookName.Size = new System.Drawing.Size(525, 33);
             this.txtTitleBookName.TabIndex = 32;
+            this.txtTitleBookName.Validating += new System.ComponentModel.CancelEventHandler(this.txtTitleBookName_Validating);
+            this.txtTitleBookName.Validated += new System.EventHandler(this.txtTitleBookName_Validated);
             // 
-            // lblNewCategory
+            // label
             // 
-            this.lblNewCategory.AutoSize = true;
-            this.lblNewCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewCategory.Location = new System.Drawing.Point(12, 22);
-            this.lblNewCategory.Name = "lblNewCategory";
-            this.lblNewCategory.Size = new System.Drawing.Size(125, 25);
-            this.lblNewCategory.TabIndex = 31;
-            this.lblNewCategory.Text = "Tên đầu sách:";
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(12, 22);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(125, 25);
+            this.label.TabIndex = 31;
+            this.label.Text = "Tên đầu sách:";
             // 
             // groupBox1
             // 
@@ -157,38 +165,41 @@ namespace BookStore.Forms.Management
             // 
             // gunaDgvAuthor
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.gunaDgvAuthor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.gunaDgvAuthor.AllowUserToAddRows = false;
+            this.gunaDgvAuthor.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gunaDgvAuthor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gunaDgvAuthor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gunaDgvAuthor.BackgroundColor = System.Drawing.Color.White;
             this.gunaDgvAuthor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaDgvAuthor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gunaDgvAuthor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDgvAuthor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDgvAuthor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gunaDgvAuthor.ColumnHeadersHeight = 28;
             this.gunaDgvAuthor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gunaDgvAuthor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TenTacGia});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDgvAuthor.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDgvAuthor.DefaultCellStyle = dataGridViewCellStyle3;
             this.gunaDgvAuthor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaDgvAuthor.EnableHeadersVisualStyles = false;
             this.gunaDgvAuthor.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gunaDgvAuthor.Location = new System.Drawing.Point(0, 0);
             this.gunaDgvAuthor.Name = "gunaDgvAuthor";
+            this.gunaDgvAuthor.ReadOnly = true;
             this.gunaDgvAuthor.RowHeadersVisible = false;
             this.gunaDgvAuthor.RowTemplate.Height = 26;
             this.gunaDgvAuthor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -207,7 +218,7 @@ namespace BookStore.Forms.Management
             this.gunaDgvAuthor.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.gunaDgvAuthor.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gunaDgvAuthor.ThemeStyle.HeaderStyle.Height = 28;
-            this.gunaDgvAuthor.ThemeStyle.ReadOnly = false;
+            this.gunaDgvAuthor.ThemeStyle.ReadOnly = true;
             this.gunaDgvAuthor.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.gunaDgvAuthor.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gunaDgvAuthor.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -221,14 +232,15 @@ namespace BookStore.Forms.Management
             this.TenTacGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TenTacGia.HeaderText = "Tên Tác Giả";
             this.TenTacGia.Name = "TenTacGia";
+            this.TenTacGia.ReadOnly = true;
             // 
             // lblAuthorNameError
             // 
             this.lblAuthorNameError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAuthorNameError.ForeColor = System.Drawing.Color.Red;
-            this.lblAuthorNameError.Location = new System.Drawing.Point(151, 193);
+            this.lblAuthorNameError.Location = new System.Drawing.Point(94, 193);
             this.lblAuthorNameError.Name = "lblAuthorNameError";
-            this.lblAuthorNameError.Size = new System.Drawing.Size(265, 17);
+            this.lblAuthorNameError.Size = new System.Drawing.Size(322, 17);
             this.lblAuthorNameError.TabIndex = 50;
             this.lblAuthorNameError.Text = "AuthorName Error";
             this.lblAuthorNameError.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -240,6 +252,8 @@ namespace BookStore.Forms.Management
             this.txtAuthorName.Name = "txtAuthorName";
             this.txtAuthorName.Size = new System.Drawing.Size(265, 33);
             this.txtAuthorName.TabIndex = 49;
+            this.txtAuthorName.Validating += new System.ComponentModel.CancelEventHandler(this.txtAuthorName_Validating);
+            this.txtAuthorName.Validated += new System.EventHandler(this.txtAuthorName_Validated);
             // 
             // label2
             // 
@@ -258,24 +272,13 @@ namespace BookStore.Forms.Management
             this.btnAddList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddList.ForeColor = System.Drawing.Color.White;
             this.btnAddList.Image = ((System.Drawing.Image)(resources.GetObject("btnAddList.Image")));
-            this.btnAddList.Location = new System.Drawing.Point(422, 137);
+            this.btnAddList.Location = new System.Drawing.Point(436, 135);
             this.btnAddList.Name = "btnAddList";
             this.btnAddList.Size = new System.Drawing.Size(34, 34);
             this.btnAddList.TabIndex = 51;
+            this.tipBook_AddTitleBook.SetToolTip(this.btnAddList, "Thêm tác giả vào danh sách");
             this.btnAddList.UseVisualStyleBackColor = false;
-            // 
-            // btnOkList
-            // 
-            this.btnOkList.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnOkList.FlatAppearance.BorderSize = 0;
-            this.btnOkList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOkList.ForeColor = System.Drawing.Color.White;
-            this.btnOkList.Image = ((System.Drawing.Image)(resources.GetObject("btnOkList.Image")));
-            this.btnOkList.Location = new System.Drawing.Point(422, 217);
-            this.btnOkList.Name = "btnOkList";
-            this.btnOkList.Size = new System.Drawing.Size(34, 34);
-            this.btnOkList.TabIndex = 69;
-            this.btnOkList.UseVisualStyleBackColor = false;
+            this.btnAddList.Click += new System.EventHandler(this.btnAddList_Click);
             // 
             // btnDeleteList
             // 
@@ -284,18 +287,43 @@ namespace BookStore.Forms.Management
             this.btnDeleteList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteList.ForeColor = System.Drawing.Color.White;
             this.btnDeleteList.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteList.Image")));
-            this.btnDeleteList.Location = new System.Drawing.Point(422, 177);
+            this.btnDeleteList.Location = new System.Drawing.Point(436, 175);
             this.btnDeleteList.Name = "btnDeleteList";
             this.btnDeleteList.Size = new System.Drawing.Size(34, 34);
             this.btnDeleteList.TabIndex = 68;
+            this.tipBook_AddTitleBook.SetToolTip(this.btnDeleteList, "Xoá tác giả được chọn khỏi danh sách");
             this.btnDeleteList.UseVisualStyleBackColor = false;
+            this.btnDeleteList.Click += new System.EventHandler(this.btnDeleteList_Click);
             // 
-            // frmTitleBook_AddTitleBook
+            // errBook_AddTitleBook
             // 
+            this.errBook_AddTitleBook.BlinkRate = 0;
+            this.errBook_AddTitleBook.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errBook_AddTitleBook.ContainerControl = this;
+            // 
+            // btnStopAddList
+            // 
+            this.btnStopAddList.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnStopAddList.FlatAppearance.BorderSize = 0;
+            this.btnStopAddList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStopAddList.ForeColor = System.Drawing.Color.White;
+            this.btnStopAddList.Image = ((System.Drawing.Image)(resources.GetObject("btnStopAddList.Image")));
+            this.btnStopAddList.Location = new System.Drawing.Point(436, 215);
+            this.btnStopAddList.Name = "btnStopAddList";
+            this.btnStopAddList.Size = new System.Drawing.Size(34, 34);
+            this.btnStopAddList.TabIndex = 69;
+            this.tipBook_AddTitleBook.SetToolTip(this.btnStopAddList, "Kiểm tra và chốt danh sách tác giả");
+            this.btnStopAddList.UseVisualStyleBackColor = false;
+            this.btnStopAddList.Click += new System.EventHandler(this.btnStopAddList_Click);
+            // 
+            // frmBook_AddTitleBook
+            // 
+            this.AcceptButton = this.btnOk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(739, 335);
-            this.Controls.Add(this.btnOkList);
+            this.Controls.Add(this.btnStopAddList);
             this.Controls.Add(this.btnDeleteList);
             this.Controls.Add(this.btnAddList);
             this.Controls.Add(this.lblAuthorNameError);
@@ -308,17 +336,19 @@ namespace BookStore.Forms.Management
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtTitleBookName);
-            this.Controls.Add(this.lblNewCategory);
+            this.Controls.Add(this.label);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmTitleBook_AddTitleBook";
+            this.Name = "frmBook_AddTitleBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Đầu sách";
+            this.Load += new System.EventHandler(this.frmBook_AddTitleBook_Load);
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaDgvAuthor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errBook_AddTitleBook)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,7 +361,7 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtTitleBookName;
-        private System.Windows.Forms.Label lblNewCategory;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2DataGridView gunaDgvAuthor;
@@ -340,7 +370,9 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAddList;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTacGia;
-        private System.Windows.Forms.Button btnOkList;
         private System.Windows.Forms.Button btnDeleteList;
+        private System.Windows.Forms.ErrorProvider errBook_AddTitleBook;
+        private System.Windows.Forms.ToolTip tipBook_AddTitleBook;
+        private System.Windows.Forms.Button btnStopAddList;
     }
 }

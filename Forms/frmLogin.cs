@@ -87,9 +87,9 @@ namespace BookStore.Forms
             string username = gunaTxtUsername.Text;
             string password = gunaTxtPassword.Text;
 
-            if (Login(username, password))
+            if (BUS.Account.Instance.Login(username, password))
             {
-                frmMain frmMain = new frmMain(username, role);
+                frmMain frmMain = new frmMain(username);
                 frmMain.Owner = this;
                 frmMain.Show();
                 this.Hide();
@@ -101,11 +101,6 @@ namespace BookStore.Forms
 
             ResetLogin();
 
-        }
-
-        bool Login(string username, string password)
-        {
-            return BUS.Account.Instance.Login(username, password);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

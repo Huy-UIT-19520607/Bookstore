@@ -40,12 +40,12 @@ namespace BookStore.Forms.Management
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlCategory = new System.Windows.Forms.Panel();
             this.gunaDgvCategory = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.MaTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlSearch = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.gunaTxtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MaTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpCategory.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlCategory.SuspendLayout();
@@ -68,6 +68,7 @@ namespace BookStore.Forms.Management
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
@@ -83,6 +84,7 @@ namespace BookStore.Forms.Management
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -98,6 +100,7 @@ namespace BookStore.Forms.Management
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Xoá";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // grpCategory
             // 
@@ -199,21 +202,6 @@ namespace BookStore.Forms.Management
             this.gunaDgvCategory.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gunaDgvCategory.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // MaTheLoai
-            // 
-            this.MaTheLoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.MaTheLoai.HeaderText = "Mã Thể Loại";
-            this.MaTheLoai.Name = "MaTheLoai";
-            this.MaTheLoai.ReadOnly = true;
-            this.MaTheLoai.Width = 138;
-            // 
-            // TenTheLoai
-            // 
-            this.TenTheLoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenTheLoai.HeaderText = "Tên Thể Loại";
-            this.TenTheLoai.Name = "TenTheLoai";
-            this.TenTheLoai.ReadOnly = true;
-            // 
             // pnlSearch
             // 
             this.pnlSearch.Controls.Add(this.btnSearch);
@@ -237,6 +225,7 @@ namespace BookStore.Forms.Management
             this.btnSearch.Size = new System.Drawing.Size(34, 35);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // gunaTxtSearch
             // 
@@ -261,6 +250,8 @@ namespace BookStore.Forms.Management
             this.gunaTxtSearch.ShadowDecoration.Parent = this.gunaTxtSearch;
             this.gunaTxtSearch.Size = new System.Drawing.Size(530, 35);
             this.gunaTxtSearch.TabIndex = 0;
+            this.gunaTxtSearch.TextChanged += new System.EventHandler(this.gunaTxtSearch_TextChanged);
+            this.gunaTxtSearch.Leave += new System.EventHandler(this.gunaTxtSearch_Leave);
             // 
             // panel1
             // 
@@ -272,6 +263,23 @@ namespace BookStore.Forms.Management
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(556, 100);
             this.panel1.TabIndex = 8;
+            // 
+            // MaTheLoai
+            // 
+            this.MaTheLoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.MaTheLoai.DataPropertyName = "Id";
+            this.MaTheLoai.HeaderText = "Mã Thể Loại";
+            this.MaTheLoai.Name = "MaTheLoai";
+            this.MaTheLoai.ReadOnly = true;
+            this.MaTheLoai.Width = 138;
+            // 
+            // TenTheLoai
+            // 
+            this.TenTheLoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenTheLoai.DataPropertyName = "Name";
+            this.TenTheLoai.HeaderText = "Tên Thể Loại";
+            this.TenTheLoai.Name = "TenTheLoai";
+            this.TenTheLoai.ReadOnly = true;
             // 
             // frmCategory
             // 
@@ -287,6 +295,7 @@ namespace BookStore.Forms.Management
             this.Name = "frmCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "THỂ LOẠI";
+            this.Load += new System.EventHandler(this.frmCategory_Load);
             this.grpCategory.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.pnlCategory.ResumeLayout(false);
@@ -305,11 +314,11 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlCategory;
         private Guna.UI2.WinForms.Guna2DataGridView gunaDgvCategory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaTheLoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai;
         private System.Windows.Forms.Panel pnlSearch;
         private System.Windows.Forms.Button btnSearch;
         private Guna.UI2.WinForms.Guna2TextBox gunaTxtSearch;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTheLoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai;
     }
 }

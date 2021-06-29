@@ -29,6 +29,7 @@ namespace BookStore.Forms.Management
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblEmailError = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,7 +43,9 @@ namespace BookStore.Forms.Management
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
-            this.lblNewCategory = new System.Windows.Forms.Label();
+            this.lbl = new System.Windows.Forms.Label();
+            this.errCustomer_Add = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errCustomer_Add)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEmailError
@@ -62,7 +65,9 @@ namespace BookStore.Forms.Management
             this.txtEmail.Location = new System.Drawing.Point(210, 197);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(215, 33);
-            this.txtEmail.TabIndex = 40;
+            this.txtEmail.TabIndex = 3;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
+            this.txtEmail.Validated += new System.EventHandler(this.txtEmail_Validated);
             // 
             // label5
             // 
@@ -91,7 +96,9 @@ namespace BookStore.Forms.Management
             this.txtPhone.Location = new System.Drawing.Point(210, 143);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(215, 33);
-            this.txtPhone.TabIndex = 37;
+            this.txtPhone.TabIndex = 2;
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
+            this.txtPhone.Validated += new System.EventHandler(this.txtPhone_Validated);
             // 
             // label4
             // 
@@ -107,9 +114,9 @@ namespace BookStore.Forms.Management
             // 
             this.lblAddressError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddressError.ForeColor = System.Drawing.Color.Red;
-            this.lblAddressError.Location = new System.Drawing.Point(210, 121);
+            this.lblAddressError.Location = new System.Drawing.Point(141, 121);
             this.lblAddressError.Name = "lblAddressError";
-            this.lblAddressError.Size = new System.Drawing.Size(215, 17);
+            this.lblAddressError.Size = new System.Drawing.Size(284, 17);
             this.lblAddressError.TabIndex = 35;
             this.lblAddressError.Text = "Address Error";
             this.lblAddressError.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -120,7 +127,9 @@ namespace BookStore.Forms.Management
             this.txtAddress.Location = new System.Drawing.Point(210, 88);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(215, 33);
-            this.txtAddress.TabIndex = 34;
+            this.txtAddress.TabIndex = 1;
+            this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txtAddress_Validating);
+            this.txtAddress.Validated += new System.EventHandler(this.txtAddress_Validated);
             // 
             // label2
             // 
@@ -136,9 +145,9 @@ namespace BookStore.Forms.Management
             // 
             this.lblCustomerNameError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerNameError.ForeColor = System.Drawing.Color.Red;
-            this.lblCustomerNameError.Location = new System.Drawing.Point(210, 66);
+            this.lblCustomerNameError.Location = new System.Drawing.Point(138, 66);
             this.lblCustomerNameError.Name = "lblCustomerNameError";
-            this.lblCustomerNameError.Size = new System.Drawing.Size(215, 17);
+            this.lblCustomerNameError.Size = new System.Drawing.Size(287, 17);
             this.lblCustomerNameError.TabIndex = 32;
             this.lblCustomerNameError.Text = "CustomerName Error";
             this.lblCustomerNameError.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -154,9 +163,10 @@ namespace BookStore.Forms.Management
             this.btnOk.Location = new System.Drawing.Point(176, 278);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(137, 46);
-            this.btnOk.TabIndex = 30;
+            this.btnOk.TabIndex = 4;
             this.btnOk.Text = "Tạo mới";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -169,9 +179,10 @@ namespace BookStore.Forms.Management
             this.btnCancel.Location = new System.Drawing.Point(337, 278);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(137, 46);
-            this.btnCancel.TabIndex = 31;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtCustomerName
             // 
@@ -179,21 +190,31 @@ namespace BookStore.Forms.Management
             this.txtCustomerName.Location = new System.Drawing.Point(210, 33);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(215, 33);
-            this.txtCustomerName.TabIndex = 29;
+            this.txtCustomerName.TabIndex = 0;
+            this.txtCustomerName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCustomerName_Validating);
+            this.txtCustomerName.Validated += new System.EventHandler(this.txtCustomerName_Validated);
             // 
-            // lblNewCategory
+            // lbl
             // 
-            this.lblNewCategory.AutoSize = true;
-            this.lblNewCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewCategory.Location = new System.Drawing.Point(44, 36);
-            this.lblNewCategory.Name = "lblNewCategory";
-            this.lblNewCategory.Size = new System.Drawing.Size(148, 25);
-            this.lblNewCategory.TabIndex = 28;
-            this.lblNewCategory.Text = "Tên khách hàng:";
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.Location = new System.Drawing.Point(44, 36);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(148, 25);
+            this.lbl.TabIndex = 28;
+            this.lbl.Text = "Tên khách hàng:";
+            // 
+            // errCustomer_Add
+            // 
+            this.errCustomer_Add.BlinkRate = 0;
+            this.errCustomer_Add.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errCustomer_Add.ContainerControl = this;
             // 
             // frmCustomer_Add
             // 
+            this.AcceptButton = this.btnOk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(498, 345);
             this.Controls.Add(this.lblEmailError);
@@ -209,7 +230,7 @@ namespace BookStore.Forms.Management
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtCustomerName);
-            this.Controls.Add(this.lblNewCategory);
+            this.Controls.Add(this.lbl);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -217,6 +238,7 @@ namespace BookStore.Forms.Management
             this.Name = "frmCustomer_Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Khách hàng";
+            ((System.ComponentModel.ISupportInitialize)(this.errCustomer_Add)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,6 +259,7 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtCustomerName;
-        private System.Windows.Forms.Label lblNewCategory;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.ErrorProvider errCustomer_Add;
     }
 }

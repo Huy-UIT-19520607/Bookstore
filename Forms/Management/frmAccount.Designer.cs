@@ -29,14 +29,18 @@ namespace BookStore.Forms.Management
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAccount));
             this.grpAccount = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlAccount = new System.Windows.Forms.Panel();
             this.gunaDgvAccount = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.TenDangNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHienThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhanQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.gunaTxtSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,10 +49,6 @@ namespace BookStore.Forms.Management
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.TenDangNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenHienThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhanQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpAccount.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlAccount.SuspendLayout();
@@ -95,35 +95,36 @@ namespace BookStore.Forms.Management
             // 
             this.gunaDgvAccount.AllowUserToAddRows = false;
             this.gunaDgvAccount.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gunaDgvAccount.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.gunaDgvAccount.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.gunaDgvAccount.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gunaDgvAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gunaDgvAccount.BackgroundColor = System.Drawing.Color.White;
             this.gunaDgvAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaDgvAccount.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gunaDgvAccount.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gunaDgvAccount.ColumnHeadersHeight = 30;
             this.gunaDgvAccount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TenDangNhap,
             this.TenHienThi,
             this.MatKhau,
             this.PhanQuyen});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDgvAccount.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDgvAccount.DefaultCellStyle = dataGridViewCellStyle6;
             this.gunaDgvAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaDgvAccount.EnableHeadersVisualStyles = false;
             this.gunaDgvAccount.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -159,6 +160,39 @@ namespace BookStore.Forms.Management
             this.gunaDgvAccount.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gunaDgvAccount.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gunaDgvAccount_CellFormatting);
             // 
+            // TenDangNhap
+            // 
+            this.TenDangNhap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenDangNhap.DataPropertyName = "Username";
+            this.TenDangNhap.HeaderText = "Tên Đăng Nhập";
+            this.TenDangNhap.Name = "TenDangNhap";
+            this.TenDangNhap.ReadOnly = true;
+            // 
+            // TenHienThi
+            // 
+            this.TenHienThi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenHienThi.DataPropertyName = "DisplayName";
+            this.TenHienThi.HeaderText = "Tên Hiển Thị";
+            this.TenHienThi.Name = "TenHienThi";
+            this.TenHienThi.ReadOnly = true;
+            // 
+            // MatKhau
+            // 
+            this.MatKhau.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MatKhau.DataPropertyName = "Password";
+            this.MatKhau.HeaderText = "Mật Khẩu";
+            this.MatKhau.Name = "MatKhau";
+            this.MatKhau.ReadOnly = true;
+            // 
+            // PhanQuyen
+            // 
+            this.PhanQuyen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PhanQuyen.DataPropertyName = "Permission";
+            this.PhanQuyen.FillWeight = 80F;
+            this.PhanQuyen.HeaderText = "Phân Quyền";
+            this.PhanQuyen.Name = "PhanQuyen";
+            this.PhanQuyen.ReadOnly = true;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnSearch);
@@ -181,6 +215,7 @@ namespace BookStore.Forms.Management
             this.btnSearch.Size = new System.Drawing.Size(34, 35);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // gunaTxtSearch
             // 
@@ -205,6 +240,8 @@ namespace BookStore.Forms.Management
             this.gunaTxtSearch.ShadowDecoration.Parent = this.gunaTxtSearch;
             this.gunaTxtSearch.Size = new System.Drawing.Size(540, 35);
             this.gunaTxtSearch.TabIndex = 0;
+            this.gunaTxtSearch.TextChanged += new System.EventHandler(this.gunaTxtSearch_TextChanged);
+            this.gunaTxtSearch.Leave += new System.EventHandler(this.gunaTxtSearch_Leave);
             // 
             // panel2
             // 
@@ -221,9 +258,9 @@ namespace BookStore.Forms.Management
             // 
             // chkHideShowPassword
             // 
+            this.chkHideShowPassword.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.chkHideShowPassword.AutoSize = true;
-            this.chkHideShowPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkHideShowPassword.Location = new System.Drawing.Point(16, 36);
+            this.chkHideShowPassword.Location = new System.Drawing.Point(19, 36);
             this.chkHideShowPassword.Name = "chkHideShowPassword";
             this.chkHideShowPassword.Size = new System.Drawing.Size(152, 25);
             this.chkHideShowPassword.TabIndex = 6;
@@ -279,39 +316,6 @@ namespace BookStore.Forms.Management
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // TenDangNhap
-            // 
-            this.TenDangNhap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenDangNhap.DataPropertyName = "Username";
-            this.TenDangNhap.HeaderText = "Tên Đăng Nhập";
-            this.TenDangNhap.Name = "TenDangNhap";
-            this.TenDangNhap.ReadOnly = true;
-            // 
-            // TenHienThi
-            // 
-            this.TenHienThi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenHienThi.DataPropertyName = "DisplayName";
-            this.TenHienThi.HeaderText = "Tên Hiển Thị";
-            this.TenHienThi.Name = "TenHienThi";
-            this.TenHienThi.ReadOnly = true;
-            // 
-            // MatKhau
-            // 
-            this.MatKhau.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MatKhau.DataPropertyName = "Password";
-            this.MatKhau.HeaderText = "Mật Khẩu";
-            this.MatKhau.Name = "MatKhau";
-            this.MatKhau.ReadOnly = true;
-            // 
-            // PhanQuyen
-            // 
-            this.PhanQuyen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PhanQuyen.DataPropertyName = "Permission";
-            this.PhanQuyen.FillWeight = 80F;
-            this.PhanQuyen.HeaderText = "Phân Quyền";
-            this.PhanQuyen.Name = "PhanQuyen";
-            this.PhanQuyen.ReadOnly = true;
-            // 
             // frmAccount
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -348,9 +352,9 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.CheckBox chkHideShowPassword;
         private System.Windows.Forms.Panel pnlAccount;
         private Guna.UI2.WinForms.Guna2DataGridView gunaDgvAccount;
+        private System.Windows.Forms.CheckBox chkHideShowPassword;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDangNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenHienThi;
         private System.Windows.Forms.DataGridViewTextBoxColumn MatKhau;

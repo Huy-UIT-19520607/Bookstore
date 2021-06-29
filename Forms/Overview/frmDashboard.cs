@@ -61,12 +61,12 @@ namespace BookStore.Forms.Overview
                     this.lblCustomerQuantity.Text = countCustomer.ToString();
                     this.lblCustomerQuantity.Refresh();
                 }
-                if (countCustomer <= customerQuantity)
+                if (countReceiptAmountPercent <= paidReceiptAmountPercent)
                 {
                     this.gunaCirProPayReceipt.Value = countReceiptAmountPercent;
                     this.gunaCirProPayReceipt.Update();
                 }
-                if (countCustomer <= customerQuantity)
+                if (countDebtAmountPercent <= paidDebtAmountPercent)
                 {
                     this.gunaCirProPayDebt.Value = countDebtAmountPercent;
                     this.gunaCirProPayDebt.Update();

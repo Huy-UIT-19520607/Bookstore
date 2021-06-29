@@ -29,16 +29,17 @@ namespace BookStore.Forms.Management
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBook));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.grpAuthor = new System.Windows.Forms.GroupBox();
             this.pnlAuthor = new System.Windows.Forms.Panel();
@@ -53,12 +54,6 @@ namespace BookStore.Forms.Management
             this.gunaTxtAuthorSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.gunaDgvBook = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaDauSach3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NhaXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NamXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnDeleteBook = new System.Windows.Forms.Button();
             this.btnEditBook = new System.Windows.Forms.Button();
@@ -75,7 +70,7 @@ namespace BookStore.Forms.Management
             this.gunaDgvTitleBook = new Guna.UI2.WinForms.Guna2DataGridView();
             this.MaDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnAddTitleBook = new System.Windows.Forms.Button();
             this.btnEditTitleBook = new System.Windows.Forms.Button();
@@ -87,6 +82,14 @@ namespace BookStore.Forms.Management
             this.btnFilterAuthor = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnFilterBook = new System.Windows.Forms.Button();
+            this.tipBookForm = new System.Windows.Forms.ToolTip(this.components);
+            this.tipBookForm2 = new System.Windows.Forms.ToolTip(this.components);
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaDauSach3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhaXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.grpAuthor.SuspendLayout();
             this.pnlAuthor.SuspendLayout();
@@ -149,33 +152,33 @@ namespace BookStore.Forms.Management
             // 
             this.gunaDgvAuthor.AllowUserToAddRows = false;
             this.gunaDgvAuthor.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gunaDgvAuthor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            this.gunaDgvAuthor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.gunaDgvAuthor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gunaDgvAuthor.BackgroundColor = System.Drawing.Color.White;
             this.gunaDgvAuthor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaDgvAuthor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gunaDgvAuthor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDgvAuthor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDgvAuthor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.gunaDgvAuthor.ColumnHeadersHeight = 30;
             this.gunaDgvAuthor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDauSach2,
             this.TenTacGia});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDgvAuthor.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDgvAuthor.DefaultCellStyle = dataGridViewCellStyle21;
             this.gunaDgvAuthor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaDgvAuthor.EnableHeadersVisualStyles = false;
             this.gunaDgvAuthor.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -213,6 +216,7 @@ namespace BookStore.Forms.Management
             // MaDauSach2
             // 
             this.MaDauSach2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.MaDauSach2.DataPropertyName = "TitleId";
             this.MaDauSach2.HeaderText = "Mã Đầu Sách";
             this.MaDauSach2.Name = "MaDauSach2";
             this.MaDauSach2.ReadOnly = true;
@@ -221,6 +225,7 @@ namespace BookStore.Forms.Management
             // TenTacGia
             // 
             this.TenTacGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenTacGia.DataPropertyName = "Name";
             this.TenTacGia.HeaderText = "Tên Tác Giả";
             this.TenTacGia.Name = "TenTacGia";
             this.TenTacGia.ReadOnly = true;
@@ -249,6 +254,7 @@ namespace BookStore.Forms.Management
             this.btnDeleteAuthor.TabIndex = 5;
             this.btnDeleteAuthor.Text = "Xoá";
             this.btnDeleteAuthor.UseVisualStyleBackColor = false;
+            this.btnDeleteAuthor.Click += new System.EventHandler(this.btnDeleteAuthor_Click);
             // 
             // btnEditAuthor
             // 
@@ -264,6 +270,7 @@ namespace BookStore.Forms.Management
             this.btnEditAuthor.TabIndex = 4;
             this.btnEditAuthor.Text = "Sửa";
             this.btnEditAuthor.UseVisualStyleBackColor = false;
+            this.btnEditAuthor.Click += new System.EventHandler(this.btnEditAuthor_Click);
             // 
             // panel8
             // 
@@ -286,7 +293,9 @@ namespace BookStore.Forms.Management
             this.btnAuthorSearch.Name = "btnAuthorSearch";
             this.btnAuthorSearch.Size = new System.Drawing.Size(34, 35);
             this.btnAuthorSearch.TabIndex = 1;
+            this.tipBookForm2.SetToolTip(this.btnAuthorSearch, "Tìm kiếm Tác giả");
             this.btnAuthorSearch.UseVisualStyleBackColor = false;
+            this.btnAuthorSearch.Click += new System.EventHandler(this.btnAuthorSearch_Click);
             // 
             // gunaTxtAuthorSearch
             // 
@@ -311,6 +320,8 @@ namespace BookStore.Forms.Management
             this.gunaTxtAuthorSearch.ShadowDecoration.Parent = this.gunaTxtAuthorSearch;
             this.gunaTxtAuthorSearch.Size = new System.Drawing.Size(217, 35);
             this.gunaTxtAuthorSearch.TabIndex = 0;
+            this.gunaTxtAuthorSearch.TextChanged += new System.EventHandler(this.gunaTxtAuthorSearch_TextChanged);
+            this.gunaTxtAuthorSearch.Leave += new System.EventHandler(this.gunaTxtAuthorSearch_Leave);
             // 
             // panel4
             // 
@@ -324,21 +335,21 @@ namespace BookStore.Forms.Management
             // 
             this.gunaDgvBook.AllowUserToAddRows = false;
             this.gunaDgvBook.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.gunaDgvBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
+            this.gunaDgvBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
             this.gunaDgvBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gunaDgvBook.BackgroundColor = System.Drawing.Color.White;
             this.gunaDgvBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaDgvBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gunaDgvBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDgvBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDgvBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.gunaDgvBook.ColumnHeadersHeight = 30;
             this.gunaDgvBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSach,
@@ -347,14 +358,14 @@ namespace BookStore.Forms.Management
             this.NamXuatBan,
             this.SoLuongTon,
             this.DonGiaBan});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDgvBook.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDgvBook.DefaultCellStyle = dataGridViewCellStyle24;
             this.gunaDgvBook.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaDgvBook.EnableHeadersVisualStyles = false;
             this.gunaDgvBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -389,51 +400,6 @@ namespace BookStore.Forms.Management
             this.gunaDgvBook.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gunaDgvBook.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // MaSach
-            // 
-            this.MaSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.MaSach.HeaderText = "Mã Sách";
-            this.MaSach.Name = "MaSach";
-            this.MaSach.ReadOnly = true;
-            this.MaSach.Width = 107;
-            // 
-            // MaDauSach3
-            // 
-            this.MaDauSach3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.MaDauSach3.HeaderText = "Mã Đầu Sách";
-            this.MaDauSach3.Name = "MaDauSach3";
-            this.MaDauSach3.ReadOnly = true;
-            this.MaDauSach3.Width = 146;
-            // 
-            // NhaXuatBan
-            // 
-            this.NhaXuatBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NhaXuatBan.HeaderText = "Nhà XB";
-            this.NhaXuatBan.Name = "NhaXuatBan";
-            this.NhaXuatBan.ReadOnly = true;
-            // 
-            // NamXuatBan
-            // 
-            this.NamXuatBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.NamXuatBan.HeaderText = "Năm XB";
-            this.NamXuatBan.Name = "NamXuatBan";
-            this.NamXuatBan.ReadOnly = true;
-            this.NamXuatBan.Width = 102;
-            // 
-            // SoLuongTon
-            // 
-            this.SoLuongTon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SoLuongTon.HeaderText = "Số Lượng Tồn";
-            this.SoLuongTon.Name = "SoLuongTon";
-            this.SoLuongTon.ReadOnly = true;
-            // 
-            // DonGiaBan
-            // 
-            this.DonGiaBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DonGiaBan.HeaderText = "Đơn Giá Bán";
-            this.DonGiaBan.Name = "DonGiaBan";
-            this.DonGiaBan.ReadOnly = true;
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.btnDeleteBook);
@@ -458,6 +424,7 @@ namespace BookStore.Forms.Management
             this.btnDeleteBook.TabIndex = 5;
             this.btnDeleteBook.Text = "Xoá";
             this.btnDeleteBook.UseVisualStyleBackColor = false;
+            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
             // 
             // btnEditBook
             // 
@@ -473,6 +440,7 @@ namespace BookStore.Forms.Management
             this.btnEditBook.TabIndex = 4;
             this.btnEditBook.Text = "Sửa";
             this.btnEditBook.UseVisualStyleBackColor = false;
+            this.btnEditBook.Click += new System.EventHandler(this.btnEditBook_Click);
             // 
             // grpBook
             // 
@@ -520,7 +488,9 @@ namespace BookStore.Forms.Management
             this.btnBookSearch.Name = "btnBookSearch";
             this.btnBookSearch.Size = new System.Drawing.Size(34, 35);
             this.btnBookSearch.TabIndex = 1;
+            this.tipBookForm2.SetToolTip(this.btnBookSearch, "Tìm kiếm sách");
             this.btnBookSearch.UseVisualStyleBackColor = false;
+            this.btnBookSearch.Click += new System.EventHandler(this.btnBookSearch_Click);
             // 
             // gunaTxtBookSearch
             // 
@@ -545,6 +515,8 @@ namespace BookStore.Forms.Management
             this.gunaTxtBookSearch.ShadowDecoration.Parent = this.gunaTxtBookSearch;
             this.gunaTxtBookSearch.Size = new System.Drawing.Size(328, 35);
             this.gunaTxtBookSearch.TabIndex = 0;
+            this.gunaTxtBookSearch.TextChanged += new System.EventHandler(this.gunaTxtBookSearch_TextChanged);
+            this.gunaTxtBookSearch.Leave += new System.EventHandler(this.gunaTxtBookSearch_Leave);
             // 
             // tableLayoutPanel1
             // 
@@ -617,34 +589,34 @@ namespace BookStore.Forms.Management
             // 
             this.gunaDgvTitleBook.AllowUserToAddRows = false;
             this.gunaDgvTitleBook.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.gunaDgvTitleBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
+            this.gunaDgvTitleBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.gunaDgvTitleBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gunaDgvTitleBook.BackgroundColor = System.Drawing.Color.White;
             this.gunaDgvTitleBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaDgvTitleBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gunaDgvTitleBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDgvTitleBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDgvTitleBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.gunaDgvTitleBook.ColumnHeadersHeight = 30;
             this.gunaDgvTitleBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDauSach,
             this.TenDauSach,
-            this.TenTheLoai});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDgvTitleBook.DefaultCellStyle = dataGridViewCellStyle9;
+            this.MaTheLoai});
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDgvTitleBook.DefaultCellStyle = dataGridViewCellStyle27;
             this.gunaDgvTitleBook.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaDgvTitleBook.EnableHeadersVisualStyles = false;
             this.gunaDgvTitleBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -678,10 +650,12 @@ namespace BookStore.Forms.Management
             this.gunaDgvTitleBook.ThemeStyle.RowsStyle.Height = 28;
             this.gunaDgvTitleBook.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gunaDgvTitleBook.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gunaDgvTitleBook.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gunaDgvTitleBook_CellFormatting);
             // 
             // MaDauSach
             // 
             this.MaDauSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.MaDauSach.DataPropertyName = "Id";
             this.MaDauSach.HeaderText = "Mã Đầu Sách";
             this.MaDauSach.Name = "MaDauSach";
             this.MaDauSach.ReadOnly = true;
@@ -690,16 +664,17 @@ namespace BookStore.Forms.Management
             // TenDauSach
             // 
             this.TenDauSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenDauSach.DataPropertyName = "Name";
             this.TenDauSach.HeaderText = "Tên Đầu Sách";
             this.TenDauSach.Name = "TenDauSach";
             this.TenDauSach.ReadOnly = true;
             // 
-            // TenTheLoai
+            // MaTheLoai
             // 
-            this.TenTheLoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenTheLoai.HeaderText = "Thể Loại";
-            this.TenTheLoai.Name = "TenTheLoai";
-            this.TenTheLoai.ReadOnly = true;
+            this.MaTheLoai.DataPropertyName = "CategoryId";
+            this.MaTheLoai.HeaderText = "Tên Thể Loại";
+            this.MaTheLoai.Name = "MaTheLoai";
+            this.MaTheLoai.ReadOnly = true;
             // 
             // panel6
             // 
@@ -726,6 +701,7 @@ namespace BookStore.Forms.Management
             this.btnAddTitleBook.TabIndex = 2;
             this.btnAddTitleBook.Text = "Thêm";
             this.btnAddTitleBook.UseVisualStyleBackColor = false;
+            this.btnAddTitleBook.Click += new System.EventHandler(this.btnAddTitleBook_Click);
             // 
             // btnEditTitleBook
             // 
@@ -741,6 +717,7 @@ namespace BookStore.Forms.Management
             this.btnEditTitleBook.TabIndex = 4;
             this.btnEditTitleBook.Text = "Sửa";
             this.btnEditTitleBook.UseVisualStyleBackColor = false;
+            this.btnEditTitleBook.Click += new System.EventHandler(this.btnEditTitleBook_Click);
             // 
             // btnDeleteTitleBook
             // 
@@ -756,6 +733,7 @@ namespace BookStore.Forms.Management
             this.btnDeleteTitleBook.TabIndex = 5;
             this.btnDeleteTitleBook.Text = "Xoá";
             this.btnDeleteTitleBook.UseVisualStyleBackColor = false;
+            this.btnDeleteTitleBook.Click += new System.EventHandler(this.btnDeleteTitleBook_Click);
             // 
             // pnlSearchTitleBook
             // 
@@ -778,7 +756,9 @@ namespace BookStore.Forms.Management
             this.btnTitleBookSearch.Name = "btnTitleBookSearch";
             this.btnTitleBookSearch.Size = new System.Drawing.Size(34, 35);
             this.btnTitleBookSearch.TabIndex = 1;
+            this.tipBookForm2.SetToolTip(this.btnTitleBookSearch, "Tìm kiếm đầu sách");
             this.btnTitleBookSearch.UseVisualStyleBackColor = false;
+            this.btnTitleBookSearch.Click += new System.EventHandler(this.btnTitleBookSearch_Click);
             // 
             // gunaTxtTitleBookSearch
             // 
@@ -803,6 +783,8 @@ namespace BookStore.Forms.Management
             this.gunaTxtTitleBookSearch.ShadowDecoration.Parent = this.gunaTxtTitleBookSearch;
             this.gunaTxtTitleBookSearch.Size = new System.Drawing.Size(328, 35);
             this.gunaTxtTitleBookSearch.TabIndex = 0;
+            this.gunaTxtTitleBookSearch.TextChanged += new System.EventHandler(this.gunaTxtTitleBookSearch_TextChanged);
+            this.gunaTxtTitleBookSearch.Leave += new System.EventHandler(this.gunaTxtTitleBookSearch_Leave);
             // 
             // panel9
             // 
@@ -824,7 +806,9 @@ namespace BookStore.Forms.Management
             this.btnFilterAuthor.Name = "btnFilterAuthor";
             this.btnFilterAuthor.Size = new System.Drawing.Size(34, 34);
             this.btnFilterAuthor.TabIndex = 2;
+            this.tipBookForm.SetToolTip(this.btnFilterAuthor, "Lọc nhanh các tác giả \r\ntừ đầu sách đã chọn");
             this.btnFilterAuthor.UseVisualStyleBackColor = false;
+            this.btnFilterAuthor.Click += new System.EventHandler(this.btnFilterAuthor_Click);
             // 
             // panel3
             // 
@@ -846,7 +830,72 @@ namespace BookStore.Forms.Management
             this.btnFilterBook.Name = "btnFilterBook";
             this.btnFilterBook.Size = new System.Drawing.Size(34, 35);
             this.btnFilterBook.TabIndex = 10;
+            this.tipBookForm.SetToolTip(this.btnFilterBook, "Lọc nhanh các sách \r\ntừ đầu sách đã chọn");
             this.btnFilterBook.UseVisualStyleBackColor = false;
+            this.btnFilterBook.Click += new System.EventHandler(this.btnFilterBook_Click);
+            // 
+            // tipBookForm
+            // 
+            this.tipBookForm.AutoPopDelay = 5000;
+            this.tipBookForm.InitialDelay = 300;
+            this.tipBookForm.ReshowDelay = 100;
+            this.tipBookForm.ToolTipTitle = "Nút lọc nhanh";
+            // 
+            // tipBookForm2
+            // 
+            this.tipBookForm2.ToolTipTitle = "Tìm kiếm";
+            // 
+            // MaSach
+            // 
+            this.MaSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.MaSach.DataPropertyName = "Id";
+            this.MaSach.HeaderText = "Mã Sách";
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            this.MaSach.Width = 107;
+            // 
+            // MaDauSach3
+            // 
+            this.MaDauSach3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.MaDauSach3.DataPropertyName = "TitleId";
+            this.MaDauSach3.HeaderText = "Mã Đầu Sách";
+            this.MaDauSach3.Name = "MaDauSach3";
+            this.MaDauSach3.ReadOnly = true;
+            this.MaDauSach3.Width = 146;
+            // 
+            // NhaXuatBan
+            // 
+            this.NhaXuatBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NhaXuatBan.DataPropertyName = "Publisher";
+            this.NhaXuatBan.HeaderText = "Nhà Xuất Bản";
+            this.NhaXuatBan.Name = "NhaXuatBan";
+            this.NhaXuatBan.ReadOnly = true;
+            // 
+            // NamXuatBan
+            // 
+            this.NamXuatBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.NamXuatBan.DataPropertyName = "PublishYear";
+            this.NamXuatBan.HeaderText = "Năm XB";
+            this.NamXuatBan.Name = "NamXuatBan";
+            this.NamXuatBan.ReadOnly = true;
+            this.NamXuatBan.Width = 102;
+            // 
+            // SoLuongTon
+            // 
+            this.SoLuongTon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SoLuongTon.DataPropertyName = "InStock";
+            this.SoLuongTon.HeaderText = "Số Lượng Tồn";
+            this.SoLuongTon.Name = "SoLuongTon";
+            this.SoLuongTon.ReadOnly = true;
+            this.SoLuongTon.Width = 151;
+            // 
+            // DonGiaBan
+            // 
+            this.DonGiaBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DonGiaBan.DataPropertyName = "Price";
+            this.DonGiaBan.HeaderText = "Đơn Giá Bán";
+            this.DonGiaBan.Name = "DonGiaBan";
+            this.DonGiaBan.ReadOnly = true;
             // 
             // frmBook
             // 
@@ -859,6 +908,7 @@ namespace BookStore.Forms.Management
             this.Name = "frmBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SÁCH";
+            this.Load += new System.EventHandler(this.frmBook_Load);
             this.panel1.ResumeLayout(false);
             this.grpAuthor.ResumeLayout(false);
             this.pnlAuthor.ResumeLayout(false);
@@ -887,12 +937,6 @@ namespace BookStore.Forms.Management
         #endregion
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2DataGridView gunaDgvBook;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NhaXuatBan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NamXuatBan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongTon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGiaBan;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnDeleteBook;
         private System.Windows.Forms.Button btnEditBook;
@@ -906,8 +950,6 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.GroupBox grpAuthor;
         private System.Windows.Forms.Panel pnlAuthor;
         private Guna.UI2.WinForms.Guna2DataGridView gunaDgvAuthor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTacGia;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnDeleteAuthor;
         private System.Windows.Forms.Button btnEditAuthor;
@@ -919,9 +961,6 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.GroupBox grpTitleBook;
         private System.Windows.Forms.Panel pnlTitleBook;
         private Guna.UI2.WinForms.Guna2DataGridView gunaDgvTitleBook;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDauSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnAddTitleBook;
         private System.Windows.Forms.Button btnEditTitleBook;
@@ -933,5 +972,18 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Button btnFilterAuthor;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnFilterBook;
+        private System.Windows.Forms.ToolTip tipBookForm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTacGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDauSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTheLoai;
+        private System.Windows.Forms.ToolTip tipBookForm2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDauSach3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NhaXuatBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamXuatBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongTon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGiaBan;
     }
 }

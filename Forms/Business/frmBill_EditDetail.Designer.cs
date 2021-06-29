@@ -404,7 +404,6 @@ namespace BookStore.Forms.Business
             0,
             0});
             this.nudPaidAmount.Name = "nudPaidAmount";
-            this.nudPaidAmount.ReadOnly = true;
             this.nudPaidAmount.Size = new System.Drawing.Size(134, 33);
             this.nudPaidAmount.TabIndex = 58;
             this.nudPaidAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -489,7 +488,7 @@ namespace BookStore.Forms.Business
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
-            // frmReceipt_EditDetail
+            // frmBill_EditDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -502,7 +501,7 @@ namespace BookStore.Forms.Business
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmReceipt_EditDetail";
+            this.Name = "frmBill_EditDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa Chi tiết hoá đơn";
             this.groupBox2.ResumeLayout(false);

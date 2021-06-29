@@ -24,13 +24,13 @@ namespace BookStore.Forms.Management
         private void ResetErrorMessage()
         {
             this.lblUsernameError.Text = "";
-            this.lblPasswordError.Text = "";
             this.lblDisplayNameError.Text = "";
+            this.lblPasswordError.Text = "";
             this.lblConfirmPasswordError.Text = "";
 
             this.txtUsername.Text = "";
-            this.txtPassword.Text = "";
             this.txtDisplayName.Text = "";
+            this.txtPassword.Text = "";
             this.txtConfirmPassword.Text = "";
 
             this.errAccount_Add.Clear();
@@ -70,7 +70,7 @@ namespace BookStore.Forms.Management
             if (txtDisplayName.Text == "")
             {
                 errMsg = "Hãy điền tên hiển thị";
-                CancelValidatedEvent(txtUsername, lblUsernameError, e);
+                CancelValidatedEvent(txtDisplayName, lblDisplayNameError, e);
                 return;
             }
             if (!ValidateInput.ValidOnlyLetter(txtDisplayName.Text, out errMsg))
@@ -87,7 +87,7 @@ namespace BookStore.Forms.Management
 
         private void txtPassword_Validating(object sender, CancelEventArgs e)
         {
-            if (txtUsername.Text == "")
+            if (txtPassword.Text == "")
             {
                 errMsg = "Hãy điền mật khẩu";
                 CancelValidatedEvent(txtPassword, lblPasswordError, e);
@@ -138,14 +138,15 @@ namespace BookStore.Forms.Management
             }
 
             if (BUS.Account.Instance.Accounts.
-                FirstOrDefault(account => account.Username.Equals(txtUsername.Text)) != null)
+                FirstOrDefault(account => account.Username.Equals(txtUsername.Text.Trim())) != null)
             {
                 MessageBox.Show("Tài khoản này đã tồn tại");
                 return;
             }
 
             if (BUS.Account.Instance.AddAccount(
-                new DTO.Account(txtUsername.Text, txtDisplayName.Text, txtPassword.Text, cboRole.SelectedIndex)))
+                new DTO.Account(txtUsername.Text.Trim(), txtDisplayName.Text.Trim(), 
+                                txtPassword.Text.Trim(), cboPermission.SelectedIndex)))
             {
                 MessageBox.Show("Thêm tài khoản mới thành công");
                 this.Dispose();

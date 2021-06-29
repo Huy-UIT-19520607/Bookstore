@@ -29,12 +29,13 @@ namespace BookStore.Forms.Management
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtCategory = new System.Windows.Forms.TextBox();
             this.txtTitlteBookCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtTitleBookName = new System.Windows.Forms.TextBox();
-            this.lblNewCategory = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.lblPublisherError = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPublisher = new System.Windows.Forms.TextBox();
@@ -42,9 +43,11 @@ namespace BookStore.Forms.Management
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.nudPublishingYear = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBookCode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.errBook_EditBook = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nudPublishingYear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errBook_EditBook)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCategory
@@ -94,23 +97,23 @@ namespace BookStore.Forms.Management
             this.txtTitleBookName.Size = new System.Drawing.Size(525, 33);
             this.txtTitleBookName.TabIndex = 86;
             // 
-            // lblNewCategory
+            // label
             // 
-            this.lblNewCategory.AutoSize = true;
-            this.lblNewCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewCategory.Location = new System.Drawing.Point(32, 76);
-            this.lblNewCategory.Name = "lblNewCategory";
-            this.lblNewCategory.Size = new System.Drawing.Size(125, 25);
-            this.lblNewCategory.TabIndex = 85;
-            this.lblNewCategory.Text = "Tên đầu sách:";
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(32, 76);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(125, 25);
+            this.label.TabIndex = 85;
+            this.label.Text = "Tên đầu sách:";
             // 
             // lblPublisherError
             // 
             this.lblPublisherError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPublisherError.ForeColor = System.Drawing.Color.Red;
-            this.lblPublisherError.Location = new System.Drawing.Point(171, 275);
+            this.lblPublisherError.Location = new System.Drawing.Point(103, 275);
             this.lblPublisherError.Name = "lblPublisherError";
-            this.lblPublisherError.Size = new System.Drawing.Size(311, 17);
+            this.lblPublisherError.Size = new System.Drawing.Size(379, 17);
             this.lblPublisherError.TabIndex = 100;
             this.lblPublisherError.Text = "Publisher Error";
             this.lblPublisherError.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -132,6 +135,8 @@ namespace BookStore.Forms.Management
             this.txtPublisher.Name = "txtPublisher";
             this.txtPublisher.Size = new System.Drawing.Size(311, 33);
             this.txtPublisher.TabIndex = 95;
+            this.txtPublisher.Validating += new System.ComponentModel.CancelEventHandler(this.txtPublisher_Validating);
+            this.txtPublisher.Validated += new System.EventHandler(this.txtPublisher_Validated);
             // 
             // label1
             // 
@@ -157,6 +162,7 @@ namespace BookStore.Forms.Management
             this.btnOk.TabIndex = 91;
             this.btnOk.Text = "Sửa đổi";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -172,18 +178,19 @@ namespace BookStore.Forms.Management
             this.btnCancel.TabIndex = 92;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // nudPublishingYear
             // 
             this.nudPublishingYear.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudPublishingYear.Location = new System.Drawing.Point(171, 303);
             this.nudPublishingYear.Maximum = new decimal(new int[] {
-            9998,
+            2021,
             0,
             0,
             0});
             this.nudPublishingYear.Minimum = new decimal(new int[] {
-            1753,
+            1950,
             0,
             0,
             0});
@@ -192,19 +199,19 @@ namespace BookStore.Forms.Management
             this.nudPublishingYear.TabIndex = 102;
             this.nudPublishingYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudPublishingYear.Value = new decimal(new int[] {
-            1753,
+            1950,
             0,
             0,
             0});
             // 
-            // textBox1
+            // txtBookCode
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(171, 183);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(122, 33);
-            this.textBox1.TabIndex = 104;
+            this.txtBookCode.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookCode.Location = new System.Drawing.Point(171, 183);
+            this.txtBookCode.Name = "txtBookCode";
+            this.txtBookCode.ReadOnly = true;
+            this.txtBookCode.Size = new System.Drawing.Size(122, 33);
+            this.txtBookCode.TabIndex = 104;
             // 
             // label2
             // 
@@ -216,12 +223,18 @@ namespace BookStore.Forms.Management
             this.label2.TabIndex = 103;
             this.label2.Text = "Mã sách:";
             // 
+            // errBook_EditBook
+            // 
+            this.errBook_EditBook.ContainerControl = this;
+            // 
             // frmBook_EditBook
             // 
+            this.AcceptButton = this.btnOk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(719, 409);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBookCode);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.nudPublishingYear);
             this.Controls.Add(this.lblPublisherError);
@@ -235,7 +248,7 @@ namespace BookStore.Forms.Management
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtTitleBookName);
-            this.Controls.Add(this.lblNewCategory);
+            this.Controls.Add(this.label);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -244,6 +257,7 @@ namespace BookStore.Forms.Management
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa sách của đầu sách";
             ((System.ComponentModel.ISupportInitialize)(this.nudPublishingYear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errBook_EditBook)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,7 +270,7 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTitleBookName;
-        private System.Windows.Forms.Label lblNewCategory;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label lblPublisherError;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPublisher;
@@ -264,7 +278,8 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.NumericUpDown nudPublishingYear;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBookCode;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider errBook_EditBook;
     }
 }

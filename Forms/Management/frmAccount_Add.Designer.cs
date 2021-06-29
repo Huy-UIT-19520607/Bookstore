@@ -45,7 +45,7 @@ namespace BookStore.Forms.Management
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cboRole = new System.Windows.Forms.ComboBox();
+            this.cboPermission = new System.Windows.Forms.ComboBox();
             this.chkHideShowPassword = new System.Windows.Forms.CheckBox();
             this.errAccount_Add = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errAccount_Add)).BeginInit();
@@ -219,18 +219,18 @@ namespace BookStore.Forms.Management
             this.label7.TabIndex = 28;
             this.label7.Text = "Phân quyền:";
             // 
-            // cboRole
+            // cboPermission
             // 
-            this.cboRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRole.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboRole.FormattingEnabled = true;
-            this.cboRole.Items.AddRange(new object[] {
+            this.cboPermission.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPermission.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboPermission.FormattingEnabled = true;
+            this.cboPermission.Items.AddRange(new object[] {
             "Quản trị viên",
             "Nhân viên"});
-            this.cboRole.Location = new System.Drawing.Point(240, 253);
-            this.cboRole.Name = "cboRole";
-            this.cboRole.Size = new System.Drawing.Size(215, 33);
-            this.cboRole.TabIndex = 4;
+            this.cboPermission.Location = new System.Drawing.Point(240, 253);
+            this.cboPermission.Name = "cboPermission";
+            this.cboPermission.Size = new System.Drawing.Size(215, 33);
+            this.cboPermission.TabIndex = 4;
             // 
             // chkHideShowPassword
             // 
@@ -252,12 +252,13 @@ namespace BookStore.Forms.Management
             // 
             // frmAccount_Add
             // 
+            this.AcceptButton = this.btnOk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(547, 397);
             this.Controls.Add(this.chkHideShowPassword);
-            this.Controls.Add(this.cboRole);
+            this.Controls.Add(this.cboPermission);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblConfirmPasswordError);
             this.Controls.Add(this.txtConfirmPassword);
@@ -303,7 +304,7 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cboRole;
+        private System.Windows.Forms.ComboBox cboPermission;
         private System.Windows.Forms.CheckBox chkHideShowPassword;
         private System.Windows.Forms.ErrorProvider errAccount_Add;
     }

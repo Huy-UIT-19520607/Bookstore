@@ -29,6 +29,7 @@ namespace BookStore.Forms.Management
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtTitlteBookCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblAuthorNameError = new System.Windows.Forms.Label();
@@ -40,6 +41,8 @@ namespace BookStore.Forms.Management
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtCategory = new System.Windows.Forms.TextBox();
+            this.errBook_EditAuthor = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errBook_EditAuthor)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTitlteBookCode
@@ -79,6 +82,8 @@ namespace BookStore.Forms.Management
             this.txtAuthorName.Name = "txtAuthorName";
             this.txtAuthorName.Size = new System.Drawing.Size(265, 33);
             this.txtAuthorName.TabIndex = 75;
+            this.txtAuthorName.Validating += new System.ComponentModel.CancelEventHandler(this.txtAuthorName_Validating);
+            this.txtAuthorName.Validated += new System.EventHandler(this.txtAuthorName_Validated);
             // 
             // label2
             // 
@@ -133,6 +138,7 @@ namespace BookStore.Forms.Management
             this.btnOk.TabIndex = 82;
             this.btnOk.Text = "Sửa đổi";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -148,6 +154,7 @@ namespace BookStore.Forms.Management
             this.btnCancel.TabIndex = 83;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtCategory
             // 
@@ -158,9 +165,17 @@ namespace BookStore.Forms.Management
             this.txtCategory.Size = new System.Drawing.Size(311, 33);
             this.txtCategory.TabIndex = 84;
             // 
-            // frmTitleBook_EditAuthor
+            // errBook_EditAuthor
             // 
+            this.errBook_EditAuthor.BlinkRate = 0;
+            this.errBook_EditAuthor.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errBook_EditAuthor.ContainerControl = this;
+            // 
+            // frmBook_EditAuthor
+            // 
+            this.AcceptButton = this.btnOk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(713, 307);
             this.Controls.Add(this.txtCategory);
@@ -178,9 +193,10 @@ namespace BookStore.Forms.Management
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmTitleBook_EditAuthor";
+            this.Name = "frmBook_EditAuthor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa tác giả của đầu sách";
+            ((System.ComponentModel.ISupportInitialize)(this.errBook_EditAuthor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,5 +214,6 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtCategory;
+        private System.Windows.Forms.ErrorProvider errBook_EditAuthor;
     }
 }
