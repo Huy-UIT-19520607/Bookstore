@@ -75,6 +75,7 @@
     <Compile Include="BUS\Book.cs" />
     <Compile Include="BUS\BookReceipt.cs" />
     <Compile Include="BUS\BookReceiptDetail.cs" />
+    <Compile Include="BUS\CashReceipt.cs" />
     <Compile Include="BUS\Category.cs" />
     <Compile Include="BUS\Customer.cs" />
     <Compile Include="BUS\DebtReport.cs" />
@@ -315,6 +316,7 @@
     <Compile Include="Forms\Setting\frmRequirement.Designer.cs">
       <DependentUpon>frmRequirement.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyConvert.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidateInput.cs" />
