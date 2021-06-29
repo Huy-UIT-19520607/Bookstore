@@ -8,15 +8,16 @@ CREATE PROC sp_login
 @password nvarchar(50)
 AS
 	SELECT * 
-	FROM TAIKHOAN 
-	WHERE [TenDangNhap]=@username AND [MatKhau]=@password;
+	FROM [dbo].[TAIKHOAN] 
+	WHERE [TenDangNhap] = @username 
+		AND [MatKhau] = @password COLLATE SQL_Latin1_General_CP1_CS_AS
 GO
 
 -- Thêm tài khoản
 CREATE PROC sp_add_account 
-@username nvarchar(50),
+@username varchar(50),
 @displayname nvarchar(200),
-@password nvarchar(50),
+@password varchar(50),
 @permission int
 AS
 	INSERT INTO TAIKHOAN 
@@ -33,9 +34,9 @@ GO
 
 -- Sửa tài khoản
 CREATE PROC sp_update_account
-@username nvarchar(50),
+@username varchar(50),
 @displayname nvarchar(200),
-@password nvarchar(50),
+@password varchar(50),
 @permission int
 AS
 	UPDATE TAIKHOAN
