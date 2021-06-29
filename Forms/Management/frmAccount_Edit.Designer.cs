@@ -117,7 +117,7 @@ namespace BookStore.Forms.Management
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOk.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.Color.White;
-            this.btnOk.Location = new System.Drawing.Point(132, 208);
+            this.btnOk.Location = new System.Drawing.Point(132, 429);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(137, 46);
             this.btnOk.TabIndex = 33;
@@ -133,7 +133,7 @@ namespace BookStore.Forms.Management
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(293, 208);
+            this.btnCancel.Location = new System.Drawing.Point(293, 429);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(137, 46);
             this.btnCancel.TabIndex = 34;
@@ -199,6 +199,8 @@ namespace BookStore.Forms.Management
             this.txtConfirmPassword.PasswordChar = '●';
             this.txtConfirmPassword.Size = new System.Drawing.Size(215, 33);
             this.txtConfirmPassword.TabIndex = 56;
+            this.txtConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmPassword_Validating);
+            this.txtConfirmPassword.Validated += new System.EventHandler(this.txtConfirmPassword_Validated);
             // 
             // chkHideShowPassword
             // 
@@ -211,6 +213,7 @@ namespace BookStore.Forms.Management
             this.chkHideShowPassword.TabIndex = 58;
             this.chkHideShowPassword.Text = "Hiển thị mật khẩu";
             this.chkHideShowPassword.UseVisualStyleBackColor = true;
+            this.chkHideShowPassword.CheckedChanged += new System.EventHandler(this.chkHideShowPassword_CheckedChanged);
             // 
             // label5
             // 
@@ -242,6 +245,8 @@ namespace BookStore.Forms.Management
             this.txtNewPassword.PasswordChar = '●';
             this.txtNewPassword.Size = new System.Drawing.Size(215, 33);
             this.txtNewPassword.TabIndex = 53;
+            this.txtNewPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtNewPassword_Validating);
+            this.txtNewPassword.Validated += new System.EventHandler(this.txtNewPassword_Validated);
             // 
             // txtOldPassword
             // 
@@ -252,6 +257,8 @@ namespace BookStore.Forms.Management
             this.txtOldPassword.PasswordChar = '●';
             this.txtOldPassword.Size = new System.Drawing.Size(215, 33);
             this.txtOldPassword.TabIndex = 60;
+            this.txtOldPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtOldPassword_Validating);
+            this.txtOldPassword.Validated += new System.EventHandler(this.txtOldPassword_Validated);
             // 
             // label4
             // 
@@ -307,7 +314,7 @@ namespace BookStore.Forms.Management
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(449, 266);
+            this.ClientSize = new System.Drawing.Size(449, 487);
             this.Controls.Add(this.pnlChangePassword);
             this.Controls.Add(this.chkChangePassword);
             this.Controls.Add(this.cboPermission);

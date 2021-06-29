@@ -240,6 +240,7 @@ namespace BookStore.Forms.Management
             // 
             // nudDebtAmount
             // 
+            this.nudDebtAmount.Enabled = false;
             this.nudDebtAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudDebtAmount.Increment = new decimal(new int[] {
             1000,

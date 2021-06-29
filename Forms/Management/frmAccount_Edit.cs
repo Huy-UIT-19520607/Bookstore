@@ -22,6 +22,8 @@ namespace BookStore.Forms.Management
 
             updatedAcc = BUS.Account.Instance.Accounts.First(acc => acc.Username == username);
 
+            this.Height = 305;
+
             ResetErrorMessage();
         }
 
@@ -96,82 +98,6 @@ namespace BookStore.Forms.Management
             this.lblDisplayNameError.Text = "";
         }
 
-        private void txtOldPassword_Validating(object sender, CancelEventArgs e)
-        {
-            if (txtOldPassword.Text == "")
-            {
-                errMsg = "Hãy điền mật khẩu cũ";
-                CancelValidatedEvent(txtOldPassword, lblOldPasswordError, e);
-                return;
-            }
-            if (!ValidateInput.ValidNoneSpecialChar(txtOldPassword.Text, out errMsg))
-            {
-                CancelValidatedEvent(txtOldPassword, lblOldPasswordError, e);
-            }
-            if (txtOldPassword.Text != updatedAcc.Password)
-            {
-                errMsg = "Mật khẩu cũ không đúng";
-                CancelValidatedEvent(txtOldPassword, lblOldPasswordError, e);
-                return;
-            }
-        }
-
-        private void txtOldPassword_Validated(object sender, EventArgs e)
-        {
-            this.errAccount_Edit.SetError(txtOldPassword, "");
-            this.lblOldPasswordError.Text = "";
-        }
-
-        private void txtNewPassword_Validating(object sender, CancelEventArgs e)
-        {
-            if (txtNewPassword.Text == "")
-            {
-                errMsg = "Hãy điền mật khẩu mới";
-                CancelValidatedEvent(txtNewPassword, lblNewPasswordError, e);
-                return;
-            }
-            if (!ValidateInput.ValidNoneSpecialChar(txtNewPassword.Text, out errMsg))
-            {
-                CancelValidatedEvent(txtNewPassword, lblNewPasswordError, e);
-            }
-            if (txtNewPassword.Text == txtOldPassword.Text)
-            {
-                errMsg = "Mật khẩu mới khác mật khẩu cũ";
-                CancelValidatedEvent(txtNewPassword, lblNewPasswordError, e);
-                return;
-            }
-        }
-
-        private void txtNewPassword_Validated(object sender, EventArgs e)
-        {
-            this.errAccount_Edit.SetError(txtNewPassword, "");
-            this.lblNewPasswordError.Text = "";
-        }
-
-        private void txtConfirmPassword_Validating(object sender, CancelEventArgs e)
-        {
-            if (txtConfirmPassword.Text == "")
-            {
-                errMsg = "Hãy xác nhận mật khẩu";
-                CancelValidatedEvent(txtConfirmPassword, lblConfirmPasswordError, e);
-            }
-            if (!ValidateInput.ValidNoneSpecialChar(txtConfirmPassword.Text, out errMsg))
-            {
-                CancelValidatedEvent(txtConfirmPassword, lblConfirmPasswordError, e);
-            }
-            if (txtNewPassword.Text != txtConfirmPassword.Text)
-            {
-                errMsg = "Mật khẩu xác nhận không trùng khớp";
-                CancelValidatedEvent(txtConfirmPassword, lblConfirmPasswordError, e);
-            }
-        }
-
-        private void txtConfirmPassword_Validated(object sender, EventArgs e)
-        {
-            this.errAccount_Edit.SetError(txtConfirmPassword, "");
-            this.lblConfirmPasswordError.Text = "";
-        }
-
         private void btnOk_Click(object sender, EventArgs e)
         {
             if (!ValidateChildren(ValidationConstraints.Enabled))
@@ -234,6 +160,79 @@ namespace BookStore.Forms.Management
             }
         }
 
-        
+        private void txtOldPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtOldPassword.Text == "")
+            {
+                errMsg = "Hãy điền mật khẩu cũ";
+                CancelValidatedEvent(txtOldPassword, lblOldPasswordError, e);
+                return;
+            }
+            if (txtOldPassword.Text != updatedAcc.Password)
+            {
+                errMsg = "Mật khẩu cũ không đúng";
+                CancelValidatedEvent(txtOldPassword, lblOldPasswordError, e);
+            }
+            if (!ValidateInput.ValidNoneSpecialChar(txtOldPassword.Text, out errMsg))
+            {
+                CancelValidatedEvent(txtOldPassword, lblOldPasswordError, e);
+            }
+        }
+
+        private void txtOldPassword_Validated(object sender, EventArgs e)
+        {
+            this.errAccount_Edit.SetError(txtOldPassword, "");
+            this.lblOldPasswordError.Text = "";
+        }
+
+        private void txtNewPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtNewPassword.Text == "")
+            {
+                errMsg = "Hãy điền mật khẩu mới";
+                CancelValidatedEvent(txtNewPassword, lblNewPasswordError, e);
+                return;
+            }
+            if (!ValidateInput.ValidNoneSpecialChar(txtNewPassword.Text, out errMsg))
+            {
+                CancelValidatedEvent(txtNewPassword, lblNewPasswordError, e);
+            }
+            if (txtNewPassword.Text == txtOldPassword.Text)
+            {
+                errMsg = "Mật khẩu mới khác mật khẩu cũ";
+                CancelValidatedEvent(txtNewPassword, lblNewPasswordError, e);
+                return;
+            }
+        }
+
+        private void txtNewPassword_Validated(object sender, EventArgs e)
+        {
+            this.errAccount_Edit.SetError(txtNewPassword, "");
+            this.lblNewPasswordError.Text = "";
+        }
+
+        private void txtConfirmPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtConfirmPassword.Text == "")
+            {
+                errMsg = "Hãy xác nhận mật khẩu";
+                CancelValidatedEvent(txtConfirmPassword, lblConfirmPasswordError, e);
+            }
+            if (!ValidateInput.ValidNoneSpecialChar(txtConfirmPassword.Text, out errMsg))
+            {
+                CancelValidatedEvent(txtConfirmPassword, lblConfirmPasswordError, e);
+            }
+            if (txtNewPassword.Text != txtConfirmPassword.Text)
+            {
+                errMsg = "Mật khẩu xác nhận không trùng khớp";
+                CancelValidatedEvent(txtConfirmPassword, lblConfirmPasswordError, e);
+            }
+        }
+
+        private void txtConfirmPassword_Validated(object sender, EventArgs e)
+        {
+            this.errAccount_Edit.SetError(txtConfirmPassword, "");
+            this.lblConfirmPasswordError.Text = "";
+        }
     }
 }
