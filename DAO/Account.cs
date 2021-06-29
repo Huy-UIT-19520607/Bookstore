@@ -98,7 +98,7 @@ namespace BookStore.DAO
 
         public bool DeleteAccount(string username)
         {
-            string query = "EXEC sp_delete_account @username";
+            string query = "EXEC sp_remove_account @username";
             int results = DataProvider.Instance.ExecuteNonQuery(query,
                 new object[] {
                     username,
