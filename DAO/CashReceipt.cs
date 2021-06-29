@@ -35,7 +35,7 @@ namespace BookStore.DAO
 
         public BindingList<DTO.CashReceipt> GetListReceipt()
         {
-            string query = "select * form PHIEUTHUTIEN";
+            string query = "select * from PHIEUTHUTIEN";
             DataTable results = DataProvider.Instance.ExecuteQuery(query);
 
             BindingList<DTO.CashReceipt> cashReceipts = new BindingList<DTO.CashReceipt>();
