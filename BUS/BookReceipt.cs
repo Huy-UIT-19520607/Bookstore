@@ -70,13 +70,14 @@ namespace BookStore.BUS
             return id;
         }
 
-        public bool UpdateReceipt(int id, DateTime date)
+        public bool UpdateReceipt(DTO.BookReceipt updated)
         {
-            if (DAO.BookReceipt.Instance.UpdateReceipt(id ,date))
+            if (DAO.BookReceipt.Instance.UpdateReceipt(updated))
             {
-                var obj = Receipts.First(receipt => receipt.Id == id);
+                var obj = Receipts.First(receipt => receipt.Id == updated.Id);
 
-                obj.ReceiveDay = date;
+                obj.ReceiveDay = updated.ReceiveDay;
+                obj.Total = updated.Total;
 
                 return true;
             }
@@ -102,6 +103,8 @@ namespace BookStore.BUS
             var obj = Receipts.First(receipt => receipt.Id == id);
 
             obj.Total += (amount - oldAmount);
+
+            UpdateReceipt(obj);
         }
 
         public void DeleteAmount(int id, int amount)
@@ -109,6 +112,8 @@ namespace BookStore.BUS
             var obj = Receipts.First(receipt => receipt.Id == id);
 
             obj.Total -= amount;
+
+            UpdateReceipt(obj);
         }
     }
 }

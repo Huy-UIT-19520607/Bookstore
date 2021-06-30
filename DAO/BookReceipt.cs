@@ -66,13 +66,14 @@ namespace BookStore.DAO
             return (int)result;
         }
 
-        public bool UpdateReceipt(int id, DateTime date)
+        public bool UpdateReceipt(DTO.BookReceipt updated)
         {
-            string query = "exec sp_update_book_receipt @id , @date";
+            string query = "exec sp_update_book_receipt @id , @date , @total";
             int result = DataProvider.Instance.ExecuteNonQuery(query, new object[]
             {
-                id,
-                date.ToString("s")
+                updated.Id,
+                updated.ReceiveDay.ToString("s"),
+                updated.Total
             });
 
             return result > 0;

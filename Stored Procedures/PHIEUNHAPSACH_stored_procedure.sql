@@ -20,11 +20,13 @@ go
 -- Sửa phiếu
 create proc sp_update_book_receipt
 @id int,
-@date date
+@date date,
+@total int
 as
 	update PHIEUNHAPSACH
 	set
-		NgayLap=@date
+		NgayLap=@date,
+		TongTien=@total
 	where SoPNS=@id
 go
 
