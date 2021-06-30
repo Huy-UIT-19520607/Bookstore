@@ -47,16 +47,19 @@ namespace BookStore.Forms
             categoryForm = new Management.frmCategory();
             bookForm = new Management.frmBook();
             customerForm = new Management.frmCustomer();
-            accountForm = new Management.frmAccount(loginAcc.Username);
-
+            
             bookReceiptForm = new Business.frmBookReceipt();
             billForm = new Business.frmBill();
             cashReceiptForm = new Business.frmCashReceipt();
 
-            inventoryForm = new Report.frmInventory();
-            debtForm = new Report.frmDebt();
+            requirementForm = new Setting.frmRequirement(loginAcc);
 
-            requirementForm = new Setting.frmRequirement();
+            if (loginAcc.Permission == 0)
+            {
+                accountForm = new Management.frmAccount(loginAcc.Username);
+                inventoryForm = new Report.frmInventory();
+                debtForm = new Report.frmDebt();
+            }    
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -95,6 +98,14 @@ namespace BookStore.Forms
             pnlSubMenuBusiness.Visible = false;
             pnlSubMenuReport.Visible = false;
             pnlSubMenuSetting.Visible = false;
+
+            if (loginAcc.Permission == 1)
+            {
+                btnAccount.Visible = false;
+                pnlSubMenuManagement.Height = pnlSubMenuManagement.Height - 50;
+                btnMenuReport.Visible = false;
+                //pnlSubMenuReport.Visible = false;
+            }
 
             lblDisplayName.Text = loginAcc.DisplayName;
             lblPermission.Text = (loginAcc.Permission == 0 ? "Quản trị viên" : "Nhân viên"); 
@@ -269,6 +280,7 @@ namespace BookStore.Forms
             this.Owner.Show();
             this.Dispose();
             this.Close();
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)

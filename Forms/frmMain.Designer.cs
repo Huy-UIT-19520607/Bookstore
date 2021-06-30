@@ -37,8 +37,6 @@ namespace BookStore.Forms
             this.btnRequirement = new System.Windows.Forms.Button();
             this.btnMenuSetting = new System.Windows.Forms.Button();
             this.pnlSubMenuReport = new System.Windows.Forms.Panel();
-            this.btnDebt = new System.Windows.Forms.Button();
-            this.btnInventory = new System.Windows.Forms.Button();
             this.btnMenuReport = new System.Windows.Forms.Button();
             this.pnlSubMenuBusiness = new System.Windows.Forms.Panel();
             this.btnCashReceipt = new System.Windows.Forms.Button();
@@ -67,6 +65,8 @@ namespace BookStore.Forms
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.tmrCurrentTime = new System.Windows.Forms.Timer(this.components);
             this.tmrRefresh = new System.Windows.Forms.Timer(this.components);
+            this.btnInventory = new System.Windows.Forms.Button();
+            this.btnDebt = new System.Windows.Forms.Button();
             this.pnlSlideMenu.SuspendLayout();
             this.pnlSubMenuSetting.SuspendLayout();
             this.pnlSubMenuReport.SuspendLayout();
@@ -179,46 +179,6 @@ namespace BookStore.Forms
             this.pnlSubMenuReport.Name = "pnlSubMenuReport";
             this.pnlSubMenuReport.Size = new System.Drawing.Size(243, 106);
             this.pnlSubMenuReport.TabIndex = 8;
-            // 
-            // btnDebt
-            // 
-            this.btnDebt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
-            this.btnDebt.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDebt.FlatAppearance.BorderSize = 0;
-            this.btnDebt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDebt.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDebt.ForeColor = System.Drawing.Color.White;
-            this.btnDebt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDebt.Location = new System.Drawing.Point(0, 50);
-            this.btnDebt.Name = "btnDebt";
-            this.btnDebt.Padding = new System.Windows.Forms.Padding(63, 0, 25, 0);
-            this.btnDebt.Size = new System.Drawing.Size(243, 50);
-            this.btnDebt.TabIndex = 4;
-            this.btnDebt.Text = "Công nợ";
-            this.btnDebt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDebt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDebt.UseVisualStyleBackColor = false;
-            this.btnDebt.Click += new System.EventHandler(this.btnDebt_Click);
-            // 
-            // btnInventory
-            // 
-            this.btnInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
-            this.btnInventory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInventory.FlatAppearance.BorderSize = 0;
-            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventory.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventory.ForeColor = System.Drawing.Color.White;
-            this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(0, 0);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Padding = new System.Windows.Forms.Padding(63, 0, 25, 0);
-            this.btnInventory.Size = new System.Drawing.Size(243, 50);
-            this.btnInventory.TabIndex = 3;
-            this.btnInventory.Text = "Tồn kho";
-            this.btnInventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInventory.UseVisualStyleBackColor = false;
-            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
             // btnMenuReport
             // 
@@ -640,6 +600,46 @@ namespace BookStore.Forms
             this.tmrRefresh.Enabled = true;
             this.tmrRefresh.Interval = 5000;
             // 
+            // btnInventory
+            // 
+            this.btnInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
+            this.btnInventory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInventory.FlatAppearance.BorderSize = 0;
+            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventory.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventory.ForeColor = System.Drawing.Color.White;
+            this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventory.Location = new System.Drawing.Point(0, 0);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Padding = new System.Windows.Forms.Padding(63, 0, 25, 0);
+            this.btnInventory.Size = new System.Drawing.Size(243, 50);
+            this.btnInventory.TabIndex = 3;
+            this.btnInventory.Text = "Tồn kho";
+            this.btnInventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInventory.UseVisualStyleBackColor = false;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
+            // 
+            // btnDebt
+            // 
+            this.btnDebt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(180)))));
+            this.btnDebt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDebt.FlatAppearance.BorderSize = 0;
+            this.btnDebt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDebt.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDebt.ForeColor = System.Drawing.Color.White;
+            this.btnDebt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDebt.Location = new System.Drawing.Point(0, 50);
+            this.btnDebt.Name = "btnDebt";
+            this.btnDebt.Padding = new System.Windows.Forms.Padding(63, 0, 25, 0);
+            this.btnDebt.Size = new System.Drawing.Size(243, 50);
+            this.btnDebt.TabIndex = 4;
+            this.btnDebt.Text = "Công nợ";
+            this.btnDebt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDebt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDebt.UseVisualStyleBackColor = false;
+            this.btnDebt.Click += new System.EventHandler(this.btnDebt_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -682,8 +682,6 @@ namespace BookStore.Forms
         private System.Windows.Forms.Button btnRequirement;
         private System.Windows.Forms.Button btnMenuSetting;
         private System.Windows.Forms.Panel pnlSubMenuReport;
-        private System.Windows.Forms.Button btnDebt;
-        private System.Windows.Forms.Button btnInventory;
         private System.Windows.Forms.Button btnMenuReport;
         private System.Windows.Forms.Panel pnlSubMenuBusiness;
         private System.Windows.Forms.Button btnCashReceipt;
@@ -708,5 +706,7 @@ namespace BookStore.Forms
         private System.Windows.Forms.Timer tmrRefresh;
         private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.Button btnCustomer;
+        private System.Windows.Forms.Button btnDebt;
+        private System.Windows.Forms.Button btnInventory;
     }
 }
