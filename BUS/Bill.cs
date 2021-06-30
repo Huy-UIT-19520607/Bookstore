@@ -140,11 +140,6 @@ namespace BookStore.BUS
                 obj.Payment,
                 obj.TotalPrice - obj.Payment
             ));
-
-            if (obj.TotalPrice - obj.Payment > 0)
-            {
-                Customer.Instance.UpdateDebt(2, obj.CustomerId, obj.CreateDate, obj.TotalPrice - obj.Payment, obj.Balance);
-            }
         }
 
         public void DeleteAmount(int id, int amount)
@@ -161,11 +156,6 @@ namespace BookStore.BUS
                 obj.Payment,
                 obj.TotalPrice - obj.Payment
             ));
-
-            if (obj.TotalPrice - obj.Payment > 0)
-            {
-                Customer.Instance.UpdateDebt(2, obj.CustomerId, obj.CreateDate, obj.TotalPrice - obj.Payment, obj.Balance);
-            }
         }
     }
 }
