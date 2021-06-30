@@ -76,7 +76,7 @@ namespace BookStore.BUS
                     var obj = Titles.First(title => title.Id.Equals(updated.Id));
 
                     obj.Name = updated.Name;
-                    obj.CategoryId = obj.CategoryId;
+                    obj.CategoryId = updated.CategoryId;
 
                     return true;
                 }
