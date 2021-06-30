@@ -45,12 +45,12 @@ namespace BookStore.BUS
             {
                 var obj = Parameters.First(parameter => parameter.Name == name);
 
-                obj.Value = value;
-
-                if (name.Equals("ApDungQD4"))
+                if (name == "TiLeTinhDonGiaBan")
                 {
-                    BUS.Book.Instance.UpdatePrice(value);
+                    BUS.Book.Instance.UpdatePrice(value, obj.Value);
                 }
+
+                obj.Value = value;
 
                 return true;
             }

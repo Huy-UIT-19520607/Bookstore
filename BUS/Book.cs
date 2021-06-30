@@ -123,13 +123,13 @@ namespace BookStore.BUS
             return false;
         }
 
-        public void UpdatePrice(int value)
+        public async void UpdatePrice(int value, int oldValue)
         {
-            Task.Factory.StartNew(() =>
+            await Task.Run(() =>
             {
                 foreach (var item in Books)
                 {
-                    item.Price *= (value / 100);
+                    item.Price = item.Price / oldValue * value;
                 }
             });
         }
