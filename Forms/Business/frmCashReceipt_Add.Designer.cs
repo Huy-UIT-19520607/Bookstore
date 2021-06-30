@@ -43,15 +43,15 @@ namespace BookStore.Forms.Business
             this.panel7 = new System.Windows.Forms.Panel();
             this.pnlCategory = new System.Windows.Forms.Panel();
             this.gunaDgvCustomer = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.pnlSearch = new System.Windows.Forms.Panel();
-            this.btnCustomerSearch = new System.Windows.Forms.Button();
-            this.gunaTxtCustomerSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoTienNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlSearch = new System.Windows.Forms.Panel();
+            this.btnCustomerSearch = new System.Windows.Forms.Button();
+            this.gunaTxtCustomerSearch = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudCollectedAmount)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -92,6 +92,7 @@ namespace BookStore.Forms.Business
             // 
             // dtmBillDate
             // 
+            this.dtmBillDate.Enabled = false;
             this.dtmBillDate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtmBillDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtmBillDate.Location = new System.Drawing.Point(502, 16);
@@ -123,6 +124,7 @@ namespace BookStore.Forms.Business
             this.btnOk.TabIndex = 54;
             this.btnOk.Text = "Tạo mới";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -138,6 +140,7 @@ namespace BookStore.Forms.Business
             this.btnCancel.TabIndex = 55;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // groupBox1
             // 
@@ -242,6 +245,56 @@ namespace BookStore.Forms.Business
             this.gunaDgvCustomer.ThemeStyle.RowsStyle.Height = 28;
             this.gunaDgvCustomer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gunaDgvCustomer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gunaDgvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gunaDgvCustomer_CellClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Khách Hàng";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 169;
+            // 
+            // TenKhachHang
+            // 
+            this.TenKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenKhachHang.DataPropertyName = "Name";
+            this.TenKhachHang.HeaderText = "Tên Khách Hàng";
+            this.TenKhachHang.Name = "TenKhachHang";
+            this.TenKhachHang.ReadOnly = true;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "Address";
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // SDT
+            // 
+            this.SDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.SDT.DataPropertyName = "PhoneNumber";
+            this.SDT.HeaderText = "SĐT";
+            this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
+            this.SDT.Width = 68;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // SoTienNo
+            // 
+            this.SoTienNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.SoTienNo.DataPropertyName = "Debt";
+            this.SoTienNo.HeaderText = "Số Tiền Nợ";
+            this.SoTienNo.Name = "SoTienNo";
+            this.SoTienNo.ReadOnly = true;
+            this.SoTienNo.Width = 127;
             // 
             // pnlSearch
             // 
@@ -266,6 +319,7 @@ namespace BookStore.Forms.Business
             this.btnCustomerSearch.Size = new System.Drawing.Size(34, 35);
             this.btnCustomerSearch.TabIndex = 1;
             this.btnCustomerSearch.UseVisualStyleBackColor = false;
+            this.btnCustomerSearch.Click += new System.EventHandler(this.btnCustomerSearch_Click);
             // 
             // gunaTxtCustomerSearch
             // 
@@ -290,51 +344,10 @@ namespace BookStore.Forms.Business
             this.gunaTxtCustomerSearch.ShadowDecoration.Parent = this.gunaTxtCustomerSearch;
             this.gunaTxtCustomerSearch.Size = new System.Drawing.Size(530, 35);
             this.gunaTxtCustomerSearch.TabIndex = 0;
+            this.gunaTxtCustomerSearch.TextChanged += new System.EventHandler(this.gunaTxtCustomerSearch_TextChanged);
+            this.gunaTxtCustomerSearch.Leave += new System.EventHandler(this.gunaTxtCustomerSearch_Leave);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Khách Hàng";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 169;
-            // 
-            // TenKhachHang
-            // 
-            this.TenKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenKhachHang.HeaderText = "Tên Khách Hàng";
-            this.TenKhachHang.Name = "TenKhachHang";
-            this.TenKhachHang.ReadOnly = true;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            // 
-            // SDT
-            // 
-            this.SDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.SDT.HeaderText = "SĐT";
-            this.SDT.Name = "SDT";
-            this.SDT.ReadOnly = true;
-            this.SDT.Width = 68;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // SoTienNo
-            // 
-            this.SoTienNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.SoTienNo.HeaderText = "Số Tiền Nợ";
-            this.SoTienNo.Name = "SoTienNo";
-            this.SoTienNo.ReadOnly = true;
-            this.SoTienNo.Width = 127;
-            // 
-            // frmBill_Add
+            // frmCashReceipt_Add
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -350,9 +363,10 @@ namespace BookStore.Forms.Business
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmBill_Add";
+            this.Name = "frmCashReceipt_Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Phiếu thu tiền";
+            this.Load += new System.EventHandler(this.frmCashReceipt_Add_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudCollectedAmount)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -375,14 +389,14 @@ namespace BookStore.Forms.Business
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel pnlCategory;
         private Guna.UI2.WinForms.Guna2DataGridView gunaDgvCustomer;
+        private System.Windows.Forms.Panel pnlSearch;
+        private System.Windows.Forms.Button btnCustomerSearch;
+        private Guna.UI2.WinForms.Guna2TextBox gunaTxtCustomerSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoTienNo;
-        private System.Windows.Forms.Panel pnlSearch;
-        private System.Windows.Forms.Button btnCustomerSearch;
-        private Guna.UI2.WinForms.Guna2TextBox gunaTxtCustomerSearch;
     }
 }

@@ -80,13 +80,13 @@ namespace BookStore.BUS
 
         public bool DeleteReceipt(int id)
         {
+            var obj = Receipts.First(receipt => receipt.Id == id);
+
             if (DAO.CashReceipt.Instance.DeleteReceipt(id))
             {
-                var obj = Receipts.First(receipt => receipt.Id == id);
-
                 //var customer = Customer.Instance.Customers.First(cus => cus.Id == obj.CustomerId);
                 //customer.Debt += obj.Payment;
-                Customer.Instance.UpdateDebt(3, id, obj.CreateDate, obj.Payment);
+                Customer.Instance.UpdateDebt(3, obj.CustomerId, obj.CreateDate, obj.Payment);
 
                 Receipts.Remove(obj);
 

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnFilterCustomerFromBill.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnFilterCustomer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAWRJREFUSEvNk8EuA1EYhWdF7Kv1RlQiacMjsCAhQcLWY3gC70FIxFbwDJbEgo3x
@@ -167,29 +167,7 @@
   <metadata name="NgayLap.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ConLai.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SoTienThu.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btnBillSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAARFJREFUOE+t
-        0j9LQlEcxvFb0GJDkY4thjj5EgQXBcGpKeg9uAW9AbegKcQtlyDRRUQxCNeKFgchcNDdsUXoj7fvT568
-        XM4VEnvgM5znd8656tX71/i+f4RrzGD5wiNy2rI+bEphignKyOMUTXzjQlvdMNzDCF3sq16F7gz2aYqq
-        wmFwjnfEVTlhVsOTluEwuEVLy8gwz2GBQ1VBKNu40TIyzNOwJFUFoayir2VkmJfwgZiqIJQFfCKjKhT6
-        HTygo8oNwx7ekFK1DGt7Q1ewp2dVu2F4APvTzFHHJSoYq7O8wv0Rf8NwF/ZKG3iBXWiXnGAAyxAJHfl7
-        OBTD1pfY13y2G8i96s3CQbvkDseqtonn/QD40z1VhZSgrwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnFilterBillFromCustomer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAW5JREFUSEvNk0FKA0EURGeluI+JN9IIgQQ9gi4UFFTQbY7hCXIPRUHcinoGl4oL
-        3Ti+6q6J6ThJ1JkEHxQ9v/6f+tDDZP+OPM9X0UCnrXohuIXukNDZdKseCFxD90ofQXXLI9UgqIkelVrC
-        A6p+dYSchLi46Dw+hrNYfOzRv0NIQ0FI36SPhE7V8hserQeHi76t+lF43FFxCQHbqOcyQeHaoNNWAn4P
-        bbksh4FDJcCzrQT8TfSE2rYS8F/QBzqwlUJj3wOTh2ag90Yy9mxHMHbROK/oCq17rBT6bXTt+XF2PBYG
-        i39hEhseTcDX9U0j/YdkRD9eF1pBZzLgxmMJ+LexnZ8izRfXJY48lkKjWBQ+POdyLPO3MDAG/nts50uu
-        9eFF+YICBrqo41J1wGWCW8Mejx3UdflzQgq4THCrtPcryNCVTLuu0t43GLxEFy4T8HUFw+sbZUYvzaQI
-        uKwFR35lul7MknngFQtaMl+y7BPvNBxhZCN+kAAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>

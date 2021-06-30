@@ -89,7 +89,6 @@ namespace BookStore.BUS
                 //Sửa hoá đơn
                 case 2:
                     customer.Debt += (amount - oldAmount);
-                    
                     break;
                 //Thêm
                 case 3:
