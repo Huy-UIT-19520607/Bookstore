@@ -29,156 +29,38 @@ namespace BookStore.Forms.Business
         /// </summary>
         private void InitializeComponent()
         {
-            this.grpCustomerChoice = new System.Windows.Forms.GroupBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.nudDebtAmount = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cboPhone = new System.Windows.Forms.ComboBox();
-            this.txtCustomerName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCustomerCode = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtReceiptCode = new System.Windows.Forms.TextBox();
+            this.txtBillCode = new System.Windows.Forms.TextBox();
             this.nudTotalAmount = new System.Windows.Forms.NumericUpDown();
             this.nudChangeAmount = new System.Windows.Forms.NumericUpDown();
             this.nudPaidAmount = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dtmRecepitDate = new System.Windows.Forms.DateTimePicker();
+            this.dtmBillDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.grpCustomerChoice.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDebtAmount)).BeginInit();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtDebtAmount = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.txtCustomerCode = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblNewCategory = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTotalAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudChangeAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaidAmount)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // grpCustomerChoice
-            // 
-            this.grpCustomerChoice.Controls.Add(this.panel4);
-            this.grpCustomerChoice.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpCustomerChoice.Location = new System.Drawing.Point(347, 58);
-            this.grpCustomerChoice.Name = "grpCustomerChoice";
-            this.grpCustomerChoice.Size = new System.Drawing.Size(451, 264);
-            this.grpCustomerChoice.TabIndex = 48;
-            this.grpCustomerChoice.TabStop = false;
-            this.grpCustomerChoice.Text = "Chọn Khách hàng";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.nudDebtAmount);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.cboPhone);
-            this.panel4.Controls.Add(this.txtCustomerName);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.txtCustomerCode);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(3, 31);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(445, 230);
-            this.panel4.TabIndex = 0;
-            // 
-            // nudDebtAmount
-            // 
-            this.nudDebtAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudDebtAmount.Increment = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudDebtAmount.Location = new System.Drawing.Point(173, 171);
-            this.nudDebtAmount.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
-            0,
-            0});
-            this.nudDebtAmount.Name = "nudDebtAmount";
-            this.nudDebtAmount.ReadOnly = true;
-            this.nudDebtAmount.Size = new System.Drawing.Size(134, 33);
-            this.nudDebtAmount.TabIndex = 43;
-            this.nudDebtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudDebtAmount.ThousandsSeparator = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(19, 173);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 25);
-            this.label8.TabIndex = 50;
-            this.label8.Text = "Số tiền nợ:";
-            // 
-            // cboPhone
-            // 
-            this.cboPhone.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPhone.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboPhone.FormattingEnabled = true;
-            this.cboPhone.Location = new System.Drawing.Point(173, 15);
-            this.cboPhone.Name = "cboPhone";
-            this.cboPhone.Size = new System.Drawing.Size(142, 33);
-            this.cboPhone.TabIndex = 49;
-            // 
-            // txtCustomerName
-            // 
-            this.txtCustomerName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.Location = new System.Drawing.Point(173, 120);
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.ReadOnly = true;
-            this.txtCustomerName.Size = new System.Drawing.Size(248, 33);
-            this.txtCustomerName.TabIndex = 48;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 123);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 25);
-            this.label3.TabIndex = 47;
-            this.label3.Text = "Tên khách hàng:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 25);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "SĐT:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 25);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "Mã khách hàng:";
-            // 
-            // txtCustomerCode
-            // 
-            this.txtCustomerCode.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerCode.Location = new System.Drawing.Point(173, 68);
-            this.txtCustomerCode.Name = "txtCustomerCode";
-            this.txtCustomerCode.ReadOnly = true;
-            this.txtCustomerCode.Size = new System.Drawing.Size(142, 33);
-            this.txtCustomerCode.TabIndex = 45;
             // 
             // btnOk
             // 
@@ -188,12 +70,13 @@ namespace BookStore.Forms.Business
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOk.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.Color.White;
-            this.btnOk.Location = new System.Drawing.Point(486, 340);
+            this.btnOk.Location = new System.Drawing.Point(494, 333);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(137, 46);
             this.btnOk.TabIndex = 53;
             this.btnOk.Text = "Sửa đổi";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -203,20 +86,21 @@ namespace BookStore.Forms.Business
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(647, 340);
+            this.btnCancel.Location = new System.Drawing.Point(655, 333);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(137, 46);
             this.btnCancel.TabIndex = 54;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(1, 12);
+            this.groupBox1.Location = new System.Drawing.Point(491, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(315, 330);
+            this.groupBox1.Size = new System.Drawing.Size(315, 316);
             this.groupBox1.TabIndex = 55;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin Hoá đơn";
@@ -224,50 +108,51 @@ namespace BookStore.Forms.Business
             // panel1
             // 
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.txtReceiptCode);
+            this.panel1.Controls.Add(this.txtBillCode);
             this.panel1.Controls.Add(this.nudTotalAmount);
             this.panel1.Controls.Add(this.nudChangeAmount);
             this.panel1.Controls.Add(this.nudPaidAmount);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.dtmRecepitDate);
+            this.panel1.Controls.Add(this.dtmBillDate);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(3, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(309, 292);
+            this.panel1.Size = new System.Drawing.Size(309, 278);
             this.panel1.TabIndex = 0;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(24, 24);
+            this.label9.Location = new System.Drawing.Point(25, 21);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(68, 25);
             this.label9.TabIndex = 62;
             this.label9.Text = "Số HĐ:";
             // 
-            // txtReceiptCode
+            // txtBillCode
             // 
-            this.txtReceiptCode.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceiptCode.Location = new System.Drawing.Point(144, 21);
-            this.txtReceiptCode.Name = "txtReceiptCode";
-            this.txtReceiptCode.ReadOnly = true;
-            this.txtReceiptCode.Size = new System.Drawing.Size(117, 33);
-            this.txtReceiptCode.TabIndex = 60;
+            this.txtBillCode.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBillCode.Location = new System.Drawing.Point(145, 18);
+            this.txtBillCode.Name = "txtBillCode";
+            this.txtBillCode.ReadOnly = true;
+            this.txtBillCode.Size = new System.Drawing.Size(117, 33);
+            this.txtBillCode.TabIndex = 60;
             // 
             // nudTotalAmount
             // 
+            this.nudTotalAmount.Enabled = false;
             this.nudTotalAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudTotalAmount.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.nudTotalAmount.Location = new System.Drawing.Point(145, 127);
+            this.nudTotalAmount.Location = new System.Drawing.Point(146, 124);
             this.nudTotalAmount.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -282,13 +167,14 @@ namespace BookStore.Forms.Business
             // 
             // nudChangeAmount
             // 
+            this.nudChangeAmount.Enabled = false;
             this.nudChangeAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudChangeAmount.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.nudChangeAmount.Location = new System.Drawing.Point(145, 224);
+            this.nudChangeAmount.Location = new System.Drawing.Point(146, 221);
             this.nudChangeAmount.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -309,24 +195,24 @@ namespace BookStore.Forms.Business
             0,
             0,
             0});
-            this.nudPaidAmount.Location = new System.Drawing.Point(145, 173);
+            this.nudPaidAmount.Location = new System.Drawing.Point(146, 170);
             this.nudPaidAmount.Maximum = new decimal(new int[] {
             1410065407,
             2,
             0,
             0});
             this.nudPaidAmount.Name = "nudPaidAmount";
-            this.nudPaidAmount.ReadOnly = true;
             this.nudPaidAmount.Size = new System.Drawing.Size(134, 33);
             this.nudPaidAmount.TabIndex = 58;
             this.nudPaidAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudPaidAmount.ThousandsSeparator = true;
+            this.nudPaidAmount.ValueChanged += new System.EventHandler(this.nudPaidAmount_ValueChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(24, 226);
+            this.label7.Location = new System.Drawing.Point(25, 223);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 25);
             this.label7.TabIndex = 57;
@@ -336,26 +222,27 @@ namespace BookStore.Forms.Business
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(24, 175);
+            this.label6.Location = new System.Drawing.Point(25, 172);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 25);
             this.label6.TabIndex = 56;
             this.label6.Text = "Thanh toán:";
             // 
-            // dtmRecepitDate
+            // dtmBillDate
             // 
-            this.dtmRecepitDate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtmRecepitDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtmRecepitDate.Location = new System.Drawing.Point(145, 72);
-            this.dtmRecepitDate.Name = "dtmRecepitDate";
-            this.dtmRecepitDate.Size = new System.Drawing.Size(134, 33);
-            this.dtmRecepitDate.TabIndex = 55;
+            this.dtmBillDate.Enabled = false;
+            this.dtmBillDate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtmBillDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtmBillDate.Location = new System.Drawing.Point(146, 69);
+            this.dtmBillDate.Name = "dtmBillDate";
+            this.dtmBillDate.Size = new System.Drawing.Size(134, 33);
+            this.dtmBillDate.TabIndex = 55;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 129);
+            this.label4.Location = new System.Drawing.Point(25, 126);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 25);
             this.label4.TabIndex = 54;
@@ -365,66 +252,169 @@ namespace BookStore.Forms.Business
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(24, 78);
+            this.label5.Location = new System.Drawing.Point(25, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 25);
             this.label5.TabIndex = 53;
             this.label5.Text = "Ngày lập:";
             // 
-            // frmReceipt_Edit
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.panel2);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(1, 26);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(469, 292);
+            this.groupBox2.TabIndex = 87;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thông tin Khách hàng";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txtDebtAmount);
+            this.panel2.Controls.Add(this.txtPhone);
+            this.panel2.Controls.Add(this.txtCustomerName);
+            this.panel2.Controls.Add(this.txtCustomerCode);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblNewCategory);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(3, 35);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(463, 254);
+            this.panel2.TabIndex = 0;
+            // 
+            // txtDebtAmount
+            // 
+            this.txtDebtAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDebtAmount.Location = new System.Drawing.Point(199, 190);
+            this.txtDebtAmount.Name = "txtDebtAmount";
+            this.txtDebtAmount.ReadOnly = true;
+            this.txtDebtAmount.Size = new System.Drawing.Size(153, 33);
+            this.txtDebtAmount.TabIndex = 101;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(199, 137);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.ReadOnly = true;
+            this.txtPhone.Size = new System.Drawing.Size(225, 33);
+            this.txtPhone.TabIndex = 96;
+            // 
+            // txtCustomerName
+            // 
+            this.txtCustomerName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerName.Location = new System.Drawing.Point(199, 83);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.ReadOnly = true;
+            this.txtCustomerName.Size = new System.Drawing.Size(225, 33);
+            this.txtCustomerName.TabIndex = 92;
+            // 
+            // txtCustomerCode
+            // 
+            this.txtCustomerCode.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerCode.Location = new System.Drawing.Point(199, 29);
+            this.txtCustomerCode.Name = "txtCustomerCode";
+            this.txtCustomerCode.ReadOnly = true;
+            this.txtCustomerCode.Size = new System.Drawing.Size(106, 33);
+            this.txtCustomerCode.TabIndex = 91;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(33, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(146, 25);
+            this.label3.TabIndex = 90;
+            this.label3.Text = "Mã khách hàng:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(33, 193);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 25);
+            this.label2.TabIndex = 89;
+            this.label2.Text = "Số tiền nợ:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(33, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 25);
+            this.label1.TabIndex = 87;
+            this.label1.Text = "SĐT:";
+            // 
+            // lblNewCategory
+            // 
+            this.lblNewCategory.AutoSize = true;
+            this.lblNewCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewCategory.Location = new System.Drawing.Point(33, 86);
+            this.lblNewCategory.Name = "lblNewCategory";
+            this.lblNewCategory.Size = new System.Drawing.Size(148, 25);
+            this.lblNewCategory.TabIndex = 85;
+            this.lblNewCategory.Text = "Tên khách hàng:";
+            // 
+            // frmBill_Edit
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(802, 398);
+            this.ClientSize = new System.Drawing.Size(810, 391);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.grpCustomerChoice);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmReceipt_Edit";
+            this.Name = "frmBill_Edit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa Hoá đơn";
-            this.grpCustomerChoice.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDebtAmount)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTotalAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudChangeAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaidAmount)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox grpCustomerChoice;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.NumericUpDown nudDebtAmount;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cboPhone;
-        private System.Windows.Forms.TextBox txtCustomerName;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCustomerCode;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtReceiptCode;
+        private System.Windows.Forms.TextBox txtBillCode;
         private System.Windows.Forms.NumericUpDown nudTotalAmount;
         private System.Windows.Forms.NumericUpDown nudChangeAmount;
         private System.Windows.Forms.NumericUpDown nudPaidAmount;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dtmRecepitDate;
+        private System.Windows.Forms.DateTimePicker dtmBillDate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtDebtAmount;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtCustomerName;
+        private System.Windows.Forms.TextBox txtCustomerCode;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNewCategory;
     }
 }
