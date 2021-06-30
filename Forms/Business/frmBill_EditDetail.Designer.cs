@@ -42,7 +42,7 @@ namespace BookStore.Forms.Business
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.nudQuantity = new System.Windows.Forms.NumericUpDown();
-            this.nudCostPrice = new System.Windows.Forms.NumericUpDown();
+            this.nudSoldPrice = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.lblNewCategory = new System.Windows.Forms.Label();
             this.txtBookCode = new System.Windows.Forms.TextBox();
@@ -50,13 +50,13 @@ namespace BookStore.Forms.Business
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtReceiptCode = new System.Windows.Forms.TextBox();
+            this.txtBillCode = new System.Windows.Forms.TextBox();
             this.nudTotalAmount = new System.Windows.Forms.NumericUpDown();
             this.nudChangeAmount = new System.Windows.Forms.NumericUpDown();
             this.nudPaidAmount = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.dtmRecepitDate = new System.Windows.Forms.DateTimePicker();
+            this.dtmBillDate = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@ namespace BookStore.Forms.Business
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPublishingYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCostPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoldPrice)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTotalAmount)).BeginInit();
@@ -97,7 +97,7 @@ namespace BookStore.Forms.Business
             this.panel2.Controls.Add(this.txtAmount);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.nudQuantity);
-            this.panel2.Controls.Add(this.nudCostPrice);
+            this.panel2.Controls.Add(this.nudSoldPrice);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lblNewCategory);
             this.panel2.Controls.Add(this.txtBookCode);
@@ -111,6 +111,7 @@ namespace BookStore.Forms.Business
             // 
             // nudPublishingYear
             // 
+            this.nudPublishingYear.Enabled = false;
             this.nudPublishingYear.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudPublishingYear.Location = new System.Drawing.Point(147, 218);
             this.nudPublishingYear.Maximum = new decimal(new int[] {
@@ -223,41 +224,48 @@ namespace BookStore.Forms.Business
             // nudQuantity
             // 
             this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQuantity.Increment = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
             this.nudQuantity.Location = new System.Drawing.Point(147, 273);
             this.nudQuantity.Maximum = new decimal(new int[] {
             1410065407,
             2,
             0,
             0});
+            this.nudQuantity.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.Size = new System.Drawing.Size(128, 35);
             this.nudQuantity.TabIndex = 117;
             this.nudQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudQuantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudQuantity.ValueChanged += new System.EventHandler(this.nudQuantity_ValueChanged);
             // 
-            // nudCostPrice
+            // nudSoldPrice
             // 
-            this.nudCostPrice.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudCostPrice.Increment = new decimal(new int[] {
+            this.nudSoldPrice.Enabled = false;
+            this.nudSoldPrice.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudSoldPrice.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.nudCostPrice.Location = new System.Drawing.Point(147, 322);
-            this.nudCostPrice.Maximum = new decimal(new int[] {
+            this.nudSoldPrice.Location = new System.Drawing.Point(147, 322);
+            this.nudSoldPrice.Maximum = new decimal(new int[] {
             1410065407,
             2,
             0,
             0});
-            this.nudCostPrice.Name = "nudCostPrice";
-            this.nudCostPrice.ReadOnly = true;
-            this.nudCostPrice.Size = new System.Drawing.Size(128, 35);
-            this.nudCostPrice.TabIndex = 116;
-            this.nudCostPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudSoldPrice.Name = "nudSoldPrice";
+            this.nudSoldPrice.ReadOnly = true;
+            this.nudSoldPrice.Size = new System.Drawing.Size(128, 35);
+            this.nudSoldPrice.TabIndex = 116;
+            this.nudSoldPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
@@ -265,9 +273,9 @@ namespace BookStore.Forms.Business
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 328);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 25);
+            this.label3.Size = new System.Drawing.Size(82, 25);
             this.label3.TabIndex = 115;
-            this.label3.Text = "Đơn giá nhập:";
+            this.label3.Text = "Đơn giá:";
             // 
             // lblNewCategory
             // 
@@ -275,9 +283,9 @@ namespace BookStore.Forms.Business
             this.lblNewCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewCategory.Location = new System.Drawing.Point(3, 279);
             this.lblNewCategory.Name = "lblNewCategory";
-            this.lblNewCategory.Size = new System.Drawing.Size(139, 25);
+            this.lblNewCategory.Size = new System.Drawing.Size(91, 25);
             this.lblNewCategory.TabIndex = 114;
-            this.lblNewCategory.Text = "Số lượng nhập:";
+            this.lblNewCategory.Text = "Số lượng:";
             // 
             // txtBookCode
             // 
@@ -312,13 +320,13 @@ namespace BookStore.Forms.Business
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtReceiptCode);
+            this.panel1.Controls.Add(this.txtBillCode);
             this.panel1.Controls.Add(this.nudTotalAmount);
             this.panel1.Controls.Add(this.nudChangeAmount);
             this.panel1.Controls.Add(this.nudPaidAmount);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.dtmRecepitDate);
+            this.panel1.Controls.Add(this.dtmBillDate);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -338,17 +346,18 @@ namespace BookStore.Forms.Business
             this.label1.TabIndex = 62;
             this.label1.Text = "Số HĐ:";
             // 
-            // txtReceiptCode
+            // txtBillCode
             // 
-            this.txtReceiptCode.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceiptCode.Location = new System.Drawing.Point(144, 21);
-            this.txtReceiptCode.Name = "txtReceiptCode";
-            this.txtReceiptCode.ReadOnly = true;
-            this.txtReceiptCode.Size = new System.Drawing.Size(117, 33);
-            this.txtReceiptCode.TabIndex = 60;
+            this.txtBillCode.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBillCode.Location = new System.Drawing.Point(144, 21);
+            this.txtBillCode.Name = "txtBillCode";
+            this.txtBillCode.ReadOnly = true;
+            this.txtBillCode.Size = new System.Drawing.Size(117, 33);
+            this.txtBillCode.TabIndex = 60;
             // 
             // nudTotalAmount
             // 
+            this.nudTotalAmount.Enabled = false;
             this.nudTotalAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudTotalAmount.Increment = new decimal(new int[] {
             1000,
@@ -370,6 +379,7 @@ namespace BookStore.Forms.Business
             // 
             // nudChangeAmount
             // 
+            this.nudChangeAmount.Enabled = false;
             this.nudChangeAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudChangeAmount.Increment = new decimal(new int[] {
             1000,
@@ -391,6 +401,7 @@ namespace BookStore.Forms.Business
             // 
             // nudPaidAmount
             // 
+            this.nudPaidAmount.Enabled = false;
             this.nudPaidAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudPaidAmount.Increment = new decimal(new int[] {
             1000,
@@ -429,14 +440,15 @@ namespace BookStore.Forms.Business
             this.label10.TabIndex = 56;
             this.label10.Text = "Thanh toán:";
             // 
-            // dtmRecepitDate
+            // dtmBillDate
             // 
-            this.dtmRecepitDate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtmRecepitDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtmRecepitDate.Location = new System.Drawing.Point(145, 72);
-            this.dtmRecepitDate.Name = "dtmRecepitDate";
-            this.dtmRecepitDate.Size = new System.Drawing.Size(134, 33);
-            this.dtmRecepitDate.TabIndex = 55;
+            this.dtmBillDate.Enabled = false;
+            this.dtmBillDate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtmBillDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtmBillDate.Location = new System.Drawing.Point(145, 72);
+            this.dtmBillDate.Name = "dtmBillDate";
+            this.dtmBillDate.Size = new System.Drawing.Size(134, 33);
+            this.dtmBillDate.TabIndex = 55;
             // 
             // label11
             // 
@@ -472,6 +484,7 @@ namespace BookStore.Forms.Business
             this.btnOk.TabIndex = 116;
             this.btnOk.Text = "Sửa đổi";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -487,9 +500,11 @@ namespace BookStore.Forms.Business
             this.btnCancel.TabIndex = 117;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmBill_EditDetail
             // 
+            this.AcceptButton = this.btnOk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(939, 556);
@@ -509,7 +524,7 @@ namespace BookStore.Forms.Business
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPublishingYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCostPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoldPrice)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -535,7 +550,7 @@ namespace BookStore.Forms.Business
         private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown nudQuantity;
-        private System.Windows.Forms.NumericUpDown nudCostPrice;
+        private System.Windows.Forms.NumericUpDown nudSoldPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblNewCategory;
         private System.Windows.Forms.TextBox txtBookCode;
@@ -543,13 +558,13 @@ namespace BookStore.Forms.Business
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtReceiptCode;
+        private System.Windows.Forms.TextBox txtBillCode;
         private System.Windows.Forms.NumericUpDown nudTotalAmount;
         private System.Windows.Forms.NumericUpDown nudChangeAmount;
         private System.Windows.Forms.NumericUpDown nudPaidAmount;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dtmRecepitDate;
+        private System.Windows.Forms.DateTimePicker dtmBillDate;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnOk;
