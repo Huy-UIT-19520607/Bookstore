@@ -64,7 +64,7 @@ namespace BookStore.BUS
             if (report != null)
             {
                 report.Change += (amount - oldAmount);
-                report.DebtFinal = report.DeftStart - report.Change;
+                report.DebtFinal = report.DeftStart + report.Change;
 
                 UpdateReport(report);
             }

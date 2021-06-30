@@ -75,6 +75,53 @@ namespace BookStore.BUS
             return false;
         }
 
+        public int SumBalance(DateTime date, int customerId)
+        {
+            int debt = Bill.Instance.Bills.Where(bill =>
+                bill.CustomerId == customerId
+                && bill.CreateDate.Month == date.Month
+                && bill.CreateDate.Year == date.Year
+            ).Sum(b => b.Balance);
+
+            int payment = CashReceipt.Instance.Receipts.Where(receipt =>
+                receipt.CreateDate.Month == date.Month
+                && receipt.CreateDate.Year == date.Year
+                && receipt.CustomerId == customerId
+            ).Sum(rec => rec.Payment);
+
+            return debt - payment;
+        }
+
+        private void CreateNewReport(DateTime date, int customerId)
+        {
+            var temp = BUS.DebtReport.Instance.Reports.FirstOrDefault(report =>
+            {
+                int m = date.Month - 1;
+                int y = date.Year;
+
+                if (m == 0)
+                {
+                    m = 12;
+                    y--;
+                }
+
+                return report.Month == m && report.Year == y;
+            });
+
+            int start = temp == null ? 0 : temp.DebtFinal;
+            int change = SumBalance(date, customerId);
+
+            BUS.DebtReport.Instance.AddReport
+            (
+                date.Month,
+                date.Year,
+                customerId,
+                start,
+                change,
+                start + change
+            );
+        }
+
         public void UpdateDebt(int type, int customerId, DateTime date, int amount, int oldAmount = 0)
         {
             var customer = Customers.First(cus => cus.Id == customerId);
@@ -101,7 +148,18 @@ namespace BookStore.BUS
             }
 
             UpdateCustomer(customer);
-            DebtReport.Instance.UpdateChange(customerId, date, customer.Debt, old);
+
+            if (!DebtReport.Instance.Reports.Any(report => 
+                report.Month == date.Month 
+                && report.Year == date.Year
+                && report.CustomerId == customer.Id))
+            {
+                CreateNewReport(date, customerId);
+            }
+            else
+            {
+                DebtReport.Instance.UpdateChange(customerId, date, customer.Debt, old);
+            }
         }
 
         public bool UpdateCustomer(DTO.Customer updated)
@@ -113,18 +171,18 @@ namespace BookStore.BUS
             //    && customer.Email.Equals(updated.Email)
             //    && customer.Debt == updated.Debt) != null)
             //{
-                if (DAO.Customer.Instance.UpdateCustomer(updated))
-                {
-                    var obj = Customers.First(customer => customer.Id == updated.Id);
+            if (DAO.Customer.Instance.UpdateCustomer(updated))
+            {
+                var obj = Customers.First(customer => customer.Id == updated.Id);
 
-                    obj.Name = updated.Name;
-                    obj.Address = updated.Address;
-                    obj.PhoneNumber = updated.PhoneNumber;
-                    obj.Email = updated.Email;
-                    obj.Debt = updated.Debt;
+                obj.Name = updated.Name;
+                obj.Address = updated.Address;
+                obj.PhoneNumber = updated.PhoneNumber;
+                obj.Email = updated.Email;
+                obj.Debt = updated.Debt;
 
-                    return true;
-                }
+                return true;
+            }
             //}
             return false;
         }
