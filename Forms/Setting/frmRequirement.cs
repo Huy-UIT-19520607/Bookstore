@@ -26,8 +26,8 @@ namespace BookStore.Forms.Setting
         private void LoadData()
         {
             nudPercent.Value = BUS.Parameter.Instance.TiLeTinhDonGiaBan.Value;
-            nudMinBookStoreNo.Value = BUS.Parameter.Instance.SLTruocNhapMin.Value;
-            nudMaxBookStoreNo.Value = BUS.Parameter.Instance.SLTruocNhapMax.Value;
+            nudMinBookStoreNo.Value = BUS.Parameter.Instance.SLTonMinSauBan.Value;
+            nudMaxBookStoreNo.Value = BUS.Parameter.Instance.SLTonMaxTruocNhap.Value;
             nudMinBookImportNo.Value = BUS.Parameter.Instance.SLNhapMin.Value;
             nudMaxDebt.Value = BUS.Parameter.Instance.SoTienNoMax.Value;
             gunaTsIsApply.Checked = BUS.Parameter.Instance.ApDungQD4.Value == 1 ? true : false;
@@ -62,11 +62,11 @@ namespace BookStore.Forms.Setting
 
         private void ChangeMinBookStoreNum()
         {
-            if (BUS.Parameter.Instance.SLTruocNhapMin.Value != nudMinBookStoreNo.Value)
+            if (BUS.Parameter.Instance.SLTonMinSauBan.Value != nudMinBookStoreNo.Value)
             {
                 if (BUS.Parameter.Instance.ChangeValue
                 (
-                    BUS.Parameter.Instance.SLTruocNhapMin.Name,
+                    BUS.Parameter.Instance.SLTonMinSauBan.Name,
                     Convert.ToInt32(nudMinBookStoreNo.Value)
                 ))
                 {
@@ -78,11 +78,11 @@ namespace BookStore.Forms.Setting
 
         private void ChangeMaxBookStoreNum()
         {
-            if (BUS.Parameter.Instance.SLTruocNhapMax.Value != nudMaxBookStoreNo.Value)
+            if (BUS.Parameter.Instance.SLTonMaxTruocNhap.Value != nudMaxBookStoreNo.Value)
             {
                 if (BUS.Parameter.Instance.ChangeValue
                 (
-                    BUS.Parameter.Instance.SLTruocNhapMax.Name, 
+                    BUS.Parameter.Instance.SLTonMaxTruocNhap.Name, 
                     Convert.ToInt32(nudMaxBookStoreNo.Value)
                 ))
                 {

@@ -26,12 +26,13 @@ namespace BookStore.BUS
             set => instance = value;
         }
         public BindingList<DTO.Parameter> Parameters { get => parameters; set => parameters = value; }
-        public int ApDungQD4 { get => Parameters[0].Value; }
-        public int SLNhapMin { get => Parameters[1].Value; }
-        public int SLTruocNhapMax { get => Parameters[2].Value; }
-        public int SLTruocNhapMin { get => Parameters[3].Value; }
-        public int SoTienNoMax { get => Parameters[4].Value; }
-        public int TiLeTinhDonGiaBan { get => Parameters[5].Value; }
+
+        public DTO.Parameter ApDungQD4 { get => Parameters[0]; }
+        public DTO.Parameter SLNhapMin { get => Parameters[1]; }
+        public DTO.Parameter SLTonMaxTruocNhap { get => Parameters[2]; }
+        public DTO.Parameter SLTonMinSauBan { get => Parameters[3]; }
+        public DTO.Parameter SoTienNoMax { get => Parameters[4]; }
+        public DTO.Parameter TiLeTinhDonGiaBan { get => Parameters[5]; }
 
         private void GetListParameter()
         {
