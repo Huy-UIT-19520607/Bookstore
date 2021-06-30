@@ -67,9 +67,10 @@ namespace BookStore.BUS
 
         public bool DeleteDetail(int id, int bookId)
         {
+            var obj = BillDetails.First(detail => detail.Id == id && detail.BookId == bookId);
+
             if (DAO.BillDetail.Instance.DeleteDetail(id, bookId))
             {
-                var obj = BillDetails.First(detail => detail.Id == id && detail.BookId == bookId);
 
                 Book.Instance.UpdateInStock(3, bookId,
                     Bill.Instance.Bills.First(bill => bill.Id == id).CreateDate,
@@ -86,11 +87,11 @@ namespace BookStore.BUS
 
         public bool UpdateDetail(DTO.BillDetail updated)
         {
+            var obj = BillDetails.First(
+                   detail => detail.Id == updated.Id && detail.BookId == updated.BookId);
+
             if (DAO.BillDetail.Instance.UpdateDetail(updated))
             {
-                var obj = BillDetails.First(
-                    detail => detail.Id == updated.Id && detail.BookId == updated.BookId);
-
                 Bill.Instance.UpdateTotal(updated.Id, updated.Total, obj.Total);
 
                 Book.Instance.UpdateInStock(2, updated.BookId,

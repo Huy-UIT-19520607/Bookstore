@@ -82,14 +82,22 @@ namespace BookStore.BUS
 
             switch (type)
             {
+                //Xóa
                 case 1:
                     customer.Debt -= amount;
                     break;
+                //Sửa hoá đơn
                 case 2:
                     customer.Debt += (amount - oldAmount);
+                    
                     break;
+                //Thêm
                 case 3:
                     customer.Debt += amount;
+                    break;
+                //Sửa thu tiền
+                case 4:
+                    customer.Debt += (oldAmount - amount);
                     break;
             }
 

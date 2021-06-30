@@ -46,13 +46,13 @@ namespace BookStore.BUS
                 Receipts.Add(new DTO.CashReceipt(
                     id,
                     customerId,
-                    date,
+                    date.Date,
                     amount
                 ));
 
-                var customer = Customer.Instance.Customers.First(cus => cus.Id == customerId);
-                customer.Debt -= amount;
-                Customer.Instance.UpdateCustomer(customer);
+                //var customer = Customer.Instance.Customers.First(cus => cus.Id == customerId);
+                //customer.Debt -= amount;
+                Customer.Instance.UpdateDebt(1, customerId, date, amount);
 
                 return true;
             }
@@ -61,13 +61,13 @@ namespace BookStore.BUS
 
         public bool UpdateReceipt(DTO.CashReceipt updated)
         {
+            var obj = Receipts.First(receipt => receipt.Id == updated.Id);
+
             if (DAO.CashReceipt.Instance.UpdateReceipt(updated))
             {
-                var obj = Receipts.First(receipt => receipt.Id == updated.Id);
-
-                var customer = Customer.Instance.Customers.First(cus => cus.Id == updated.CustomerId);
-                customer.Debt += (updated.Payment - obj.Payment);
-                Customer.Instance.UpdateCustomer(customer);
+                //var customer = Customer.Instance.Customers.First(cus => cus.Id == updated.CustomerId);
+                //customer.Debt += (obj.Payment - updated.Payment);
+                Customer.Instance.UpdateDebt(4, updated.CustomerId, updated.CreateDate, updated.Payment, obj.Payment);
 
                 obj.CustomerId = updated.CustomerId;
                 obj.CreateDate = updated.CreateDate;
@@ -84,9 +84,9 @@ namespace BookStore.BUS
             {
                 var obj = Receipts.First(receipt => receipt.Id == id);
 
-                var customer = Customer.Instance.Customers.First(cus => cus.Id == obj.CustomerId);
-                customer.Debt += obj.Payment;
-                Customer.Instance.UpdateCustomer(customer);
+                //var customer = Customer.Instance.Customers.First(cus => cus.Id == obj.CustomerId);
+                //customer.Debt += obj.Payment;
+                Customer.Instance.UpdateDebt(3, id, obj.CreateDate, obj.Payment);
 
                 Receipts.Remove(obj);
 

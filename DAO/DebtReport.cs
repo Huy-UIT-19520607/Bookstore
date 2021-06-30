@@ -19,7 +19,18 @@ namespace BookStore.DAO
             //GetListReport();
         }
 
-        public static DebtReport Instance { get => instance; set => instance = value; }
+        public static DebtReport Instance 
+        { 
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DebtReport();
+                }
+                return instance;
+            }
+            set => instance = value; 
+        }
         //public static BindingList<DTO.DebtReport> DebtReports { get => debtReports; set => debtReports = value; }
 
         public BindingList<DTO.DebtReport> GetListReport()

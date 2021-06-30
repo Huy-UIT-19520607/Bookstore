@@ -37,7 +37,24 @@ namespace BookStore.BUS
             Receipts = DAO.BookReceipt.Instance.GetListReceipt();
         }
 
-        public bool AddReceipt(DateTime date, int total)
+        //public bool AddReceipt(DateTime date, int total)
+        //{
+        //    int id = DAO.BookReceipt.Instance.AddReceipt(date, total);
+
+        //    if (id != -1)
+        //    {
+        //        Receipts.Add(new DTO.BookReceipt(
+        //            id,
+        //            date,
+        //            total
+        //        ));
+
+        //        return true;
+        //    }
+        //    return false;
+        //}
+
+        public int AddReceipt(DateTime date, int total)
         {
             int id = DAO.BookReceipt.Instance.AddReceipt(date, total);
 
@@ -48,10 +65,9 @@ namespace BookStore.BUS
                     date,
                     total
                 ));
-
-                return true;
             }
-            return false;
+
+            return id;
         }
 
         public bool UpdateReceipt(int id, DateTime date)

@@ -37,7 +37,31 @@ namespace BookStore.BUS
             Bills = DAO.Bill.Instance.GetListBill();
         }
 
-        public bool AddBill(int customerId, DateTime createDate, int total, int payment, int balance)
+        //public bool AddBill(int customerId, DateTime createDate, int total, int payment, int balance)
+        //{
+        //    int id = DAO.Bill.Instance.AddBill(customerId, createDate, total, payment, balance);
+
+        //    if (id != -1)
+        //    {
+        //        Bills.Add(new DTO.Bill(
+        //           id,
+        //           customerId,
+        //           createDate,
+        //           total,
+        //           payment,
+        //           balance
+        //        ));
+
+        //        if (balance > 0)
+        //        {
+        //            Customer.Instance.UpdateDebt(3, customerId, createDate, balance);
+        //        }
+
+        //        return true;
+        //    }
+        //    return false;
+        //}
+        public int AddBill(int customerId, DateTime createDate, int total, int payment, int balance)
         {
             int id = DAO.Bill.Instance.AddBill(customerId, createDate, total, payment, balance);
 
@@ -56,18 +80,16 @@ namespace BookStore.BUS
                 {
                     Customer.Instance.UpdateDebt(3, customerId, createDate, balance);
                 }
-
-                return true;
             }
-            return false;
-        }
 
+            return id;
+        }
         public bool UpdateBill(DTO.Bill updated)
         {
+            var obj = Bills.First(bill => bill.Id == updated.Id);
+
             if (DAO.Bill.Instance.UpdateBill(updated))
             {
-                var obj = Bills.First(bill => bill.Id == updated.Id);
-
                 if (updated.Balance > 0)
                 {
                     Customer.Instance.UpdateDebt(2, updated.CustomerId, updated.CreateDate, updated.Balance, obj.Balance);
@@ -92,7 +114,7 @@ namespace BookStore.BUS
 
                 if (obj.Balance > 0)
                 {
-                    Customer.Instance.UpdateDebt(1,  obj.CustomerId, obj.CreateDate, obj.Balance);
+                    Customer.Instance.UpdateDebt(1, obj.CustomerId, obj.CreateDate, obj.Balance);
                 }
 
                 BillDetail.Instance.DeleteAllDetailById(id, obj.CreateDate);
