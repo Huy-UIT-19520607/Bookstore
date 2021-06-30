@@ -36,19 +36,19 @@ namespace BookStore.Forms.Setting
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.gunaTsIsApply = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.nudMaxDebt = new System.Windows.Forms.NumericUpDown();
+            this.nudMinBookStoreNo = new System.Windows.Forms.NumericUpDown();
+            this.nudMaxBookStoreNo = new System.Windows.Forms.NumericUpDown();
+            this.nudMinBookImportNo = new System.Windows.Forms.NumericUpDown();
+            this.nudPercent = new System.Windows.Forms.NumericUpDown();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxDebt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinBookStoreNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxBookStoreNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinBookImportNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPercent)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -130,114 +130,125 @@ namespace BookStore.Forms.Setting
             this.label7.TabIndex = 33;
             this.label7.Text = "Số tiền thu không vượt quá số tiền khách hàng đang nợ:";
             // 
-            // guna2ToggleSwitch1
+            // gunaTsIsApply
             // 
-            this.guna2ToggleSwitch1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.CheckedState.Parent = this.guna2ToggleSwitch1;
-            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(700, 471);
-            this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
-            this.guna2ToggleSwitch1.ShadowDecoration.Parent = this.guna2ToggleSwitch1;
-            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(67, 30);
-            this.guna2ToggleSwitch1.TabIndex = 34;
-            this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.UncheckedState.Parent = this.guna2ToggleSwitch1;
+            this.gunaTsIsApply.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gunaTsIsApply.Animated = true;
+            this.gunaTsIsApply.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gunaTsIsApply.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gunaTsIsApply.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.gunaTsIsApply.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.gunaTsIsApply.CheckedState.Parent = this.gunaTsIsApply;
+            this.gunaTsIsApply.Location = new System.Drawing.Point(700, 471);
+            this.gunaTsIsApply.Name = "gunaTsIsApply";
+            this.gunaTsIsApply.ShadowDecoration.Parent = this.gunaTsIsApply;
+            this.gunaTsIsApply.Size = new System.Drawing.Size(67, 30);
+            this.gunaTsIsApply.TabIndex = 34;
+            this.gunaTsIsApply.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.gunaTsIsApply.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.gunaTsIsApply.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.gunaTsIsApply.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.gunaTsIsApply.UncheckedState.Parent = this.gunaTsIsApply;
             // 
-            // numericUpDown1
+            // nudMaxDebt
             // 
-            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Increment = new decimal(new int[] {
+            this.nudMaxDebt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudMaxDebt.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudMaxDebt.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown1.Location = new System.Drawing.Point(672, 394);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nudMaxDebt.Location = new System.Drawing.Point(672, 394);
+            this.nudMaxDebt.Maximum = new decimal(new int[] {
             999999999,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 35);
-            this.numericUpDown1.TabIndex = 35;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudMaxDebt.Name = "nudMaxDebt";
+            this.nudMaxDebt.Size = new System.Drawing.Size(120, 35);
+            this.nudMaxDebt.TabIndex = 35;
+            this.nudMaxDebt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // numericUpDown2
+            // nudMinBookStoreNo
             // 
-            this.numericUpDown2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(672, 324);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.nudMinBookStoreNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudMinBookStoreNo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudMinBookStoreNo.Location = new System.Drawing.Point(672, 324);
+            this.nudMinBookStoreNo.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 35);
-            this.numericUpDown2.TabIndex = 36;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudMinBookStoreNo.Name = "nudMinBookStoreNo";
+            this.nudMinBookStoreNo.Size = new System.Drawing.Size(120, 35);
+            this.nudMinBookStoreNo.TabIndex = 36;
+            this.nudMinBookStoreNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // numericUpDown3
+            // nudMaxBookStoreNo
             // 
-            this.numericUpDown3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown3.Location = new System.Drawing.Point(672, 249);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.nudMaxBookStoreNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudMaxBookStoreNo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudMaxBookStoreNo.Location = new System.Drawing.Point(672, 249);
+            this.nudMaxBookStoreNo.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 35);
-            this.numericUpDown3.TabIndex = 37;
-            this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudMaxBookStoreNo.Name = "nudMaxBookStoreNo";
+            this.nudMaxBookStoreNo.Size = new System.Drawing.Size(120, 35);
+            this.nudMaxBookStoreNo.TabIndex = 37;
+            this.nudMaxBookStoreNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // numericUpDown4
+            // nudMinBookImportNo
             // 
-            this.numericUpDown4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown4.Location = new System.Drawing.Point(672, 176);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
+            this.nudMinBookImportNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudMinBookImportNo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudMinBookImportNo.Location = new System.Drawing.Point(672, 176);
+            this.nudMinBookImportNo.Maximum = new decimal(new int[] {
             999999999,
             0,
             0,
             0});
-            this.numericUpDown4.Minimum = new decimal(new int[] {
+            this.nudMinBookImportNo.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 35);
-            this.numericUpDown4.TabIndex = 38;
-            this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown4.Value = new decimal(new int[] {
+            this.nudMinBookImportNo.Name = "nudMinBookImportNo";
+            this.nudMinBookImportNo.Size = new System.Drawing.Size(120, 35);
+            this.nudMinBookImportNo.TabIndex = 38;
+            this.nudMinBookImportNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudMinBookImportNo.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // numericUpDown5
+            // nudPercent
             // 
-            this.numericUpDown5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown5.Location = new System.Drawing.Point(672, 116);
-            this.numericUpDown5.Maximum = new decimal(new int[] {
-            200,
+            this.nudPercent.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudPercent.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPercent.Location = new System.Drawing.Point(672, 116);
+            this.nudPercent.Maximum = new decimal(new int[] {
+            900,
             0,
             0,
             0});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(120, 35);
-            this.numericUpDown5.TabIndex = 39;
-            this.numericUpDown5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudPercent.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudPercent.Name = "nudPercent";
+            this.nudPercent.Size = new System.Drawing.Size(120, 35);
+            this.nudPercent.TabIndex = 39;
+            this.nudPercent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudPercent.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // btnCancel
             // 
@@ -253,6 +264,7 @@ namespace BookStore.Forms.Setting
             this.btnCancel.TabIndex = 41;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -268,6 +280,7 @@ namespace BookStore.Forms.Setting
             this.btnSave.TabIndex = 40;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmRequirement
             // 
@@ -276,12 +289,12 @@ namespace BookStore.Forms.Setting
             this.ClientSize = new System.Drawing.Size(943, 653);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.numericUpDown5);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.guna2ToggleSwitch1);
+            this.Controls.Add(this.nudPercent);
+            this.Controls.Add(this.nudMinBookImportNo);
+            this.Controls.Add(this.nudMaxBookStoreNo);
+            this.Controls.Add(this.nudMinBookStoreNo);
+            this.Controls.Add(this.nudMaxDebt);
+            this.Controls.Add(this.gunaTsIsApply);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -294,11 +307,12 @@ namespace BookStore.Forms.Setting
             this.Name = "frmRequirement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUY ĐỊNH";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            this.Load += new System.EventHandler(this.frmRequirement_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxDebt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinBookStoreNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxBookStoreNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinBookImportNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPercent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,12 +327,12 @@ namespace BookStore.Forms.Setting
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch gunaTsIsApply;
+        private System.Windows.Forms.NumericUpDown nudMaxDebt;
+        private System.Windows.Forms.NumericUpDown nudMinBookStoreNo;
+        private System.Windows.Forms.NumericUpDown nudMaxBookStoreNo;
+        private System.Windows.Forms.NumericUpDown nudMinBookImportNo;
+        private System.Windows.Forms.NumericUpDown nudPercent;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
     }
