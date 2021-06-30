@@ -91,6 +91,28 @@ namespace BookStore.BUS
             return false;
         }
 
+        public int SumBalance(DateTime date, int bookId)
+        {
+            int import = BookReceiptDetail.Instance.Details.Where(detail =>
+                detail.BookId == bookId
+                && BookReceipt.Instance.Receipts.Any(receipt =>
+                    receipt.Id == detail.Id
+                    && receipt.ReceiveDay.Month == date.Month
+                    && receipt.ReceiveDay.Year == date.Year
+                )
+            ).Sum(det => det.Number);
+
+            int sold = BillDetail.Instance.BillDetails.Where(detail =>
+                detail.BookId == bookId
+                && Bill.Instance.Bills.Any(bill => 
+                    bill.CreateDate.Month == date.Month
+                    && bill.CreateDate.Year == date.Year
+                )
+            ).Sum(det => det.Number);
+
+            return import - sold;
+        }
+
         public void UpdateInStock(int type, int bookId, DateTime date, int amount, int oldAmount = 0)
         {
             var book = Books.First(bk => bk.Id == bookId);
@@ -110,7 +132,18 @@ namespace BookStore.BUS
             }
 
             UpdateBook(book);
-            InventoryReport.Instance.UpdateChange(bookId, date, book.InStock, old);
+
+            if (!InventoryReport.Instance.Reports.Any(report =>
+                report.Month == date.Month
+                && report.Year == date.Year
+                && report.BookId == bookId))
+            {
+
+            }
+            else
+            {
+                InventoryReport.Instance.UpdateChange(bookId, date, book.InStock, old);
+            }
         }
 
         public bool DeleteBook(int id)
@@ -127,10 +160,11 @@ namespace BookStore.BUS
         {
             await Task.Run(() =>
             {
-                foreach (var item in Books)
-                {
-                    item.Price = item.Price / oldValue * value;
-                }
+                //foreach (var item in Books)
+                //{
+                //    item.Price = item.Price / oldValue * value;
+                //}
+                Books.ToList().ForEach(item => item.Price = item.Price / oldValue * value);
             });
         }
     }
