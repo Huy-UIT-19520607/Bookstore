@@ -60,7 +60,7 @@ namespace BookStore.Forms.Management
                 CancelValidatedEvent(txtPublisher, lblPublisherError, e);
                 return;
             }
-            if (!ValidateInput.ValidOnlyLetter(txtPublisher.Text, out errMsg))
+            if (!ValidateInput.ValidOnlyLetterAndNumber(txtPublisher.Text, out errMsg))
             {
                 CancelValidatedEvent(txtPublisher, lblPublisherError, e);
             }
