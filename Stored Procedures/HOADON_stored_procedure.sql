@@ -14,13 +14,14 @@ BEGIN
 	INSERT INTO HOADON(MaKhachHang, NgayLap, TongTien, ThanhToan, ConLai)
 	VALUES (@customer_id, @date, @total, @payment, @balance);
 
-	SELECT SoHD
+	SELECT Top 1 SoHD
 	FROM HOADON
 	WHERE MaKhachHang=@customer_id
 	AND NgayLap=@date
 	AND TongTien=@total
 	AND ThanhToan=@payment
 	AND ConLai=@balance
+	Order by SoHD desc
 END;
 GO
 

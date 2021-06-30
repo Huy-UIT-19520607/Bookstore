@@ -12,11 +12,12 @@ begin
 	insert into PHIEUTHUTIEN(MaKhachHang, NgayLap, SoTienThu)
 	values (@customer_id, @date, @amount);
 
-	select SoPT
+	select top 1 SoPT
 	from PHIEUTHUTIEN
 	where MaKhachHang=@customer_id
 	and NgayLap=@date
 	and SoTienThu=@amount
+	order by SoPT desc
 end
 go
 
