@@ -15,6 +15,7 @@ namespace BookStore.Forms.Business
         public frmBookReceipt_Add()
         {
             InitializeComponent();
+            if (!ValidateInput.ValidOnlyLetterAndNumber(txtPublisher.Text, out errMsg))
         }
 
         
