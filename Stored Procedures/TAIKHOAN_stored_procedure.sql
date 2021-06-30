@@ -1,6 +1,6 @@
 ﻿USE QuanLyNhaSach;
 
-GO;
+GO
 
 -- Đăng nhập
 CREATE PROC sp_login
