@@ -11,9 +11,10 @@ begin
 	insert into PHIEUNHAPSACH(NgayLap, TongTien)
 	values(@date, @total);
 
-	select SoPNS
+	select top 1 SoPNS
 	from PHIEUNHAPSACH
 	where NgayLap=@date and TongTien=@total
+	order by SoPNS desc
 end
 go
 
