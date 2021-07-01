@@ -19,17 +19,6 @@ namespace BookStore.Forms.Report
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            //var reportsInMonth = BUS.DebtReport.Instance.Reports.Where(report =>
-            //                    report.Month == (int)nudMonth.Value && 
-            //                    report.Year == (int)nudPublishingYear.Value);
-
-            //if (reportsInMonth.Count() != 0)
-            //{
-            //    return;
-            //}
-
-            //CreateNew(reportsInMonth);
-
             gunaDgvAccount.DataSource = BUS.DebtReport.Instance.Reports.Where(reprt =>
                 reprt.Month == (int)nudMonth.Value &&
                 reprt.Year == (int)nudPublishingYear.Value
@@ -42,6 +31,8 @@ namespace BookStore.Forms.Report
             //    DateTime.Now.Month - 1 : 12;
             //nudPublishingYear.Maximum = nudMonth.Maximum == 12 ?
             //    DateTime.Now.Year - 1 : DateTime.Now.Year;
+
+            //nudMonth.Value = nudMonth.Maximum;
 
             gunaDgvCustomer.DataSource = BUS.Customer.Instance.Customers;
         }
@@ -94,7 +85,7 @@ namespace BookStore.Forms.Report
             btnCancelFilter.Enabled = true;
 
             gunaDgvCustomer.DataSource = BUS.Customer.Instance.Customers.Where(customer =>
-                customer.Id == (int)gunaDgvAccount.SelectedRows[0].Cells[0].Value
+                customer.Id == (int)gunaDgvAccount.SelectedRows[0].Cells["MaKhachHang1"].Value
             ).ToList();
         }
 
@@ -103,7 +94,7 @@ namespace BookStore.Forms.Report
             btnCancelFilter.Enabled = true;
 
             gunaDgvAccount.DataSource = BUS.DebtReport.Instance.Reports.Where(report =>
-                report.CustomerId == (int)gunaDgvCustomer.SelectedRows[0].Cells[0].Value
+                report.CustomerId == (int)gunaDgvCustomer.SelectedRows[0].Cells["MaKhachHang"].Value
                 && report.Month == (int)nudMonth.Value
                 && report.Year == (int)nudPublishingYear.Value
             ).ToList();
