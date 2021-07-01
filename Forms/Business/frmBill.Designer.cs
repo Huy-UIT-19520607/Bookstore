@@ -307,6 +307,7 @@ namespace BookStore.Forms.Business
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(929, 62);
             this.panel6.TabIndex = 38;
+            this.panel6.Visible = false;
             // 
             // btnDeleteBillDetail
             // 

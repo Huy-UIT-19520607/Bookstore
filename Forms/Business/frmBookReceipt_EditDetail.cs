@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace BookStore.Forms.Business
 {
-    public partial class frmBookReceipt_EditDetail_NO_USE : Form
+    public partial class frmBookReceipt_EditDetail : Form
     {
 
         private int quantityMin = BUS.Parameter.Instance.SLNhapMin.Value;
@@ -25,7 +25,7 @@ namespace BookStore.Forms.Business
 
         private DTO.Title title;
 
-        public frmBookReceipt_EditDetail_NO_USE(int bookReceiptId, int bookId)
+        public frmBookReceipt_EditDetail(int bookReceiptId, int bookId)
         {
             InitializeComponent();
 
@@ -89,41 +89,41 @@ namespace BookStore.Forms.Business
                 return;
             }
 
-            DTO.Book checkBook = BUS.Book.Instance.Books.FirstOrDefault(bk=> bk.TitleId == title.Id 
-                    && bk.Publisher == book.Publisher && bk.PublishYear == book.PublishYear);
-            if (checkBook != null)
-            {
-                nudCostPrice.Enabled = false;
+            //DTO.Book checkBook = BUS.Book.Instance.Books.FirstOrDefault(bk=> bk.TitleId == title.Id 
+            //        && bk.Publisher == book.Publisher && bk.PublishYear == book.PublishYear);
+            //if (checkBook != null)
+            //{
+            //    nudCostPrice.Enabled = false;
 
 
-                int costPrice = BUS.BookReceiptDetail.Instance.Details.First(
-                        detail => detail.BookId == checkBook.Id).ReceivePrice;
-                nudCostPrice.Value = costPrice;
+            //    int costPrice = BUS.BookReceiptDetail.Instance.Details.First(
+            //            detail => detail.BookId == checkBook.Id).ReceivePrice;
+            //    nudCostPrice.Value = costPrice;
 
-                int quantity = (int)nudQuantity.Value;
+            //    int quantity = (int)nudQuantity.Value;
 
-                int amount = costPrice * quantity;
+            //    int amount = costPrice * quantity;
 
-                var updatedStock = quantity + checkBook.InStock;
+            //    var updatedStock = quantity + checkBook.InStock;
 
-                BUS.Book.Instance.UpdateBook(new DTO.Book(checkBook.Id, book.TitleId,
-                    book.Publisher, book.PublishYear, updatedStock, (int)(costPrice * priceRate / 100)));
+            //    BUS.Book.Instance.UpdateBook(new DTO.Book(checkBook.Id, book.TitleId,
+            //        book.Publisher, book.PublishYear, updatedStock, (int)(costPrice * priceRate / 100)));
 
-            }
-            else
-            {
-                //BUS.Book.Instance.AddBook(id, publisher, publishYear, quantity, (int)(costPrice * priceRate / 100));
-                //DTO.Book newBook = BUS.Book.Instance.Books.FirstOrDefault(book
-                //    => book.TitleId == id && book.Publisher == publisher && book.PublishYear == publishYear);
-                //bookId = newBook.Id;
-            }
+            //}
+            //else
+            //{
+            //    //BUS.Book.Instance.AddBook(id, publisher, publishYear, quantity, (int)(costPrice * priceRate / 100));
+            //    //DTO.Book newBook = BUS.Book.Instance.Books.FirstOrDefault(book
+            //    //    => book.TitleId == id && book.Publisher == publisher && book.PublishYear == publishYear);
+            //    //bookId = newBook.Id;
+            //}
 
-            //BUS.BookReceiptDetail.Instance.UpdateDetail(bookReceiptId, bookId, quantity, costPrice, amount);
-
-
+            ////BUS.BookReceiptDetail.Instance.UpdateDetail(bookReceiptId, bookId, quantity, costPrice, amount);
 
 
-            //MessageBox.Show("Thêm phiếu nhập sách thành công");
+
+
+            ////MessageBox.Show("Thêm phiếu nhập sách thành công");
 
             this.Dispose();
 

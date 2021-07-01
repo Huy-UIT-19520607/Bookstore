@@ -36,7 +36,6 @@ namespace BookStore.Forms.Business
             this.label9 = new System.Windows.Forms.Label();
             this.txtBillCode = new System.Windows.Forms.TextBox();
             this.nudTotalAmount = new System.Windows.Forms.NumericUpDown();
-            this.nudChangeAmount = new System.Windows.Forms.NumericUpDown();
             this.nudPaidAmount = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@ namespace BookStore.Forms.Business
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblDebtMax = new System.Windows.Forms.Label();
             this.txtDebtAmount = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
@@ -53,11 +53,10 @@ namespace BookStore.Forms.Business
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNewCategory = new System.Windows.Forms.Label();
-            this.lblDebtMax = new System.Windows.Forms.Label();
+            this.txtChangeAmount = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTotalAmount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudChangeAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaidAmount)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -108,10 +107,10 @@ namespace BookStore.Forms.Business
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtChangeAmount);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtBillCode);
             this.panel1.Controls.Add(this.nudTotalAmount);
-            this.panel1.Controls.Add(this.nudChangeAmount);
             this.panel1.Controls.Add(this.nudPaidAmount);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
@@ -165,28 +164,6 @@ namespace BookStore.Forms.Business
             this.nudTotalAmount.TabIndex = 61;
             this.nudTotalAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudTotalAmount.ThousandsSeparator = true;
-            // 
-            // nudChangeAmount
-            // 
-            this.nudChangeAmount.Enabled = false;
-            this.nudChangeAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudChangeAmount.Increment = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudChangeAmount.Location = new System.Drawing.Point(146, 221);
-            this.nudChangeAmount.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
-            0,
-            0});
-            this.nudChangeAmount.Name = "nudChangeAmount";
-            this.nudChangeAmount.ReadOnly = true;
-            this.nudChangeAmount.Size = new System.Drawing.Size(134, 33);
-            this.nudChangeAmount.TabIndex = 59;
-            this.nudChangeAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudChangeAmount.ThousandsSeparator = true;
             // 
             // nudPaidAmount
             // 
@@ -288,6 +265,17 @@ namespace BookStore.Forms.Business
             this.panel2.Size = new System.Drawing.Size(340, 254);
             this.panel2.TabIndex = 0;
             // 
+            // lblDebtMax
+            // 
+            this.lblDebtMax.AutoSize = true;
+            this.lblDebtMax.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDebtMax.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblDebtMax.Location = new System.Drawing.Point(24, 228);
+            this.lblDebtMax.Name = "lblDebtMax";
+            this.lblDebtMax.Size = new System.Drawing.Size(216, 17);
+            this.lblDebtMax.TabIndex = 89;
+            this.lblDebtMax.Text = "Số tiền nợ tối đa của khách hàng là:";
+            // 
             // txtDebtAmount
             // 
             this.txtDebtAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -364,16 +352,14 @@ namespace BookStore.Forms.Business
             this.lblNewCategory.TabIndex = 85;
             this.lblNewCategory.Text = "Tên KH:";
             // 
-            // lblDebtMax
+            // txtChangeAmount
             // 
-            this.lblDebtMax.AutoSize = true;
-            this.lblDebtMax.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDebtMax.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblDebtMax.Location = new System.Drawing.Point(24, 228);
-            this.lblDebtMax.Name = "lblDebtMax";
-            this.lblDebtMax.Size = new System.Drawing.Size(216, 17);
-            this.lblDebtMax.TabIndex = 89;
-            this.lblDebtMax.Text = "Số tiền nợ tối đa của khách hàng là:";
+            this.txtChangeAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChangeAmount.Location = new System.Drawing.Point(146, 220);
+            this.txtChangeAmount.Name = "txtChangeAmount";
+            this.txtChangeAmount.ReadOnly = true;
+            this.txtChangeAmount.Size = new System.Drawing.Size(134, 33);
+            this.txtChangeAmount.TabIndex = 102;
             // 
             // frmBill_Edit
             // 
@@ -396,7 +382,6 @@ namespace BookStore.Forms.Business
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTotalAmount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudChangeAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPaidAmount)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -413,7 +398,6 @@ namespace BookStore.Forms.Business
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtBillCode;
         private System.Windows.Forms.NumericUpDown nudTotalAmount;
-        private System.Windows.Forms.NumericUpDown nudChangeAmount;
         private System.Windows.Forms.NumericUpDown nudPaidAmount;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -431,5 +415,6 @@ namespace BookStore.Forms.Business
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNewCategory;
         private System.Windows.Forms.Label lblDebtMax;
+        private System.Windows.Forms.TextBox txtChangeAmount;
     }
 }

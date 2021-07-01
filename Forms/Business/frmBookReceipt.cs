@@ -136,7 +136,33 @@ namespace BookStore.Forms.Business
 
         private void btnDeleteBookReceipt_Click(object sender, EventArgs e)
         {
+            if (gunaDgvBookReceipt.SelectedRows.Count > 0)
+            {
+                // Lấy row hiện tại
+                DataGridViewRow row = gunaDgvBookReceipt.SelectedRows[0];
+                int id = Convert.ToInt32(row.Cells[0].Value.ToString());
 
+                if (BUS.BookReceiptDetail.Instance.Details.Any(detail =>
+                    BUS.BillDetail.Instance.BillDetails.Any(billdetail => billdetail.BookId == detail.BookId)))
+                {
+                    MessageBox.Show("Có sách trong phiếu nhập này đang lưu trong hoá đơn. Không thể xoá");
+                    return;
+                } 
+
+                if (BUS.BookReceipt.Instance.DeleteReceipt(id))
+                {
+                    
+                    MessageBox.Show("Xoá phiếu nhập sách thành công.");
+                }
+                else
+                {
+                    MessageBox.Show("Xoá phiếu nhập sách thất bại.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn phiếu nhập sách muốn xoá");
+            }
         }
 
         private void btnDeleteBookReceiptDetail_Click(object sender, EventArgs e)
@@ -153,7 +179,7 @@ namespace BookStore.Forms.Business
                 int receiptId = Convert.ToInt32(row.Cells[0].Value.ToString());
                 int bookId = Convert.ToInt32(row.Cells[1].Value.ToString());
 
-                (new Forms.Business.frmBookReceipt_EditDetail_NO_USE(receiptId, bookId)).ShowDialog();
+                (new Forms.Business.frmBookReceipt_EditDetail(receiptId, bookId)).ShowDialog();
             }
             else
             {

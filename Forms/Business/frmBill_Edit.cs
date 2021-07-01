@@ -25,7 +25,7 @@ namespace BookStore.Forms.Business
             bill = BUS.Bill.Instance.Bills.First(bill => bill.Id == billId);
             customer = BUS.Customer.Instance.Customers.First(cus => cus.Id == cusId);
 
-            
+
         }
         private void frmBill_Edit_Load(object sender, EventArgs e)
         {
@@ -39,14 +39,14 @@ namespace BookStore.Forms.Business
             this.dtmBillDate.Value = bill.CreateDate;
             this.nudTotalAmount.Value = bill.TotalPrice;
             this.nudPaidAmount.Value = bill.Payment;
-            this.nudChangeAmount.Value = bill.Balance;
+            this.txtChangeAmount.Text = bill.Balance.ToString();
 
             this.txtCustomerCode.Text = customer.Id.ToString();
             this.txtCustomerName.Text = customer.Name;
             this.txtPhone.Text = customer.PhoneNumber;
             this.txtDebtAmount.Text = customer.Debt.ToString();
 
-            this.nudPaidAmount.Maximum = this.nudTotalAmount.Value;
+            //this.nudPaidAmount.Maximum = this.nudTotalAmount.Value;
 
         }
 
@@ -65,8 +65,8 @@ namespace BookStore.Forms.Business
                 MessageBox.Show("Số tiền thanh toán không được vượt quá tổng tiền");
                 return;
             }
-            
-            if ((bill.TotalPrice - nudPaidAmount.Value) + 
+
+            if ((bill.TotalPrice - nudPaidAmount.Value) +
                 (customer.Debt - bill.Balance) > debtMax)
             {
                 MessageBox.Show(String.Format("Số tiền nợ mới của khách hàng đã vượt quá số tiền nợ tối đa {0}", debtMax));
@@ -74,11 +74,11 @@ namespace BookStore.Forms.Business
             }
 
             if (BUS.Bill.Instance.UpdateBill(
-                new DTO.Bill(bill.Id, customer.Id, dtmBillDate.Value, bill.TotalPrice, (int)nudPaidAmount.Value, (int)nudChangeAmount.Value)))
+                new DTO.Bill(bill.Id, customer.Id, dtmBillDate.Value, bill.TotalPrice, (int)nudPaidAmount.Value, Convert.ToInt32(txtChangeAmount.Text))))
             {
                 MessageBox.Show("Sửa phiếu thu tiền thành công");
-            }
 
+            }
             this.Dispose();
         }
 
@@ -90,11 +90,11 @@ namespace BookStore.Forms.Business
                 {
                     int debt = Convert.ToInt32(txtDebtAmount.Text.ToString());
 
-                    debt -= (int)nudChangeAmount.Value;
+                    debt -= Convert.ToInt32(txtChangeAmount.Text);
 
-                    nudChangeAmount.Value = nudTotalAmount.Value - nudPaidAmount.Value;
+                    txtChangeAmount.Text = (nudTotalAmount.Value - nudPaidAmount.Value).ToString();
 
-                    debt += (int)nudChangeAmount.Value;
+                    debt += Convert.ToInt32(txtChangeAmount.Text);
 
                     txtDebtAmount.Text = debt.ToString();
                 }

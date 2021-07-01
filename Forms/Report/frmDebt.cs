@@ -27,12 +27,12 @@ namespace BookStore.Forms.Report
 
         private void frmDebt_Load(object sender, EventArgs e)
         {
-            //nudMonth.Maximum = DateTime.Now.Month != 1 ?
-            //    DateTime.Now.Month - 1 : 12;
-            //nudPublishingYear.Maximum = nudMonth.Maximum == 12 ?
-            //    DateTime.Now.Year - 1 : DateTime.Now.Year;
+            nudMonth.Maximum = DateTime.Now.Month != 1 ?
+                DateTime.Now.Month : 12;
+            nudPublishingYear.Maximum = nudMonth.Maximum == 12 ?
+                DateTime.Now.Year - 1 : DateTime.Now.Year;
 
-            //nudMonth.Value = nudMonth.Maximum;
+            nudMonth.Value = nudMonth.Maximum;
 
             gunaDgvCustomer.DataSource = BUS.Customer.Instance.Customers;
         }
