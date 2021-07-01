@@ -49,9 +49,9 @@ namespace BookStore.BUS
                     total
                 ));
 
-                //Book.Instance.UpdateInStock(3, bookId,
-                //    BookReceipt.Instance.Receipts.First(receipt => receipt.Id == id).ReceiveDay,
-                //    number);
+                Book.Instance.UpdateInStock(5, bookId,
+                    BookReceipt.Instance.Receipts.First(receipt => receipt.Id == id).ReceiveDay,
+                    number);
 
                 return true;
             }
