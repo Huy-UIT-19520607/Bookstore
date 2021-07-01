@@ -50,7 +50,7 @@ namespace BookStore.Forms.Business
 
             if (string.IsNullOrEmpty(gunaTxtBillDetailSearch.Text))
             {
-                gunaDgvBill.DataSource = BUS.Book.Instance.Books;
+                gunaDgvBillDetail.DataSource = BUS.BillDetail.Instance.BillDetails;
                 return;
             }
         }
@@ -64,7 +64,7 @@ namespace BookStore.Forms.Business
         {
             if (string.IsNullOrEmpty(gunaTxtBillDetailSearch.Text))
             {
-                gunaDgvBillDetail.DataSource = BUS.Book.Instance.Books;
+                gunaDgvBillDetail.DataSource = BUS.BillDetail.Instance.BillDetails;
                 return;
             }
 
@@ -73,15 +73,18 @@ namespace BookStore.Forms.Business
             searchText = MyConvert.ToAscii(searchText).ToLower();
 
             gunaDgvBillDetail.DataSource =
-                BUS.Book.Instance.Books.Where(book =>
+                BUS.BillDetail.Instance.BillDetails.Where(dt =>
                 {
 
-                    string bookName = BUS.Title.Instance.Titles.First(title => title.Id == book.TitleId).Name;
+                    var bookDetail = BUS.Book.Instance.Books.First(book => book.Id == dt.BookId);
+                    
+
+                    string bookName = BUS.Title.Instance.Titles.First(title => title.Id == bookDetail.TitleId).Name;
                     bookName = MyConvert.ToAscii(bookName).ToLower();
 
-                    string publisher = MyConvert.ToAscii(book.Publisher).ToLower();
+                    string publisher = MyConvert.ToAscii(bookDetail.Publisher).ToLower();
 
-                    string publishYearString = MyConvert.ToAscii(book.PublishYear.ToString()).ToLower();
+                    string publishYearString = MyConvert.ToAscii(bookDetail.PublishYear.ToString()).ToLower();
 
                     return bookName.Contains(searchText) || publisher.Contains(searchText)
                             || publishYearString.Contains(searchText);
@@ -173,7 +176,18 @@ namespace BookStore.Forms.Business
                 int billId = Convert.ToInt32(row.Cells[0].Value.ToString());
                 int cusId = Convert.ToInt32(row.Cells[1].Value.ToString());
 
-                BUS.Bill.Instance.DeleteBill(billId);
+                if (MessageBox.Show(String.Format("Bạn muốn xoá hoá đơn số {0}?", billId), "Xoá", MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
+                {
+                    if (BUS.Bill.Instance.DeleteBill(billId))
+                    {
+                        MessageBox.Show("Xoá hoá đơn thành công.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xoá hoá đơn thất bại.");
+                    }    
+                }
             }
             else
             {
@@ -202,17 +216,44 @@ namespace BookStore.Forms.Business
         {
             if (gunaDgvBillDetail.SelectedRows.Count > 0)
             {
+
+                
                 // Lấy row hiện tại
                 DataGridViewRow row = gunaDgvBillDetail.SelectedRows[0];
                 int billId = Convert.ToInt32(row.Cells[0].Value.ToString());
                 int bookId = Convert.ToInt32(row.Cells[1].Value.ToString());
+                //if (BUS.BillDetail.Instance.BillDetails.Where(detail => detail.Id == billId).ToList().Count > 1)
+                //{
+                //}
+                MessageBox.Show(BUS.BillDetail.Instance.BillDetails.Where(detail => detail.Id == billId).ToList().Count.ToString());
 
-                if (gunaDgvBillDetail.Rows.Count == 1)
-                {
-                    MessageBox.Show("")
-                }    
-                    BUS.BillDetail.Instance.DeleteDetail(billId, bookId);
-
+                //if (MessageBox.Show(String.Format("Bạn muốn xoá chi tiết hoá đơn số {0}, mã sách {1}?", billId, bookId), "Xoá", MessageBoxButtons.OKCancel,
+                //    MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
+                //{
+                //    if (BUS.BillDetail.Instance.BillDetails.Where(detail => detail.Id == billId).ToList().Count > 1)
+                //    {
+                //        if (BUS.BillDetail.Instance.DeleteDetail(billId, bookId))
+                //        {
+                //            MessageBox.Show("Xoá chi tiết hoá đơn thành công");
+                //        }
+                //        else
+                //        {
+                //            MessageBox.Show("Xoá chi tiết hoá đơn thất bại");
+                //        }
+                //    }
+                //    else
+                //    {
+                //        if (MessageBox.Show(String.Format("Hoá đơn chỉ còn 1 chi tiết duy nhất. Bạn muốn xoá hoá đơn số {0}?", billId), "Xoá", MessageBoxButtons.OKCancel,
+                //            MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
+                //        {
+                //            BUS.Bill.Instance.DeleteBill(billId);
+                //        }
+                //        else 
+                //        {
+                //            return;
+                //        }
+                //    }
+                //}
             }
             else
             {
