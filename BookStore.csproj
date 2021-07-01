@@ -154,11 +154,11 @@
     <Compile Include="Forms\Business\frmBookReceipt_Edit_NO_USE.Designer.cs">
       <DependentUpon>frmBookReceipt_Edit_NO_USE.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Business\frmBookReceipt_EditDetail_NO_USE.cs">
+    <Compile Include="Forms\Business\frmBookReceipt_EditDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Business\frmBookReceipt_EditDetail_NO_USE.Designer.cs">
-      <DependentUpon>frmBookReceipt_EditDetail_NO_USE.cs</DependentUpon>
+    <Compile Include="Forms\Business\frmBookReceipt_EditDetail.Designer.cs">
+      <DependentUpon>frmBookReceipt_EditDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Business\frmCashReceipt.cs">
       <SubType>Form</SubType>
@@ -341,8 +341,8 @@
     <EmbeddedResource Include="Forms\Business\frmBookReceipt_Edit_NO_USE.resx">
       <DependentUpon>frmBookReceipt_Edit_NO_USE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Business\frmBookReceipt_EditDetail_NO_USE.resx">
-      <DependentUpon>frmBookReceipt_EditDetail_NO_USE.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Business\frmBookReceipt_EditDetail.resx">
+      <DependentUpon>frmBookReceipt_EditDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Business\frmCashReceipt.resx">
       <DependentUpon>frmCashReceipt.cs</DependentUpon>
