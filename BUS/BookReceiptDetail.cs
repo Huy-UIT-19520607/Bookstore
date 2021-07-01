@@ -49,9 +49,9 @@ namespace BookStore.BUS
                     total
                 ));
 
-                //Book.Instance.UpdateInStock(1, bookId,
-                //    BookReceipt.Instance.Receipts.First(receipt => receipt.Id == id).ReceiveDay,
-                //    number);
+                Book.Instance.UpdateInStock(3, bookId,
+                    BookReceipt.Instance.Receipts.First(receipt => receipt.Id == id).ReceiveDay,
+                    number);
 
                 return true;
             }
@@ -66,7 +66,7 @@ namespace BookStore.BUS
 
                 BookReceipt.Instance.DeleteAmount(id, obj.Total);
 
-                Book.Instance.UpdateInStock(3, obj.BookId, 
+                Book.Instance.UpdateInStock(1, obj.BookId, 
                     BookReceipt.Instance.Receipts.First(receipt => receipt.Id == id).ReceiveDay,
                     obj.Number);
 
@@ -97,9 +97,13 @@ namespace BookStore.BUS
 
                 BookReceipt.Instance.UpdateTotal(updated.Id, updated.Total, obj.Total);
 
-                Book.Instance.UpdateInStock(2, updated.BookId,
+                Book.Instance.UpdateInStock(4, updated.BookId,
                     BookReceipt.Instance.Receipts.First(receipt => receipt.Id == updated.Id).ReceiveDay,
                     updated.Number, obj.Number);
+
+                var book = Book.Instance.Books.First(bk => bk.Id == updated.BookId);
+                book.Price = updated.ReceivePrice / 100 * Parameter.Instance.TiLeTinhDonGiaBan.Value;
+                Book.Instance.UpdateBook(book);
 
                 obj.Number = updated.Number;
                 obj.ReceivePrice = updated.ReceivePrice;
