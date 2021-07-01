@@ -148,17 +148,17 @@
     <Compile Include="Forms\Business\frmBookReceipt_Add.Designer.cs">
       <DependentUpon>frmBookReceipt_Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Business\frmBookReceipt_Edit.cs">
+    <Compile Include="Forms\Business\frmBookReceipt_Edit_NO_USE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Business\frmBookReceipt_Edit.Designer.cs">
-      <DependentUpon>frmBookReceipt_Edit.cs</DependentUpon>
+    <Compile Include="Forms\Business\frmBookReceipt_Edit_NO_USE.Designer.cs">
+      <DependentUpon>frmBookReceipt_Edit_NO_USE.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Business\frmBookReceipt_EditDetail.cs">
+    <Compile Include="Forms\Business\frmBookReceipt_EditDetail_NO_USE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Business\frmBookReceipt_EditDetail.Designer.cs">
-      <DependentUpon>frmBookReceipt_EditDetail.cs</DependentUpon>
+    <Compile Include="Forms\Business\frmBookReceipt_EditDetail_NO_USE.Designer.cs">
+      <DependentUpon>frmBookReceipt_EditDetail_NO_USE.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Business\frmCashReceipt.cs">
       <SubType>Form</SubType>
@@ -338,11 +338,11 @@
     <EmbeddedResource Include="Forms\Business\frmBookReceipt_Add.resx">
       <DependentUpon>frmBookReceipt_Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Business\frmBookReceipt_Edit.resx">
-      <DependentUpon>frmBookReceipt_Edit.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Business\frmBookReceipt_Edit_NO_USE.resx">
+      <DependentUpon>frmBookReceipt_Edit_NO_USE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Business\frmBookReceipt_EditDetail.resx">
-      <DependentUpon>frmBookReceipt_EditDetail.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Business\frmBookReceipt_EditDetail_NO_USE.resx">
+      <DependentUpon>frmBookReceipt_EditDetail_NO_USE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Business\frmCashReceipt.resx">
       <DependentUpon>frmCashReceipt.cs</DependentUpon>
