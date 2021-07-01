@@ -124,10 +124,13 @@ namespace BookStore.BUS
                     book.InStock -= amount;
                     break;
                 case 2:
-                    book.InStock += (amount - oldAmount);
+                    book.InStock += (oldAmount - amount);
                     break;
                 case 3:
                     book.InStock += amount;
+                    break;
+                case 4:
+                    book.InStock += (amount - oldAmount);
                     break;
             }
 
@@ -138,12 +141,42 @@ namespace BookStore.BUS
                 && report.Year == date.Year
                 && report.BookId == bookId))
             {
-
+                CreateNewReport(date, bookId);
             }
             else
             {
                 InventoryReport.Instance.UpdateChange(bookId, date, book.InStock, old);
             }
+        }
+
+        private void CreateNewReport(DateTime date, int bookId)
+        {
+            var temp = BUS.InventoryReport.Instance.Reports.FirstOrDefault(report =>
+            {
+                int m = date.Month - 1;
+                int y = date.Year;
+
+                if (m == 0)
+                {
+                    m = 12;
+                    y--;
+                }
+
+                return report.Month == m && report.Year == y;
+            });
+
+            int start = temp == null ? 0 : temp.Final;
+            int change = SumBalance(date, bookId);
+
+            BUS.InventoryReport.Instance.AddReport
+            (
+                date.Month,
+                date.Year,
+                bookId,
+                start,
+                change,
+                start + change
+            );
         }
 
         public bool DeleteBook(int id)
