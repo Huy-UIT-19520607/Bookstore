@@ -322,6 +322,7 @@ namespace BookStore.Forms.Business
             this.btnDeleteBillDetail.TabIndex = 5;
             this.btnDeleteBillDetail.Text = "Xoá";
             this.btnDeleteBillDetail.UseVisualStyleBackColor = false;
+            this.btnDeleteBillDetail.Click += new System.EventHandler(this.btnDeleteBillDetail_Click);
             // 
             // btnEditBillDetail
             // 

@@ -12,12 +12,16 @@ namespace BookStore.Forms.Setting
 {
     public partial class frmRequirement : Form
     {
+        private int permission = 0;
+
         private string message { get; set; }
         private bool isChange { get; set; }
 
-        public frmRequirement()
+        public frmRequirement(DTO.Account login)
         {
             InitializeComponent();
+
+            permission = login.Permission;
 
             message = "";
             isChange = false;
@@ -31,6 +35,19 @@ namespace BookStore.Forms.Setting
             nudMinBookImportNo.Value = BUS.Parameter.Instance.SLNhapMin.Value;
             nudMaxDebt.Value = BUS.Parameter.Instance.SoTienNoMax.Value;
             gunaTsIsApply.Checked = BUS.Parameter.Instance.ApDungQD4.Value == 1 ? true : false;
+
+            if (permission == 1)
+            {
+                nudPercent.Enabled = false;
+                nudMinBookStoreNo.Enabled = false;
+                nudMaxBookStoreNo.Enabled = false;
+                nudMinBookImportNo.Enabled = false;
+                nudMaxDebt.Enabled = false;
+                gunaTsIsApply.Enabled = false;
+
+                btnSave.Visible = false;
+                btnCancel.Visible = false;
+            }
         }
 
         private void frmRequirement_Load(object sender, EventArgs e)
@@ -157,5 +174,6 @@ namespace BookStore.Forms.Setting
             message = "";
             isChange = false;
         }
+
     }
 }

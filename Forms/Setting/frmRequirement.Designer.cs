@@ -134,6 +134,7 @@ namespace BookStore.Forms.Setting
             // 
             this.gunaTsIsApply.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gunaTsIsApply.Animated = true;
+            this.gunaTsIsApply.BackColor = System.Drawing.Color.Transparent;
             this.gunaTsIsApply.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gunaTsIsApply.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gunaTsIsApply.CheckedState.InnerBorderColor = System.Drawing.Color.White;
@@ -149,7 +150,7 @@ namespace BookStore.Forms.Setting
             this.gunaTsIsApply.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.gunaTsIsApply.UncheckedState.InnerColor = System.Drawing.Color.White;
             this.gunaTsIsApply.UncheckedState.Parent = this.gunaTsIsApply;
-            // 
+            //
             // nudMaxDebt
             // 
             this.nudMaxDebt.Anchor = System.Windows.Forms.AnchorStyles.None;
