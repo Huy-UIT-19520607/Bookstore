@@ -76,7 +76,7 @@ namespace BookStore.BUS
                    balance
                 ));
 
-                if (balance > 0)
+                if (balance >= 0)
                 {
                     Customer.Instance.UpdateDebt(3, customerId, createDate, balance);
                 }
@@ -90,7 +90,7 @@ namespace BookStore.BUS
 
             if (DAO.Bill.Instance.UpdateBill(updated))
             {
-                if (updated.Balance > 0)
+                if (updated.Balance >= 0)
                 {
                     Customer.Instance.UpdateDebt(2, updated.CustomerId, updated.CreateDate, updated.Balance, obj.Balance);
                 }
