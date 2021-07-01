@@ -76,10 +76,7 @@ namespace BookStore.BUS
                    balance
                 ));
 
-                if (balance >= 0)
-                {
-                    Customer.Instance.UpdateDebt(3, customerId, createDate, balance);
-                }
+                Customer.Instance.UpdateDebt(3, customerId, createDate, balance);
             }
 
             return id;
@@ -90,10 +87,7 @@ namespace BookStore.BUS
 
             if (DAO.Bill.Instance.UpdateBill(updated))
             {
-                if (updated.Balance >= 0)
-                {
-                    Customer.Instance.UpdateDebt(2, updated.CustomerId, updated.CreateDate, updated.Balance, obj.Balance);
-                }
+                Customer.Instance.UpdateDebt(2, updated.CustomerId, updated.CreateDate, updated.Balance, obj.Balance);
 
                 obj.CustomerId = updated.CustomerId;
                 obj.CreateDate = updated.CreateDate;
@@ -112,10 +106,7 @@ namespace BookStore.BUS
             {
                 var obj = Bills.First(bill => bill.Id == id);
 
-                if (obj.Balance > 0)
-                {
-                    Customer.Instance.UpdateDebt(1, obj.CustomerId, obj.CreateDate, obj.Balance);
-                }
+                Customer.Instance.UpdateDebt(1, obj.CustomerId, obj.CreateDate, obj.Balance);
 
                 BillDetail.Instance.DeleteAllDetailById(id, obj.CreateDate);
 
