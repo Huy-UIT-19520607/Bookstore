@@ -61,7 +61,7 @@ namespace BookStore.Forms.Business
         {
             if (txtPublisher.Text.Trim() == "")
             {
-                errMsg = "Hãy điền tên nhà sản xuất";
+                errMsg = "Hãy điền tên nhà xuất bản";
                 CancelValidatedEvent(txtPublisher, lblPublisherError, e);
                 return;
             }
