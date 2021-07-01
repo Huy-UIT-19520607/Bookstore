@@ -172,6 +172,7 @@ namespace BookStore.Forms.Management
             {
                 errMsg = "Mật khẩu cũ không đúng";
                 CancelValidatedEvent(txtOldPassword, lblOldPasswordError, e);
+                return;
             }
             if (!ValidateInput.ValidNoneSpecialChar(txtOldPassword.Text, out errMsg))
             {
@@ -196,6 +197,7 @@ namespace BookStore.Forms.Management
             if (!ValidateInput.ValidNoneSpecialChar(txtNewPassword.Text, out errMsg))
             {
                 CancelValidatedEvent(txtNewPassword, lblNewPasswordError, e);
+                return;
             }
             if (txtNewPassword.Text == txtOldPassword.Text)
             {
@@ -217,10 +219,12 @@ namespace BookStore.Forms.Management
             {
                 errMsg = "Hãy xác nhận mật khẩu";
                 CancelValidatedEvent(txtConfirmPassword, lblConfirmPasswordError, e);
+                return;
             }
             if (!ValidateInput.ValidNoneSpecialChar(txtConfirmPassword.Text, out errMsg))
             {
                 CancelValidatedEvent(txtConfirmPassword, lblConfirmPasswordError, e);
+                return;
             }
             if (txtNewPassword.Text != txtConfirmPassword.Text)
             {

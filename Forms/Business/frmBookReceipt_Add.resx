@@ -137,10 +137,7 @@
         OBTD1pfY13y2G8i96s3CQbvkDseqtonn/QD40z1VhZSgrwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="SoPNS2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MaSach.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="MaDauSach2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="NhaXuatBan.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -158,14 +155,10 @@
   <metadata name="ThanhTien.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btnImportBookDetailSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAARFJREFUOE+t
-        0j9LQlEcxvFb0GJDkY4thjj5EgQXBcGpKeg9uAW9AbegKcQtlyDRRUQxCNeKFgchcNDdsUXoj7fvT568
-        XM4VEnvgM5znd8656tX71/i+f4RrzGD5wiNy2rI+bEphignKyOMUTXzjQlvdMNzDCF3sq16F7gz2aYqq
-        wmFwjnfEVTlhVsOTluEwuEVLy8gwz2GBQ1VBKNu40TIyzNOwJFUFoayir2VkmJfwgZiqIJQFfCKjKhT6
-        HTygo8oNwx7ekFK1DGt7Q1ewp2dVu2F4APvTzFHHJSoYq7O8wv0Rf8NwF/ZKG3iBXWiXnGAAyxAJHfl7
-        OBTD1pfY13y2G8i96s3CQbvkDseqtonn/QD40z1VhZSgrwAAAABJRU5ErkJggg==
-</value>
-  </data>
+  <metadata name="errBookReceipt_Add.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>20, 0</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>

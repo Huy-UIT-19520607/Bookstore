@@ -111,10 +111,12 @@ namespace BookStore.Forms.Management
             {
                 errMsg = "Hãy xác nhận mật khẩu";
                 CancelValidatedEvent(txtConfirmPassword, lblConfirmPasswordError, e);
+                return;
             }
             if (!ValidateInput.ValidNoneSpecialChar(txtConfirmPassword.Text, out errMsg))
             {
                 CancelValidatedEvent(txtConfirmPassword, lblConfirmPasswordError, e);
+                return;
             }
             if (txtPassword.Text != txtConfirmPassword.Text)
             {

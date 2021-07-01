@@ -166,7 +166,19 @@ namespace BookStore.Forms.Business
 
         private void btnDeleteBill_Click(object sender, EventArgs e)
         {
-            
+            if (gunaDgvBill.SelectedRows.Count > 0)
+            {
+                // Lấy row hiện tại
+                DataGridViewRow row = gunaDgvBill.SelectedRows[0];
+                int billId = Convert.ToInt32(row.Cells[0].Value.ToString());
+                int cusId = Convert.ToInt32(row.Cells[1].Value.ToString());
+
+                BUS.Bill.Instance.DeleteBill(billId);
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn hoá đơn muốn xoá");
+            }
         }
 
         private void btnEditBillDetail_Click(object sender, EventArgs e)
@@ -182,10 +194,30 @@ namespace BookStore.Forms.Business
             }
             else
             {
-                MessageBox.Show("Hãy phiếu thu tiền muốn sửa");
+                MessageBox.Show("Hãy chọn chi tiết hoá đơn muốn sửa");
             }
         }
 
-        
+        private void btnDeleteBillDetail_Click(object sender, EventArgs e)
+        {
+            if (gunaDgvBillDetail.SelectedRows.Count > 0)
+            {
+                // Lấy row hiện tại
+                DataGridViewRow row = gunaDgvBillDetail.SelectedRows[0];
+                int billId = Convert.ToInt32(row.Cells[0].Value.ToString());
+                int bookId = Convert.ToInt32(row.Cells[1].Value.ToString());
+
+                if (gunaDgvBillDetail.Rows.Count == 1)
+                {
+                    MessageBox.Show("")
+                }    
+                    BUS.BillDetail.Instance.DeleteDetail(billId, bookId);
+
+            }
+            else
+            {
+                MessageBox.Show("Hãy chi tiết hoá đơn muốn xoá");
+            }
+        }
     }
 }

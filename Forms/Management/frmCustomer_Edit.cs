@@ -37,7 +37,7 @@ namespace BookStore.Forms.Management
             this.txtAddress.Text = updatedCus.Address;
             this.txtPhone.Text = updatedCus.PhoneNumber;
             this.txtEmail.Text = updatedCus.Email;
-            this.nudDebtAmount.Value = updatedCus.Debt;
+            this.txtDebtAmount.Text = updatedCus.Debt.ToString();
 
             this.errCustomer_Edit.Clear();
             GC.Collect();

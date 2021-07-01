@@ -73,7 +73,7 @@ namespace BookStore.Forms.Management
             if (BUS.Category.Instance.Categories.
                 FirstOrDefault(cate => cate.Name == txtNewCategory.Text.Trim()) != null)
             {
-                MessageBox.Show("Thể loại này đã tồn tại");
+                MessageBox.Show("Thể loại này đã tồn tại", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

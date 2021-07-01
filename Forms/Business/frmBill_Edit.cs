@@ -12,7 +12,7 @@ namespace BookStore.Forms.Business
 {
     public partial class frmBill_Edit : Form
     {
-        
+        private int debtMax = BUS.Parameter.Instance.SoTienNoMax.Value;
 
         private DTO.Bill bill;
 
@@ -25,9 +25,14 @@ namespace BookStore.Forms.Business
             bill = BUS.Bill.Instance.Bills.First(bill => bill.Id == billId);
             customer = BUS.Customer.Instance.Customers.First(cus => cus.Id == cusId);
 
+            
+        }
+        private void frmBill_Edit_Load(object sender, EventArgs e)
+        {
+            lblDebtMax.Text = lblDebtMax.Text + " " + debtMax.ToString();
+
             LoadBillInfo();
         }
-
         private void LoadBillInfo()
         {
             this.txtBillCode.Text = bill.Id.ToString();
@@ -42,6 +47,7 @@ namespace BookStore.Forms.Business
             this.txtDebtAmount.Text = customer.Debt.ToString();
 
             this.nudPaidAmount.Maximum = this.nudTotalAmount.Value;
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -52,17 +58,16 @@ namespace BookStore.Forms.Business
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            int debtAmount = customer.Debt;
-
-            int debtMax = BUS.Parameter.Instance.SoTienNoMax.Value;
+            //int debtAmount = customer.Debt;
 
             if (nudTotalAmount.Value - nudPaidAmount.Value < 0)
             {
                 MessageBox.Show("Số tiền thanh toán không được vượt quá tổng tiền");
                 return;
             }
-
-            if ((bill.TotalPrice - nudPaidAmount.Value) + customer.Debt > debtMax)
+            
+            if ((bill.TotalPrice - nudPaidAmount.Value) + 
+                (customer.Debt - bill.Balance) > debtMax)
             {
                 MessageBox.Show(String.Format("Số tiền nợ mới của khách hàng đã vượt quá số tiền nợ tối đa {0}", debtMax));
                 return;
@@ -79,14 +84,27 @@ namespace BookStore.Forms.Business
 
         private void nudPaidAmount_ValueChanged(object sender, EventArgs e)
         {
-            if (nudTotalAmount.Value - nudPaidAmount.Value >= 0)
+            if (!String.IsNullOrEmpty(txtDebtAmount.Text))
             {
-                nudChangeAmount.Value = nudTotalAmount.Value - nudPaidAmount.Value;
-            }
-            else
-            {
-                MessageBox.Show("Số tiền thanh toán không được vượt quá tổng tiền");
-            }
+                if (nudTotalAmount.Value - nudPaidAmount.Value >= 0)
+                {
+                    int debt = Convert.ToInt32(txtDebtAmount.Text.ToString());
+
+                    debt -= (int)nudChangeAmount.Value;
+
+                    nudChangeAmount.Value = nudTotalAmount.Value - nudPaidAmount.Value;
+
+                    debt += (int)nudChangeAmount.Value;
+
+                    txtDebtAmount.Text = debt.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Số tiền thanh toán không được vượt quá tổng tiền");
+                }
+            }   
         }
+
+        
     }
 }

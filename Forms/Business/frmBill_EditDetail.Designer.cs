@@ -77,12 +77,12 @@ namespace BookStore.Forms.Business
             // 
             this.groupBox2.Controls.Add(this.panel2);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(355, 2);
+            this.groupBox2.Location = new System.Drawing.Point(1, 1);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(580, 476);
+            this.groupBox2.Size = new System.Drawing.Size(580, 486);
             this.groupBox2.TabIndex = 114;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông tin Sách";
+            this.groupBox2.Text = "Sách trong hoá đơn";
             // 
             // panel2
             // 
@@ -106,7 +106,7 @@ namespace BookStore.Forms.Business
             this.panel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(3, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(574, 438);
+            this.panel2.Size = new System.Drawing.Size(574, 448);
             this.panel2.TabIndex = 0;
             // 
             // nudPublishingYear
@@ -205,17 +205,18 @@ namespace BookStore.Forms.Business
             // txtAmount
             // 
             this.txtAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmount.Location = new System.Drawing.Point(147, 377);
+            this.txtAmount.Location = new System.Drawing.Point(124, 376);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.ReadOnly = true;
-            this.txtAmount.Size = new System.Drawing.Size(129, 33);
+            this.txtAmount.Size = new System.Drawing.Size(154, 33);
             this.txtAmount.TabIndex = 119;
+            this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 380);
+            this.label6.Location = new System.Drawing.Point(4, 379);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 25);
             this.label6.TabIndex = 118;
@@ -224,7 +225,7 @@ namespace BookStore.Forms.Business
             // nudQuantity
             // 
             this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQuantity.Location = new System.Drawing.Point(147, 273);
+            this.nudQuantity.Location = new System.Drawing.Point(124, 272);
             this.nudQuantity.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -236,7 +237,7 @@ namespace BookStore.Forms.Business
             0,
             0});
             this.nudQuantity.Name = "nudQuantity";
-            this.nudQuantity.Size = new System.Drawing.Size(128, 35);
+            this.nudQuantity.Size = new System.Drawing.Size(153, 35);
             this.nudQuantity.TabIndex = 117;
             this.nudQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudQuantity.Value = new decimal(new int[] {
@@ -255,7 +256,7 @@ namespace BookStore.Forms.Business
             0,
             0,
             0});
-            this.nudSoldPrice.Location = new System.Drawing.Point(147, 322);
+            this.nudSoldPrice.Location = new System.Drawing.Point(124, 321);
             this.nudSoldPrice.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -263,7 +264,7 @@ namespace BookStore.Forms.Business
             0});
             this.nudSoldPrice.Name = "nudSoldPrice";
             this.nudSoldPrice.ReadOnly = true;
-            this.nudSoldPrice.Size = new System.Drawing.Size(128, 35);
+            this.nudSoldPrice.Size = new System.Drawing.Size(153, 35);
             this.nudSoldPrice.TabIndex = 116;
             this.nudSoldPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -271,7 +272,7 @@ namespace BookStore.Forms.Business
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 328);
+            this.label3.Location = new System.Drawing.Point(4, 327);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 25);
             this.label3.TabIndex = 115;
@@ -281,7 +282,7 @@ namespace BookStore.Forms.Business
             // 
             this.lblNewCategory.AutoSize = true;
             this.lblNewCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewCategory.Location = new System.Drawing.Point(3, 279);
+            this.lblNewCategory.Location = new System.Drawing.Point(4, 278);
             this.lblNewCategory.Name = "lblNewCategory";
             this.lblNewCategory.Size = new System.Drawing.Size(91, 25);
             this.lblNewCategory.TabIndex = 114;
@@ -310,9 +311,9 @@ namespace BookStore.Forms.Business
             // 
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(2, 64);
+            this.groupBox1.Location = new System.Drawing.Point(609, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(315, 330);
+            this.groupBox1.Size = new System.Drawing.Size(303, 296);
             this.groupBox1.TabIndex = 115;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin Hoá đơn";
@@ -333,14 +334,14 @@ namespace BookStore.Forms.Business
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(3, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(309, 292);
+            this.panel1.Size = new System.Drawing.Size(297, 258);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 24);
+            this.label1.Location = new System.Drawing.Point(18, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 62;
@@ -349,7 +350,7 @@ namespace BookStore.Forms.Business
             // txtBillCode
             // 
             this.txtBillCode.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillCode.Location = new System.Drawing.Point(144, 21);
+            this.txtBillCode.Location = new System.Drawing.Point(138, 10);
             this.txtBillCode.Name = "txtBillCode";
             this.txtBillCode.ReadOnly = true;
             this.txtBillCode.Size = new System.Drawing.Size(117, 33);
@@ -364,7 +365,7 @@ namespace BookStore.Forms.Business
             0,
             0,
             0});
-            this.nudTotalAmount.Location = new System.Drawing.Point(145, 127);
+            this.nudTotalAmount.Location = new System.Drawing.Point(139, 116);
             this.nudTotalAmount.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -386,7 +387,7 @@ namespace BookStore.Forms.Business
             0,
             0,
             0});
-            this.nudChangeAmount.Location = new System.Drawing.Point(145, 224);
+            this.nudChangeAmount.Location = new System.Drawing.Point(139, 213);
             this.nudChangeAmount.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -408,7 +409,7 @@ namespace BookStore.Forms.Business
             0,
             0,
             0});
-            this.nudPaidAmount.Location = new System.Drawing.Point(145, 173);
+            this.nudPaidAmount.Location = new System.Drawing.Point(139, 162);
             this.nudPaidAmount.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -424,7 +425,7 @@ namespace BookStore.Forms.Business
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(24, 226);
+            this.label5.Location = new System.Drawing.Point(18, 215);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 25);
             this.label5.TabIndex = 57;
@@ -434,7 +435,7 @@ namespace BookStore.Forms.Business
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(24, 175);
+            this.label10.Location = new System.Drawing.Point(18, 164);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(112, 25);
             this.label10.TabIndex = 56;
@@ -445,7 +446,7 @@ namespace BookStore.Forms.Business
             this.dtmBillDate.Enabled = false;
             this.dtmBillDate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtmBillDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtmBillDate.Location = new System.Drawing.Point(145, 72);
+            this.dtmBillDate.Location = new System.Drawing.Point(139, 61);
             this.dtmBillDate.Name = "dtmBillDate";
             this.dtmBillDate.Size = new System.Drawing.Size(134, 33);
             this.dtmBillDate.TabIndex = 55;
@@ -454,7 +455,7 @@ namespace BookStore.Forms.Business
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(24, 129);
+            this.label11.Location = new System.Drawing.Point(18, 118);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(96, 25);
             this.label11.TabIndex = 54;
@@ -464,7 +465,7 @@ namespace BookStore.Forms.Business
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(24, 78);
+            this.label12.Location = new System.Drawing.Point(18, 67);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(91, 25);
             this.label12.TabIndex = 53;
@@ -478,7 +479,7 @@ namespace BookStore.Forms.Business
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOk.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.Color.White;
-            this.btnOk.Location = new System.Drawing.Point(583, 498);
+            this.btnOk.Location = new System.Drawing.Point(605, 428);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(137, 46);
             this.btnOk.TabIndex = 116;
@@ -494,7 +495,7 @@ namespace BookStore.Forms.Business
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(744, 498);
+            this.btnCancel.Location = new System.Drawing.Point(766, 428);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(137, 46);
             this.btnCancel.TabIndex = 117;
@@ -504,10 +505,9 @@ namespace BookStore.Forms.Business
             // 
             // frmBill_EditDetail
             // 
-            this.AcceptButton = this.btnOk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(939, 556);
+            this.ClientSize = new System.Drawing.Size(914, 503);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.groupBox1);
@@ -519,6 +519,7 @@ namespace BookStore.Forms.Business
             this.Name = "frmBill_EditDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa Chi tiết hoá đơn";
+            this.Load += new System.EventHandler(this.frmBill_EditDetail_Load);
             this.groupBox2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

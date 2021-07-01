@@ -30,6 +30,9 @@ namespace BookStore.Forms.Business
             cboPhone.DisplayMember = "PhoneNumber";
             cboPhone.DataSource = BUS.Customer.Instance.Customers;
             gunaDgvBook.DataSource = BUS.Book.Instance.Books;
+
+            lblInStockMin.Text = lblInStockMin.Text + " " + inStockMin.ToString();
+            lblDebtMax.Text = lblDebtMax.Text + " " + debtMax.ToString();
         }
 
         private void gunaDgvBook_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -158,14 +161,12 @@ namespace BookStore.Forms.Business
                 int soldPrice = (int)row.Cells[2].Value;
                 int amount = (int)row.Cells[3].Value;
 
-             
                 //BUS.InventoryReport.Instance.UpdateChange(oldBook.Id, dtmBillDate.Value, 0, quantity);
 
                 BUS.BillDetail.Instance.AddDetail(new DTO.BillDetail(billId, bookId, quantity, soldPrice, amount));
 
                 //BUS.Book.Instance.UpdateInStock(1, bookId, dtmBillDate.Value, quantity, 0);
 
-                
             }
 
             //int debtFinal = (int)(debtAmuont + nudChangeAmount.Value);
@@ -209,6 +210,13 @@ namespace BookStore.Forms.Business
 
                 nudPaidAmount.Enabled = true;
                 nudPaidAmount.Maximum = nudTotalAmount.Value;
+                nudChangeAmount.Value = nudTotalAmount.Value - nudPaidAmount.Value;
+
+                int debt = Convert.ToInt32(txtDebtAmount.Text.ToString());
+
+                debt += (int)nudChangeAmount.Value;
+
+                txtDebtAmount.Text = debt.ToString();
             }
             else
             {
@@ -238,10 +246,25 @@ namespace BookStore.Forms.Business
 
         private void nudPaidAmount_ValueChanged(object sender, EventArgs e)
         {
-            if (nudTotalAmount.Value - nudPaidAmount.Value >= 0)
+            if (!String.IsNullOrEmpty(txtDebtAmount.Text))
             {
-                nudChangeAmount.Value = nudTotalAmount.Value - nudPaidAmount.Value;
-            } 
+                if (nudTotalAmount.Value - nudPaidAmount.Value >= 0)
+                {
+                    int debt = Convert.ToInt32(txtDebtAmount.Text.ToString());
+
+                    debt -= (int)nudChangeAmount.Value;
+
+                    nudChangeAmount.Value = nudTotalAmount.Value - nudPaidAmount.Value;
+
+                    debt += (int)nudChangeAmount.Value;
+
+                    txtDebtAmount.Text = debt.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Số tiền thanh toán không được vượt quá tổng tiền");
+                }
+            }
         }
 
 

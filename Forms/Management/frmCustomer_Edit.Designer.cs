@@ -47,9 +47,8 @@ namespace BookStore.Forms.Management
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblCustomerNameError = new System.Windows.Forms.Label();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
-            this.nudDebtAmount = new System.Windows.Forms.NumericUpDown();
             this.errCustomer_Edit = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.nudDebtAmount)).BeginInit();
+            this.txtDebtAmount = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errCustomer_Edit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -238,33 +237,20 @@ namespace BookStore.Forms.Management
             this.txtCustomerName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCustomerName_Validating);
             this.txtCustomerName.Validated += new System.EventHandler(this.txtCustomerName_Validated);
             // 
-            // nudDebtAmount
-            // 
-            this.nudDebtAmount.Enabled = false;
-            this.nudDebtAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudDebtAmount.Increment = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudDebtAmount.Location = new System.Drawing.Point(213, 294);
-            this.nudDebtAmount.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
-            0,
-            0});
-            this.nudDebtAmount.Name = "nudDebtAmount";
-            this.nudDebtAmount.ReadOnly = true;
-            this.nudDebtAmount.Size = new System.Drawing.Size(134, 33);
-            this.nudDebtAmount.TabIndex = 5;
-            this.nudDebtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudDebtAmount.ThousandsSeparator = true;
-            // 
             // errCustomer_Edit
             // 
             this.errCustomer_Edit.BlinkRate = 0;
             this.errCustomer_Edit.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errCustomer_Edit.ContainerControl = this;
+            // 
+            // txtDebtAmount
+            // 
+            this.txtDebtAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDebtAmount.Location = new System.Drawing.Point(213, 293);
+            this.txtDebtAmount.Name = "txtDebtAmount";
+            this.txtDebtAmount.ReadOnly = true;
+            this.txtDebtAmount.Size = new System.Drawing.Size(149, 33);
+            this.txtDebtAmount.TabIndex = 68;
             // 
             // frmCustomer_Edit
             // 
@@ -273,7 +259,7 @@ namespace BookStore.Forms.Management
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(507, 426);
-            this.Controls.Add(this.nudDebtAmount);
+            this.Controls.Add(this.txtDebtAmount);
             this.Controls.Add(this.lblEmailError);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblPhoneError);
@@ -298,7 +284,6 @@ namespace BookStore.Forms.Management
             this.Name = "frmCustomer_Edit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa Khách hàng";
-            ((System.ComponentModel.ISupportInitialize)(this.nudDebtAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errCustomer_Edit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -323,7 +308,7 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblCustomerNameError;
         private System.Windows.Forms.TextBox txtCustomerName;
-        private System.Windows.Forms.NumericUpDown nudDebtAmount;
         private System.Windows.Forms.ErrorProvider errCustomer_Edit;
+        private System.Windows.Forms.TextBox txtDebtAmount;
     }
 }

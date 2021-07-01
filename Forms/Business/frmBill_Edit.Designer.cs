@@ -53,6 +53,7 @@ namespace BookStore.Forms.Business
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNewCategory = new System.Windows.Forms.Label();
+            this.lblDebtMax = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTotalAmount)).BeginInit();
@@ -70,7 +71,7 @@ namespace BookStore.Forms.Business
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOk.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.Color.White;
-            this.btnOk.Location = new System.Drawing.Point(494, 333);
+            this.btnOk.Location = new System.Drawing.Point(380, 333);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(137, 46);
             this.btnOk.TabIndex = 53;
@@ -86,7 +87,7 @@ namespace BookStore.Forms.Business
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(655, 333);
+            this.btnCancel.Location = new System.Drawing.Point(541, 333);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(137, 46);
             this.btnCancel.TabIndex = 54;
@@ -98,7 +99,7 @@ namespace BookStore.Forms.Business
             // 
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(491, 2);
+            this.groupBox1.Location = new System.Drawing.Point(378, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(315, 316);
             this.groupBox1.TabIndex = 55;
@@ -264,13 +265,14 @@ namespace BookStore.Forms.Business
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(1, 26);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(469, 292);
+            this.groupBox2.Size = new System.Drawing.Size(346, 292);
             this.groupBox2.TabIndex = 87;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin Khách hàng";
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblDebtMax);
             this.panel2.Controls.Add(this.txtDebtAmount);
             this.panel2.Controls.Add(this.txtPhone);
             this.panel2.Controls.Add(this.txtCustomerName);
@@ -283,13 +285,13 @@ namespace BookStore.Forms.Business
             this.panel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(3, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(463, 254);
+            this.panel2.Size = new System.Drawing.Size(340, 254);
             this.panel2.TabIndex = 0;
             // 
             // txtDebtAmount
             // 
             this.txtDebtAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDebtAmount.Location = new System.Drawing.Point(199, 190);
+            this.txtDebtAmount.Location = new System.Drawing.Point(108, 179);
             this.txtDebtAmount.Name = "txtDebtAmount";
             this.txtDebtAmount.ReadOnly = true;
             this.txtDebtAmount.Size = new System.Drawing.Size(153, 33);
@@ -298,7 +300,7 @@ namespace BookStore.Forms.Business
             // txtPhone
             // 
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(199, 137);
+            this.txtPhone.Location = new System.Drawing.Point(108, 126);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.ReadOnly = true;
             this.txtPhone.Size = new System.Drawing.Size(225, 33);
@@ -307,7 +309,7 @@ namespace BookStore.Forms.Business
             // txtCustomerName
             // 
             this.txtCustomerName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.Location = new System.Drawing.Point(199, 83);
+            this.txtCustomerName.Location = new System.Drawing.Point(108, 72);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.ReadOnly = true;
             this.txtCustomerName.Size = new System.Drawing.Size(225, 33);
@@ -316,7 +318,7 @@ namespace BookStore.Forms.Business
             // txtCustomerCode
             // 
             this.txtCustomerCode.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerCode.Location = new System.Drawing.Point(199, 29);
+            this.txtCustomerCode.Location = new System.Drawing.Point(108, 18);
             this.txtCustomerCode.Name = "txtCustomerCode";
             this.txtCustomerCode.ReadOnly = true;
             this.txtCustomerCode.Size = new System.Drawing.Size(106, 33);
@@ -326,17 +328,17 @@ namespace BookStore.Forms.Business
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 32);
+            this.label3.Location = new System.Drawing.Point(8, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 25);
+            this.label3.Size = new System.Drawing.Size(72, 25);
             this.label3.TabIndex = 90;
-            this.label3.Text = "Mã khách hàng:";
+            this.label3.Text = "Mã KH:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 193);
+            this.label2.Location = new System.Drawing.Point(8, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 25);
             this.label2.TabIndex = 89;
@@ -346,7 +348,7 @@ namespace BookStore.Forms.Business
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 140);
+            this.label1.Location = new System.Drawing.Point(8, 129);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 25);
             this.label1.TabIndex = 87;
@@ -356,17 +358,28 @@ namespace BookStore.Forms.Business
             // 
             this.lblNewCategory.AutoSize = true;
             this.lblNewCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewCategory.Location = new System.Drawing.Point(33, 86);
+            this.lblNewCategory.Location = new System.Drawing.Point(8, 75);
             this.lblNewCategory.Name = "lblNewCategory";
-            this.lblNewCategory.Size = new System.Drawing.Size(148, 25);
+            this.lblNewCategory.Size = new System.Drawing.Size(74, 25);
             this.lblNewCategory.TabIndex = 85;
-            this.lblNewCategory.Text = "Tên khách hàng:";
+            this.lblNewCategory.Text = "Tên KH:";
+            // 
+            // lblDebtMax
+            // 
+            this.lblDebtMax.AutoSize = true;
+            this.lblDebtMax.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDebtMax.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblDebtMax.Location = new System.Drawing.Point(24, 228);
+            this.lblDebtMax.Name = "lblDebtMax";
+            this.lblDebtMax.Size = new System.Drawing.Size(216, 17);
+            this.lblDebtMax.TabIndex = 89;
+            this.lblDebtMax.Text = "Số tiền nợ tối đa của khách hàng là:";
             // 
             // frmBill_Edit
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(810, 391);
+            this.ClientSize = new System.Drawing.Size(696, 391);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnOk);
@@ -378,6 +391,7 @@ namespace BookStore.Forms.Business
             this.Name = "frmBill_Edit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa Hoá đơn";
+            this.Load += new System.EventHandler(this.frmBill_Edit_Load);
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -416,5 +430,6 @@ namespace BookStore.Forms.Business
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNewCategory;
+        private System.Windows.Forms.Label lblDebtMax;
     }
 }

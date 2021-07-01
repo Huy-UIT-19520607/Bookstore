@@ -181,9 +181,9 @@ namespace BookStore.Forms.Management
             // 
             this.lblConfirmPasswordError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmPasswordError.ForeColor = System.Drawing.Color.Red;
-            this.lblConfirmPasswordError.Location = new System.Drawing.Point(240, 227);
+            this.lblConfirmPasswordError.Location = new System.Drawing.Point(171, 227);
             this.lblConfirmPasswordError.Name = "lblConfirmPasswordError";
-            this.lblConfirmPasswordError.Size = new System.Drawing.Size(215, 17);
+            this.lblConfirmPasswordError.Size = new System.Drawing.Size(284, 17);
             this.lblConfirmPasswordError.TabIndex = 27;
             this.lblConfirmPasswordError.Text = "ConfirmPassword Error";
             this.lblConfirmPasswordError.TextAlign = System.Drawing.ContentAlignment.TopRight;
