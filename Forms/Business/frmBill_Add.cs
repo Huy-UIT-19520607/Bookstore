@@ -102,7 +102,7 @@ namespace BookStore.Forms.Business
                 int quantity = (int)nudQuantity.Value;
                 int amount = quantity * soldPrice;
 
-                nudQuantity.Maximum = quantity;
+                nudQuantity.Maximum = inStock - inStockMin;
 
                 if (inStock - quantity < inStockMin)
                 {

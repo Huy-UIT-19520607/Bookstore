@@ -85,7 +85,7 @@ namespace BookStore.BUS
             {
                 Details.Remove(detail);
 
-                Book.Instance.UpdateInStock(3, detail.BookId, date, detail.Number);
+                Book.Instance.UpdateInStock(1, detail.BookId, date, detail.Number);
             }
         }
 
