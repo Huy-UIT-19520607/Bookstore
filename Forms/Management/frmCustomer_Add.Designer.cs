@@ -29,40 +29,45 @@ namespace BookStore.Forms.Management
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblConfirmPasswordError = new System.Windows.Forms.Label();
-            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.lblEmailError = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblPasswordError = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblPhoneError = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblDisplayNameError = new System.Windows.Forms.Label();
-            this.txtDisplayName = new System.Windows.Forms.TextBox();
+            this.lblAddressError = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblUsernameError = new System.Windows.Forms.Label();
+            this.lblCustomerNameError = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.lblNewCategory = new System.Windows.Forms.Label();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.lbl = new System.Windows.Forms.Label();
+            this.errCustomer_Add = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errCustomer_Add)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblConfirmPasswordError
+            // lblEmailError
             // 
-            this.lblConfirmPasswordError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmPasswordError.ForeColor = System.Drawing.Color.Red;
-            this.lblConfirmPasswordError.Location = new System.Drawing.Point(210, 230);
-            this.lblConfirmPasswordError.Name = "lblConfirmPasswordError";
-            this.lblConfirmPasswordError.Size = new System.Drawing.Size(215, 17);
-            this.lblConfirmPasswordError.TabIndex = 41;
-            this.lblConfirmPasswordError.Text = "ConfirmPassword Error";
-            this.lblConfirmPasswordError.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblEmailError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailError.ForeColor = System.Drawing.Color.Red;
+            this.lblEmailError.Location = new System.Drawing.Point(210, 230);
+            this.lblEmailError.Name = "lblEmailError";
+            this.lblEmailError.Size = new System.Drawing.Size(215, 17);
+            this.lblEmailError.TabIndex = 41;
+            this.lblEmailError.Text = "Email Error";
+            this.lblEmailError.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // txtConfirmPassword
+            // txtEmail
             // 
-            this.txtConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(210, 197);
-            this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(215, 33);
-            this.txtConfirmPassword.TabIndex = 40;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(210, 197);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(215, 33);
+            this.txtEmail.TabIndex = 3;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
+            this.txtEmail.Validated += new System.EventHandler(this.txtEmail_Validated);
             // 
             // label5
             // 
@@ -74,24 +79,26 @@ namespace BookStore.Forms.Management
             this.label5.TabIndex = 39;
             this.label5.Text = "Email:";
             // 
-            // lblPasswordError
+            // lblPhoneError
             // 
-            this.lblPasswordError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordError.ForeColor = System.Drawing.Color.Red;
-            this.lblPasswordError.Location = new System.Drawing.Point(210, 176);
-            this.lblPasswordError.Name = "lblPasswordError";
-            this.lblPasswordError.Size = new System.Drawing.Size(215, 17);
-            this.lblPasswordError.TabIndex = 38;
-            this.lblPasswordError.Text = "Password Error";
-            this.lblPasswordError.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblPhoneError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneError.ForeColor = System.Drawing.Color.Red;
+            this.lblPhoneError.Location = new System.Drawing.Point(210, 176);
+            this.lblPhoneError.Name = "lblPhoneError";
+            this.lblPhoneError.Size = new System.Drawing.Size(215, 17);
+            this.lblPhoneError.TabIndex = 38;
+            this.lblPhoneError.Text = "Phone Error";
+            this.lblPhoneError.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // txtPassword
+            // txtPhone
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(210, 143);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(215, 33);
-            this.txtPassword.TabIndex = 37;
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(210, 143);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(215, 33);
+            this.txtPhone.TabIndex = 2;
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
+            this.txtPhone.Validated += new System.EventHandler(this.txtPhone_Validated);
             // 
             // label4
             // 
@@ -103,24 +110,26 @@ namespace BookStore.Forms.Management
             this.label4.TabIndex = 36;
             this.label4.Text = "SĐT:";
             // 
-            // lblDisplayNameError
+            // lblAddressError
             // 
-            this.lblDisplayNameError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplayNameError.ForeColor = System.Drawing.Color.Red;
-            this.lblDisplayNameError.Location = new System.Drawing.Point(210, 121);
-            this.lblDisplayNameError.Name = "lblDisplayNameError";
-            this.lblDisplayNameError.Size = new System.Drawing.Size(215, 17);
-            this.lblDisplayNameError.TabIndex = 35;
-            this.lblDisplayNameError.Text = "DisplayName Error";
-            this.lblDisplayNameError.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblAddressError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressError.ForeColor = System.Drawing.Color.Red;
+            this.lblAddressError.Location = new System.Drawing.Point(141, 121);
+            this.lblAddressError.Name = "lblAddressError";
+            this.lblAddressError.Size = new System.Drawing.Size(284, 17);
+            this.lblAddressError.TabIndex = 35;
+            this.lblAddressError.Text = "Address Error";
+            this.lblAddressError.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // txtDisplayName
+            // txtAddress
             // 
-            this.txtDisplayName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDisplayName.Location = new System.Drawing.Point(210, 88);
-            this.txtDisplayName.Name = "txtDisplayName";
-            this.txtDisplayName.Size = new System.Drawing.Size(215, 33);
-            this.txtDisplayName.TabIndex = 34;
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(210, 88);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(215, 33);
+            this.txtAddress.TabIndex = 1;
+            this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txtAddress_Validating);
+            this.txtAddress.Validated += new System.EventHandler(this.txtAddress_Validated);
             // 
             // label2
             // 
@@ -132,16 +141,16 @@ namespace BookStore.Forms.Management
             this.label2.TabIndex = 33;
             this.label2.Text = "Địa chỉ:";
             // 
-            // lblUsernameError
+            // lblCustomerNameError
             // 
-            this.lblUsernameError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsernameError.ForeColor = System.Drawing.Color.Red;
-            this.lblUsernameError.Location = new System.Drawing.Point(210, 66);
-            this.lblUsernameError.Name = "lblUsernameError";
-            this.lblUsernameError.Size = new System.Drawing.Size(215, 17);
-            this.lblUsernameError.TabIndex = 32;
-            this.lblUsernameError.Text = "Username Error";
-            this.lblUsernameError.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblCustomerNameError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerNameError.ForeColor = System.Drawing.Color.Red;
+            this.lblCustomerNameError.Location = new System.Drawing.Point(138, 66);
+            this.lblCustomerNameError.Name = "lblCustomerNameError";
+            this.lblCustomerNameError.Size = new System.Drawing.Size(287, 17);
+            this.lblCustomerNameError.TabIndex = 32;
+            this.lblCustomerNameError.Text = "CustomerName Error";
+            this.lblCustomerNameError.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // btnOk
             // 
@@ -154,9 +163,10 @@ namespace BookStore.Forms.Management
             this.btnOk.Location = new System.Drawing.Point(176, 278);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(137, 46);
-            this.btnOk.TabIndex = 30;
+            this.btnOk.TabIndex = 4;
             this.btnOk.Text = "Tạo mới";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -169,47 +179,58 @@ namespace BookStore.Forms.Management
             this.btnCancel.Location = new System.Drawing.Point(337, 278);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(137, 46);
-            this.btnCancel.TabIndex = 31;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txtUsername
+            // txtCustomerName
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(210, 33);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(215, 33);
-            this.txtUsername.TabIndex = 29;
+            this.txtCustomerName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerName.Location = new System.Drawing.Point(210, 33);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(215, 33);
+            this.txtCustomerName.TabIndex = 0;
+            this.txtCustomerName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCustomerName_Validating);
+            this.txtCustomerName.Validated += new System.EventHandler(this.txtCustomerName_Validated);
             // 
-            // lblNewCategory
+            // lbl
             // 
-            this.lblNewCategory.AutoSize = true;
-            this.lblNewCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewCategory.Location = new System.Drawing.Point(44, 36);
-            this.lblNewCategory.Name = "lblNewCategory";
-            this.lblNewCategory.Size = new System.Drawing.Size(148, 25);
-            this.lblNewCategory.TabIndex = 28;
-            this.lblNewCategory.Text = "Tên khách hàng:";
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.Location = new System.Drawing.Point(44, 36);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(148, 25);
+            this.lbl.TabIndex = 28;
+            this.lbl.Text = "Tên khách hàng:";
+            // 
+            // errCustomer_Add
+            // 
+            this.errCustomer_Add.BlinkRate = 0;
+            this.errCustomer_Add.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errCustomer_Add.ContainerControl = this;
             // 
             // frmCustomer_Add
             // 
+            this.AcceptButton = this.btnOk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(498, 345);
-            this.Controls.Add(this.lblConfirmPasswordError);
-            this.Controls.Add(this.txtConfirmPassword);
+            this.Controls.Add(this.lblEmailError);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblPasswordError);
-            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.lblPhoneError);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblDisplayNameError);
-            this.Controls.Add(this.txtDisplayName);
+            this.Controls.Add(this.lblAddressError);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblUsernameError);
+            this.Controls.Add(this.lblCustomerNameError);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.lblNewCategory);
+            this.Controls.Add(this.txtCustomerName);
+            this.Controls.Add(this.lbl);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -217,6 +238,7 @@ namespace BookStore.Forms.Management
             this.Name = "frmCustomer_Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Khách hàng";
+            ((System.ComponentModel.ISupportInitialize)(this.errCustomer_Add)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,19 +246,20 @@ namespace BookStore.Forms.Management
 
         #endregion
 
-        private System.Windows.Forms.Label lblConfirmPasswordError;
-        private System.Windows.Forms.TextBox txtConfirmPassword;
+        private System.Windows.Forms.Label lblEmailError;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblPasswordError;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblPhoneError;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblDisplayNameError;
-        private System.Windows.Forms.TextBox txtDisplayName;
+        private System.Windows.Forms.Label lblAddressError;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblUsernameError;
+        private System.Windows.Forms.Label lblCustomerNameError;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label lblNewCategory;
+        private System.Windows.Forms.TextBox txtCustomerName;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.ErrorProvider errCustomer_Add;
     }
 }

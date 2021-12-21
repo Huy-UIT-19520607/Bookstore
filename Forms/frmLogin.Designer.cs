@@ -63,6 +63,8 @@ namespace BookStore.Forms
             this.btnCancel = new System.Windows.Forms.Button();
             this.tmrForgotPassword = new System.Windows.Forms.Timer(this.components);
             this.tmrLogin = new System.Windows.Forms.Timer(this.components);
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errLogin)).BeginInit();
@@ -73,7 +75,7 @@ namespace BookStore.Forms
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(41, 2);
+            this.label1.Location = new System.Drawing.Point(38, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(255, 32);
             this.label1.TabIndex = 4;
@@ -86,10 +88,10 @@ namespace BookStore.Forms
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(33, 260);
+            this.btnLogin.Location = new System.Drawing.Point(33, 250);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(105, 36);
-            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Size = new System.Drawing.Size(106, 46);
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -101,9 +103,9 @@ namespace BookStore.Forms
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(183, 260);
+            this.btnExit.Location = new System.Drawing.Point(161, 250);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(84, 36);
+            this.btnExit.Size = new System.Drawing.Size(106, 46);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -112,7 +114,7 @@ namespace BookStore.Forms
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 82);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(303, 127);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -142,9 +144,9 @@ namespace BookStore.Forms
             this.pnlLogin.Controls.Add(this.label2);
             this.pnlLogin.Controls.Add(this.btnLogin);
             this.pnlLogin.Controls.Add(this.btnExit);
-            this.pnlLogin.Location = new System.Drawing.Point(14, 190);
+            this.pnlLogin.Location = new System.Drawing.Point(11, 215);
             this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(303, 325);
+            this.pnlLogin.Size = new System.Drawing.Size(303, 306);
             this.pnlLogin.TabIndex = 15;
             // 
             // lblPasswordError
@@ -194,7 +196,7 @@ namespace BookStore.Forms
             this.gunaTxtPassword.SelectedText = "";
             this.gunaTxtPassword.ShadowDecoration.Parent = this.gunaTxtPassword;
             this.gunaTxtPassword.Size = new System.Drawing.Size(234, 27);
-            this.gunaTxtPassword.TabIndex = 18;
+            this.gunaTxtPassword.TabIndex = 1;
             this.gunaTxtPassword.UseSystemPasswordChar = true;
             this.gunaTxtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.gunaTxtPassword_Validating);
             this.gunaTxtPassword.Validated += new System.EventHandler(this.gunaTxtPassword_Validated);
@@ -224,7 +226,7 @@ namespace BookStore.Forms
             this.gunaTxtUsername.SelectedText = "";
             this.gunaTxtUsername.ShadowDecoration.Parent = this.gunaTxtUsername;
             this.gunaTxtUsername.Size = new System.Drawing.Size(234, 29);
-            this.gunaTxtUsername.TabIndex = 17;
+            this.gunaTxtUsername.TabIndex = 0;
             this.gunaTxtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.gunaTxtUsername_Validating);
             this.gunaTxtUsername.Validated += new System.EventHandler(this.gunaTxtUsername_Validated);
             // 
@@ -253,7 +255,7 @@ namespace BookStore.Forms
             this.lblForgotPassword.Location = new System.Drawing.Point(96, 214);
             this.lblForgotPassword.Name = "lblForgotPassword";
             this.lblForgotPassword.Size = new System.Drawing.Size(117, 21);
-            this.lblForgotPassword.TabIndex = 9;
+            this.lblForgotPassword.TabIndex = 2;
             this.lblForgotPassword.Text = "Quên mật khẩu";
             this.lblForgotPassword.Click += new System.EventHandler(this.lblForgotPassword_Click);
             // 
@@ -288,7 +290,7 @@ namespace BookStore.Forms
             this.gunaTxtNewPassword.SelectedText = "";
             this.gunaTxtNewPassword.ShadowDecoration.Parent = this.gunaTxtNewPassword;
             this.gunaTxtNewPassword.Size = new System.Drawing.Size(234, 27);
-            this.gunaTxtNewPassword.TabIndex = 22;
+            this.gunaTxtNewPassword.TabIndex = 5;
             this.gunaTxtNewPassword.UseSystemPasswordChar = true;
             this.gunaTxtNewPassword.Validating += new System.ComponentModel.CancelEventHandler(this.gunaTxtNewPassword_Validating);
             this.gunaTxtNewPassword.Validated += new System.EventHandler(this.gunaTxtNewPassword_Validated);
@@ -358,9 +360,9 @@ namespace BookStore.Forms
             this.pnlForgotPassword.Controls.Add(this.panel7);
             this.pnlForgotPassword.Controls.Add(this.gunaTxtNewPassword);
             this.pnlForgotPassword.Controls.Add(this.panel8);
-            this.pnlForgotPassword.Location = new System.Drawing.Point(352, 190);
+            this.pnlForgotPassword.Location = new System.Drawing.Point(343, 215);
             this.pnlForgotPassword.Name = "pnlForgotPassword";
-            this.pnlForgotPassword.Size = new System.Drawing.Size(303, 325);
+            this.pnlForgotPassword.Size = new System.Drawing.Size(303, 306);
             this.pnlForgotPassword.TabIndex = 16;
             // 
             // gunaTxtConfirmPassword
@@ -388,7 +390,7 @@ namespace BookStore.Forms
             this.gunaTxtConfirmPassword.SelectedText = "";
             this.gunaTxtConfirmPassword.ShadowDecoration.Parent = this.gunaTxtConfirmPassword;
             this.gunaTxtConfirmPassword.Size = new System.Drawing.Size(234, 27);
-            this.gunaTxtConfirmPassword.TabIndex = 27;
+            this.gunaTxtConfirmPassword.TabIndex = 6;
             this.gunaTxtConfirmPassword.UseSystemPasswordChar = true;
             this.gunaTxtConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.gunaTxtConfirmPassword_Validating);
             this.gunaTxtConfirmPassword.Validated += new System.EventHandler(this.gunaTxtConfirmPassword_Validated);
@@ -418,7 +420,7 @@ namespace BookStore.Forms
             this.gunaTxtUsernameFP.SelectedText = "";
             this.gunaTxtUsernameFP.ShadowDecoration.Parent = this.gunaTxtUsernameFP;
             this.gunaTxtUsernameFP.Size = new System.Drawing.Size(234, 27);
-            this.gunaTxtUsernameFP.TabIndex = 26;
+            this.gunaTxtUsernameFP.TabIndex = 4;
             this.gunaTxtUsernameFP.Validating += new System.ComponentModel.CancelEventHandler(this.gunaTxtUsernameFP_Validating);
             this.gunaTxtUsernameFP.Validated += new System.EventHandler(this.gunaTxtUsernameFP_Validated);
             // 
@@ -473,12 +475,13 @@ namespace BookStore.Forms
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOk.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.Color.White;
-            this.btnOk.Location = new System.Drawing.Point(36, 260);
+            this.btnOk.Location = new System.Drawing.Point(36, 250);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(105, 36);
-            this.btnOk.TabIndex = 5;
+            this.btnOk.Size = new System.Drawing.Size(105, 46);
+            this.btnOk.TabIndex = 7;
             this.btnOk.Text = "Chấp nhận";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -487,10 +490,10 @@ namespace BookStore.Forms
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(186, 260);
+            this.btnCancel.Location = new System.Drawing.Point(165, 250);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(84, 36);
-            this.btnCancel.TabIndex = 6;
+            this.btnCancel.Size = new System.Drawing.Size(105, 46);
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -505,19 +508,40 @@ namespace BookStore.Forms
             this.tmrLogin.Interval = 1;
             this.tmrLogin.Tick += new System.EventHandler(this.tmrLogin_Tick);
             // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.ControlBoxStyle = Guna.UI2.WinForms.Enums.ControlBoxStyle.Custom;
+            this.guna2ControlBox1.CustomIconSize = 15F;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Red;
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(301, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(25, 25);
+            this.guna2ControlBox1.TabIndex = 17;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this;
+            // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(330, 517);
+            this.ClientSize = new System.Drawing.Size(326, 527);
             this.ControlBox = false;
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.pnlForgotPassword);
             this.Controls.Add(this.pnlLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -568,5 +592,7 @@ namespace BookStore.Forms
         private System.Windows.Forms.Label lblUsernameErrorFP;
         private Guna.UI2.WinForms.Guna2TextBox gunaTxtConfirmPassword;
         private Guna.UI2.WinForms.Guna2TextBox gunaTxtUsernameFP;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

@@ -88,6 +88,23 @@ namespace BookStore
             return true;
         }
 
+        public static bool ValidOnlyLetterAndNumber(string str, out string errMsg)
+        { 
+
+            //ĐỂ VIẾT TIẾNG VIỆT
+            string specialChar = @"\|!#$%&/()=?»«@£§€{}.-;'<>_,";
+            foreach (var item in specialChar)
+            {
+                if (str.Contains(item))
+                {
+                    errMsg = "Không được chứa kí tự đặc biệt";
+                    return false;
+                }
+            }
+            errMsg = "";
+            return true;
+        }
+
         public static bool ValidNoneSpecialChar(string str, out string errMsg)
         {
             if (!IsEmpty(str, out errMsg))

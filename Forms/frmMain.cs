@@ -14,18 +14,52 @@ namespace BookStore.Forms
 {
     public partial class frmMain : Form
     {
-        private string username;
-        private string password;
-        private int role;
 
-        public frmMain(string username, string password, int role)
+        private DTO.Account loginAcc;
+
+        private Button currentButton;
+
+        private Forms.Overview.frmDashboard dashboardForm;
+
+        private Forms.Management.frmCategory categoryForm;
+        private Forms.Management.frmBook bookForm;
+        private Forms.Management.frmCustomer customerForm;
+        private Forms.Management.frmAccount accountForm;
+
+        private Forms.Business.frmBookReceipt bookReceiptForm;
+        private Forms.Business.frmBill billForm;
+        private Forms.Business.frmCashReceipt cashReceiptForm;
+
+        private Forms.Report.frmInventory inventoryForm;
+        private Forms.Report.frmDebt debtForm;
+
+        private Forms.Setting.frmRequirement requirementForm;
+
+
+        public frmMain(string username)
         {
             InitializeComponent();
-         
-            this.username = username;
-            this.password = password;
-            this.role = role;
 
+            loginAcc = BUS.Account.Instance.Accounts.First(acc => acc.Username == username);
+
+            dashboardForm = new Overview.frmDashboard();
+
+            categoryForm = new Management.frmCategory();
+            bookForm = new Management.frmBook();
+            customerForm = new Management.frmCustomer();
+            
+            bookReceiptForm = new Business.frmBookReceipt();
+            billForm = new Business.frmBill();
+            cashReceiptForm = new Business.frmCashReceipt();
+
+            requirementForm = new Setting.frmRequirement(loginAcc);
+
+            if (loginAcc.Permission == 0)
+            {
+                accountForm = new Management.frmAccount(loginAcc.Username);
+                inventoryForm = new Report.frmInventory();
+                debtForm = new Report.frmDebt();
+            }    
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -37,9 +71,10 @@ namespace BookStore.Forms
             this.ResizeBegin += (s, ev) => { this.SuspendLayout(); };
             this.ResizeEnd += (s, ev) => { this.ResumeLayout(true); };
 
-            onCustomizeDesign();
+            CustomizeDesign();
 
-            onOpenChildForm(new Forms.Overview.frmDashboard());
+            OpenChildForm(dashboardForm, sender);
+            pnlTopBar.BackColor = Color.Black;
         }
 
         #region Drag Control
@@ -47,7 +82,7 @@ namespace BookStore.Forms
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        
+
         private void pnlTopBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -57,15 +92,26 @@ namespace BookStore.Forms
         }
         #endregion
 
-        private void onCustomizeDesign()
+        private void CustomizeDesign()
         {
             pnlSubMenuManagement.Visible = false;
             pnlSubMenuBusiness.Visible = false;
             pnlSubMenuReport.Visible = false;
             pnlSubMenuSetting.Visible = false;
+
+            if (loginAcc.Permission == 1)
+            {
+                btnAccount.Visible = false;
+                pnlSubMenuManagement.Height = pnlSubMenuManagement.Height - 50;
+                btnMenuReport.Visible = false;
+                //pnlSubMenuReport.Visible = false;
+            }
+
+            lblDisplayName.Text = loginAcc.DisplayName;
+            lblPermission.Text = (loginAcc.Permission == 0 ? "Quản trị viên" : "Nhân viên"); 
         }
 
-        private void onHideSubMenu()
+        private void HideSubMenu()
         {
             if (pnlSubMenuManagement.Visible == true)
                 pnlSubMenuManagement.Visible = false;
@@ -77,28 +123,54 @@ namespace BookStore.Forms
                 pnlSubMenuSetting.Visible = false;
         }
 
-        private void onShowSubMenu(Panel subMenu)
+        private void ShowSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
             {
-                onHideSubMenu();
+                HideSubMenu();
                 subMenu.Visible = true;
             }
         }
 
-        private Form activeForm = null;
-        private void onOpenChildForm(Form childForm)
+        private void ActiveButton(object btnSender)
         {
-            if (activeForm != null)
-                activeForm.Close();
-            activeForm = childForm;
+            if (btnSender != null)
+            {
+                if (currentButton != (Button)btnSender)
+                {
+                    DisableButton();
+                    currentButton = (Button)btnSender;
+                    currentButton.BackColor = Color.OrangeRed;
+                }
+            }
+        } 
+
+        private void DisableButton()
+        {
+            if (currentButton != null)
+            {
+                currentButton.BackColor = Color.FromArgb(0, 71, 180);
+            }
+
+            GC.Collect();
+        }
+
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            pnlChildForm.Controls.Clear();
+
+            if (btnSender.GetType() == typeof(Button))
+            {
+                ActiveButton(btnSender);
+            }
+
             childForm.BackColor = Color.White;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            lblSubMenuName.Text = childForm.Text; 
-
-            pnlChildForm.Controls.Clear();
+            lblSubMenuName.Text = childForm.Text;
+            pnlTopBar.BackColor = Color.Firebrick;
+            
             pnlChildForm.Controls.Add(childForm);
             pnlChildForm.Tag = childForm;
             childForm.BringToFront();
@@ -107,94 +179,99 @@ namespace BookStore.Forms
 
         private void picLogo_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Overview.frmDashboard());
+            OpenChildForm(dashboardForm, sender);
+            pnlTopBar.BackColor = Color.Black;
+            DisableButton();
+            HideSubMenu();
         }
 
         #region Management SubMenu
         private void btnMenuManagement_Click(object sender, EventArgs e)
         {
-            onShowSubMenu(pnlSubMenuManagement);
+            ShowSubMenu(pnlSubMenuManagement);
         }
 
-        private void btnGenre_Click(object sender, EventArgs e)
+        private void btnCategory_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Management.Form3());
-            onHideSubMenu();
+            OpenChildForm(categoryForm, sender);
+            ShowSubMenu(pnlSubMenuManagement);
         }
 
         private void btnBook_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Management.frmTitleBook());
-            onHideSubMenu();
+            OpenChildForm(bookForm, sender);
+            ShowSubMenu(pnlSubMenuManagement);
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Management.frmCustomer());
-            onHideSubMenu();
+            OpenChildForm(customerForm, sender);
+            ShowSubMenu(pnlSubMenuManagement);
         }
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Management.frmAccount());
-            onHideSubMenu();
+            OpenChildForm(accountForm, sender);
+            ShowSubMenu(pnlSubMenuManagement);
         }
         #endregion
 
         #region Business SubMenu
         private void btnMenuBusiness_Click(object sender, EventArgs e)
         {
-            onShowSubMenu(pnlSubMenuBusiness);
+            ShowSubMenu(pnlSubMenuBusiness);
         }
 
-        private void btnImportBook_Click(object sender, EventArgs e)
+        private void btnBookReceipt_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Business.frmImportBook());
-            onHideSubMenu();
-        }
-
-        private void btnReceipt_Click(object sender, EventArgs e)
-        {
-            onOpenChildForm(new Forms.Business.frmReceipt());
-            onHideSubMenu();
+            OpenChildForm(bookReceiptForm, sender);
+            ShowSubMenu(pnlSubMenuBusiness);
         }
 
         private void btnBill_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Business.frmBill());
-            onHideSubMenu();
+            OpenChildForm(billForm, sender);
+            ShowSubMenu(pnlSubMenuBusiness);
         }
+
+        private void btnCashReceipt_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(cashReceiptForm, sender);
+            ShowSubMenu(pnlSubMenuBusiness);
+        }
+        
         #endregion
 
         #region Report SubMenu
         private void btnMenuReport_Click(object sender, EventArgs e)
         {
-            onShowSubMenu(pnlSubMenuReport);
+            ShowSubMenu(pnlSubMenuReport);
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Report.frmInventory());
-            onHideSubMenu();
+            OpenChildForm(inventoryForm, sender);
+            ShowSubMenu(pnlSubMenuReport);
         }
 
-        private void btnDept_Click(object sender, EventArgs e)
+        private void btnDebt_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Report.frmDebt());
-            onHideSubMenu();
+            OpenChildForm(debtForm, sender);
+            ShowSubMenu(pnlSubMenuReport);
         }
+        
         #endregion
 
         #region Setting SubMenu
         private void btnMenuSetting_Click(object sender, EventArgs e)
         {
-            onShowSubMenu(pnlSubMenuSetting);
+            ShowSubMenu(pnlSubMenuSetting);
         }
 
         private void btnRequirement_Click(object sender, EventArgs e)
         {
-            onOpenChildForm(new Forms.Setting.frmRequirement());
-            onHideSubMenu();
+            OpenChildForm(requirementForm, sender);
+            ShowSubMenu(pnlSubMenuSetting);
         }
         #endregion
 
@@ -203,6 +280,7 @@ namespace BookStore.Forms
             this.Owner.Show();
             this.Dispose();
             this.Close();
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -227,5 +305,6 @@ namespace BookStore.Forms
         {
             lblCurrentTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
+
     }
 }

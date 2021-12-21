@@ -29,13 +29,16 @@ namespace BookStore.Forms.Management
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblCategoryNameError = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtCategoryName = new System.Windows.Forms.TextBox();
-            this.lblNewCategory = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCategoryCode = new System.Windows.Forms.TextBox();
+            this.errCategory_Edit = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errCategory_Edit)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCategoryNameError
@@ -63,6 +66,7 @@ namespace BookStore.Forms.Management
             this.btnOk.TabIndex = 16;
             this.btnOk.Text = "Sửa đổi";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancel
             // 
@@ -78,6 +82,7 @@ namespace BookStore.Forms.Management
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtCategoryName
             // 
@@ -86,16 +91,18 @@ namespace BookStore.Forms.Management
             this.txtCategoryName.Name = "txtCategoryName";
             this.txtCategoryName.Size = new System.Drawing.Size(272, 33);
             this.txtCategoryName.TabIndex = 15;
+            this.txtCategoryName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCategoryName_Validating);
+            this.txtCategoryName.Validated += new System.EventHandler(this.txtCategoryName_Validated);
             // 
-            // lblNewCategory
+            // label
             // 
-            this.lblNewCategory.AutoSize = true;
-            this.lblNewCategory.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewCategory.Location = new System.Drawing.Point(37, 72);
-            this.lblNewCategory.Name = "lblNewCategory";
-            this.lblNewCategory.Size = new System.Drawing.Size(113, 25);
-            this.lblNewCategory.TabIndex = 14;
-            this.lblNewCategory.Text = "Tên thể loại:";
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(37, 72);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(113, 25);
+            this.label.TabIndex = 14;
+            this.label.Text = "Tên thể loại:";
             // 
             // label2
             // 
@@ -113,12 +120,20 @@ namespace BookStore.Forms.Management
             this.txtCategoryCode.Location = new System.Drawing.Point(175, 25);
             this.txtCategoryCode.Name = "txtCategoryCode";
             this.txtCategoryCode.ReadOnly = true;
-            this.txtCategoryCode.Size = new System.Drawing.Size(100, 33);
+            this.txtCategoryCode.Size = new System.Drawing.Size(117, 33);
             this.txtCategoryCode.TabIndex = 20;
+            // 
+            // errCategory_Edit
+            // 
+            this.errCategory_Edit.BlinkRate = 0;
+            this.errCategory_Edit.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errCategory_Edit.ContainerControl = this;
             // 
             // frmCategory_Edit
             // 
+            this.AcceptButton = this.btnOk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(499, 219);
             this.Controls.Add(this.txtCategoryCode);
@@ -127,7 +142,7 @@ namespace BookStore.Forms.Management
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtCategoryName);
-            this.Controls.Add(this.lblNewCategory);
+            this.Controls.Add(this.label);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -135,6 +150,7 @@ namespace BookStore.Forms.Management
             this.Name = "frmCategory_Edit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa Thể loại";
+            ((System.ComponentModel.ISupportInitialize)(this.errCategory_Edit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,8 +162,9 @@ namespace BookStore.Forms.Management
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtCategoryName;
-        private System.Windows.Forms.Label lblNewCategory;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCategoryCode;
+        private System.Windows.Forms.ErrorProvider errCategory_Edit;
     }
 }

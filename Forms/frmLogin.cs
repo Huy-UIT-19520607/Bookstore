@@ -13,7 +13,6 @@ namespace BookStore.Forms
     public partial class frmLogin : Form
     {
         private string username;
-        private string password;
         private int role;
         private string errMsg = "";
 
@@ -21,30 +20,142 @@ namespace BookStore.Forms
         {
             InitializeComponent();
 
-            this.Text = "";
-            this.ControlBox = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            this.AcceptButton = this.btnLogin;
-
-            ResetErrorMessage();
+            ResetLogin();
         }
 
+        #region Reset
         private void ResetErrorMessage()
         {
-            lblUsernameError.Text = "";
-            lblPasswordError.Text = "";
-            lblUsernameErrorFP.Text = "";
-            lblNewPasswordError.Text = "";
-            lblConfirmPasswordError.Text = "";
+            this.lblUsernameError.Text = "";
+            this.lblPasswordError.Text = "";
+            this.lblUsernameErrorFP.Text = "";
+            this.lblNewPasswordError.Text = "";
+            this.lblConfirmPasswordError.Text = "";
+
+            this.gunaTxtConfirmPassword.Text = "";
+            this.gunaTxtNewPassword.Text = "";
+            this.gunaTxtUsernameFP.Text = "";
+
+            this.gunaTxtUsername.Text = "";
+            this.gunaTxtPassword.Text = "";
 
             this.errLogin.Clear();
             GC.Collect();
+        }
+
+        private void ResetLogin()
+        {
+            this.AcceptButton = this.btnLogin;
+
+            this.gunaTxtConfirmPassword.Enabled = false;
+            this.gunaTxtNewPassword.Enabled = false;
+            this.gunaTxtUsernameFP.Enabled = false;
+            
+            this.gunaTxtUsername.Enabled = true;
+            this.gunaTxtPassword.Enabled = true;
+            
+            ResetErrorMessage();
+
+            this.gunaTxtUsername.Focus();
+        }
+
+        private void ResetForgotPassword()
+        {
+            this.AcceptButton = this.btnOk;
+
+            this.gunaTxtConfirmPassword.Enabled = true;
+            this.gunaTxtNewPassword.Enabled = true;
+            this.gunaTxtUsernameFP.Enabled = true;
+
+            this.gunaTxtUsername.Enabled = false;
+            this.gunaTxtPassword.Enabled = false;
+
+            ResetErrorMessage();
+
+            this.gunaTxtUsernameFP.Focus();
+        }
+        #endregion
+
+        #region Handle Login Area
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (!ValidateChildren(ValidationConstraints.Enabled))
+            {
+                return;
+            }
+
+            string username = gunaTxtUsername.Text;
+            string password = gunaTxtPassword.Text;
+
+            if (BUS.Account.Instance.Login(username, password))
+            {
+                frmMain frmMain = new frmMain(username);
+                frmMain.Owner = this;
+                frmMain.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            ResetLogin();
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        private void lblForgotPassword_Click(object sender, EventArgs e)
+        {
+            tmrForgotPassword.Start();
+
+            ResetForgotPassword();
+        }
+
+        private void tmrForgotPassword_Tick(object sender, EventArgs e)
+        {
+            this.pnlLogin.Left -= 10;
+            this.pnlForgotPassword.Left -= 10;
+            if (this.pnlForgotPassword.Left <= 20)
+            {
+                tmrForgotPassword.Stop();
+            }
+        }
+        #endregion
+
+        #region Handle ForgotPassword Area
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            tmrLogin.Start();
+
+            ResetLogin();
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            if (!ValidateChildren(ValidationConstraints.Enabled))
+            {
+                return;
+            }
+
+            tmrLogin.Start();
+
+            ResetLogin();
+        }
+
+        private void tmrLogin_Tick(object sender, EventArgs e)
+        {
+            this.pnlLogin.Left += 10;
+            this.pnlForgotPassword.Left += 10;
+            if (this.pnlLogin.Left >= 10)
+            {
+                tmrLogin.Stop();
+            }
+        }
+        #endregion
 
         private void CancelValidatedEvent(Control control, Label error, CancelEventArgs e)
         {
@@ -54,6 +165,7 @@ namespace BookStore.Forms
             error.Text = errMsg;
         }
 
+        #region Validate Login
         private void gunaTxtUsername_Validating(object sender, CancelEventArgs e)
         {
             if (gunaTxtUsername.Text == "")
@@ -93,68 +205,9 @@ namespace BookStore.Forms
             this.errLogin.SetError(gunaTxtPassword, "");
             this.lblPasswordError.Text = "";
         }
+        #endregion
 
-        private void ResetLogin()
-        {
-            this.AcceptButton = this.btnLogin;
-
-            gunaTxtUsername.Focus();
-
-            ResetErrorMessage();
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            //if (!ValidateChildren(ValidationConstraints.Enabled))
-            //{
-            //    return;
-            //}
-
-            //frmMain frmMain = new frmMain(username, password, role);
-            frmMain frmMain = new frmMain(username, password, role);
-            frmMain.Owner = this;
-            frmMain.Show();
-            this.Hide();
-
-            ResetLogin();
-        }
-
-        private void lblForgotPassword_Click(object sender, EventArgs e)
-        {
-            tmrForgotPassword.Start();
-            this.AcceptButton = this.btnOk;
-
-            this.gunaTxtUsernameFP.Focus();
-        }
-
-        private void tmrForgotPassword_Tick(object sender, EventArgs e)
-        {
-            this.pnlLogin.Left -= 10;
-            this.pnlForgotPassword.Left -= 10;
-            if (this.pnlForgotPassword.Left <= 20)
-            {
-                tmrForgotPassword.Stop();
-            }
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            tmrLogin.Start();
-            this.AcceptButton = this.btnLogin;
-            
-            this.gunaTxtUsername.Focus();
-        }
-
-        private void tmrLogin_Tick(object sender, EventArgs e)
-        {
-            this.pnlLogin.Left += 10;
-            this.pnlForgotPassword.Left += 10;
-            if (this.pnlLogin.Left >= 10)
-            {
-                tmrLogin.Stop();
-            }
-        }
-
+        #region Validate Forgot Password
         private void gunaTxtUsernameFP_Validating(object sender, CancelEventArgs e)
         {
             if (gunaTxtUsernameFP.Text == "")
@@ -216,6 +269,7 @@ namespace BookStore.Forms
             this.errLogin.SetError(gunaTxtConfirmPassword, "");
             this.lblConfirmPasswordError.Text = "";
         }
+        #endregion
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
